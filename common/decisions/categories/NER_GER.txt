@@ -1,0 +1,24 @@
+GER_Berlin_eco_decision_category = {
+	allowed = {
+		tag = GER
+	}
+	visible = {
+		has_country_flag = GER_Berlin_eco_boom
+		NOT = {
+			OR = {
+				has_country_flag = GER_Berlin_eco_lose
+				has_country_flag = GER_Berlin_eco_win
+			}
+		}
+	}
+	priority = 300
+}
+
+GER_NER_debug_category = {
+	allowed = {
+		tag = GER
+	}
+	visible = {
+		is_debug = yes
+	}
+}

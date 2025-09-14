@@ -1,0 +1,830 @@
+ideas = {
+#不要动
+
+	country = {
+	#不要动	
+
+		SWI_pt = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_pt 
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				stability_factor = -0.5
+				political_power_factor = -0.10
+				war_support_factor = -0.1
+				economy_cost_factor = 0.5
+				surrender_limit = 0.1
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+		SWI_bltn = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_bltn 
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				stability_factor = -0.5
+				political_power_factor = -0.10
+				war_support_factor = -0.1
+				economy_cost_factor = 0.5
+				surrender_limit = 0.1
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+
+		SWI_aebs = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_aebs 
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				stability_factor = -0.5
+				political_power_factor = -0.10
+				war_support_factor = -0.1
+				army_org_factor = -0.2
+				surrender_limit = 0.1
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+		SWI_disorderly_commune = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_disorderly_commune 
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+		SWI_final_idea = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_final_idea 
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				generate_wargoal_tension = -1.0
+				justify_war_goal_time = -0.8
+				stability_weekly = 0.1
+				war_support_weekly = 0.1
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+		SWI_forevers1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_forevers1 
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				political_power_factor = 1.0
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.4
+				consumer_goods_expected_value = 0.1
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_forevers2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_forevers2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				political_power_factor = 1.0
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.4
+				consumer_goods_expected_value = 0.1
+				compliance_starting_value = 0.9
+				compliance_growth = 1.0
+				resistance_growth = -0.95
+				max_command_power = 300
+				command_power_gain = 1
+				no_supply_grace = 240
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_forevers3 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_forevers3
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				political_power_factor = 1.0
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.4
+				consumer_goods_expected_value = 0.1
+				compliance_starting_value = 0.9
+				compliance_growth = 1.0
+				resistance_growth = -0.95
+				max_command_power = 300
+				command_power_gain = 1
+				no_supply_grace = 240
+				non_core_manpower = 50.00
+				stability_factor = 0.5
+				war_support_factor = 0.5
+				agency_upgrade_time = -0.8
+				civilian_intel_factor = 50
+				army_intel_factor = 50
+				navy_intel_factor = 50
+				airforce_intel_factor = 50
+				research_speed_factor = 2.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_forevers4 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_forevers4
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				political_power_factor = 1.0
+				industrial_capacity_factory = 0.7
+				industrial_capacity_dockyard = 1.4
+				consumer_goods_expected_value = 0.05
+				compliance_starting_value = 0.9
+				compliance_growth = 1.0
+				resistance_growth = -0.95
+				max_command_power = 300
+				command_power_gain = 1
+				no_supply_grace = 240
+				non_core_manpower = 50.00
+				stability_factor = 0.5
+				war_support_factor = 0.5
+				agency_upgrade_time = -0.8
+				civilian_intel_factor = 50
+				army_intel_factor = 50
+				navy_intel_factor = 50
+				airforce_intel_factor = 50
+				research_speed_factor = 2.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_forevers5 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_forevers5
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				political_power_factor = 1.0
+				industrial_capacity_factory = 1.0
+				industrial_capacity_dockyard = 2.5
+				consumer_goods_expected_value = 0.05
+				compliance_starting_value = 0.9
+				compliance_growth = 1.0
+				resistance_growth = -0.95
+				max_command_power = 300
+				command_power_gain = 1
+				no_supply_grace = 240
+				non_core_manpower = 50.00
+				stability_factor = 0.5
+				war_support_factor = 0.5
+				agency_upgrade_time = -0.8
+				civilian_intel_factor = 50
+				army_intel_factor = 50
+				navy_intel_factor = 50
+				airforce_intel_factor = 50
+				research_speed_factor = 2.0
+				monthly_population = 100000
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_army_ideas1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_army_ideas1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				experience_gain_army = 10.00
+				monthly_population = -1.0
+				army_org_factor = 5.0
+				attrition = -0.2
+				army_attack_factor = 1.0
+				army_defence_factor = 1.0
+				army_speed_factor = 0.5
+				planning_speed = 10.00
+				max_planning = 10.00
+				experience_gain_army_unit_factor = 4.0
+				experience_gain_factor = 4.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_army_ideas2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_army_ideas2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				experience_gain_army = 10.00
+				monthly_population = -1.0
+				army_org_factor = 5.0
+				attrition = -0.2
+				army_attack_factor = 2.0
+				army_defence_factor = 2.0
+				army_speed_factor = 1.0
+				planning_speed = 10.00
+				max_planning = 10.00
+				experience_gain_army_unit_factor = 4.0
+				experience_gain_factor = 4.0
+				terrain_penalty_reduction = 0.2
+				dig_in_speed_factor = 0.5
+				experience_loss_factor = -0.1
+				army_core_attack_factor = 1.0
+				army_core_defence_factor = 1.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+
+		SWI_navy_ideas1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_navy_ideas1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				experience_gain_navy = 10.00
+				navy_visibility = -0.3
+				naval_detection = 5.0
+				naval_damage_factor = 1.0
+				naval_defense_factor = 1.0
+				sortie_efficiency = 1.0
+				naval_torpedo_hit_chance_factor = 0.5
+				naval_torpedo_screen_penetration_factor = 1.0
+				invasion_preparation = -0.8
+				naval_invasion_penalty = -0.8
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_navy_ideas2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_navy_ideas2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				experience_gain_navy = 10.00
+				navy_visibility = -0.3
+				naval_detection = 5.0
+				naval_damage_factor = 2.0
+				naval_defense_factor = 2.0
+				sortie_efficiency = 1.0
+				naval_torpedo_hit_chance_factor = 0.5
+				naval_torpedo_screen_penetration_factor = 1.0
+				invasion_preparation = -0.8
+				naval_invasion_penalty = -0.8
+				navy_max_range_factor = 4.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+		SWI_air_force_ideas1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_air_force_ideas1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				experience_gain_air = 10.00
+				air_ace_generation_chance_factor = 9.00
+				air_attack_factor = 1.0
+				air_defence_factor = 1.0
+				air_range_factor = 4.0
+				air_maximum_speed_factor = 2.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_air_force_ideas2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_air_force_ideas2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				experience_gain_air = 10.00
+				air_ace_generation_chance_factor = 9.00
+				air_attack_factor = 2.0
+				air_defence_factor = 2.0
+				air_range_factor = 9.0
+				air_maximum_speed_factor = 4.0
+				air_night_penalty = -0.1
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+
+		SWI_commune_economy1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_commune_economy1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				industrial_capacity_factory = 0.5
+				industrial_capacity_dockyard = 0.5
+				production_factory_max_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+				line_change_production_efficiency_factor = 0.5
+				production_factory_start_efficiency_factor = 0.5
+				production_lack_of_resource_penalty_factor = -0.3
+				global_building_slots_factor = 0.2
+				local_resources_factor = 4.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_commune_economy2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_commune_economy2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				industrial_capacity_factory = 0.75
+				industrial_capacity_dockyard = 1.0
+				production_factory_max_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+				line_change_production_efficiency_factor = 0.5
+				production_factory_start_efficiency_factor = 0.5
+				production_lack_of_resource_penalty_factor = -0.5
+				global_building_slots_factor = 0.2
+				local_resources_factor = 4.0
+				production_speed_buildings_factor = 3.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+		
+		SWI_commune_economy3 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_commune_economy3
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				industrial_capacity_factory = 0.75
+				industrial_capacity_dockyard = 1.0
+				production_factory_max_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+				line_change_production_efficiency_factor = 0.5
+				production_factory_start_efficiency_factor = 0.5
+				production_lack_of_resource_penalty_factor = -1.0
+				global_building_slots_factor = 0.2
+				local_resources_factor = 4.0
+				production_speed_buildings_factor = 3.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_anime = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_anime
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				stability_weekly = 0.2
+				war_support_weekly = 0.2
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_re0_ideas1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_re0_ideas1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				combat_width_factor = -0.5
+				production_speed_buildings_factor = 2.5
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_re0_ideas2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_re0_ideas2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				combat_width_factor = -0.7
+				production_speed_buildings_factor = 2.8
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+		SWI_dal_ideas1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_dal_ideas1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				production_factory_max_efficiency_factor = 1.0
+				production_factory_efficiency_gain_factor = 1.0
+				line_change_production_efficiency_factor = 1.0
+				production_factory_start_efficiency_factor = 1.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_dal_ideas3 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_dal_ideas3
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				production_factory_max_efficiency_factor = 2.0
+				production_factory_efficiency_gain_factor = 2.0
+				line_change_production_efficiency_factor = 2.0
+				production_factory_start_efficiency_factor = 2.0
+				industrial_capacity_factory = 1.0
+				industrial_capacity_dockyard = 1.5
+				production_speed_dockyard_factor = 1.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_dal_ideas2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_dal_ideas2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				production_factory_max_efficiency_factor = 2.0
+				production_factory_efficiency_gain_factor = 2.0
+				line_change_production_efficiency_factor = 2.0
+				production_factory_start_efficiency_factor = 2.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+		SWI_fate_ideas1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_fate_ideas1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				monthly_population = 100000
+				political_power_factor = 1.0
+				army_infantry_attack_factor = 0.3
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_fate_ideas2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_fate_ideas2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				monthly_population = 100000
+				political_power_factor = 1.0
+				army_infantry_attack_factor = 0.3
+				army_armor_attack_factor = 0.7
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_cy_ideas1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_cy_ideas1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				cavalry_attack_factor = 2.5
+				cavalry_defence_factor = 2.5
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+
+		SWI_bgd_ideas1 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_bgd_ideas1
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				send_volunteer_size = 10
+				research_speed_factor = 1.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_bgd_ideas2 = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_bgd_ideas2
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				send_volunteer_size = 50
+				research_speed_factor = 1.5
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+
+		SWI_final_idea = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = SWI_final_idea
+			#国家tag_精神名字，如USA_123
+
+#			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { original_tag = SWI }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				stability_weekly = 0.05
+				war_support_weekly = 0.05
+				research_speed_factor = 1.0
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+	}
+}

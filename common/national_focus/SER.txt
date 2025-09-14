@@ -1,0 +1,670 @@
+focus_tree = {
+   id = SER
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SER
+		}
+	}
+	default = no
+    
+
+
+# 分裂的联盟：
+focus = {
+    id = SER_Divided_Alliance
+    icon = SER_Divided_Alliance_gfx
+    x = 0
+    y = 0
+    cost = 1.000
+    completion_reward = {
+        add_political_power = 100
+        add_ideas = SER_Divided_Alliance
+    }
+}
+
+# 咄咄逼人的激进人民党：
+focus = {
+    id = SER_The_aggressive_Radical_People's_Party
+    icon = SER_The_aggressive_Radical_People's_Party_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = -2
+    y = 1
+    cost = 1.000
+    prerequisite = { # 前置组 1
+        focus = SER_Divided_Alliance
+    }
+    completion_reward = {
+        add_political_power = 25
+        add_stability = 0.1
+        country_event = { id = SER.002 days = 2 }
+    }
+}
+
+# 我们的历史：
+focus = {
+    id = SER_our_history
+    icon = SER_our_history_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 1
+    cost = 1.000
+    prerequisite = { # 前置组 2
+        focus = SER_Divided_Alliance
+    }
+    completion_reward = {
+        add_political_power = 25
+        add_stability = 0.1
+        country_event = { id = SER.001 days = 2 }
+    }
+}
+
+# 猖狂的民族社会主义运动：
+focus = {
+    id = SER_Rampant_national_socialist_movement
+    icon = SER_Rampant_national_socialist_movement_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 2
+    y = 1
+    cost = 1.000
+    prerequisite = { # 前置组 3
+        focus = SER_Divided_Alliance
+    }
+    completion_reward = {
+        add_political_power = 25
+        add_stability = 0.1
+        country_event = { id = SER.003 days = 2 }
+    }
+}
+
+# 贝尔格莱德之夜：
+focus = {
+    id = SER_Belgrade_at_night
+    icon = SER_Belgrade_at_night_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 2
+    cost = 2.000
+    prerequisite = { # 前置组 11
+        focus = SER_The_aggressive_Radical_People's_Party
+    }
+    prerequisite = { # 前置组 12
+        focus = SER_our_history
+    }
+    prerequisite = { # 前置组 13
+        focus = SER_Rampant_national_socialist_movement
+    }
+    completion_reward = {
+        add_political_power = 50
+        country_event = { id = SER.004 days = 2 }
+    }
+}
+
+# 屹立不倒：
+focus = {
+    id = SER_Standing_firm
+    icon = SER_Standing_firm_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 4
+    cost = 1.000
+    prerequisite = { # 前置组 5
+        focus = SER_Belgrade_at_night
+    }
+    available = {
+			has_country_flag = SER_The_Radical_League_won
+		}
+    completion_reward = {
+        remove_ideas = SER_Divided_Alliance
+        add_ideas = SER_Remnants_of_the_opposition_Alliance
+        remove_ideas = SER_ASNOS_threat
+    }
+}
+
+# 扫清反对残余：
+ focus = {
+    id = SER_Clear_the_remnants_of_opposition
+    icon = SER_Clear_the_remnants_of_opposition_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = -4
+    y = 5
+    cost = 3.000
+    prerequisite = { # 前置组 6
+        focus = SER_Standing_firm
+    }
+    completion_reward = {
+          add_stability =  0.15
+          add_war_support = 0.15
+          add_political_power = 35
+          army_experience = 20
+    }
+}
+
+# 噤声行动：
+ focus = {
+    id = SER_Silence_action
+    icon = SER_Silence_action_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = -6
+    y = 6
+    cost = 4.000
+    prerequisite = { # 前置组 7
+        focus = SER_Clear_the_remnants_of_opposition
+    }
+    mutually_exclusive = {
+        focus = SER_Forgiveness
+    }
+    completion_reward = {
+        remove_ideas = SER_Remnants_of_the_opposition_Alliance
+        army_experience = 15
+    }
+}
+
+# 宽恕之心：
+ focus = {
+    id = SER_Forgiveness
+    icon = SER_Forgiveness_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = -4
+    y = 6
+    cost = 4.000
+    prerequisite = { # 前置组 8
+        focus = SER_Clear_the_remnants_of_opposition
+    }
+    mutually_exclusive = {
+        focus = SER_Silence_action
+    }
+    completion_reward = {
+        add_timed_idea =  { idea = SER_Integrate_opposition_guards days = 360 }
+    }
+}
+
+# 至高无上的统治：
+ focus = {
+    id = SER_Supreme_rule
+    icon = SER_Supreme_rule_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = -5
+    y = 7
+    cost = 4.000
+    prerequisite = { # 前置组 9
+        focus = SER_Silence_action
+        focus = SER_Forgiveness
+    }
+    completion_reward = {
+       add_ideas = SER_One_leader_one_nation_one_country
+    }
+}
+
+# 组建绿衫军：
+ focus = {
+    id = SER_Form_the_Zelenasi
+    icon = SER_Form_the_Zelenasi_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 5
+    cost = 4.000
+    prerequisite = { # 前置组 14
+        focus = SER_Standing_firm
+    }
+    completion_reward = {
+        add_ideas = SER_Zelenasi
+    }
+}
+
+# 忠于领袖之军：
+ focus = {
+    id = SER_Loyal_to_the_leader's_army
+    icon = SER_Loyal_to_the_leader's_army_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 6
+    cost = 5.000
+    prerequisite = { # 前置组 15
+        focus = SER_Form_the_Zelenasi
+    }
+    completion_reward = {
+        army_experience = 30
+	navy_experience = 30
+	air_experience = 30
+    }
+}
+
+# 重启巴尔干战争：
+ focus = {
+    id = SER_Restart_the_Balkan_Wars
+    icon = SER_Restart_the_Balkan_Wars_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 10
+    cost = 2.000
+    prerequisite = { # 前置组 17
+        focus = SER_Supreme_rule
+    }
+    prerequisite = { # 前置组 18
+        focus = SER_Loyal_to_the_leader's_army
+    }
+    prerequisite = { # 前置组 32
+        focus = SER_Survive_the_crisis
+    }
+    completion_reward = {
+            add_ideas = SER_Restart_the_Balkan_Wars
+    }
+}
+
+# 应对危机：
+ focus = {
+    id = SER_Responding_to_crises
+    icon = SER_Responding_to_crises_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 4
+    y = 5
+    cost = 4.000
+    prerequisite = { # 前置组 16
+        focus = SER_Standing_firm
+    }
+    available = {
+			has_global_flag = Glo_berlin_ecomic_crisis_flag
+		}
+    completion_reward = {
+        add_political_power = 35
+    }
+}
+
+# 德式经济模式改革：
+ focus = {
+    id = SER_German_style_economic_model_reform
+    icon = SER_German_style_economic_model_reform_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 5
+    y = 6
+    cost = 3.000
+    prerequisite = { # 前置组 24
+        focus = SER_Responding_to_crises
+    }
+    mutually_exclusive = {
+        focus = SER_New_fiscal_policy
+    }
+    completion_reward = {
+       swap_ideas = {
+            remove_idea = SER_GER_Berlin_eco_boom
+            add_idea  = SER_GER_Berlin_eco_boom1
+          }
+       }
+    }
+
+
+# 本土企业卡特尔化：
+ focus = {
+    id = SER_Cartelization_of_local_enterprises
+    icon = SER_Cartelization_of_local_enterprises_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 3
+    y = 7
+    cost = 4.000
+    prerequisite = { # 前置组 19
+        focus = SER_German_style_economic_model_reform
+    }
+    completion_reward = {
+        add_ideas  = SER_Cartelization_reform
+    }
+}
+
+# 征收高关税：
+focus = {
+    id = SER_High_tariffs_are_imposed
+    icon = SER_High_tariffs_are_imposed_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 5
+    y = 7
+    cost = 4.000
+    prerequisite = { # 前置组 20
+        focus = SER_German_style_economic_model_reform
+    }
+    completion_reward = {
+       swap_ideas = {
+            remove_idea = SER_GER_Berlin_eco_boom1
+            add_idea  = SER_GER_Berlin_eco_boom2
+           }
+      }
+  }
+
+# 逐步摆脱经济控制：
+focus = {
+    id = SER_Gradually_get_rid_of_economic_control
+    icon = SER_Gradually_get_rid_of_economic_control_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 4
+    y = 8
+    cost = 5.000
+    prerequisite = { # 前置组 21
+        focus = SER_Cartelization_of_local_enterprises
+    }
+    prerequisite = { # 前置组 22
+        focus = SER_High_tariffs_are_imposed
+    }
+    completion_reward = {
+        swap_ideas = {
+            remove_idea = SER_Capital_control_in_Austrian 
+            add_idea = SER_Capital_control_in_Austrian1
+          }
+         swap_ideas = {
+             remove_idea = SER_Capital_control_in_Germany
+            add_idea = SER_Capital_control_in_Germany1
+          }
+    }
+}
+
+# 新财政政策：
+focus = {
+    id = SER_New_fiscal_policy
+    icon = SER_New_fiscal_policy_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 7
+    y = 6
+    cost = 3.000
+    prerequisite = { # 前置组 23
+        focus = SER_Responding_to_crises
+    }
+    mutually_exclusive = {
+        focus = SER_German_style_economic_model_reform
+    }
+    completion_reward = {
+         swap_ideas = {
+            remove_idea = SER_GER_Berlin_eco_boom
+            add_idea  = SER_GER_Berlin_eco_boom1
+          }
+       }
+   }
+
+
+# 国有化德奥资本：
+focus = {
+    id = SER_Nationalized_German_Austrian_capital
+    icon = SER_Nationalized_German_Austrian_capital_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 8
+    y = 7
+    cost = 4.000
+    prerequisite = { # 前置组 25
+        focus = SER_New_fiscal_policy
+    }
+    completion_reward = {
+           remove_ideas = SER_Capital_control_in_Germany
+           remove_ideas = SER_Capital_control_in_Austrian
+      }
+}
+
+# 有形的大手：
+focus = {
+    id = SER_Big_hands_with_shape
+    icon = SER_Big_hands_with_shape_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 10
+    y = 7
+    cost = 4.000
+    prerequisite = { # 前置组 26
+        focus = SER_New_fiscal_policy
+    }
+    completion_reward = {
+         swap_ideas = {
+            remove_idea = SER_GER_Berlin_eco_boom1
+            add_idea  = SER_GER_Berlin_eco_boom2
+          }
+      }
+   }
+
+
+# 清算农民债务：
+focus = {
+    id = SER_Liquidate_farmers'_debts
+    icon = SER_Liquidate_farmers'_debts_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 12
+    y = 7
+    cost = 4.000
+    prerequisite = { # 前置组 27
+        focus = SER_New_fiscal_policy
+    }
+    completion_reward = {
+        add_ideas  = SER_Liquidate_farmers'_debts
+    }
+}
+
+# 法团主义模式：
+focus = {
+    id = SER_Corporatism_model
+    icon = SER_Corporatism_model_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 8
+    y = 8
+    cost = 5.000
+    prerequisite = { # 前置组 28
+        focus = SER_Big_hands_with_shape
+    }
+    prerequisite = { # 前置组 29
+        focus = SER_Nationalized_German_Austrian_capital
+    }
+    prerequisite = { # 前置组 30
+        focus = SER_Liquidate_farmers'_debts
+    }
+    completion_reward = {
+        add_ideas  = SER_Corporatism_model
+    }
+}
+
+# 度过危机：
+focus = {
+    id = SER_Survive_the_crisis
+    icon = SER_Survive_the_crisis_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 6
+    y = 9
+    cost = 5.000
+    prerequisite = { # 前置组 31
+        focus = SER_Gradually_get_rid_of_economic_control
+        focus = SER_Corporatism_model
+    }
+    completion_reward = {
+      swap_ideas = {
+            remove_idea = SER_GER_Berlin_eco_boom2
+            add_idea  = SER_GER_Berlin_eco_boom3
+        }
+    }
+}
+
+# 我们不会忘记：
+focus = {
+    id = SER_We_will_not_forget
+    icon = SER_We_will_not_forget_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = -3
+    y = 11
+    cost = 3.000
+    prerequisite = { # 前置组 33
+        focus = SER_Restart_the_Balkan_Wars
+    }
+    completion_reward = {
+        add_ideas  = SER_We_will_not_forget
+    }
+}
+
+# 解救同胞：
+focus = {
+    id = SER_Rescue_your_fellow_citizens
+    icon = SER_Rescue_your_fellow_citizens_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = -3
+    y = 12
+    cost = 3.000
+    prerequisite = { # 前置组 34
+        focus = SER_We_will_not_forget
+    }
+    completion_reward = {
+        unlock_decision_tooltip = SER_Save_our_compatriots_in_Bulgaria
+        unlock_decision_tooltip = SER_Save_our_compatriots_in_Austria
+        add_state_core = 106
+        add_state_core = 803
+        add_state_core = 102
+        add_state_core = 764
+        add_state_core = 804
+        add_state_core = 109
+        add_state_core = 104
+        add_state_core = 105
+        add_state_core = 45
+        add_state_core = 853
+    }
+}
+
+# 血海深仇：
+focus = {
+    id = SER_A_deep_feud_in_the_sea_of_blood
+    icon = SER_A_deep_feud_in_the_sea_of_blood_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = -3
+    y = 13
+    cost = 3.000
+    prerequisite = { # 前置组 35
+        focus = SER_Rescue_your_fellow_citizens
+    }
+    completion_reward = {
+       swap_ideas = {
+            remove_idea = SER_Revenge_Mania
+            add_idea  = SER_A_deep_feud_in_the_sea_of_blood
+        } 
+    }
+}
+
+# 与宿敌和解：
+focus = {
+    id = SER_Reconcile_with_old_enemies
+    icon = SER_Reconcile_with_old_enemies_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 3
+    y = 11
+    cost = 3.000
+    prerequisite = { # 前置组 36
+        focus = SER_Restart_the_Balkan_Wars
+    }
+    completion_reward = {
+        add_opinion_modifier = {
+            target = ITA
+            modifier = improve_relations_+100
+        } 
+         add_opinion_modifier = {
+            target = OTO
+            modifier = improve_relations_+100
+        } 
+    }
+}
+
+# 我们的夙愿：
+focus = {
+    id = SER_Our_long_cherished_wish
+    icon = SER_Our_long_cherished_wish_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 3
+    y = 12
+    cost = 3.000
+    prerequisite = { # 前置组 37
+        focus = SER_Reconcile_with_old_enemies
+    }
+    completion_reward = {
+        add_ideas  = SER_Our_long_cherished_wish
+    }
+}
+
+# 最终圣战：
+focus = {
+    id = SER_Final_Jid
+    icon = SER_Final_Jid_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 14
+    cost = 1.000
+    prerequisite = { # 前置组 38
+        focus = SER_Our_long_cherished_wish
+    }
+    prerequisite = { # 前置组 39
+        focus = SER_A_deep_feud_in_the_sea_of_blood
+    }
+    available = {
+         owns_state = 106
+         owns_state = 803
+         owns_state = 102
+         owns_state = 764
+         owns_state = 804
+         owns_state = 104
+         owns_state = 45
+         owns_state = 853
+         owns_state = 109
+         owns_state = 105
+    }
+    completion_reward = {
+        add_political_power = 35
+    }
+}
+
+# 实现奥布拉德维奇之理想：
+focus = {
+    id = SER_Fulfilling_Obradvich's_ideals
+    icon = SER_Fulfilling_Obradvich's_ideals_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 15
+    cost = 1.000
+    prerequisite = { # 前置组 40
+        focus = SER_Final_Jid
+    }
+    completion_reward = {
+        add_state_core = 103
+        add_state_core = 163
+        add_state_core = 736
+        add_state_core = 852
+        create_wargoal = {
+                type = annex_everything
+                target = ITA
+            }
+    }
+}
+
+# 三腿椅子理论：
+focus = {
+    id = SER_Three_legged_chair_theory
+    icon = SER_Three_legged_chair_theory_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 16
+    cost = 4.000
+    prerequisite = { # 前置组 41
+        focus = SER_Fulfilling_Obradvich's_ideals
+    }
+    available = {
+         owns_state = 103
+         owns_state = 163
+         owns_state = 736
+         owns_state = 852
+    }
+    completion_reward = {
+        add_ideas  = SER_Three_legged_chair_theory
+    }
+}
+
+# 塞尔维亚，统一，团结，强大：
+focus = {
+    id = SER_Serbia_united_united_strong
+    icon = SER_Serbia_united_united_strong_gfx
+    relative_position_id = SER_Divided_Alliance
+    x = 0
+    y = 17
+    cost = 1.000
+    prerequisite = { # 前置组 42
+        focus = SER_Three_legged_chair_theory
+    }
+    completion_reward = {
+        add_political_power = 100
+    }
+}
+}
+

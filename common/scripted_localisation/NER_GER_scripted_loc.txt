@@ -1,0 +1,48 @@
+defined_text = {
+	name = GER_focus_berlin_economic_crisis_over_sloc
+	text = {
+		trigger = {
+			GER = {
+				has_country_flag = GER_Berlin_eco_lose
+			}
+		}
+		localization_key = GER_focus_berlin_economic_crisis_lose_sloc
+	}
+	text = {
+		localization_key = GER_focus_berlin_economic_crisis_win_sloc
+	}
+}
+
+defined_text = {#选举的本地化
+	name = GER_get_election_state
+	text = {
+		trigger = {
+			check_variable = { election_states = 0 }
+		}
+		localization_key = GER_election_states_name_0
+	}
+	text = {
+		trigger = {
+			check_variable = { election_states = 1 }
+		}
+		localization_key = GER_election_states_name_1
+	}
+	text = {
+		trigger = {
+			check_variable = { election_states = 2 }
+		}
+		localization_key = GER_election_states_name_2
+	}
+	text = {
+		trigger = {
+			check_variable = { election_states = 3 }
+		}
+		localization_key = GER_election_states_name_3
+	}
+	text = {
+		trigger = {
+			check_variable = { election_states = 4 }
+		}
+		localization_key = GER_election_states_name_4
+	}
+}

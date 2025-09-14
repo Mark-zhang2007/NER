@@ -1,0 +1,28 @@
+GER_alliance = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		has_government = neutrality
+	}
+	ai_strategy = {
+		type = alliance
+		id = DFN
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = DFN
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = DFN
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = CHA
+		value = 200
+	}
+}

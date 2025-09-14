@@ -1,0 +1,28 @@
+PRC_alliance_SOV = {
+	allowed = {
+		tag = PRC
+	}
+	enable = {
+		has_completed_focus = PRC_set_up_new_CHINA
+		SOV = {
+			has_government = communism
+			exists = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = SOV
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = SOV
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = SOV
+		value = 200
+	}
+
+}

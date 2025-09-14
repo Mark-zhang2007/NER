@@ -1,0 +1,160 @@
+JAP_prepare= {
+	allowed = {
+		tag = JAP
+	}
+	enable = {
+		OR ={
+			ROC={
+				exists = yes
+			}
+			CHA = {
+				exists = yes
+			}
+			PRC ={
+				exists = yes
+			}
+		}
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = CHA
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = CHA
+		value = 200
+	}
+	ai_strategy = {
+		type =invade
+		id = CHA
+		value = 200
+	}
+	ai_strategy = {
+		type =invade
+		id = CHA
+		value = 200
+	}
+	abort = {
+		PRC={
+			has_completed_focus = PRC_set_up_new_CHINA
+		}
+	}
+
+}
+JAP_war={
+	allowed = {
+		tag = JAP
+	}
+	enable = {
+		OR ={
+			CHA={
+				exists = yes
+			}
+			has_war_with = ROC
+			has_war_with = CHA
+			has_war_with = PRC
+		}
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = ROC
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = CHA
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = PRC
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = GXC
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = SIK
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = XSM
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = SHX
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = MON
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = TIB
+		value = 200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = YUN
+		value = 200
+	}
+
+	ai_strategy = {
+		type =alliance
+		id = ROC
+		value = -200
+	}
+	ai_strategy = {
+		type =alliance	
+		id = CHA
+		value = -200
+	}
+	ai_strategy = {
+		type =alliance
+		id = PRC
+		value = -200
+	}
+	ai_strategy = {
+		type =antagonize	
+		id = GXC
+		value = 200
+	}
+	ai_strategy = {
+		type =alliance	
+		id = SIK
+		value = -200
+	}
+	ai_strategy = {
+		type =alliance	
+		id = XSM
+		value = -200
+	}
+	ai_strategy = {
+		type =alliance	
+		id = SHX
+		value = -200
+	}
+	ai_strategy = {
+		type =alliance	
+		id = MON
+		value = -200
+	}
+	ai_strategy = {
+		type =alliance
+		id = TIB
+		value = -200
+	}
+	ai_strategy = {
+		type =alliance
+		id = YUN
+		value = -200
+	}
+}

@@ -1,0 +1,16 @@
+characters = {
+	SOV_Lev_Trotskiy_NER = {#列夫·托洛茨基
+		name = SOV_lev_trotsky_NER
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/SOV_Lev_Trotskiy.png"
+			}
+			army = {
+				large = "gfx/leaders/SOV/SOV_Lev_Trotskiy.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+		}
+	}
+}

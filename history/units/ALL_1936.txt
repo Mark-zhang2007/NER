@@ -1,0 +1,51 @@
+﻿division_template = {
+	name = "国防军"			# Represents three-division infantry corps (generally poorly-equipped militias)
+
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+
+division_template = {
+	name = "战斗者"			# Represents three-division infantry corps (generally poorly-equipped militias)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        anti_tank = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2}
+	}
+}
+
+### OOB ###
+
+#### 生产
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			#creator = TAG
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+		
+	}	
+}

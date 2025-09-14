@@ -1,0 +1,136 @@
+focus_tree = {
+	id = KAZ_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			tag = KAZ
+		}
+	}
+	default = no
+	focus = {
+		id = KAZ_offsite_building
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 15
+		y = 0
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 10 }
+			add_offsite_building = { type = industrial_complex level = 5 }
+		}
+		
+	}
+	focus = {
+		id = KAZ_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 15
+		y = 1
+		prerequisite = {
+			focus = KAZ_offsite_building
+		}
+		completion_reward = {
+			add_ideas = KAZ_economy
+		}
+	}
+	focus = {
+		id = KAZ_industry
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 15
+		y = 2
+		prerequisite = {
+			focus = KAZ_economy
+		}
+		completion_reward = {
+			586 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes 
+			}
+		}
+		}
+	}
+	focus = {
+		id = KAZ_dream
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 15
+		y = 3
+		prerequisite = {
+			focus = KAZ_industry
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KAZ_attack_TMS
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 12
+		y = 4
+		prerequisite = {
+			focus = KAZ_dream
+		}
+		completion_reward = {
+			create_wargoal = { target = TMS type = take_state }
+		}
+	}
+	focus = {
+		id = KAZ_attack_TAJ
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 15
+		y = 4
+		prerequisite = {
+			focus = KAZ_dream
+		}
+		completion_reward = {
+			create_wargoal = { target = TAJ type = take_state }
+		}
+	}
+	focus = {
+		id = KAZ_attack_KYR
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 18
+		y = 4
+		prerequisite = {
+			focus = KAZ_dream
+		}
+		completion_reward = {
+			create_wargoal = { target = KAZ type = take_state }
+		}
+	}
+	focus = {
+		id = KAZ_big_MA
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 15
+		y = 5
+		prerequisite = {
+			focus = KAZ_attack_TAJ
+		}
+		prerequisite = {
+			focus = KAZ_attack_KYR
+		}
+		prerequisite = {
+			focus = KAZ_attack_TMS
+		}
+		completion_reward = {
+			add_state_core = 732
+			add_state_core = 742
+			add_state_core = 405
+			add_state_core = 830
+			add_state_core = 585
+			add_state_core = 823
+			add_state_core = 831
+			add_state_core = 832
+			add_state_core = 584
+		}
+	}
+}

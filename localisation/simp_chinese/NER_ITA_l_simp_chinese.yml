@@ -1,0 +1,84 @@
+﻿l_simp_chinese:
+######顺序为 ###
+##### 国名 ###
+#### 党派名 ###
+ ITA_communism_party: "意大利共产党"
+ ITA_communism_party_long: "意大利共产党"
+ ITA_democratic_party: "意大利共和党"
+ ITA_democratic_party_long: "意大利共和党"
+ ITA_fascism_party: "国家法西斯党"
+ ITA_fascism_party_long: "国家法西斯党"
+ ITA_neutrality_party: "保皇党"
+ ITA_neutrality_party_long: "保皇党"
+# tooltip
+# 决议events
+# 事件events
+# 国策focus
+ ITA_fuxing: "意大利复兴运动"
+ ITA_fxs: "墨索里尼指导思想"
+ ITA_startplace: "法西斯策源地"
+ ITA_dream: "大意大利之梦"
+# 经济线
+ ITA_industry: "亚平宁工业法案"
+ ITA_develop: "国家发展委员会"
+ ITA_economy: "经济复苏"
+ ITA_prepare: "准备下次大战"
+ ITA_4years_plan: "四年计划"
+ ITA_fxsindustry: "军国主义工业"
+ ITA_wuliu: "国家物流公司"
+ ITA_highway: "意大利高速公路"
+ ITA_better_life: "更美好的生活"
+ ITA_better_economy: "经济优化"
+ ITA_war_economy: "战争经济"
+ ITA_rebuild_rome: "重建罗马"
+ ITA_rebuild_milan: "重建米兰"
+ ITA_miracle: "经济辉煌"
+# 政治线
+ ITA_kuozhangplan: "指定扩张计策"
+ ITA_lost_place: "收复失地"
+ ITA_north_back: "收复北境"
+ ITA_attack_swi: "堙灭公社"
+ ITA_reitaly: "重铸荣光"
+ ITA_ambition: "意大利的野心"
+ ITA_africa: "非洲事务所"
+ ITA_baergan: "巴尔干计划"
+ ITA_suogu: "索取阿尔巴尼亚"
+ ITA_north_africa: "索取北非"
+ ITA_with_oto: "与奥斯曼的盟约"
+ ITA_east_africa: "索取东非"
+ ITA_vienna: "维也纳会议"
+ ITA_onebeg: "独占巴尔干"
+ ITA_twobeg: "瓜分巴尔干"
+# SER 764/82 宣称
+# ITA 109/104/103/853/804/105/45 宣称
+# ROM 84/76/80核心 89/91宣称
+ ITA_with_dfn: "意大利-多瑙合作协议"
+ ITA_attack_dfn: "册封斯洛文尼亚大公"
+ ITA_attack_ger: "北上"
+ ITA_eng_africa: "夺取英属非洲"
+ ITA_kill_ger: "血洗米兰会战之耻"
+ ITA_our_sea: "我们的海"
+ ITA_attack_fra: "入侵法兰西"
+ ITA_attack_oto: "还击圣城之辱"
+ ITA_attack_eng: "飞跃英吉利海峡"
+ ITA_attack_spr: "着眼伊比利亚"
+ ITA_dream_of_rome: "罗马幻梦"
+ ITA_Rome_Kingdom: "罗马帝国"
+# 军事线
+ ITA_military: "国家军事委员会"
+ ITA_royal: "意大利皇家军队"
+ ITA_army: "意大利皇家陆军"
+ ITA_navy: "意大利皇家海军"
+ ITA_air_force: "意大利皇家空军"
+ ITA_wolf: "亚平宁之狼"
+ ITA_light_tanks: "意大利轻坦"
+ ITA_whale: "亚平宁之鲸"
+ ITA_ships: "巨轮游荡"
+ ITA_eagle: "亚平宁之鹰"
+ ITA_our_air: "天空即我们的海"
+ ITA_honor: "意大利的荣耀"
+
+
+
+# 民族精神ideas
+

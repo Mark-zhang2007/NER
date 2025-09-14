@@ -1,0 +1,831 @@
+﻿PRC_INF_01 = {
+  name = "步兵单位"  # Infantry Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "infantry"
+  }
+  fallback_name = "新编第%d军"  # Xin %d Juntuán
+  ordered = {
+    1 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    21 = {
+      "第1纵队/120步兵师"  # 1 Lie/120 Bubing Shi
+    }
+    31 = {
+      "第1纵队/129步兵师"  # 1 Lie/129 Bubing Shi
+    }
+    2 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    22 = {
+      "第2纵队/120步兵师"  # 2 Lie/120 Bubing Shi
+    }
+    32 = {
+      "第2纵队/129步兵师"  # 2 Lie/129 Bubing Shi
+    }
+    3 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    23 = {
+      "第3纵队/120步兵师"  # 3 Lie/120 Bubing Shi
+    }
+    33 = {
+      "第3纵队/129步兵师"  # 3 Lie/129 Bubing Shi
+    }
+    4 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    24 = {
+      "第4纵队/120步兵师"  # 4 Lie/120 Bubing Shi
+    }
+    34 = {
+      "第4纵队/129步兵师"  # 4 Lie/129 Bubing Shi
+    }
+    5 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    25 = {
+      "第5纵队/120步兵师"  # 5 Lie/120 Bubing Shi
+    }
+    35 = {
+      "第5纵队/129步兵师"  # 5 Lie/129 Bubing Shi
+    }
+    41 = {
+      "第1列/新编第4军"  # 1 Lie/Xin 4 Juntuán
+    }
+    42 = {
+      "第2纵队/新编第4军"  # 2 Lie/Xin 4 Juntuán
+    }
+    43 = {
+      "第3纵队/新编第4军"  # 3 Lie/Xin 4 Juntuán
+    }
+    6 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    26 = {
+      "第6纵队/120步兵师"  # 6 Lie/120 Bubing Shi
+    }
+    36 = {
+      "第6纵队/129步兵师"  # 6 Lie/129 Bubing Shi
+    }
+    44 = {
+      "第4纵队/新编第4军"  # 4 Lie/Xin 4 Juntuán
+    }
+    45 = {
+      "第5队/新编第4军"  # 5 Lie/Xin 4 Juntuán
+    }
+    7 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    27 = {
+      "第7纵队/120步兵师"  # 7 Lie/120 Bubing Shi
+    }
+    37 = {
+      "第7纵队/129步兵师"  # 7 Lie/129 Bubing Shi
+    }
+    46 = {
+      "第6纵队/新编第4军"  # 6 Lie/Xin 4 Juntuán
+    }
+    47 = {
+      "第7纵队/新编第4军"  # 7 Lie/Xin 4 Juntuán
+    }
+    8 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    28 = {
+      "第8纵队/120步兵师"  # 8 Lie/120 Bubing Shi
+    }
+    38 = {
+      "第8纵队/129步兵师"  # 8 Lie/129 Bubing Shi
+    }
+    48 = {
+      "第8纵队/新编第4军"  # 8 Lie/Xin 4 Juntuán
+    }
+    9 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    29 = {
+      "第9纵队/120步兵师"  # 9 Lie/120 Bubing Shi
+    }
+    39 = {
+      "第9纵队/129步兵师"  # 9 Lie/129 Bubing Shi
+    }
+    49 = {
+      "第9纵队/新编第4军"  # 9 Lie/Xin 4 Juntuán
+    }
+  }
+}
+PRC_CAV_01 = {
+  name = "骑兵部队"  # Cavalry Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "cavalry"
+  }
+  fallback_name = "第%d骑兵师"  # %d Luxian Qibing Jun
+  ordered = {
+    1 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    2 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    3 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    4 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    6 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    5 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    7 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    8 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    9 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    10 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    104 = {
+      "新编第4骑兵师"  # Xin 4 Luxian Qibing Jun
+    }
+    108 = {
+      "新编第8骑兵师"  # Xin 8 Luxian Qibing Jun
+    }
+    106 = {
+      "新编第6骑兵师"  # Xin 6 Luxian Qibing Jun
+    }
+    11 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    12 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    13 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    14 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    15 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    16 = {
+      "第%d骑兵师"  # %d Luxian Qibing Jun
+    }
+    101 = {
+      "新编第1骑兵师"  # Xin 1 Luxian Qibing Jun
+    }
+    102 = {
+      "新编第2骑兵师"  # Xin 2 Luxian Qibing Jun
+    }
+    103 = {
+      "新编第3骑兵师"  # Xin 3 Luxian Qibing Jun
+    }
+    105 = {
+      "新编第5骑兵师"  # Xin 5 Luxian Qibing Jun
+    }
+    107 = {
+      "新编第7骑兵师"  # Xin 7 Luxian Qibing Jun
+    }
+  }
+}
+PRC_MOT_01 = {
+  name = "摩托化部队"  # Motorized Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "motorized"
+  }
+  link_numbering_with = {
+    PRC_INF_01
+  }
+  fallback_name = "新编第%d军"  # Xin %d Juntuán
+  ordered = {
+    1 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    21 = {
+      "第1纵队/120步兵师"  # 1 Lie/120 Bubing Shi
+    }
+    31 = {
+      "第1纵队/129步兵师"  # 1 Lie/129 Bubing Shi
+    }
+    2 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    22 = {
+      "第2纵队/120步兵师"  # 2 Lie/120 Bubing Shi
+    }
+    32 = {
+      "第2纵队/129步兵师"  # 2 Lie/129 Bubing Shi
+    }
+    3 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    23 = {
+      "第3纵队/120步兵师"  # 3 Lie/120 Bubing Shi
+    }
+    33 = {
+      "第3纵队/129步兵师"  # 3 Lie/129 Bubing Shi
+    }
+    4 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    24 = {
+      "第4纵队/120步兵师"  # 4 Lie/120 Bubing Shi
+    }
+    34 = {
+      "第4纵队/129步兵师"  # 4 Lie/129 Bubing Shi
+    }
+    5 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    25 = {
+      "第5纵队/120步兵师"  # 5 Lie/120 Bubing Shi
+    }
+    35 = {
+      "第5纵队/129步兵师"  # 5 Lie/129 Bubing Shi
+    }
+    41 = {
+      "第1纵队/新编第4军"  # 1 Lie/Xin 4 Juntuán
+    }
+    42 = {
+      "第2纵队/新编第4军"  # 2 Lie/Xin 4 Juntuán
+    }
+    43 = {
+      "第3纵队/新编第4军"  # 3 Lie/Xin 4 Juntuán
+    }
+    6 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    26 = {
+      "第6纵队/120步兵师"  # 6 Lie/120 Bubing Shi
+    }
+    36 = {
+      "第6纵队/129步兵师"  # 6 Lie/129 Bubing Shi
+    }
+    44 = {
+      "第4纵队/新编第4军"  # 4 Lie/Xin 4 Juntuán
+    }
+    45 = {
+      "第5纵队/新编第4军"  # 5 Lie/Xin 4 Juntuán
+    }
+    7 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    27 = {
+      "第7纵队/120步兵师"  # 7 Lie/120 Bubing Shi
+    }
+    37 = {
+      "第5纵队/129步兵师"  # 7 Lie/129 Bubing Shi
+    }
+    46 = {
+      "第6纵队/新编第4军"  # 6 Lie/Xin 4 Juntuán
+    }
+    47 = {
+      "第7纵队/新编第4军"  # 7 Lie/Xin 4 Juntuán
+    }
+    8 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    28 = {
+      "第8纵队/120步兵师"  # 8 Lie/120 Bubing Shi
+    }
+    38 = {
+      "第8纵队/129步兵师"  # 8 Lie/129 Bubing Shi
+    }
+    48 = {
+      "第8纵队/新编第4步兵师"  # 8 Lie/Xin 4 Juntuán
+    }
+    9 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    29 = {
+      "第9纵队/120步兵师"  # 9 Lie/120 Bubing Shi
+    }
+    39 = {
+      "第9纵队/129步兵师"  # 9 Lie/129 Bubing Shi
+    }
+    49 = {
+      "第9纵队/新编第4军"  # 9 Lie/Xin 4 Juntuán
+    }
+  }
+}
+PRC_MEC_01 = {
+  name = "机械化部队"  # Mechanized Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "mechanized"
+  }
+  link_numbering_with = {
+    PRC_INF_01
+  }
+  fallback_name = "新编第%d军"  # Xin %d Juntuán
+  ordered = {
+    1 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    21 = {
+      "第1纵队/120步兵师"  # 1 Lie/120 Bubing Shi
+    }
+    31 = {
+      "第1纵队/129步兵师"  # 1 Lie/129 Bubing Shi
+    }
+    2 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    22 = {
+      "第2纵队/120步兵师"  # 2 Lie/120 Bubing Shi
+    }
+    32 = {
+      "第2纵队/129步兵师"  # 2 Lie/129 Bubing Shi
+    }
+    3 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    23 = {
+      "第3纵队/120步兵师"  # 3 Lie/120 Bubing Shi
+    }
+    33 = {
+      "第3纵队/129步兵师"  # 3 Lie/129 Bubing Shi
+    }
+    4 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    24 = {
+      "第4纵队/120步兵师"  # 4 Lie/120 Bubing Shi
+    }
+    34 = {
+      "第4纵队/115步兵师"  # 4 Lie/129 Bubing Shi
+    }
+    5 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    25 = {
+      "第5纵队/120步兵师"  # 5 Lie/120 Bubing Shi
+    }
+    35 = {
+      "第5纵队/129步兵师"  # 5 Lie/129 Bubing Shi
+    }
+    41 = {
+      "第1纵队/新编第4军"  # 1 Lie/Xin 4 Juntuán
+    }
+    42 = {
+      "第2纵队/新编第4军"  # 2 Lie/Xin 4 Juntuán
+    }
+    43 = {
+      "第3纵队/新编第4军"  # 3 Lie/Xin 4 Juntuán
+    }
+    6 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    26 = {
+      "第6纵队/120步兵师"  # 6 Lie/120 Bubing Shi
+    }
+    36 = {
+      "第6纵队/129步兵师"  # 6 Lie/129 Bubing Shi
+    }
+    44 = {
+      "第4纵队/新编第4军"  # 4 Lie/Xin 4 Juntuán
+    }
+    45 = {
+      "第5纵队/新编第4军"  # 5 Lie/Xin 4 Juntuán
+    }
+    7 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    27 = {
+      "第7纵队/120步兵师"  # 7 Lie/120 Bubing Shi
+    }
+    37 = {
+      "第7纵队/129步兵师"  # 7 Lie/129 Bubing Shi
+    }
+    46 = {
+      "第6纵队/新编第4军"  # 6 Lie/Xin 4 Juntuán
+    }
+    47 = {
+      "第7纵队/新编第4军"  # 7 Lie/Xin 4 Juntuán
+    }
+    8 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    28 = {
+      "第8纵队/120步兵师"  # 8 Lie/120 Bubing Shi
+    }
+    38 = {
+      "第8纵队/129步兵师"  # 8 Lie/129 Bubing Shi
+    }
+    48 = {
+      "第8纵队/新编第4军"  # 8 Lie/Xin 4 Juntuán
+    }
+    9 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    29 = {
+      "第9纵队120步兵师"  # 9 Lie/120 Bubing Shi
+    }
+    39 = {
+      "第9纵队/129步兵师"  # 9 Lie/129 Bubing Shi
+    }
+    49 = {
+      "第9纵队/新编第4军"  # 9 Lie/Xin 4 Juntuán
+    }
+  }
+}
+PRC_MNT_01 = {
+  name = "山地部队"  # Mountain Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "mountaineers"
+  }
+  link_numbering_with = {
+    PRC_INF_01
+  }
+  fallback_name = "新编第%d军"  # Xin %d Juntuán
+  ordered = {
+    1 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    21 = {
+      "第1纵队/120步兵师"  # 1 Lie/120 Bubing Shi
+    }
+    31 = {
+      "第1纵队/129步兵师"  # 1 Lie/129 Bubing Shi
+    }
+    2 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    22 = {
+      "第2纵队/120步兵师"  # 2 Lie/120 Bubing Shi
+    }
+    32 = {
+      "第2纵队/129步兵师"  # 2 Lie/129 Bubing Shi
+    }
+    3 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    23 = {
+      "第3纵队/120步兵师"  # 3 Lie/120 Bubing Shi
+    }
+    33 = {
+      "第3纵队/129步兵师"  # 3 Lie/129 Bubing Shi
+    }
+    4 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    24 = {
+      "第4纵队/120步兵师"  # 4 Lie/120 Bubing Shi
+    }
+    34 = {
+      "第4纵队/129步兵师"  # 4 Lie/129 Bubing Shi
+    }
+    5 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    25 = {
+      "第5纵队/120步兵师"  # 5 Lie/120 Bubing Shi
+    }
+    35 = {
+      "第5纵队/129步兵师"  # 5 Lie/129 Bubing Shi
+    }
+    41 = {
+      "第1纵队/新编第4军"  # 1 Lie/Xin 4 Juntuán
+    }
+    42 = {
+      "第2纵队/新编第4军"  # 2 Lie/Xin 4 Juntuán
+    }
+    43 = {
+      "第3纵队/新编第4军"  # 3 Lie/Xin 4 Juntuán
+    }
+    6 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    26 = {
+      "第6纵队/120步兵师"  # 6 Lie/120 Bubing Shi
+    }
+    36 = {
+      "第6纵队/129步兵师"  # 6 Lie/129 Bubing Shi
+    }
+    44 = {
+      "第4纵队/新编第4军"  # 4 Lie/Xin 4 Juntuán
+    }
+    45 = {
+      "第5纵队/新编第4军"  # 5 Lie/Xin 4 Juntuán
+    }
+    7 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    27 = {
+      "第7纵队/120步兵师"  # 7 Lie/120 Bubing Shi
+    }
+    37 = {
+      "第7纵队/129步兵师"  # 7 Lie/129 Bubing Shi
+    }
+    46 = {
+      "第6纵队/新编第4军"  # 6 Lie/Xin 4 Juntuán
+    }
+    47 = {
+      "第7纵队/新编第4军"  # 7 Lie/Xin 4 Juntuán
+    }
+    8 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    28 = {
+      "第8纵队/120步兵师"  # 8 Lie/120 Bubing Shi
+    }
+    38 = {
+      "第8纵队/129步兵师"  # 8 Lie/129 Bubing Shi
+    }
+    48 = {
+      "第8纵队/新编第4军"  # 8 Lie/Xin 4 Juntuán
+    }
+    9 = {
+      "第%d纵队/115步兵师"  # %d Lie/115 Bubing Shi
+    }
+    29 = {
+      "第9纵队/120步兵师"  # 9 Lie/120 Bubing Shi
+    }
+    39 = {
+      "第9纵队/129步兵师"  # 9 Lie/129 Bubing Shi
+    }
+    49 = {
+      "第9纵队/新编第4军"  # 9 Lie/Xin 4 Juntuán
+    }
+  }
+}
+PRC_GAR_01 = {
+  name = "守备部队"  # Garrison Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "infantry"
+  }
+  fallback_name = "第%d陕西军"  # %d Shensi Juntuán
+  ordered = {
+    1 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    2 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    3 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    4 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    5 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    101 = {
+      "第1延安守备军"  # 1 Yan'an Jingbei
+    }
+    102 = {
+      "第2延安守备军"  # 2 Yan'an Jingbei
+    }
+    103 = {
+      "第3延安守备军"  # 3 Yan'an Jingbei
+    }
+    104 = {
+      "第4延安守备军"  # 4 Yan'an Jingbei
+    }
+    105 = {
+      "第5延安守备军"  # 5 Yan'an Jingbei
+    }
+    6 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    7 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    8 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    9 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    10 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    11 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    12 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    106 = {
+      "第6延安守备军"  # 6 Yan'an Jingbei
+    }
+    107 = {
+      "第7延安守备军"  # 7 Yan'an Jingbei
+    }
+    108 = {
+      "第8延安守备军"  # 8 Yan'an Jingbei
+    }
+    109 = {
+      "第9延安守备军"  # 9 Yan'an Jingbei
+    }
+    110 = {
+      "第10延安守备军"  # 10 Yan'an Jingbei
+    }
+    13 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    14 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+    15 = {
+      "第%d陕西军"  # %d Shensi Juntuán
+    }
+  }
+}
+PRC_ARM_01 = {
+  name = "装甲部队"  # Armored Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "light_armor"
+    "medium_armor"
+    "heavy_armor"
+    "modern_armor"
+  }
+  fallback_name = "第%d装甲师"  # %d Zhuangjia Shi
+  ordered = {
+    1 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    2 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    3 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    4 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    5 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    6 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    7 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    8 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    9 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    10 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    11 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    12 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    13 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    14 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+    15 = {
+      "第%d装甲师"  # %d Zhuangjia Shi
+    }
+  }
+}
+PRC_PAR_01 = {
+  name = "伞兵部队"  # Paratrooper Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "paratrooper"
+  }
+  fallback_name = "第%d伞兵师"  # %d Sanbing Shi
+  ordered = {
+    1 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    2 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    3 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    4 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    5 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    6 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    7 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    8 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    9 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+    10 = {
+      "第%d伞兵师"  # %d Sanbing Shi
+    }
+  }
+}
+PRC_MAR_01 = {
+  name = "陆战师"  # Marine Unit
+  for_countries = {
+    PRC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "marine"
+  }
+  fallback_name = "第%d陆战师"  # %d Luzhan Dui Shi
+  ordered = {
+    1 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    2 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    3 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    4 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    5 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    6 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    7 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    8 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    9 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    10 = {
+      "第%d陆战师"  # %d Luzhan Dui Shi
+    }
+  }
+}

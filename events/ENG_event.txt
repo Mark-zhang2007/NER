@@ -1,0 +1,35 @@
+﻿add_namespace = ENG
+
+country_event = {#意大利要非洲殖民地
+  id = ENG.1
+  title = ENG.1.t
+  desc = ENG.1.d
+  is_triggered_only = yes
+   
+
+
+  fire_only_once = yes
+  option = {
+    ai_chance = {
+			base   = 100
+    }
+    name = ENG.1.a
+    ITA={
+      annex_country = {
+        target = BAF
+      }
+    }
+  }
+  option = {
+    ITA ={
+      create_wargoal = { target = ENG type = puppet_wargoal_focus}
+    }
+    ai_chance = {
+			base   = 0
+    }
+    name = ENG.1.b
+    
+  }
+
+}
+

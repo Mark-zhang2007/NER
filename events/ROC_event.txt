@@ -1,0 +1,70 @@
+add_namespace = ROC_earlygame #早期
+country_event = {#广州之新生
+	id = ROC_earlygame.1
+	title = ROC_earlygame.1.t
+	desc = ROC_earlygame.1.d
+	is_triggered_only = yes
+	option = {#亲爱精诚！
+		name = ROC_earlygame.1.a
+	}
+}
+
+country_event = {#中国国民党第二次全国代表大会
+	id = ROC_earlygame.2
+	title = ROC_earlygame.2.t
+	desc = ROC_earlygame.2.d
+	is_triggered_only = yes
+	option = {#完成革命使命！
+		name = ROC_earlygame.2.a
+	}
+}
+
+country_event = {#地方实力派抵制约法
+	id = ROC_earlygame.3
+	title = ROC_earlygame.3.t
+	desc = ROC_earlygame.3.d
+	is_triggered_only = yes
+	option = {#至少我们还能团结……
+		name = ROC_earlygame.3.a
+	}
+}
+
+country_event = {#打倒列强？
+	id = ROC_earlygame.4
+	title = ROC_earlygame.4.t
+	desc = ROC_earlygame.4.d
+	is_triggered_only = yes
+	option = {#也许这句话是太激烈了
+		name = ROC_earlygame.4.a
+	}
+	option = {#段祺瑞他都反帝，你是想干什么？！
+		name = ROC_earlygame.4.b
+	}
+}
+
+
+country_event = {#第二次国共合作？
+	id = ROC_earlygame.5
+	title = ROC_earlygame.5.t
+	desc = ROC_earlygame.5.d
+	is_triggered_only = yes
+	option = {#北伐才是第一位的
+		name = ROC_earlygame.5.a
+	}
+	option = {#我们不相信共产党人！
+		name = ROC_earlygame.5.b
+	}
+}
+
+country_event = {#国民党希望一同对抗段祺瑞
+	id = ROC_earlygame.6
+	title = ROC_earlygame.6.t
+	desc = ROC_earlygame.6.d
+	is_triggered_only = yes
+	option = {#那就合作愉快了，老同学们
+		name = ROC_earlygame.6.a
+	}
+	option = {#他们不也是个压迫者
+		name = ROC_earlygame.6.b
+	}
+}

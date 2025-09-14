@@ -1,0 +1,279 @@
+#决议分类txt文件位置common/decisions/categories/xxx_decision_category.txt
+SOV_five_years_mission_categores = {
+
+
+	SOV_35_finish = {#35计划限时
+		days_mission_timeout =730
+		fire_only_once = yes
+		allowed = {
+			tag =SOV
+		}
+
+		available = {
+			industrial_complex > 40
+			arms_factory > 80
+		}
+		activation = {                
+			has_completed_focus = SOV_start_35
+		}    
+		
+		selectable_mission = no
+		# 如果设置，会将任务转换为玩家必须选择按钮的任务。
+
+		is_good = no                        
+		
+		
+
+		timeout_effect = {                      
+			add_political_power = -100
+			add_stability = -0.1
+			swap_ideas = {
+				remove_idea = SOV_five_years_plan1
+				add_idea = SOV_five_years_plan2_fails
+			}
+			
+		}       
+		complete_effect = {   
+			swap_ideas = {
+				remove_idea = SOV_five_years_plan1
+				add_idea =SOV_five_years_plan2_succeed    
+			}   
+			   
+			       
+		}
+		cancel_trigger = {
+			
+			
+			
+		}
+		cancel_effect = {
+			 
+		}
+	}
+	SOV_45_finish = {#45计划限时
+		days_mission_timeout =730
+		fire_only_once = yes
+		allowed = {
+			tag =SOV
+		}
+
+		available = {
+			industrial_complex > 100
+			arms_factory > 150
+		}
+		activation = {                
+			has_completed_focus = SOV_start_45
+		}    
+		
+		selectable_mission = no
+		# 如果设置，会将任务转换为玩家必须选择按钮的任务。
+
+		is_good = no                        
+		
+		
+
+		timeout_effect = {                      
+			add_political_power = -100
+			add_stability = -0.1
+			swap_ideas = {
+				remove_idea = SOV_five_years_plan1
+				add_idea = SOV_five_years_plan2_fails
+			}
+			
+		}       
+		complete_effect = {   
+			swap_ideas = {
+				remove_idea = SOV_five_years_plan1
+				add_idea =SOV_five_years_plan2_succeed    
+			}   
+			   
+			       
+		}
+		cancel_trigger = {
+			
+			
+			
+		}
+		cancel_effect = {
+			 
+		}
+	}
+	SOV_more_army_factory ={
+		available = {
+			has_country_flag = start_five_years_plan
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		ai_will_do = {
+			base = 1000
+		}
+		cost = 100
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	SOV_more_civil_factory ={
+		available = {
+			has_country_flag = start_five_years_plan
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		ai_will_do = {
+			base = 1000
+		}
+		cost = 100
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	SOV_dig_resouce ={
+		available = {
+			has_country_flag = start_five_years_plan
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		fire_only_once = no
+		days_re_enable = 10
+
+		cost = 75
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			random_list = { 
+				20 = {
+					random_owned_controlled_state = {
+						add_resource = {
+						type = steel 
+						amount = 10
+
+						}
+					} 
+				}
+				20 = {
+					random_owned_controlled_state = {
+						add_resource = {
+						type = oil 
+						amount = 20
+
+						}
+					} 
+				}
+				20 = {
+					random_owned_controlled_state = {
+						add_resource = {
+						type = steel 
+						amount = 10
+
+						}
+					} 
+				}
+				10 = {
+					random_owned_controlled_state = {
+						add_resource = {
+						type = tungsten 
+						amount = 10
+
+						}
+					} 
+				}
+				10 = {
+					random_owned_controlled_state = {
+						add_resource = {
+						type = chromium
+						amount = 10
+
+						}
+					} 
+				}
+				10 = {
+					random_owned_controlled_state = {
+						add_resource = {
+						type = aluminium 
+						amount = 10
+
+						}
+					} 
+				}
+				10 = {
+					random_owned_controlled_state = {
+						add_resource = {
+						type = rubber
+						amount = 10
+
+						}
+					} 
+				}
+			}
+		}
+
+	}
+	SOV_plan_finish = {#苏维埃之梦计划限时
+		days_mission_timeout =360
+
+		allowed = {
+			tag =SOV
+		}
+
+		available = {
+			industrial_complex > 200
+			arms_factory > 400
+		}
+		activation = {                
+			has_completed_focus = SOV_soviet
+		}    
+		
+		selectable_mission = no
+		# 如果设置，会将任务转换为玩家必须选择按钮的任务。
+
+		is_good = no                        
+		
+		
+
+		timeout_effect = {                      
+			add_political_power = -100
+			add_stability = -0.2
+			add_ideas = SOV_plan_broken
+			
+		}       
+		complete_effect = {   
+			add_ideas = SOV_plan_come_true
+			   
+			       
+		}
+		cancel_trigger = {
+			
+			
+			
+		}
+		cancel_effect = {
+			 
+		}
+	}
+}

@@ -1,0 +1,855 @@
+
+pussy_mode_lol = {
+	allowed = {
+		is_in_faction_with = ENG
+	}
+	
+	enable = {
+		has_country_flag = this_guy_is_a_pussy
+	}
+
+	abort = {
+		FRA = { has_capitulated = yes }
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = BEL
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = HOL
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = POL
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = FRA
+		value = 100
+	}
+}
+
+pussy_mode_extended = {
+	allowed = {
+		OR = {
+			original_tag = BEL
+			original_tag = HOL
+		}
+	}
+	
+	enable = {
+		has_country_flag = this_guy_is_a_pussy
+	}
+
+	abort = {
+		has_war = yes
+	}
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = -500
+	}
+}
+
+belgum_protect_netherlands_against_germany = {
+	allowed = { original_tag = BEL }
+
+	enable = {
+		GER = { has_completed_focus = GER_end_of_czechoslovakia }
+		GER = { NOT = { has_war_with = HOL } }
+		country_exists = HOL
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = HOL }
+			has_war_with = HOL
+		}
+	}
+
+	ai_strategy = {
+		type = protect
+		id = "HOL"
+		value = 200
+	}
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = HOL
+		target = guarantee
+		value = 200
+	}
+}
+
+usa_early_invasions_are_good = {
+	allowed = {
+		is_in_faction_with = USA
+		tag = USA
+	}
+	enable = {
+		always = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "JAP"
+		value = 500
+	}
+}
+
+USA_no_damn_shit_in_africa = {
+	allowed = { original_tag = USA }
+	enable = {
+		NOT = {
+			OR = {
+				has_civil_war = yes
+				has_war_with = CAN
+				has_war_with = MEX
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+}
+
+ITA_lets_not_die_buffer = {
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		is_historical_focus_on = yes
+		date > 1942.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		states = {
+			156
+			117
+			849
+			157
+			2
+			162
+			161
+			### Oh no we forgot sicily! What could possibly go wrong.
+		}
+		ratio = 0.70
+		area = italy
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+	}
+}
+
+ITA_do_not_hold_africa = {
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		date < 1941.1.1
+	}
+	abort = {
+		any_owned_state = { is_core_of = ITA NOT = { is_controlled_by = ITA } }
+		date > 1941.1.1
+	}
+
+	# Tripoli
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 448
+		value = -20
+	}
+
+	# Benghasi
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 450
+		value = -20
+	}
+
+	# Alexandria
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 447
+		value = -20
+	}
+}
+
+no_sea_lion = {
+	allowed = {
+		tag = ENG
+	}
+	enable = {
+		BEL = {
+			has_capitulated = yes
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		order_id = 2
+
+		# south england
+		states = {
+			125
+			126
+			127
+			128
+			129
+			338
+			123
+			122
+		}
+
+		ratio = 0.70
+
+		area = europe
+
+		subtract_invasions_from_need = yes
+	}
+}
+
+USA_tanks_lol = {
+	allowed = {
+		original_tag = USA 
+	}
+	enable = {
+		NOT = {
+			OR = {
+				has_civil_war = yes
+				has_war_with = CAN
+				has_war_with = MEX
+			}
+		}
+		OR = {
+			has_tech = basic_medium_tank
+			has_tech = basic_medium_tank_chassis
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 150
+	}
+	
+}
+
+no_lag_pookie = {
+	enable = {
+		has_war = no
+		is_major = no
+		NOT = {
+			is_in_faction_with = SOV
+			is_in_faction_with = JAP
+			is_in_faction_with = GER
+			is_in_faction_with = USA
+			is_in_faction_with = ENG
+			original_tag = POL
+			original_tag = BEL
+			original_tag = HOL
+			original_tag = CHI
+			original_tag = FIN
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = -500
+	}
+}
+
+
+get_that_xp = {
+	enable = {
+		always = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		value = 200
+	}
+
+}
+
+
+allied_invasions_on_europe = {
+	allowed = {
+		is_in_faction_with = ENG
+	}
+
+	enable = {
+		date > 1943.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "GER"
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = "ITA"
+		value = -200
+	}
+}
+
+allied_invasions_on_europe_pussy = {
+	allowed = {
+		is_in_faction_with = ENG
+	}
+
+	enable = {
+		date < 1944.1.1
+		has_global_flag = this_guy_is_a_pussy
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "GER"
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = "ITA"
+		value = -200
+	}
+}
+
+
+ITA_do_not_commit_to_ethiopian_theatre = {
+	allowed = {
+		original_tag = ITA
+		original_tag = GER
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = -2000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = suez
+		value = -2000
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = horn_of_africa
+		value = -2000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = horn_of_africa
+		value = -2000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = belgian_congo
+		value = -2000
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		area = belgian_congo
+		value = -2000
+	}
+
+
+
+
+
+}
+
+lets_not_get_stuck_in_china = {
+	allowed = {
+		original_tag = JAP
+	}
+
+	enable = {
+		has_war_with = CHI
+	}
+
+	abort = {
+		CHI = { has_capitulated = yes }
+		has_war_with = USA
+	}
+    ai_strategy = {
+        type = role_ratio
+        id = armor
+        value = -150
+    }
+	ai_strategy = {
+        type = role_ratio
+        id = armor_role
+        value = -150
+    }
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = -100
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = armor
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+	
+	ai_strategy = {
+	type = equipment_production_min_factories
+	id = fighter
+	value = -150  # The AI will put at least 6 factories on producing fighter planes
+	}
+	
+	ai_strategy = {
+	type = equipment_production_factor
+	id = fighter
+	value = -150  # The AI will put at least 6 factories on producing fighter planes
+	}
+}
+
+the_show_must_go_on_sadly = {
+	allowed = {
+		is_in_faction_with = ENG
+	}
+
+	enable = {
+		has_war_with = GER
+		date > 1941.1.1
+		BEL = { has_capitulated = no }
+		is_historical_focus_on = yes
+	}
+
+	abort = {
+		BEL = { has_capitulated = yes }
+	}
+	
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = BEL
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = HOL
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = POL
+		value = 100
+	}
+}
+
+AXIS_intervention_smily_face = {
+	allowed = {
+		has_government = fascism
+	}
+	
+	enable = {
+		always = yes
+	}
+
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SAF
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ITA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = JAP
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MEN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MAN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = VEN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ELS
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = DOM
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = GER
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = PRU
+		value = 200
+	}
+}
+
+ALLIED_intervention_smily_face = {
+	allowed = {
+		has_government = democratic
+	}
+	
+	enable = {
+		always = yes
+	}
+
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ENG
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = D01
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ROM
+		value = 200
+	}
+	###ai_strategy = {
+		###type = send_volunteers_desire
+		###id = ETH
+		###value = 200
+	###}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BEL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HOL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = DEN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = POL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = USA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CZE
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CAN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FIN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = PER
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = RAJ
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AST
+		value = 200
+	}
+}
+
+COMMIE_intervention_smily_face = {
+	allowed = {
+		has_government = communism
+	}
+	
+	enable = {
+		always = yes
+	}
+
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ENG
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = D01
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ROM
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ETH
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BEL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HOL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = DEN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = POL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = USA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CZE
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CAN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FIN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = PER
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = RAJ
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AST
+		value = 200
+	}
+}
+
+NEUTRAL_intervention_smily_face = {
+	allowed = {
+		has_government = neutrality
+	}
+	
+	enable = {
+		always = yes
+	}
+
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ENG
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = D01
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ROM
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ETH
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BEL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HOL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = DEN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = POL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = USA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CZE
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CAN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FIN
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = PER
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = RAJ
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AST
+		value = 200
+	}
+}
+
+
+defend_your_home_please = {
+	enable = {
+		surrender_progress > 0.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = spare_unit_factor
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+}
+
+dont_waste_troops_please = {
+	enable = {
+		num_of_controlled_states > 70
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+
+}
+

@@ -1,0 +1,656 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = china_communist_focus
+	
+	country = {
+		factor = 0
+		#modifier = {
+		#	add = 10
+		#	tag = PRC
+		#}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1500 }
+
+#	focus = {
+#		id = PRC_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {#毛泽东思想
+		id = PRC_focus_maoism
+		icon = GFX_focus_prc_maoism
+		cost = 2
+		x = 1
+		y = 1
+		completion_reward = {
+
+		 }
+	}
+
+	focus = {#土改
+		id = PRC_focus_land_reform
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 5
+        relative_position_id = PRC_focus_maoism
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = PRC_focus_maoism
+		}
+		completion_reward = { 
+
+		}
+	}
+
+	focus = {#人民公社
+		id = PRC_focus_peoples_commune
+		icon = GFX_focus_generic_soviet_politics
+		cost = 5
+		relative_position_id = PRC_focus_land_reform
+		prerequisite = {
+			focus = PRC_focus_land_reform
+		}
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#上山下乡
+		id = PRC_focus_up_mountain_down_villager
+		relative_position_id = PRC_focus_peoples_commune
+		icon = GFX_focus_generic_farmland
+		cost = 5
+		prerequisite = {
+			focus = PRC_focus_land_reform
+		}
+		x = 3
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#大锅饭
+		id = PRC_focus_big_guo_rice
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = PRC_focus_peoples_commune
+		prerequisite = {
+			focus = PRC_focus_peoples_commune
+		}
+		mutually_exclusive = {
+			focus = PRC_focus_financially_autonomous
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#自负盈亏
+		id = PRC_focus_financially_autonomous
+		icon = GFX_focus_generic_monetary_union
+		relative_position_id = PRC_focus_big_guo_rice
+		prerequisite = {
+			focus = PRC_focus_peoples_commune
+		}
+		mutually_exclusive = {
+		focus = PRC_focus_big_guo_rice
+		}
+		cost = 5
+		x = 2
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#大跃进
+		id = PRC_focus_Great_Leap_Forwar
+		icon = GFX_goal_generic_soviet_construction
+		relative_position_id = PRC_focus_peoples_commune
+		prerequisite = {
+			focus = PRC_focus_financially_autonomous
+			focus = PRC_focus_big_guo_rice
+		}
+
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = { }
+	}
+
+	focus = {#优化计划经济
+		id = PRC_focus_improved_planne_economy
+		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
+		relative_position_id = PRC_focus_up_mountain_down_villager
+		prerequisite = {
+			focus = PRC_focus_up_mountain_down_villager
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+
+	focus = {#文革
+		id = PRC_focus_CR
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 5
+		prerequisite = {
+			focus = PRC_focus_improved_planne_economy
+		}
+		prerequisite = {
+			focus = PRC_focus_improved_center
+		}
+		relative_position_id = PRC_focus_improved_planne_economy
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#规范行政
+		id = PRC_focus_Administrative_improve
+		icon = GFX_focus_generic_improve_the_administration
+		relative_position_id = PRC_focus_maoism
+		prerequisite = {
+			focus = PRC_focus_maoism
+		}
+		cost = 5
+		x = 4
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#大政府
+		id = PRC_focus_large_gov
+		icon = GFX_focus_generic_treaty
+		relative_position_id = PRC_focus_Administrative_improve
+		prerequisite = {
+			focus = PRC_focus_Administrative_improve
+		}
+		mutually_exclusive = {
+			focus = PRC_focus_small_gov
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+		focus = {#小政府
+		id = PRC_focus_small_gov
+		icon = GFX_focus_generic_treaty
+		relative_position_id = PRC_focus_Administrative_improve
+		prerequisite = {
+			focus = PRC_focus_Administrative_improve
+		}
+		mutually_exclusive = {
+			focus = PRC_focus_large_gov
+		}
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#加强中央领导
+		id = PRC_focus_improved_center
+		icon = GFX_focus_generic_treaty
+		relative_position_id = PRC_focus_large_gov
+		prerequisite = {
+			focus = PRC_focus_large_gov
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#扩大党员规模
+		id = PRC_focus_Expansion_of_party_membership
+		icon = GFX_focus_generic_treaty
+		relative_position_id = PRC_focus_CR
+		prerequisite = {
+			focus = PRC_focus_improved_center
+		}
+		cost = 5
+		x = 2
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#发动群众
+		id = PRC_focus_mobilize_the_masses
+		icon = GFX_focus_generic_treaty
+		relative_position_id = PRC_focus_small_gov
+		prerequisite = {
+			focus = PRC_focus_small_gov
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#强调政协作用
+		id = PRC_focus_intensify_CPPCC
+		icon = GFX_focus_generic_treaty
+		relative_position_id = PRC_focus_mobilize_the_masses
+		prerequisite = {
+			focus = PRC_focus_mobilize_the_masses
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#百花齐放
+		id = PRC_focus_a_hundred_flowers_bloom
+		icon = GFX_focus_generic_treaty
+		relative_position_id = PRC_focus_intensify_CPPCC
+		prerequisite = {
+			focus = PRC_focus_intensify_CPPCC
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#科技兴国
+		id = PRC_focus_research_build_country
+		icon = GFX_focus_research
+		relative_position_id = PRC_focus_Administrative_improve
+		prerequisite = {
+			focus = PRC_focus_maoism
+		}
+		cost = 5
+		x = 4
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#九年义务教育
+		id = PRC_focus_compulsory_education
+		icon = GFX_focus_NOR_moscows_education_centers
+		relative_position_id = PRC_focus_research_build_country
+		prerequisite = {
+			focus = PRC_focus_research_build_country
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#改革高考
+		id = PRC_focus_reformprogress_gaokao
+		icon = GFX_focus_generic_treaty
+		relative_position_id = PRC_focus_compulsory_education
+		prerequisite = {
+			focus = PRC_focus_compulsory_education
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#投资公办大学
+		id = PRC_focus_Investing_public_universities
+		icon = GFX_focus_generic_university_2
+		relative_position_id = PRC_focus_research_build_country
+		prerequisite = {
+			focus = PRC_focus_research_build_country
+		}
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#中国科学院
+		id = PRC_focus_CAS
+		icon = GFX_focus_research2
+		relative_position_id = PRC_focus_Investing_public_universities
+		prerequisite = {
+			focus = PRC_focus_Investing_public_universities
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#把落后的帽子甩到太平洋对面去！
+		id = PRC_focus_Not_lagging_behind
+		icon = GFX_focus_generic_spur_communist_revolutions
+		relative_position_id = PRC_focus_CAS
+		prerequisite = {
+			focus = PRC_focus_CAS
+		}
+		prerequisite = {
+			focus = PRC_focus_reformprogress_gaokao
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#输出革命
+		id = PRC_focus_output_revolution
+		icon = GFX_focus_focus_fra_revolution_utmost
+		relative_position_id = PRC_focus_land_reform
+		prerequisite = {
+			focus = PRC_focus_maoism
+		}
+		cost = 5
+		x = -4
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#东南形式
+		id = PRC_focus_southeastern_revo
+		icon = GFX_focus_usa_focus_on_asia
+		relative_position_id = PRC_focus_output_revolution
+		prerequisite = {
+			focus = PRC_focus_output_revolution
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#解放印度
+		id = PRC_focus_Liberation_india
+		icon = GFX_focus_generic_attack_india
+		relative_position_id = PRC_focus_southeastern_revo
+		prerequisite = {
+			focus = PRC_focus_southeastern_revo
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#赤化欧洲
+		id = PRC_focus_red_all_europa
+		icon = GFX_focus_usa_focus_on_europe
+		relative_position_id = PRC_focus_Liberation_india
+		prerequisite = {
+			focus = PRC_focus_Liberation_india
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#解放非洲
+		id = PRC_focus_Liberation_africa
+		icon = GFX_focus_ETH_african_union
+		relative_position_id = PRC_focus_red_all_europa
+		prerequisite = {
+			focus = PRC_focus_Liberation_india
+		}
+		cost = 5
+		x = 2
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#彼岸之敌
+		id = PRC_focus_Enemy_across_the_sea
+		icon = GFX_focus_generic_attack_usa
+		relative_position_id = PRC_focus_Liberation_india
+		prerequisite = {
+			focus = PRC_focus_red_all_europa
+		}
+				prerequisite = {
+			focus = PRC_focus_Liberation_africa
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = { }
+	}
+
+	focus = {#开始第一个五年计划
+		id = PRC_focus_first_five_year_plan
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		relative_position_id = PRC_focus_output_revolution
+		prerequisite = {
+			focus = PRC_focus_maoism
+		}
+		cost = 5
+		x = -4
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#修复基建
+		id = PRC_focus_repair_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = PRC_focus_first_five_year_plan
+		prerequisite = {
+			focus = PRC_focus_first_five_year_plan
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#修建青藏公路
+		id = PRC_focus_Qinghai_tibet_road
+		icon = GFX_focus_generic_road_investment
+		relative_position_id = PRC_focus_repair_infrastructure
+		prerequisite = {
+			focus = PRC_focus_first_five_year_plan
+		}
+		cost = 5
+		x = 2
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#预备二五计划
+		id = PRC_focus_second_five_year_plan
+		icon = GFX_SOV_finish_the_five_year_plan_ccp_2d_sov_compatibility
+		relative_position_id = PRC_focus_first_five_year_plan
+		prerequisite = {
+			focus = PRC_focus_repair_infrastructure
+		}
+		prerequisite = {
+			focus = PRC_focus_Qinghai_tibet_road
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = { }
+	}
+
+	focus = {#西部大开发
+		id = PRC_focus_Western_Development
+		icon = GFX_goal_generic_construction2
+		relative_position_id = PRC_focus_second_five_year_plan
+		prerequisite = {
+			focus = PRC_focus_second_five_year_plan
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#勘探油田
+		id = PRC_focus_oil_exploration
+		icon = GFX_goal_generic_oil_refinery
+		relative_position_id = PRC_focus_Western_Development
+		prerequisite = {
+			focus = PRC_focus_second_five_year_plan
+		}
+		cost = 5
+		x = 2
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#马兰花开
+		id = PRC_focus_malan_flower
+		icon = GFX_focus_wonderweapons
+		relative_position_id = PRC_focus_second_five_year_plan
+		prerequisite = {
+			focus = PRC_focus_Western_Development
+		}
+		prerequisite = {
+			focus = PRC_focus_oil_exploration
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = { }
+	}
+
+	focus = {#两弹一星
+		id = PRC_focus_Two_Bombs_One_Satellite
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = PRC_focus_malan_flower
+		prerequisite = {
+			focus = PRC_focus_malan_flower
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#四清运动
+		id = PRC_focus_four_clear
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		relative_position_id = PRC_focus_CR
+		prerequisite = {
+			focus = PRC_focus_Great_Leap_Forwar
+		}
+		prerequisite = {
+			focus = PRC_focus_CR
+			focus = PRC_focus_Expansion_of_party_membership
+			focus = PRC_focus_a_hundred_flowers_bloom
+		}
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = PRC_focus_CR
+					has_completed_focus = PRC_focus_Expansion_of_party_membership
+				}
+				has_completed_focus = PRC_focus_a_hundred_flowers_bloom
+			}
+		}
+		cost = 6
+		x = -2
+		y = 2
+		completion_reward = { }
+	}
+
+	focus = {#反官僚主义
+		id = PRC_focus_anti_bureaucracy
+		icon = GFX_focus_generic_improve_the_administration
+		relative_position_id = PRC_focus_four_clear
+		prerequisite = {
+			focus = PRC_focus_four_clear
+		}
+		cost = 5
+		x = -2
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {#反修正主义
+		id = PRC_focus_anti_revisionism
+		icon = GFX_focus_generic_soviet_politics
+		relative_position_id = PRC_focus_anti_bureaucracy
+		prerequisite = {
+			focus = PRC_focus_four_clear
+		}
+		cost = 5
+		x = 2
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#反个人崇拜
+		id = PRC_focus_anti_personality_cult
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		relative_position_id = PRC_focus_anti_revisionism
+		prerequisite = {
+			focus = PRC_focus_four_clear
+		}
+		cost = 5
+		x = 2
+		y = 0
+		completion_reward = { }
+	}
+
+	focus = {#跑步进入共产主义
+		id = PRC_focus_into_communism
+		icon = GFX_focus_FIN_socialist_welfare
+		relative_position_id = PRC_focus_anti_revisionism
+		prerequisite = {
+			focus = PRC_focus_anti_bureaucracy
+		}
+		prerequisite = {
+			focus = PRC_focus_anti_personality_cult
+		}
+		prerequisite = {
+			focus = PRC_focus_anti_revisionism
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+}

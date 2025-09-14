@@ -1,0 +1,320 @@
+add_namespace = DFN
+country_event = {
+	id = DFN.001
+	title = DFN.001.t
+	desc = DFN.001.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = DFN.001.a
+		add_ideas = DFN_idea_eco_boom_3
+		complete_national_focus = DFN_save_eco
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {#宪法内容的决定
+	id = DFN.002
+	title = DFN.002.t
+	desc = DFN.002.d
+	is_triggered_only = yes
+	option = {#集权
+		name = DFN.002.a
+		set_country_flag = DFN_constitution_unity_flag
+	}
+
+	option = {#分权
+		name = DFN.002.b
+		set_country_flag = DFN_constitution_decentralization
+	}
+	
+}
+
+country_event = {#多瑙联邦寻求加入德国阵营
+	id = DFN.003
+	title = DFN.003.t
+	desc = DFN.003.d
+	is_triggered_only = yes
+	option = {#同意
+		name = DFN.003.a
+		FROM = {
+			country_event = { id = DFN.004 days = 2}
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				add = 10
+				has_opinion = {
+					target = FROM
+					value > 30
+				}
+			}
+		}
+
+	}
+	option = {#拒绝
+		name = DFN.003.b
+		FROM = {
+			country_event = { id = DFN.005 days = 2}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 4
+				has_opinion = {
+					target = FROM
+					value < 20
+				}
+			}
+		}
+	}
+}
+
+country_event = {#德国同意请求
+	id = DFN.004
+	title = DFN.004.t
+	desc = DFN.004.d
+	is_triggered_only = yes
+	option = {#好耶
+		name = DFN.004.a
+		GER = {
+			add_to_faction = ROOT
+		}
+
+	}
+}
+
+country_event = {#德国不同意
+	id = DFN.005
+	title = DFN.005.t
+	desc = DFN.005.d
+	is_triggered_only = yes
+	option = {#威威，我草拟吗！
+		name = DFN.005.a
+		uncomplete_national_focus = {
+			focus = DFN_follow_ger
+		}
+		add_opinion_modifier = {
+			target = GER
+			modifier = hate_gov_opinion
+		}
+		complete_national_focus = DFN_restart_kingdom
+
+	}
+}
+
+country_event = {#实现革命第三阶段宪政（不是）划掉，行宪
+	id = DFN.006
+	title = DFN.006.t
+	desc = DFN.006.d
+	is_triggered_only = yes
+	option = {#千呼万唤始出来!
+		name = DFN.006.a
+	}
+}
+country_event = {#意大利要地
+	id = DFN.007
+	title = DFN.007.t
+	desc = DFN.007.d
+	is_triggered_only = yes
+	option = {
+		name = DFN.007.a
+		ITA={
+			transfer_state = 159
+			transfer_state = 850
+			transfer_state = 160
+			transfer_state = 736
+			transfer_state = 852
+			add_state_claim = 736
+			add_state_claim = 852
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = DFN.007.b
+		declare_war_on = {
+			target = ITA
+		}
+		add_political_power = -100
+		add_stability = -0.5
+	}
+}
+country_event = {#意大利要地# 索取109/104/103/853/804/105/45 
+	id = DFN.008
+	title = DFN.008.t
+	desc = DFN.008.d
+	is_triggered_only = yes
+	option = {
+		name = DFN.008.a
+		ITA={
+			transfer_state = 109
+			transfer_state = 104
+			transfer_state = 103
+			transfer_state = 853
+			transfer_state = 804
+			add_state_claim = 105
+			add_state_claim = 45 
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = DFN.008.b
+		declare_war_on = {
+			target = ITA
+		}
+		add_political_power = -100
+		add_stability = -0.5
+	}
+}
+country_event = {#意大利要地
+# 同意后获得 764/82/109/104/103/853/804/105/45/84/76/80/89/91 的控制权
+	id = DFN.009
+	title = DFN.009.t
+	desc = DFN.009.d
+	is_triggered_only = yes
+	option = {
+		name = DFN.009.a
+		ITA={
+			transfer_state = 82
+			transfer_state = 103
+			transfer_state = 84
+			transfer_state = 76
+			transfer_state = 80
+			transfer_state = 89
+			transfer_state = 91
+                                                transfer_state = 163
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = DFN.009.b
+		declare_war_on = {
+			target = ITA
+		}
+		add_political_power = -100
+		add_stability = -0.5
+	}
+}
+country_event = {
+    id = DFN.900
+    title = DFN.900.t
+    desc = DFN.900.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {                        
+        name = DFN.900.a
+        ai_chance = {
+            base = 100
+        }
+        SER = {
+            
+			transfer_state = 45
+            transfer_state = 764
+		    #transfer_state = 804
+			#transfer_state = 105 
+            #transfer_state = 109
+			#transfer_state = 104
+			#transfer_state = 853
+			#transfer_state = 102
+
+        }
+		country_event = {id=DFN.901 days=30}
+
+    }
+
+    option = {                        
+        name = DFN.900.b
+        ai_chance = {
+            base = 0
+        }
+        SER = {
+            create_wargoal = {
+                type = annex_everything
+                target = DFN
+            }
+        }
+    }
+}
+country_event = {
+    id = DFN.901
+    title = DFN.901.t
+    desc = DFN.901.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {                        
+        name = DFN.901.a
+        ai_chance = {
+            base = 80
+        }
+        SER = {
+            
+			#transfer_state = 45
+            #transfer_state = 764
+		    transfer_state = 804
+			transfer_state = 105 
+            transfer_state = 109
+			transfer_state = 104
+			#transfer_state = 853
+			#transfer_state = 102
+
+        }
+		country_event = {id=DFN.902 days=30}
+    }
+
+    option = {                        
+        name = DFN.901.b
+        ai_chance = {
+            base = 20
+        }
+        SER = {
+            create_wargoal = {
+                type = annex_everything
+                target = DFN
+            }
+        }
+    }
+}
+country_event = {
+    id = DFN.902
+    title = DFN.902.t
+    desc = DFN.902.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {                        
+        name = DFN.902.a
+        ai_chance = {
+            base = 0
+        }
+        SER = {
+            
+			#transfer_state = 45
+            #transfer_state = 764
+		    #transfer_state = 804
+			#transfer_state = 105 
+            #transfer_state = 109
+			#transfer_state = 104
+			transfer_state = 853
+			transfer_state = 102
+
+        }
+    }
+
+    option = {                        
+        name = DFN.902.b
+        ai_chance = {
+            base = 100
+        }
+        SER = {
+            create_wargoal = {
+                type = annex_everything
+                target = DFN
+            }
+        }
+    }
+}

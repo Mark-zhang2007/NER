@@ -1,0 +1,63 @@
+#决议分类txt文件位置common/decisions/categories/xxx_decision_category.txt
+CHA_war  = {
+
+
+	CHA_war_ETH_1 = {     #打埃塞限时
+		days_mission_timeout = 150
+
+		allowed = {
+			tag =CHA
+		}
+
+		available = {     
+					has_war = no
+		}
+		activation = {                
+			has_war_with = ETH
+		}    
+		
+		selectable_mission = no
+		# 如果设置，会将任务转换为玩家必须选择按钮的任务。
+
+		is_good = no                        
+	
+		
+
+		timeout_effect = {                      
+			CHA={
+				white_peace = ETH
+				load_focus_tree = CHA_2
+				add_days_mission_timeout = {
+					mission = CHA_civil_war_1
+					days = -30
+							 }
+			}
+			
+		}       
+		complete_effect = {      
+			load_focus_tree = CHA_2
+			     add_days_mission_timeout = {
+					mission = CHA_civil_war_1
+					days = 60
+							 }         
+			       
+		}
+		cancel_trigger = {
+			
+			
+			
+		}
+		cancel_effect = {
+			 
+	}
+}
+
+}
+CHA_debug = {
+	CHA_debug_civil_now = {
+		cost = 0
+		complete_effect = {
+			country_event = { id = CHA.2 }
+		}
+	}
+}

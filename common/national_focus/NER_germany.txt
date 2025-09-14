@@ -1,0 +1,1761 @@
+﻿#!gfx:interface\NER_goals.gfx
+focus_tree = {
+	id = German_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = GER
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2000 }
+	initial_show_position = {
+		focus = GER_focus_Berlin_Conference
+	}
+	focus = {#柏林大会
+		id = GER_focus_Berlin_Conference
+		icon = GFX_focus_POL_complete_april_constitution
+		cost = 3
+		x = 2
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		 }
+	}
+
+	focus = {#管理公国
+		id = GER_focus_duchy_control
+		icon = GFX_focus_ger_revive_kaiserreich
+		relative_position_id = GER_focus_Berlin_Conference
+		prerequisite = {
+			focus = GER_focus_Berlin_Conference
+		}
+		available = {
+			has_completed_focus = GER_focus_overissued_government_bonds
+		}
+		cost = 5
+		x = -5
+		y = 1
+		completion_reward = {
+			MTA={
+				add_timed_idea = {
+					idea = GER_control 
+					days = 100
+				}
+			}
+			VBH={
+				add_timed_idea = {
+					idea = GER_control 
+					days = 100
+				}
+			}
+			LIT={
+				add_timed_idea = {
+					idea = GER_control 
+					days = 100
+				}
+			}
+			WHR={
+				add_timed_idea = {
+					idea = GER_control 
+					days = 100
+				}
+			}
+			UKR={
+				add_timed_idea = {
+					idea = GER_control 
+					days = 100
+				}
+			}
+		}
+	}
+
+	focus = {#武力胁迫
+		id = GER_focus_duchy_by_gun
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		relative_position_id = GER_focus_duchy_control
+		prerequisite = {
+			focus = GER_focus_duchy_control
+		}
+		mutually_exclusive = {
+			focus = GER_focus_duchy_by_eco
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			MTA={
+				add_timed_idea = {
+					idea = GER_duchy_by_gun
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+				}
+
+			}
+			VBH={
+				add_timed_idea = {
+					idea = GER_duchy_by_gun
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+				}
+			}
+			LIT={
+				add_timed_idea = {
+					idea = GER_duchy_by_gun
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+				}
+			}
+			WHR={
+				add_timed_idea = {
+					idea = GER_duchy_by_gun
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+				}
+			}
+			UKR={
+				add_timed_idea = {
+					idea = GER_duchy_by_gun
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+				}
+			}
+		}
+	}
+
+	focus = {#经济入侵
+		id = GER_focus_duchy_by_eco
+		icon = GFX_focus_RAJ_trickle_down_economics
+		relative_position_id = GER_focus_duchy_control
+		prerequisite = {
+			focus = GER_focus_duchy_control
+		}
+		mutually_exclusive = {
+			focus = GER_focus_duchy_by_gun
+		}
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = {
+			MTA={
+				add_timed_idea = {
+					idea = GER_duchy_by_eco
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+				}
+
+			}
+			VBH={
+				add_timed_idea = {
+					idea = GER_duchy_by_eco
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+				}
+			}
+			LIT={
+				add_timed_idea = {
+					idea = GER_duchy_by_eco
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+				}
+			}
+			WHR={
+				add_timed_idea = {
+					idea = GER_duchy_by_eco
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+				}
+			}
+			UKR={
+				add_timed_idea = {
+					idea = GER_duchy_by_eco
+					days = 100
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+				}
+			}
+		}
+	}
+
+	focus = {#刺激经济
+		id = GER_focus_Stimulate_the_economy
+		icon = GFX_focus_generic_economic_recovery
+		relative_position_id = GER_focus_Berlin_Conference
+		prerequisite = {
+			focus = GER_focus_Berlin_Conference
+		}
+		cost = 3
+		x = -2
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+				days = 30
+				idea = GER_focus_Stimulate_the_economy
+			}
+		}
+	}
+
+	focus = {#量化宽松
+		id = GER_focus_quantitative_easing
+		icon = GFX_focus_generic_economic_recovery
+		relative_position_id = GER_focus_Stimulate_the_economy
+		prerequisite = {
+			focus = GER_focus_Stimulate_the_economy
+		}
+		cost = 3
+		x = 0
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+				days = 60
+				idea = GER_focus_quantitative_easing
+			}
+		}
+	}
+
+	focus = {#超发国债 ##害害，黑色星期一来咯！
+		id = GER_focus_overissued_government_bonds
+		icon = GFX_focus_generic_economic_recovery
+		relative_position_id = GER_focus_quantitative_easing
+		prerequisite = {
+			focus = GER_focus_quantitative_easing
+		}
+		cost = 3
+		x = 0
+		y = 1
+		completion_reward = {
+			hidden_effect = {
+				news_event = { id = NER_GER.1 days = 60 }
+			}
+			add_timed_idea = {
+				days = 60
+				idea = GER_focus_overissued_government_bonds
+			}
+		}
+	}
+
+	focus = {#重整军备
+		id = GER_focus_MGAG #make Germany great again
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		relative_position_id = GER_focus_Berlin_Conference
+		prerequisite = {
+			focus = GER_focus_Berlin_Conference
+		}
+		available = {
+			has_completed_focus = GER_focus_overissued_government_bonds
+		}
+		cost = 5
+		x = 6
+		y = 1
+		completion_reward = {
+			add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 50000
+							producer =GER
+						}
+			add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 5000
+							producer = GER
+						}
+			add_ideas = GER_focus_MGAG
+		}
+	}
+
+	focus = {#重炮厚甲
+		id = GER_focus_hard_artillery 
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = GER_focus_MGAG
+		prerequisite = {
+			focus = GER_focus_MGAG
+		}
+		mutually_exclusive = {
+			focus = GER_focus_mobile_first
+		}
+		cost = 5
+		x = -3
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+		name = GER_focus_hard_artillery 
+		bonus = 1
+		uses = 2
+		category = artillery
+	}
+	add_doctrine_cost_reduction = {
+		name = GER_focus_hard_artillery 
+		cost_reduction = 0.5
+		uses = 2
+		category = cat_superior_firepower 
+	}
+
+
+		}
+	}
+
+	focus = {#普鲁士火炮
+		id = GER_focus_prussia_artillery
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = GER_focus_hard_artillery
+		prerequisite = {
+			focus = GER_focus_hard_artillery
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_prussia_artillery
+		}
+	}
+
+	focus = {#弹幕徐进
+		id = GER_focus_creeping_barrage
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = GER_focus_prussia_artillery
+		prerequisite = {
+			focus = GER_focus_prussia_artillery
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_creeping_barrage
+		}
+	}
+
+	focus = {#创新堑壕
+		id = GER_focus_improve_Trench_Warfare
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = GER_focus_prussia_artillery
+		prerequisite = {
+			focus = GER_focus_prussia_artillery
+		}
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_improve_Trench_Warfare 
+		}
+	}
+
+	focus = {#战争之王
+		id = GER_focus_king_of_war
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = GER_focus_prussia_artillery
+		prerequisite = {
+			focus = GER_focus_creeping_barrage
+		}
+		prerequisite = {
+			focus = GER_focus_improve_Trench_Warfare
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = GER_focus_king_of_war
+		}
+	}
+
+	focus = {#机动学说
+		id = GER_focus_mobile_first
+		icon = GFX_goal_generic_army_motorized
+		relative_position_id = GER_focus_MGAG
+		prerequisite = {
+			focus = GER_focus_MGAG
+		}
+		mutually_exclusive = {
+			focus = GER_focus_hard_artillery
+		}
+		cost = 5
+		x = 3
+		y = 1
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+		name = GER_focus_hard_artillery 
+		cost_reduction = 0.7
+		uses = 2
+		category = cat_mobile_warfare 
+	}
+	add_tech_bonus = {
+		name = GER_focus_mobile_first
+		bonus = 1
+		uses = 4
+		category = armor
+	}
+		}
+	}
+
+	focus = {#闪电战
+		id = GER_focus_thunder_war
+		icon = GFX_focus_GER_german_army_invincible
+		relative_position_id = GER_focus_mobile_first
+		prerequisite = {
+			focus = GER_focus_mobile_first
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_thunder_war
+		}
+	}
+
+	focus = {#先进坦克研发
+		id = GER_focus_tank_research
+		icon = GFX_focus_GER_german_army_invincible
+		relative_position_id = GER_focus_thunder_war
+		prerequisite = {
+			focus = GER_focus_thunder_war
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_focus_mobile_first
+				bonus = 1
+				uses = 4
+				category = armor
+			}
+			add_ideas = GER_focus_tank_research
+		}
+	}
+
+	focus = {#步兵机械化
+		id = GER_focus_Infantry_mechanization
+		icon = GFX_focus_GER_german_army_invincible
+		relative_position_id = GER_focus_thunder_war
+		prerequisite = {
+			focus = GER_focus_thunder_war
+		}
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_focus_mobile_first
+				bonus = 1
+				uses = 2
+				category = motorized_equipment 
+			}
+		}
+	}
+	
+	focus = {#步坦协同
+		id = GER_focus_Infantry_tank_coordination
+		icon = GFX_focus_GER_german_army_invincible
+		relative_position_id = GER_focus_thunder_war
+		prerequisite = {
+			focus = GER_focus_tank_research
+		}
+		prerequisite = {
+			focus = GER_focus_Infantry_mechanization
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = GER_focus_Infantry_tank_coordination
+		}
+	}
+
+	focus = {#普鲁士的荣耀
+		id = GER_focus_Glory_of_prussia
+		icon = GFX_focus_ger_return_of_the_kaiser
+		relative_position_id = GER_focus_MGAG
+		prerequisite = {
+			focus = GER_focus_hard_artillery
+			focus = GER_focus_mobile_first
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = GER_focus_Glory_of_prussia_1
+		}
+	}
+
+	focus = {#参军光荣
+		id = GER_focus_enlist_is_honor
+		icon = GFX_focus_generic_full_social_mobilization
+		relative_position_id = GER_focus_Glory_of_prussia
+		prerequisite = {
+			focus = GER_focus_Glory_of_prussia
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_focus_Glory_of_prussia_1
+				add_idea = GER_focus_Glory_of_prussia_2
+			}
+			
+		}
+	}
+
+	focus = {#推进工业化
+		id = GER_focus_Industrialization
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = GER_focus_MGAG
+		prerequisite = {
+			focus = GER_focus_Berlin_Conference
+		}
+		available = {
+			has_completed_focus = GER_focus_overissued_government_bonds
+		}
+		cost = 5
+		x = 7
+		y = 0
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+	}
+
+	focus = {#扩大威廉皇帝学会
+		id = GER_focus_KWGZFDW #威廉皇帝学会全文是Kaiser-Wilhelm-Gesellschaft zur Förderung der Wissenschaften太长了取了个首字母
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = GER_focus_Industrialization
+		prerequisite = {
+			focus = GER_focus_Industrialization
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = {
+			add_research_slot =  1
+			add_tech_bonus = {
+		name = GER_focus_KWGZFDW
+		bonus = 0.5
+		uses = 1
+		ahead_reduction = 1
+		category = industry 
+	}
+		add_tech_bonus = {
+		name = GER_focus_KWGZFDW
+		bonus = 0.5
+		uses = 1
+		ahead_reduction = 1
+		category = cat_production
+	}
+
+		}
+	}
+
+	focus = {#赞助核研究
+		id = GER_focus_nuclear_research
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = GER_focus_KWGZFDW
+		prerequisite = {
+			focus = GER_focus_KWGZFDW
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+		name = GER_focus_KWGZFDW
+		bonus = 0.5
+		uses = 1
+		ahead_reduction = 1
+		category = nuclear 
+	}
+		}
+	}
+
+	focus = {#成立铀协会
+		id = GER_focus_Uranium_Association
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = GER_focus_nuclear_research
+		prerequisite = {
+			focus = GER_focus_nuclear_research
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			64 = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory  
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+	}
+
+	focus = {#扩大鲁尔工业区
+		id = GER_focus_Expansion_Ruhr_Industrial
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = GER_focus_Industrialization
+		prerequisite = {
+			focus = GER_focus_Industrialization
+		}
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = {
+			57 = {
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+				}
+			}
+	}
+
+	focus = {#产业升级
+		id = GER_focus_industrial_upgrading
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = GER_focus_Expansion_Ruhr_Industrial
+		prerequisite = {
+			focus = GER_focus_Expansion_Ruhr_Industrial
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = GER_industrial_1
+		}
+	}
+
+	focus = {#完善流水线
+		id = GER_focus_improve_assembly_line
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = GER_focus_industrial_upgrading
+		prerequisite = {
+			focus = GER_focus_industrial_upgrading
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_industrial_1
+				add_idea = GER_industrial_2
+			}
+		}
+	}
+
+	focus = {#柏林经济危机
+		id = GER_focus_berlin_economic_crisis
+		icon = GFX_goal_generic_trade
+		allow_branch = {
+			has_country_flag = GER_Berlin_eco_boom
+			NOT = {
+				OR = {
+					has_country_flag = GER_Berlin_eco_lose
+					has_country_flag = GER_Berlin_eco_win
+				}
+			}
+		}
+		relative_position_id = GER_focus_overissued_government_bonds
+		prerequisite = {
+			focus = GER_focus_overissued_government_bonds
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			activate_mission = GER_eco_lose
+			activate_mission = GER_eco_win
+		}
+	}
+
+	focus = {#放弃金本位
+		id = GER_focus_no_gold_standard
+		icon = GFX_goal_generic_trade
+		relative_position_id = GER_focus_berlin_economic_crisis
+		prerequisite = {
+			focus = GER_focus_berlin_economic_crisis
+		}
+		cost = 2
+		x = -1
+		y = 1
+		ai_will_do = {
+		factor = 10
+		
+	}
+
+		completion_reward = {
+			unlock_decision_tooltip = { 
+    			decision = GER_eco_no_gold_standard
+    			show_effect_tooltip = yes 
+    			show_modifiers = yes 
+			}
+		}
+	}
+
+	focus = {#掠夺殖民地
+		id = GER_focus_plunder_colony
+		icon = GFX_goal_generic_trade
+		relative_position_id = GER_focus_berlin_economic_crisis
+		prerequisite = {
+			focus = GER_focus_berlin_economic_crisis
+		}
+		cost = 2
+		x = 1
+		y = 1
+		ai_will_do = {
+		factor = 10
+		
+	}
+		completion_reward = {
+			set_variable = { GER_plunder_colony_num = 0 }
+			unlock_decision_tooltip = { 
+    			decision = GER_eco_plunder_colony
+    			show_effect_tooltip = yes 
+    			show_modifiers = yes 
+			}
+		}
+	}
+
+	focus = {#超发货币
+		id = GER_focus_overissued_currency
+		icon = GFX_goal_generic_trade
+		relative_position_id = GER_focus_berlin_economic_crisis
+		prerequisite = {
+			focus = GER_focus_berlin_economic_crisis
+		}
+		cost = 2
+		x = 3
+		y = 1
+		ai_will_do = {
+		factor = 10
+		
+	}
+		completion_reward = {
+			unlock_decision_tooltip = { 
+    			decision = GER_eco_overissued_currency
+    			show_effect_tooltip = yes 
+    			show_modifiers = yes 
+			}
+		}
+	}
+
+	focus = {#收购企业
+		id = GER_focus_gov_Acquiring_Companies
+		icon = GFX_goal_generic_trade
+		relative_position_id = GER_focus_berlin_economic_crisis
+		prerequisite = {
+			focus = GER_focus_berlin_economic_crisis
+		}
+		cost = 2
+		x = -3
+		y = 1
+		ai_will_do = {
+		factor = 10
+		
+	}
+		completion_reward = {
+			unlock_decision_tooltip = { 
+    			decision = GER_eco_acquiring
+    			show_effect_tooltip = yes 
+    			show_modifiers = yes 
+			}
+		}
+	}
+
+	focus = {#以工代赈
+		id = GER_focus_PWTRP #provide work to relieve poverty
+		icon = GFX_goal_generic_trade
+		relative_position_id = GER_focus_gov_Acquiring_Companies
+		prerequisite = {
+			focus = GER_focus_gov_Acquiring_Companies
+		}
+		cost = 2
+		x = 0
+		y = 1
+		ai_will_do = {
+		factor = 10
+		
+	}
+		completion_reward = {
+			unlock_decision_tooltip = { 
+    			decision = GER_eco_PWTRP
+    			show_effect_tooltip = yes 
+    			show_modifiers = yes 
+			}
+		}
+	}
+
+	focus = {#悬崖勒马/经济大萧条 可变
+		id = GER_focus_berlin_economic_crisis_over
+		dynamic = yes
+		icon = GFX_goal_generic_trade
+		relative_position_id = GER_focus_berlin_economic_crisis
+		prerequisite = {
+			focus = GER_focus_PWTRP
+		}
+		prerequisite = {
+			focus = GER_focus_no_gold_standard
+		}
+		prerequisite = {
+			focus = GER_focus_plunder_colony
+		}
+		prerequisite = {
+			focus = GER_focus_overissued_currency
+		}
+		cost = 5
+		x = 0
+		y = 3
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_focus_crisis_over_trigger_tt
+				always = no
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {#施莱歇尔继续领导德意志！
+		id = GER_focus_fake_1
+		icon = GFX_focus_POL_complete_april_constitution
+		relative_position_id = GER_focus_duchy_control
+		allow_branch = {
+			NOT = {
+				has_country_flag = GER_Berlin_eco_boom
+			}
+		}
+		available = {
+			has_country_flag = GER_fake_focus_flag
+		}
+		cost = 2
+		x = 2
+		y = 4
+		completion_reward = { }
+	}
+ ############ 民主线 ###############
+	focus = {#民主得胜利
+		id = GER_focus_freedom_win
+		icon = GFX_focus_POL_complete_april_constitution
+		relative_position_id = GER_focus_duchy_control
+		allow_branch = {
+			has_country_flag = GER_Berlin_eco_win
+		}
+		cost = 2
+		x = 2
+		y = 4
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			country_event = { id = GER_dem.1 days = 3 }
+		}
+	}
+  ########## 民主线-施莱歇尔线 ###########
+	focus = {#第二任期
+		id = GER_focus_second_term_of_office
+		icon = GFX_goal_GER_focus_second_term_of_office
+		relative_position_id = GER_focus_freedom_win
+		prerequisite = {
+			focus = GER_focus_freedom_win
+		}
+		allow_branch = {
+			has_country_flag = GER_Schleicher_is_election_winner #施莱歇尔赢得了大选
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = focus_auto_tt
+				always = no
+			}
+		}
+		cost = 2
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = GER_focus_second_term_of_office
+				days = 60
+			}
+		}
+	}
+
+	focus = {#削弱极左极右势力
+		id = GER_focus_careful_left_and_right
+		icon = GFX_goal_GER_focus_careful_left_and_right
+		relative_position_id = GER_focus_second_term_of_office
+		prerequisite = {
+			focus = GER_focus_second_term_of_office
+		}
+		cost = 5
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_careful_left_and_right
+		}
+	}
+
+	focus = {#帮助容克公司重建
+		id = GER_focus_help_Juncker_company
+		icon = GFX_goal_GER_focus_help_Juncker_company
+		relative_position_id = GER_focus_careful_left_and_right
+		prerequisite = {
+			focus = GER_focus_careful_left_and_right
+		}
+		cost = 5
+		x = -1
+		y = 1
+		completion_reward = {
+			64 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes 
+					
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+					
+				}
+		}
+		remove_ideas = GER_idea_capitalist_unrest
+		}
+	}
+
+	focus = {#牵制德皇
+		id = GER_focus_shuanzhu_kaiser #狠狠地栓威威！
+		icon = GFX_goal_GER_focus_shuanzhu_kaiser
+		relative_position_id = GER_focus_careful_left_and_right
+		prerequisite = {
+			focus = GER_focus_careful_left_and_right
+		}
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = {
+			remove_ideas = GER_constitutional_monarchy
+		}
+	}
+
+	focus = {#与皇储的会面
+		id = GER_focus_meeting_with_prince
+		icon = GFX_goal_GER_focus_meeting_with_prince
+		relative_position_id = GER_focus_careful_left_and_right
+		prerequisite = {
+			focus = GER_focus_help_Juncker_company
+		}
+		prerequisite = {
+			focus = GER_focus_shuanzhu_kaiser
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {#皇帝陛下的破壁人
+		id = GER_focus_PoBiRen_of_Kaiser
+		icon = GFX_goal_GER_focus_PoBiRen_of_Kaiser
+		relative_position_id = GER_focus_meeting_with_prince
+		prerequisite = {
+			focus = GER_focus_meeting_with_prince
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_country_leader_trait = GER_Kurt_von_Schleicher_breaker
+		}
+	}
+
+	focus = {#巩固对议会的控制
+		id = GER_focus_control_parliament
+		icon = GFX_goal_GER_focus_control_parliament
+		relative_position_id = GER_focus_second_term_of_office
+		prerequisite = {
+			focus = GER_focus_second_term_of_office
+		}
+		cost = 5
+		x = 2
+		y = 1
+		completion_reward = {
+			add_country_leader_trait = GER_Kurt_von_Schleicher_conctroler
+		}
+		
+	}
+
+	focus = {#帝国第一，宰相第二
+		id = GER_focus_empire_first_Chancellor_second
+		icon = GFX_goal_GER_focus_empire_first_Chancellor_second
+		relative_position_id = GER_focus_control_parliament
+		prerequisite = {
+			focus = GER_focus_control_parliament
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+
+	focus = {#重组总参谋部
+		id = GER_focus_Reorganise_GSH #General Staff Headquarters
+		icon = GFX_goal_GER_focus_Reorganise_GSH
+		relative_position_id = GER_focus_empire_first_Chancellor_second
+		prerequisite = {
+			focus = GER_focus_empire_first_Chancellor_second
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_Reorganise_GSH
+		}
+	}
+
+	focus = {#杯酒释钱财
+		id = GER_focus_cash_relinquish_money_power
+		icon = GFX_goal_GER_focus_cash_relinquish_money_power
+		relative_position_id = GER_focus_Reorganise_GSH
+		prerequisite = {
+			focus = GER_focus_Reorganise_GSH
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_cash_relinquish_money_power
+			add_political_power = -100
+		}
+	}
+
+	focus = {#雄鹰脱壳
+		id = GER_focus_eagle_out_egg
+		icon = GFX_goal_GER_focus_eagle_out_egg
+		relative_position_id = GER_focus_second_term_of_office
+		prerequisite = {
+			focus = GER_focus_PoBiRen_of_Kaiser
+		}
+		prerequisite = {
+			focus = GER_focus_cash_relinquish_money_power
+		}
+		cost = 5
+		x = 0
+		y = 5
+		completion_reward = {
+			army_experience = 100
+			air_experience = 100
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+ ############ 德皇独裁线 #######
+	focus = {#无限期暂停内阁
+		id = GER_focus_kaiser_win
+		icon = GFX_focus_ger_return_of_the_kaiser
+		relative_position_id = GER_focus_duchy_control
+		allow_branch = {
+			has_country_flag = GER_Berlin_eco_lose
+		}
+		cost = 2
+		x = 2
+		y = 4
+		completion_reward = {
+			add_political_power = -50
+		}
+		
+	}
+
+	focus = {#力挽狂澜
+		id = GER_focus_kaiser_save_Germany
+		icon = GFX_focus_ger_return_of_the_kaiser
+		relative_position_id = GER_focus_kaiser_win
+		prerequisite = {
+			focus = GER_focus_kaiser_win
+		}
+		cost = 3
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+	focus = {#发挥自身威信
+		id = GER_focus_kaiser_prestige
+		icon = GFX_focus_ger_return_of_the_kaiser
+		relative_position_id = GER_focus_kaiser_save_Germany
+		prerequisite = {
+			focus = GER_focus_kaiser_save_Germany
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			add_timed_idea = {
+				idea = GER_focus_kaiser_prestige
+				days = 60
+			}
+		}
+	}
+
+	focus = {#号召贵族
+		id = GER_focus_call_noblemen
+		icon = GFX_focus_ger_return_of_the_kaiser
+		relative_position_id = GER_focus_kaiser_prestige
+		prerequisite = {
+			focus = GER_focus_kaiser_prestige
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = -30
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = GER_focus_call_noblemen
+				days = 100
+			}
+		}
+	}
+
+	focus = {#罢黜议会
+		id = GER_focus_depose_the_legislature
+		icon = GFX_focus_ger_return_of_the_kaiser
+		relative_position_id = GER_focus_call_noblemen
+		prerequisite = {
+			focus = GER_focus_call_noblemen
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			#到时候在这里删人，如内阁、将领、顾问等
+		}
+	}
+
+	focus = {#德皇万岁 Heil！
+		id = GER_focus_three_for_heil
+		icon = GFX_focus_ger_return_of_the_kaiser
+		relative_position_id = GER_focus_depose_the_legislature
+		prerequisite = {
+			focus = GER_focus_depose_the_legislature
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_three_for_heil
+			swap_ideas = {
+				remove_idea = GER_idea_economic_crisis
+				add_idea = GER_idea_economic_crisis_lighten 
+			}
+		}
+	}
+ ######### 外交线 ###########
+	focus = {#于战争阴影之中徘徊
+		id = GER_focus_shadow_of_war
+		icon = GFX_goal_GER_focus_shadow_of_war
+		allow_branch = {
+			has_country_flag = GER_Berlin_eco_win
+		}
+		cost = 3
+		x = 10
+		y = 8
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {#重拾普鲁士精神
+		id = GER_focus_revisit_Prussian_spirit
+		icon = GFX_goal_GER_focus_revisit_Prussian_spirit
+		relative_position_id = GER_focus_shadow_of_war
+		prerequisite = {
+			focus = GER_focus_shadow_of_war
+		}
+		cost = 5
+		x = -4
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_revisit_Prussian_spirit
+			add_political_power = 50
+		}
+	}
+
+	focus = {#主动出击
+		id = GER_focus_take_initiative
+		icon = GFX_goal_GER_focus_take_initiative
+		relative_position_id = GER_focus_revisit_Prussian_spirit
+		prerequisite = {
+			focus = GER_focus_revisit_Prussian_spirit
+		}
+		bypass = {
+			has_war_with = FRA
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = { target = FRA type = take_state_focus } 
+		}
+	}
+
+	focus = {#老鹰抓小鸡
+		id = GER_focus_Eagle_catches_chicken
+		icon = GFX_goal_GER_focus_Eagle_catches_chicken
+		relative_position_id = GER_focus_take_initiative
+		prerequisite = {
+			focus = GER_focus_take_initiative
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_artillery_chassis_1
+				amount = 500
+			}
+		}
+	}
+
+	focus = {#驱逐疯狗
+		id = GER_focus_remove_mad_dog
+		icon = GFX_goal_GER_focus_remove_mad_dog
+		relative_position_id = GER_focus_shadow_of_war
+		prerequisite = {
+			focus = GER_focus_shadow_of_war
+		}
+		bypass = {
+			has_war_with = ITA
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				target = ITA
+				type = take_state_focus
+			}
+			add_timed_idea = {
+				idea = GER_focus_remove_mad_dog
+				days = 100
+			}
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {#啄碎东罗之美梦
+		id = GER_focus_break_dream_of_east_roma
+		icon = GFX_goal_GER_focus_break_dream_of_east_roma
+		relative_position_id = GER_focus_remove_mad_dog
+		prerequisite = {
+			focus = GER_focus_remove_mad_dog
+		}
+		cost = 5
+		bypass = {
+			has_war_with = OTO
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				target = OTO
+				type = take_state_focus
+			}
+			add_timed_idea = {
+				idea = GER_focus_break_dream_of_east_roma
+				days = 100
+			}
+		}
+	}
+
+	focus = {#雄鹰羽翼下的巴尔干
+		id = GER_focus_Balkans_under_wings_of_eagle
+		icon = GFX_goal_GER_focus_Balkans_under_wings_of_eagle
+		relative_position_id = GER_focus_break_dream_of_east_roma
+		prerequisite = {
+			focus = GER_focus_break_dream_of_east_roma
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			#country_event
+		}
+	}
+
+	focus = {#确保东部防线
+		id = GER_focus_Secure_eastern_front
+		icon = GFX_goal_GER_focus_Secure_eastern_front
+		relative_position_id = GER_focus_shadow_of_war
+		prerequisite = {
+			focus = GER_focus_shadow_of_war
+		}
+		cost = 5
+		x = 4
+		y = 1
+		completion_reward = {
+			813 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 4640
+					id = 13127
+					
+				}
+			}
+			
+		}
+		191 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 592
+					
+				}
+			}
+
+		}
+		
+		810= {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 3298
+					id = 319
+					id = 222
+					id = 9275
+				}
+			}
+
+		}
+		207 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 3219
+					id = 6326
+					id = 6249
+					id = 9323
+					id = 323
+					id = 11241
+					id = 11220
+
+				}
+			}
+
+		}
+		207 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 3219
+					id = 6326
+					id = 6249
+					id = 9323
+					id = 323
+					id = 11241
+					id = 11220
+					
+				}
+			}
+
+		}
+		241 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 6354
+					id = 289
+					id = 11230
+					id = 11383
+					id = 9396
+					id = 9371
+					id = 11355
+					id = 9342
+				}
+			}
+
+		}
+		193 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 6589
+					id = 238
+				}
+			}
+
+		}
+		225 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 3225
+					id = 11553
+					id = 6565
+					id = 522
+					id = 3520
+					id = 501
+				}
+			}
+
+		}
+		221 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 11397
+					id = 418
+					id = 9556
+					id = 3409
+					id = 11541
+					
+
+				}
+			}
+
+		}
+		228 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 570
+					id = 11513
+					id = 547
+					id = 9476
+					id = 9461
+					id = 9446
+				}
+			}
+
+		}
+		227 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 6493
+					id = 3421
+				}
+			}
+
+		}
+		137 = {
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				instant_build = yes 
+				province = {
+					id = 9680
+				}
+			}
+		}
+	}
+	}
+
+	focus = {#鹰击巨熊
+		id = GER_focus_egale_attack_big_bear
+		icon = GFX_goal_GER_focus_egale_attack_big_bear
+		relative_position_id = GER_focus_Secure_eastern_front
+		prerequisite = {
+			focus = GER_focus_Secure_eastern_front
+		}
+		available = {
+			RUS={
+				exists = no
+			}
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = {
+			create_wargoal = {
+				target = SOV
+				type =  take_state_focus
+			}
+		}
+	}
+
+	focus = {#德意志大赢特赢
+		id = GER_focus_win_win_and_win
+		icon = GFX_goal_GER_focus_win_win_and_win
+		relative_position_id = GER_focus_shadow_of_war
+		prerequisite = {
+			focus = GER_focus_Eagle_catches_chicken
+		}
+		prerequisite = {
+			focus = GER_focus_Balkans_under_wings_of_eagle
+		}
+		prerequisite = {
+			focus = GER_focus_egale_attack_big_bear
+		}
+		available = {
+			NOT = {
+				has_war_with = FRA
+				has_war_with = OTO
+				has_war_with = SOV
+			}
+		}
+		cost = 3
+		x = 0
+		y = 4
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			add_political_power = 100
+		}
+	}
+
+	focus = {#君主们的峰会
+		id = GER_focus_Summit_of_Monarchs
+		icon = GFX_goal_GER_focus_Summit_of_Monarchs
+		relative_position_id = GER_focus_win_win_and_win
+		allow_branch = {
+			has_completed_focus = GER_focus_win_win_and_win
+		}
+		prerequisite = {
+			focus = GER_focus_win_win_and_win
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			HOL ={
+				country_event = NER_GER.7
+			}
+			BEL = {
+				country_event = NER_GER.7
+			}
+			DEN ={
+				country_event = NER_GER.7
+			}
+			OTO ={
+				country_event = NER_GER.7
+			}
+			every_state = {
+				limit = {
+					OR={
+						is_core_of = HOL
+						is_core_of = BEL
+						is_core_of = DEN
+						is_core_of = DFN
+					}
+				}
+				add_core_of = GER
+			}
+
+		}
+	}
+
+	focus = {#和平组建德意志联邦
+		id = GER_focus_peace_united_germany
+		icon = GFX_goal_GER_focus_peace_united_germany
+		relative_position_id = GER_focus_Summit_of_Monarchs
+		prerequisite = {
+			focus = GER_focus_Summit_of_Monarchs
+		}
+		mutually_exclusive = {
+			focus = GER_focus_you_all_need_beat
+		}
+		available={
+			all_core_state = {
+				is_fully_controlled_by = GER
+			}
+		}
+		cost = 5
+		x = -3
+		y = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {#三天不打上房揭瓦
+		id = GER_focus_you_all_need_beat #也许意思是“你们都欠打”之类的罢，反正这种id能看懂就好了啦（心虚）
+		icon = GFX_goal_GER_focus_you_all_need_beat
+		relative_position_id = GER_focus_Summit_of_Monarchs
+		prerequisite = {
+			focus = GER_focus_Summit_of_Monarchs
+		}
+		mutually_exclusive = {
+			focus = GER_focus_peace_united_germany
+		}
+		available = {
+			NOT={
+				all_core_state = {
+				is_fully_controlled_by = GER
+			}
+			}
+		}
+		cost = 5
+		x = 3
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				target = HOL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BEL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = OTO
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = DEN
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {#民主化我们的日耳曼同胞
+		id = GER_focus_german_need_Mr_D #日耳曼需要德先生
+		icon = GFX_goal_GER_focus_german_need_Mr_D
+		relative_position_id = GER_focus_you_all_need_beat
+		prerequisite = {
+			focus = GER_focus_you_all_need_beat
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_focus_german_need_Mr_D
+				days = 100
+			}
+		}
+	}
+
+	focus = {#荷尔斯泰因战争的遗产
+		id = GER_focus_Legacy_of_Holstein_War
+		icon = GFX_goal_GER_focus_Legacy_of_Holstein_War
+		relative_position_id = GER_focus_german_need_Mr_D
+		prerequisite = {
+			focus = GER_focus_german_need_Mr_D
+		}
+		cost = 5
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = GER_focus_Legacy_of_Holstein_War
+		}
+	}
+
+	focus = {#民主世界的领头鹰
+		id = GER_focus_leading_eagle_of_democratic_world
+		icon = GFX_goal_GER_focus_leading_eagle_of_democratic_world
+		relative_position_id = GER_focus_Summit_of_Monarchs
+		prerequisite = {
+			focus = GER_focus_Legacy_of_Holstein_War
+			focus = GER_focus_peace_united_germany
+		}
+		cost = 5
+		x = 0
+		y = 4
+		completion_reward = {
+			add_ideas = GER_focus_leading_eagle_of_democratic_world
+			add_political_power = 100
+		}
+	}
+}

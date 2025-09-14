@@ -1,0 +1,116 @@
+﻿l_simp_chinese:
+######顺序为 ###
+##### 国名 ###
+#### 党派名 ###
+### 角色
+# tooltip
+# flag
+# 决议
+# 事件
+# 国策
+# idea
+# 还有什么来着我忘了
+########## 国名 ##########
+ ROC_CANTON_GOV: "广州国民政府"
+ ROC_CANTON_GOV_DEF: "广州国民政府"
+ ROC_CANTON_GOV_ADJ: "广州国民政府"
+####### 特殊意识形态 ######
+ sanmin_dem: "三民主义"
+ sanmin_soc: "革命三民主义"
+ sanmin_fatuan: "法团三民主义"
+######### 党派名 #######
+ ROC_communism_party: "国民党-临委会"
+ ROC_communism_party_long: "中国国民党临时行动委员会"
+ ROC_democratic_party: "国民党-中执委"
+ ROC_democratic_party_long: "中国国民党中央执行委员会"
+ ROC_fascism_party: "国民党-复兴社"
+ ROC_fascism_party_long: "中华复兴社"
+ ROC_neutrality_party: "党外人士"
+ ROC_neutrality_party_long: "党外人士和地方实力派"
+
+######### 角色名 #########
+ ROC_Xu_Chongzhi: "许崇智"
+ ROC_Deng_Yanda: "邓演达"
+ ROC_Dai_Jitao: "戴季陶"
+######### 事件 ###########
+ ROC_earlygame.1.t: "广州之新生"
+ ROC_earlygame.1.d: "在地方实力派和许崇智将军的共同努力下，国民党快速夺取了两广。\n随着青天白日重新在总统府升起，广州城洋溢的喜悦气氛让人想起来上一次的国民革命，这次我们绝不重蹈覆辙。\n\n但并不是一切都那么美好，地方实力派（左派党员则通常直接称之为“军阀残留”在我们夺取广州后便露出了与以往支持革命完全相反的样貌，他们支持革命似乎只是为了反对北边，而不是对我们的三民主义乃至国民革命有什么期盼，对他们来说似乎只是穿个新衣服戴个新帽徽罢了，一切并没有什么改变。\n但不论如何，我们现在都只能联合在一起，对抗北边的反动政府。"
+ ROC_earlygame.1.a: "亲爱精诚……吗"
+
+ ROC_earlygame.2.t: "中国国民党第二次全国代表大会"
+ ROC_earlygame.2.d: "（待补充）"
+ ROC_earlygame.2.a: "完成革命使命！"
+
+ ROC_earlygame.3.t: "地方实力派抵制约法"
+ ROC_earlygame.3.d: "一些地方实力派似乎并不喜欢临时约法的不少内容，他们或明或暗的抵制约法的执行，更有甚者拿出了所谓的“联省主义”意图对抗当下的党国体制。\n但无论怎么说，我们现在没法直接抛开他们，他们也没法直接对抗我们。"
+ ROC_earlygame.3.a: "至少暂时还需要团结……"
+
+ ROC_earlygame.4.t: "打倒列强？"
+ ROC_earlygame.4.d: "打倒列强除军阀是我们第一次北伐使用的口号，但今天，一位地方实力派的官员提出，打倒列强这句话似乎并不合适，尤其是在我们需要大量外援的当下。\n该提议在党内引起了巨大的争议，经过多轮讨论后，党内最终的决定是："
+ ROC_earlygame.4.a: "也许这句话是太激烈了"
+ ROC_earlygame.4.b: "段祺瑞他都反帝，你是想干什么？！"
+
+ ROC_earlygame.5.t: "第二次国共合作？"
+ ROC_earlygame.5.d: "在上一次北伐中，我们曾和共产党合作，共党在动员工人等方面起到了极大的作用，但北伐很快就败于段祺瑞的快速镇压，共产党员大多前往深山老林进行游击战。\n国民党则随着中央委员会流亡海外，只有许崇智将军带领的残军在两广地方军阀的默许下进入了广西的山林躲藏起来，我们的合作也因通信不便和各种矛盾不约而散。\n\n现在，二次北伐在即，党内颇有影响力的左派党员提出我们应该再次联合共党，一同对抗北方的反动政府。"
+ ROC_earlygame.5.a: "北伐才是第一位的"
+ ROC_earlygame.5.b: "我们不相信共产党人！"
+
+ ROC_earlygame.6.t: "国民党希望一同对抗段祺瑞"
+ ROC_earlygame.6.d: "我们收到了一封电报，来自“广州国民政府”的电报。\n多次确认后，我们得知，国民党已经夺取了两广，并准备再次北伐，在邓演达的牵头下他们联系我们希望第二次合作。\n在第一次国共合作时期，共产党员和国民党员一同在黄埔军校学习，我们党内不少将领也出自黄埔军校，如今黄埔同袍邓演达邀请我们继续合作，我们是答应还是不答应呢。"
+ ROC_earlygame.6.a: "那就合作愉快了，老同学们"
+ ROC_earlygame.6.b: "他们不也是个压迫者"
+########## 国策 ##########
+ ROC_focus_white_sun_rise_agian: "青天白日再升起"
+ ROC_focus_white_sun_rise_agian_desc: ""
+ ROC_focus_2st_KMTdahui: "第二次全国代表大会"
+ ROC_focus_2st_KMTdahui_desc: ""
+ ROC_focus_xunzheng: "颁布训政临时约法"
+ ROC_focus_xunzheng_desc: ""
+ ROC_focus_Overthrow_imperialist_warlords: "打倒列强，除军阀"
+ ROC_focus_Overthrow_imperialist_warlords_desc: ""
+ ROC_focus_set_dip: "设立外交部"
+ ROC_focus_set_dip_desc: ""
+ ROC_focus_contact_huaqiao: "联络海外华侨"
+ ROC_focus_contact_huaqiao_desc: ""
+ ROC_focus_build_administrative_agency: "建立地方行政"
+ ROC_focus_build_administrative_agency_desc: ""
+ ROC_focus_curbing_local_factions: "敲打地方实力派"
+ ROC_focus_curbing_local_factions_desc: ""
+ ROC_focus_second_national_revolution: "第二次国民革命"
+ ROC_focus_second_national_revolution_desc: "终于，在整顿完内部事务之后，我们可以腾出手来，向反动派的老巢——北京发起进攻。\n我们要完成国民革命，完成国父先生的遗愿：三民主义统一中国！"
+ ROC_focus_make_huangpu_great_again: "重开黄埔军校"
+ ROC_focus_make_huangpu_great_again_desc: ""
+ ROC_focus_set_political_department: "设立政治部"
+ ROC_focus_set_political_department_desc: ""
+ ROC_focus_qinaijingcheng: "亲爱精诚"
+ ROC_focus_qinaijingcheng_desc: ""
+ ROC_focus_pioneer_of_National_revorution: "国民革命之先锋"
+ ROC_focus_pioneer_of_National_revorution_desc: ""
+ ROC_focus_queli_zongcan: "建立总参谋部"
+ ROC_focus_queli_zongcan_desc: ""
+ ROC_focus_set_junqu: "设立军区"
+ ROC_focus_set_junqu_desc: ""
+ ROC_focus_New_army_designation: "军队新番号"
+ ROC_focus_New_army_designation_desc: ""
+ ROC_focus_national_army_not_KMTs: "国军而非党军"
+ ROC_focus_national_army_not_KMTs_desc: ""
+ ROC_focus_liangguang_build: "两广省建"
+ ROC_focus_liangguang_build_desc: ""
+ ROC_focus_expand_guangdong_armsfactory: "扩建广东兵工厂"
+ ROC_focus_expand_guangdong_armsfactory_desc: ""
+ ROC_focus_expand_ic: "扶持民族资本"
+ ROC_focus_expand_ic_desc: ""
+ ROC_focus_radio_build: "建立全国广播电台"
+ ROC_focus_radio_build_desc: ""
+ ROC_focus_beifa_dabenying: "北伐大本营"
+ ROC_focus_beifa_dabenying_desc: ""
+############### idea ###########
+ ROC_idea_xunzheng_yuefa: "《训政时期临时约法》"
+ ROC_idea_NRA_0: "国民革命军"
+ ROC_idea_NRA_1: "国民革命军"
+ ROC_idea_NRA_2: "国民革命军"
+ ROC_idea_zhengzhibu: "政治部"
+ ROC_idea_NDA_1: "中国国防军"
+ ROC_idea_NDA_2: "中国国防军"
+ ROC_idea_beifa_dabenying: "北伐大本营"
+

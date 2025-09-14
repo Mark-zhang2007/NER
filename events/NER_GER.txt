@@ -1,0 +1,336 @@
+add_namespace = NER_GER
+add_namespace = GER_dem #德国民主线
+
+# country_event = {
+#	id = NER_GER.1
+#	title = NER_GER.1.t
+#	desc = NER_GER.1.d
+#	is_triggered_only = yes
+#	option = {
+#		name = NER_GER.1.a
+#		complete_national_focus = GER_focus_berlin_economic_crisis
+#		set_country_flag = GER_Berlin_eco_boom
+                mark_focus_tree_layout_dirty = yes
+#	}
+#}
+
+news_event = {#经济危机爆爆爆
+	id = NER_GER.1
+	title = NER_GER.1.t
+	desc = NER_GER.1.d
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		set_global_flag = Glo_berlin_ecomic_crisis_flag
+                SER = { country_event = { id = SER.005 days = 2 } }
+         }
+option = {
+		name = NER_GER.1.a
+		trigger = {
+			tag = GER
+		}
+		complete_national_focus = GER_focus_berlin_economic_crisis
+		set_country_flag = GER_Berlin_eco_boom
+		add_ideas = GER_idea_economic_crisis
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = NER_GER.1.b
+		trigger = {
+			NOT = {
+				tag = GER
+				tag = CHA
+				tag = DFN
+			}
+		}
+
+	}
+	option = {
+		hidden_effect = {
+			country_event = {days=20
+							id = CHA.6
+		}
+			country_event = {days=40
+							id = CHA.7
+		}
+			country_event = {days=50
+							id = CHA.8
+		}
+	}
+		name = NER_GER.1.b
+		trigger = {
+			tag = CHA
+			}
+
+		
+		
+		add_ideas = CHA_GER_Berlin_eco_boom
+	}
+	option = {
+		name = NER_GER.1.c
+		trigger = {
+			tag = DFN
+		}
+		hidden_effect = {
+			country_event = { id = DFN.001 days = 5 }
+		}
+	}
+	}
+         country_event = {#暂停选举
+	id = NER_GER.2
+	title = NER_GER.2.t
+	desc = NER_GER.2.d
+	is_triggered_only = yes
+	option = {
+		name = NER_GER.2.a
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {#民主得胜
+	id = NER_GER.3
+	title = NER_GER.3.t
+	desc = NER_GER.3.d
+	is_triggered_only = yes
+	option = {
+		name = NER_GER.3.a
+		complete_national_focus = GER_focus_freedom_win
+		mark_focus_tree_layout_dirty = yes
+		#set_politics = {
+		#	ruling_party = neutrality
+		#	elections_allowed = yes
+		#	election_frequency = 48
+		#}
+	}
+}
+
+country_event = {#德意志[获得日期]大选 #在民主得胜利后开始选举
+	id = GER_dem.1
+	title = GER_dem.1.t
+	desc = GER_dem.1.d
+	is_triggered_only = yes
+	option = {#事不宜迟！
+		name = GER_dem.1.a
+		set_variable = { election_states = 0 }
+		country_event = { id = GER_dem.2 days = 2 }
+		add_to_array = {#数组为选举的候选人，0是施莱歇尔，后面的……还没出呢！
+			array = election_candidate
+			value = 0
+			index = 0
+		}
+
+	}
+}
+
+country_event = {#[勃兰登堡、西普鲁士、莱茵兰、汉诺威、波莫瑞]省的投票
+	id = GER_dem.2
+	title = GER_dem.2.t
+	desc = GER_dem.2.d
+	is_triggered_only = yes
+	option = {#施莱歇尔，当然的
+		name = GER_dem.2.a
+		add_to_variable = { election_candidate^0 = 1 }
+		add_to_variable = { election_states = 1 }
+		if = {
+			limit = {#选举省份没到5个的时候再触发一次选举，通过脚本本地化实现不同省份名
+				check_variable = { election_states < 5 } 
+			}
+			hidden_effect = {
+				country_event = { id = GER_dem.2 days = 5 }
+			}
+		}
+		else = {
+			country_event = { id = GER_dem.3 days = 3 }
+		}
+	}
+}
+
+country_event = {#选举结果颁布
+	id = GER_dem.3
+	title = GER_dem.3.t
+	desc = GER_dem.3.d
+	is_triggered_only = yes
+	option = {#施莱歇尔！
+		name = GER_dem.3.a
+		trigger = {
+			check_variable = { election_candidate^0 > 2 }
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		set_country_flag = GER_Schleicher_is_election_winner
+		complete_national_focus = GER_focus_second_term_of_office
+		mark_focus_tree_layout_dirty = yes
+		clear_variable = election_states
+		clear_array = election_candidate
+	}
+}
+
+
+country_event = {#你威威来咯 威廉大权独揽
+	id = NER_GER.4
+	title = NER_GER.4.t
+	desc = NER_GER.4.d
+	is_triggered_only = yes
+	option = {
+		name = NER_GER.4.a
+		promote_character = GER_Wilhelm_II
+		mark_focus_tree_layout_dirty = yes
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+			long_name = GER_party_kaiser_back_long
+			name = GER_party_kaiser_back
+		}
+		remove_ideas = GER_idea_kaisers_volition
+		complete_national_focus = GER_focus_kaiser_win
+	}
+}
+country_event = {#法国要求归还勃艮第
+	id = NER_GER.5
+	title = NER_GER.5.t
+	desc = NER_GER.5.d
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = NER_GER.5.a
+		FRA ={
+			annex_country = { 
+			target = BUD
+			transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = NER_GER.5.b
+		FRA = {
+			country_event = FRA.1
+		}
+	}
+}
+country_event = {#法国要求归还阿尔萨斯洛林
+	id = NER_GER.6
+	title = NER_GER.6.t
+	desc = NER_GER.6.d
+	is_triggered_only = yes
+	option = {
+		name = NER_GER.6.a
+		FRA ={
+			transfer_state = 28
+		}
+	}
+	option = {
+		name = NER_GER.6.b
+		ai_chance = {
+			base = 100
+		}
+		FRA = {
+			country_event = FRA.3
+		}
+	}
+}
+country_event = {#德国要求组建大德意志联邦
+	id = NER_GER.7
+	title = NER_GER.7.t
+	desc = NER_GER.7.d
+	is_triggered_only = yes
+	option = {
+		name = NER_GER.7.a
+		ai_chance = {
+			base = 50
+		}
+		FROM ={
+			annex_country = { target = ROOT transfer_troops = no }
+
+		}
+	}
+	option = {
+		name = NER_GER.7.b
+		ai_chance = {
+			base = 50
+		}
+		FROM ={
+			add_war_support = 0.5
+			add_political_power = 100
+		}
+		ROOT ={
+			create_wargoal = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+		
+	}
+}
+country_event = {#东欧要求独立
+	id = NER_GER.8
+	title = NER_GER.8.t
+	desc = NER_GER.8.d
+	is_triggered_only = yes
+	option = {
+		name = NER_GER.8.a
+		ai_chance = {
+			base = 50
+		}
+		GER= {
+			declare_war_on = {
+				target = VBH
+			}
+			declare_war_on = {
+				target = POL
+			}
+			declare_war_on = {
+				target = WHR
+			}
+			declare_war_on = {
+				target = LIT
+			}
+			declare_war_on = {
+				target = UKR
+			}
+			declare_war_on = {
+				target = MOL
+			}
+		}
+	}
+	option = {
+		name = NER_GER.8.b
+		ai_chance = {
+			base = 50
+		}
+		set_autonomy = {
+			target = VBH
+			autonomy_state = autonomy_free
+		}
+		set_autonomy = {
+			target = POL
+			autonomy_state = autonomy_free
+		}
+		set_autonomy = {
+			target = LIT
+			autonomy_state = autonomy_free
+		}
+		set_autonomy = {
+			target = WHR
+			autonomy_state = autonomy_free
+		}
+		set_autonomy = {
+			target = UKR
+			autonomy_state = autonomy_free
+		}
+		set_autonomy = {
+			target = MOL
+			autonomy_state = autonomy_free
+		}
+
+		
+	}
+}

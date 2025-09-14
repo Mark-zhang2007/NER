@@ -1,0 +1,55 @@
+﻿l_simp_chinese:
+######顺序为 ###
+##### 国名 ###
+#### 党派名 ###
+ RMC_communism_party: "美国共产党"
+ RMC_communism_party_long: "美国共产党"
+ RMC_democratic_party: "临时联盟"
+ RMC_democratic_party_long: "共和党-民主党选举联盟"
+ RMC_fascism_party: "军政府"
+ RMC_fascism_party_long: "军政府"
+ RMC_neutrality_party: "美利坚登基党"
+ RMC_neutrality_party_long: "美利坚登基党"
+# tooltip
+# 决议events
+
+#第一部分：核心危机应对（x=0列）
+RMC_Seize_Power: "夺取权力" #[如果尚未完全控制，则巩固权力]
+RMC_Declare_Martial_Law: "宣布戒严"
+RMC_Crush_Disorder: "粉碎骚乱" #[镇压街头抗议和初期反抗]
+
+#第二部分：军事重建（x=1列）
+RMC_Rebuild_Armed_Forces: "重建武装力量"
+RMC_Modernize_Infantry: "步兵现代化"
+RMC_nameed_Corps: "装甲部队计划"
+RMC_Air_Force_Revival: "空军复兴计划"
+
+#第三部分：经济动员（x=2列）
+RMC_War_Economy: "转入战时经济"
+RMC_Industrial_Revival: "工业复兴"
+RMC_Resource_Mobilization: "资源动员"
+RMC_Manpower_Draft: "人力征召"
+
+#第四部分：统一战争（x=3列）
+RMC_Plan_Against_Feds: "针对联邦政府的计划"
+RMC_Plan_Against_AUS: "针对联盟国的计划"
+RMC_Plan_Against_CSA: "针对社会主义者的计划"
+RMC_Total_War_Doctrine: "总体战学说"
+
+#第五部分：对外政策（x=4列）
+RMC_Reassert_Monroe: "重申门罗主义" #[针对拉丁美洲]
+RMC_Stand_Against_Red_Tide: "对抗红色浪潮" #[针对苏联和可能的社会主义国家]
+RMC_Pacific_Threat: "太平洋威胁" #[针对日本和中华联邦的残余势力]
+RMC_Old_World_Order: "旧世界秩序" #[与欧洲的德国或东罗协定合作]
+
+# ideas
+RMC_Armored_Supremacy: "装甲至上"
+RMC_Consolidated_Power: "权力巩固"
+RMC_Martial_Law: "戒严"
+RMC_Manpower: "宪法之子"
+
+#opinion modifiers
+RMC_monroe_doctrine: "重申门罗主义"
+RMC_anti_communist: "反共主义"
+RMC_pacific_rivalry: "太平洋竞争"
+RMC_german_cooperation: "德国合作"

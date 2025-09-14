@@ -1,0 +1,59 @@
+add_namespace = SER
+country_event = {
+    id = SER.001
+    title = SER.001.t
+    desc = SER.001.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { 
+        name = SER.001.a
+	}
+}
+country_event = {
+    id = SER.002
+    title = SER.002.t
+    desc = SER.002.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { 
+        name = SER.002.a
+	}
+}
+	
+country_event = {
+    id = SER.003
+    title = SER.003.t
+    desc = SER.003.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { 
+        name = SER.003.a
+	}
+}
+country_event = {
+    id = SER.004
+    title = SER.004.t
+    desc = SER.004.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { 
+        name = SER.004.a
+        set_country_flag = SER_The_Radical_League_won
+        complete_national_focus = SER_Standing_firm
+	}
+}
+ country_event = {
+    id = SER.005
+    title = SER.005.t
+    desc = SER.005.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { 
+        name = SER.005.a
+        add_ideas = SER_GER_Berlin_eco_boom
+        complete_national_focus = SER_Responding_to_crises
+	}
+}
+
+
+

@@ -1,0 +1,107 @@
+add_namespace = world_NEWS
+news_event = {#柏林经济危机的世界新闻
+  id =  world_NEWS.1
+  title =   world_NEWS.1.t
+  desc =  world_NEWS.1.d
+  is_triggered_only = yes
+  major = yes
+  immediate = {
+    
+  }
+  
+
+  option = {
+    name =  world_NEWS.1.a
+    trigger = {
+      tag = USA
+    }
+  }
+
+  option = {
+    name = world_NEWS.1.b
+    trigger = {
+      tag = PRC
+	  
+    }
+  }
+
+  option = {
+    name = world_NEWS.1.c
+    trigger = {
+      OR = {
+        tag = ENG
+        tag = FRA
+        tag = GER
+        tag = CAN
+      }
+    }
+  }
+
+  option = {
+    name = world_NEWS.1.dd
+    trigger = {
+      tag = CHA
+      
+    }
+    
+  }
+
+}
+news_event = {#苏联掀起东欧独立思潮
+  id = world_NEWS.2
+  title = world_NEWS.2.t
+  desc = world_NEWS.2.d
+  is_triggered_only = yes
+  major = yes
+  immediate = {
+    GER ={
+      country_event = NER_GER.8
+    }
+  }
+  option = {
+    name = world_NEWS.2.a
+    trigger = {
+      tag = GER
+    }
+  }
+  option = {
+    name = world_NEWS.2.b
+    trigger = {
+      tag = SOV
+    }
+  }
+  option = {
+    name = world_NEWS.2.c
+    trigger = {
+      NOT = {
+        OR ={
+          tag = GER
+          tag = SOV
+        }
+
+      }
+    }
+  }
+}
+
+news_event = {#苏联掀起中亚统一思潮
+  id = world_NEWS.3
+  title = world_NEWS.3.t
+  desc = world_NEWS.3.d
+  is_triggered_only = yes
+  major = yes
+  option = {
+    name = world_NEWS.3.a
+    trigger = {
+      tag = SOV
+    }
+  }
+  option = {
+    name = world_NEWS.3.b
+    trigger = {
+      NOT = {
+        tag = SOV
+      }
+    }
+  }
+}

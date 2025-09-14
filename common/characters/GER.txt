@@ -1,0 +1,25 @@
+characters = {
+	GER_Kurt_von_Schleicher = {
+		name = GER_Kurt_von_Schleicher
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_Kurt_von_Schleicher.png"
+			}
+		}
+		country_leader = {
+			ideology = moderatism
+		}
+	}
+
+	GER_Wilhelm_II = {
+		name = GER_Wilhelm_II
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_Wilhelm_II.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+		}
+	}
+}

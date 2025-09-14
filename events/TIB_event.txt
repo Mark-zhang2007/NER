@@ -1,0 +1,37 @@
+﻿add_namespace = TIB_back
+
+country_event = {#回归
+  id = TIB_back.1
+  title = TIB_back.1.t
+  desc = TIB_back.1.d
+  is_triggered_only = yes
+   
+
+
+  fire_only_once = yes
+  option = {
+    ai_chance = {
+			base   = 100
+    }
+    name = TIB_back.1.a
+    PRC ={
+      annex_country = { 
+      target = TIB 
+      transfer_troops = yes
+    }
+
+    }
+  }
+  option = {
+    ai_chance = {
+			base   = 0
+    }
+    name = TIB_back.1.b
+    PRC ={
+      declare_war_on = { target = TIB type = annex_everything }
+
+    }
+  }
+
+}
+

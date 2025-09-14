@@ -1,0 +1,71 @@
+USA_home_land_is_safe = {
+	allowed = { original_tag = USA }
+	enable = {
+		NOT = {
+			OR = {
+				has_civil_war = yes
+				has_war_with = CAN
+				has_war_with = MEX
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+}
+
+USA_onto_the_beaches = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		has_war = yes
+		NOT = {
+			OR = {
+				has_civil_war = yes
+				has_war_with = CAN
+				has_war_with = MEX
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 100
+	}
+}
+
+USA_drums_of_war = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		num_of_military_factories > 170
+		NOT = {
+			has_war_with = ENG
+			OR = {
+				has_civil_war = yes
+				has_war_with = CAN
+				has_war_with = MEX
+			}
+		}
+		has_government = democratic
+		ENG = {
+			has_government = democratic
+			has_war = yes
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = "ENG"
+		value = 1000
+	}
+}

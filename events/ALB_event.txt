@@ -1,0 +1,33 @@
+﻿add_namespace = ALB
+
+country_event = {#意大利要求臣服
+  id = ALB.1
+  title = ALB.1.t
+  desc = ALB.1.d
+  is_triggered_only = yes
+   
+
+
+  fire_only_once = yes
+  option = {
+    ai_chance = {
+			base   = 100
+    }
+    name = ALB.1.a
+    ITA={
+      set_autonomy = {
+				target = ALB
+				autonomy_state = autonomy_dominion 
+			}
+    }
+  }
+  option = {
+    ai_chance = {
+			base   = 0
+    }
+    name = ALB.1.b
+    
+  }
+
+}
+

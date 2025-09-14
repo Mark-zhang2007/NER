@@ -1,0 +1,214 @@
+# AI tank design for testing
+
+generic_medium_tanks = {
+	category = land
+
+	
+	
+	available_for = {}
+
+	roles = {
+		land_medium_tank
+	}
+
+	priority = {
+		factor = 5000
+	}
+
+	basic_medium_tank_default = {
+		priority = {
+			factor = 5000
+			modifier = { 
+				has_tech = improved_medium_tank_chassis
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 5000
+			type = medium_tank_chassis_1
+			modules = {
+				main_armament_slot = { any_of = { tank_medium_cannon_2 tank_medium_cannon tank_close_support_gun } }
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = wet_ammo_storage
+				special_type_slot_3 = secondary_turret_hmg
+				special_type_slot_4 = secondary_turret_hmg
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 0
+				tank_nsb_armor_upgrade = 20
+			}
+		}
+
+		allowed_modules = {
+			tank_close_support_gun
+			tank_medium_cannon
+			tank_medium_cannon_2
+			tank_medium_three_man_tank_turret
+			tank_torsion_bar_suspension
+			tank_gasoline_engine
+			tank_radio_3 
+			tank_radio_2 
+			tank_radio_1
+			tank_riveted_armor
+			secondary_turret_hmg
+			wet_ammo_storage
+		}
+	}
+
+	improved_medium_tank_default = {
+		priority = {
+			factor = 7000
+			
+			
+			modifier = { 
+				has_tech = advanced_medium_tank_chassis
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 7000
+			type = medium_tank_chassis_2
+			modules = {
+				main_armament_slot = { any_of = { tank_medium_cannon_2 tank_medium_cannon } }
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = easy_maintenance
+				special_type_slot_3 = secondary_turret_hmg
+				special_type_slot_4 = secondary_turret_hmg 
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 20
+			}
+		}
+
+		allowed_modules = {
+			tank_medium_cannon
+			tank_medium_cannon_2
+			tank_medium_three_man_tank_turret
+			tank_torsion_bar_suspension
+			tank_gasoline_engine
+			tank_radio_3 
+			tank_radio_2 
+			tank_radio_1
+			tank_riveted_armor
+			secondary_turret_hmg
+			easy_maintenance
+		}
+	}
+	
+	advanced_medium_tank_default = {
+		priority = {
+			factor = 10000
+			
+			
+		}
+
+		target_variant = {
+			match_value = 10000
+			type = medium_tank_chassis_3
+			modules = {
+				main_armament_slot = { any_of = { tank_medium_cannon_2 tank_medium_cannon } }
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = easy_maintenance
+				special_type_slot_3 = secondary_turret_hmg
+				special_type_slot_4 = secondary_turret_hmg 
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 20
+			}
+		}
+
+		allowed_modules = {
+			tank_medium_cannon
+			tank_medium_cannon_2
+			tank_medium_three_man_tank_turret
+			tank_torsion_bar_suspension
+			tank_gasoline_engine
+			tank_radio_3 
+			tank_radio_2 
+			tank_radio_1
+			tank_riveted_armor
+			secondary_turret_hmg
+			easy_maintenance
+		}
+	}
+}
+
+generic_modern_tanks = {
+	category = land
+
+	available_for = {}
+
+	roles = {
+		land_modern_tank
+	}
+
+	priority = {
+		factor = 15000
+	}
+
+	basic_modern_tank_default = {
+		priority = {
+			factor = 15000
+		}
+
+		target_variant = {
+			match_value = 15000
+			type = modern_tank_chassis
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_heavy_cannon_3 
+						tank_heavy_cannon_2 
+						tank_heavy_cannon 
+					} 
+				}
+				turret_type_slot = tank_modern_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = easy_maintenance
+				special_type_slot_3 = armor_skirts
+				special_type_slot_4 = wet_ammo_storage
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 0
+				tank_nsb_armor_upgrade = 20
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_cannon 
+			tank_heavy_cannon_2 
+			tank_heavy_cannon_3 
+			tank_modern_tank_turret
+			tank_bogie_suspension
+			tank_riveted_armor
+			tank_gasoline_engine
+			tank_radio_module
+			armor_skirts
+			wet_ammo_storage
+			easy_maintenance
+			tank_radio_3
+			tank_radio_2
+			tank_radio_1
+		}
+	}
+}

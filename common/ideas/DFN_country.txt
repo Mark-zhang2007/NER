@@ -1,0 +1,287 @@
+ideas = {
+#不要动
+
+	country = {
+	#不要动	
+
+		DFN_idea_eco_boom_3 = { #大萧条
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.4
+				consumer_goods_expected_value = 0.5
+				industrial_capacity_factory = -0.5
+				production_factory_efficiency_gain_factor = -0.5
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+		DFN_idea_eco_boom_2 = {
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				consumer_goods_expected_value = 0.45
+				industrial_capacity_factory = -0.4
+				production_factory_efficiency_gain_factor = -0.35
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+		DFN_idea_eco_boom_1 = {
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				consumer_goods_expected_value = 0.35
+				industrial_capacity_factory = -0.3
+				production_factory_efficiency_gain_factor = -0.25
+				line_change_production_efficiency_factor = -0.15
+			}
+		}
+
+		DFN_idea_eco_boom_0 = {
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				consumer_goods_expected_value = 0.3
+				industrial_capacity_factory = -0.25
+				production_factory_efficiency_gain_factor = -0.15
+				line_change_production_efficiency_factor = -0.1
+			}
+		}
+
+		DFN_idea_eco_boom_over = { #大萧条 后遗症
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_expected_value = 0.15
+				industrial_capacity_factory = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+				line_change_production_efficiency_factor = -0.05
+			}
+		}
+
+		DFN_idea_somany_nation = {#多民族矛盾 分裂的国家
+			modifier = {
+				stability_factor = -0.25
+				war_stability_factor = -0.3
+				conscription_factor = -0.5
+			}
+		}
+
+		DFN_idea_somany_nation_1 = {#多民族矛盾 分裂的国家
+			modifier = {
+				stability_factor = -0.20
+				war_stability_factor = -0.3
+				conscription_factor = -0.4
+			}
+		}
+
+		DFN_idea_somany_nation_2 = {#多民族矛盾 分裂的国家
+			modifier = {
+				stability_factor = -0.15
+				war_stability_factor = -0.3
+				conscription_factor = -0.25
+			}
+		}
+
+		DFN_idea_somany_nation_3 = {#多民族矛盾 分裂的国家
+			modifier = {
+				stability_factor = -0.1
+				war_stability_factor = -0.3
+				conscription_factor = -0.15
+			}
+		}
+
+		DFN_idea_ours_road = {#帝国自己的道路
+			modifier = {
+				send_volunteer_size = 4
+				send_volunteers_tension = -0.4
+			}
+			rule = {
+				can_create_factions = yes
+				can_send_volunteers = yes
+			}
+		}
+
+		DFN_idea_german_and_aus = {#追随德国
+			targeted_modifier = {
+				tag = GER
+				trade_cost_for_target_factor = -0.25
+				cic_to_target_factor = 0.05
+			}
+		}
+
+		DFN_idea_united_army_0 = { #联邦陆军
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				org_loss_when_moving = -0.1
+			}
+		}
+
+		DFN_idea_united_army_1 = { #联邦陆军
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				org_loss_when_moving = -0.15
+				army_morale_factor = 0.15
+				army_infantry_attack_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				max_planning_factor = 0.4
+			}
+		}
+
+		DFN_idea_united_navy_0 = {#联邦海军
+			modifier = {
+				experience_gain_navy_factor = 0.1
+				navy_fuel_consumption_factor = -0.15
+
+			}
+		}
+		DFN_idea_united_navy_1 = {#联邦海军
+			modifier = {
+				experience_gain_navy_factor = 0.1
+				navy_fuel_consumption_factor = -0.15
+				marines_special_forces_contribution_factor = -0.25
+				special_forces_attack_factor = 0.15
+				special_forces_defence_factor = 0.20
+				special_forces_no_supply_grace = 24
+				modifier_army_sub_unit_category_special_forces_max_org_factor = 0.2
+			}
+		}
+
+		DFN_idea_united_navy_2 = {#联邦海军
+			modifier = {
+				experience_gain_navy_factor = 0.1
+				navy_fuel_consumption_factor = -0.15
+				marines_special_forces_contribution_factor = -0.25
+				special_forces_attack_factor = 0.15
+				special_forces_defence_factor = 0.20
+				special_forces_no_supply_grace = 24
+				modifier_army_sub_unit_category_special_forces_max_org_factor = 0.2
+				naval_hit_chance = 0.1
+				navy_capital_ship_attack_factor = 0.2
+				navy_screen_attack_factor = 0.15
+			}
+		}
+
+		DFN_idea_united_air_0 = {#联邦空军
+			modifier = {
+				air_ace_generation_chance_factor = 0.25
+				air_training_xp_gain_factor = 0.1
+				army_bonus_air_superiority_factor = 0.05
+			}
+		}
+
+		DFN_idea_united_air_1 = {#联邦空军
+			modifier = {
+				air_ace_generation_chance_factor = 0.25
+				air_training_xp_gain_factor = 0.1
+				army_bonus_air_superiority_factor = 0.05
+				air_weather_penalty = -0.2
+				air_cas_efficiency = 0.2
+				air_detection = 0.1
+				air_wing_xp_loss_when_killed_factor = -0.25
+			}
+		}
+
+		DFN_idea_prepara_war = { #准备战争
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+				production_speed_industrial_complex_factor = -0.2
+				training_time_army_factor = -0.4
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		DFN_idea_workers_satisfied = {#保障工人权利
+			modifier = {
+				stability_factor = 0.15
+				party_popularity_stability_factor = 0.15
+				industrial_capacity_factory = 0.1
+				political_power_gain = -0.05
+			}
+		}
+
+		DFN_idea_Danube_Economic_miracle = {#多瑙经济奇迹
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+
+
+			}
+		}
+
+		DFN_idea_AUS_GER_cooperation = {# 多瑙-德意志合作协议
+			modifier = {
+				experience_gain_army = 0.05
+				experience_gain_navy = 0.05
+				experience_gain_air = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.15
+				stability_factor = 0.3
+				war_stability_factor = 0.3
+			}
+			targeted_modifier = {
+				tag = GER
+				trade_cost_for_target_factor = -0.25
+				cic_to_target_factor = 0.1
+			}
+
+		}
+
+		GER_idea_AUS_GER_cooperation = {#德意志-多瑙合作协议
+			modifier = {
+				experience_gain_army = 0.05
+				experience_gain_navy = 0.05
+				experience_gain_air = 0.05
+				production_factory_efficiency_gain_factor = 0.2
+				consumer_goods_factor = -0.25
+			}
+		}
+
+		DFN_idea_constitution_unity = {#多瑙联邦宪法_集权
+			modifier = {
+				stability_factor = 0.2
+				party_popularity_stability_factor = 0.2
+				weekly_casualties_war_support = 0.01
+				political_power_factor = 0.15
+				resistance_damage_to_garrison = -0.2
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+
+		DFN_idea_constitution_decentralization = {#多瑙联邦宪法_分权
+			modifier = {
+				stability_factor = 0.25
+				party_popularity_stability_factor = -0.15
+				political_power_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+				global_building_slots_factor = 0.25
+				resistance_target_on_our_occupied_states = 0.1
+
+
+			}
+		}
+
+	}
+	industrial_concern = {
+		DFN_united_building_com = {
+			allowed = {
+				original_tag = DFN
+			}
+			visible = {
+				has_completed_focus = DFN_Infrastructure
+			}
+			traits = {
+				construction_company
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+ideas = {
+#不要动
+
+	country = {
+	#不要动	
+
+		JAP_prepareless ={
+			modifier = {
+				offensive_war_stability_factor = -0.5
+				command_power_gain = -0.5
+				attrition = 0.3
+				army_defence_factor = -0.5
+				army_attack_factor = 2
+				mobilization_speed = 2
+				breakthrough_factor = 1
+				hidden_modifier = {
+					ai_get_ally_desire_factor = -1000
+				}
+			}
+			available = {
+				OR={
+		has_war_with = CHA
+		has_war_with = ROC
+		has_war_with = PRC
+				}
+		
+	}
+
+
+		}
+		
+}
+}

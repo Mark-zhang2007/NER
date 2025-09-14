@@ -1,0 +1,231 @@
+ideas = {
+#不要动
+
+	country = {
+	#不要动	
+
+		SER_Capital_control_in_Germany = {
+		                modifier = {
+                                     consumer_goods_factor = +0.3
+			}
+			
+		}
+                                 SER_Capital_control_in_Germany1 = {
+		                modifier = {
+                                     consumer_goods_factor = +0.1
+			}
+			
+		}
+
+                                 SER_Capital_control_in_Austrian = {
+		                modifier = {
+                                      consumer_goods_factor = +0.5
+			}
+			
+		}
+                                 SER_Capital_control_in_Austrian1 = {
+		                modifier = {
+                                      consumer_goods_factor = +0.2
+			}
+			
+		}
+
+                                  SER_Revenge_Mania = {
+		                modifier = {
+                                       army_attack_factor = 0.2
+                                       army_defence_factor =  0.2 
+                                       army_speed_factor = 0.2
+                                       army_org_factor =  0.15
+                                       army_morale_factor = 0.15                                      
+			}
+			
+		}
+                                    SER_A_deep_feud_in_the_sea_of_blood = {
+		                modifier = {
+                                       army_attack_factor = 0.4
+                                       army_defence_factor =  0.4 
+                                       army_speed_factor = 0.4
+                                       army_org_factor =  0.35
+                                       army_morale_factor = 0.35 
+                                       supply_consumption_factor = -0.35 
+                                       out_of_supply_factor = -0.35
+                                       org_loss_when_moving = -0.35
+                                       army_strength_factor =  0.35                                    
+			}
+			
+		}
+                                  SER_ASNOS_threat = {
+		                modifier = {
+                                        stability_factor = -0.05
+                                        stability_weekly = -0.05
+                                        communism_drift = 0.05                         
+			}
+			
+		}
+		                           SER_Divided_Alliance = {
+		                modifier = {
+                                        political_power_gain = -0.1
+                                        stability_weekly = -0.2
+                                                                 
+			}
+			
+		}
+                                    SER_Remnants_of_the_opposition_Alliance = {
+		                modifier = {
+                                        political_power_gain = -0.15
+                                        stability_weekly = -0.1
+                                        war_support_factor = -0.1
+                                                                 
+			}
+			
+		}
+                                    SER_Integrate_opposition_guards = {
+		                modifier = {
+                                        political_power_gain = -0.1
+                                        stability_weekly = -0.05
+                         }
+			
+		}
+                                    SER_One_leader_one_nation_one_country = {
+		                modifier = {
+                                        political_power_factor = 0.4
+                                        stability_weekly = 0.3
+                                        war_support_factor = 0.25
+                                        war_support_weekly = 0.25
+                                        mobilization_laws_cost_factor = -0.25
+                                        trade_laws_cost_factor  = -0.25
+                                        economy_cost_factor = -0.25
+                                        fascism_drift = 0.15
+                         }
+			
+		}
+                                    SER_Zelenasi = {
+		                modifier = {
+                                        command_power_gain_mult = 0.25
+                                        training_time_army_factor = -0.2
+                                        command_power_gain = 15
+                            }
+	          }
+                                     SER_GER_Berlin_eco_boom = {
+		                modifier = {
+                                          industrial_capacity_factory  = -0.25
+                                          consumer_goods_factor = +0.2
+                                          production_speed_buildings_factor  = -0.3
+                                          production_factory_max_efficiency_factor = -0.3
+		                          production_factory_efficiency_gain_factor = -0.3
+		                          line_change_production_efficiency_factor = -0.3
+		                          production_factory_start_efficiency_factor = -0.3
+                                          production_speed_arms_factory_factor = -0.3
+                             }
+	          }
+                                     SER_GER_Berlin_eco_boom1 = {
+		                modifier = {
+                                          industrial_capacity_factory  = -0.15
+                                          consumer_goods_factor = +0.1
+                                          production_speed_buildings_factor  = -0.2
+                                          production_factory_max_efficiency_factor = -0.2
+		                          production_factory_efficiency_gain_factor = -0.2
+		                          line_change_production_efficiency_factor = -0.2
+		                          production_factory_start_efficiency_factor = -0.2
+                                          production_speed_arms_factory_factor = -0.2
+                             }
+	          }
+                                    SER_GER_Berlin_eco_boom2  = {
+		                modifier = {
+                                          industrial_capacity_factory  = -0.05
+                                          production_speed_buildings_factor  = -0.1
+                                          production_factory_max_efficiency_factor = -0.1
+		                          production_factory_efficiency_gain_factor = -0.1
+		                          line_change_production_efficiency_factor = -0.1
+		                          production_factory_start_efficiency_factor = -0.1
+                                          production_speed_arms_factory_factor = -0.1
+                             }
+	          }
+                                     SER_GER_Berlin_eco_boom3  = {
+		                modifier = {
+                                          industrial_capacity_factory  = +0.25
+                                          production_speed_buildings_factor  = +0.25
+                                          production_factory_max_efficiency_factor = +0.25
+		                          production_factory_efficiency_gain_factor = +0.15
+		                          line_change_production_efficiency_factor = +0.25
+		                          production_factory_start_efficiency_factor =+0.25
+                                          production_speed_arms_factory_factor = +0.35
+                             }
+	          }
+
+
+                                     SER_Cartelization_reform = {
+		                modifier = {
+                                       political_power_factor = 0.15
+                                       production_factory_start_efficiency_factor =  0.1
+                                       production_speed_industrial_complex_factor = 0.15                        
+                             }
+	          }
+                                      SER_Liquidate_farmers'_debts = {
+		                modifier = {
+                                       political_power_factor = 0.15
+                                       production_factory_start_efficiency_factor =  0.1
+                                       production_speed_industrial_complex_factor = 0.25
+                                       consumer_goods_factor =  -0.25
+                                       conscription_factor =  0.35               
+                             } 
+	          }
+                                      SER_Corporatism_model = {
+		                modifier = {
+                                       production_speed_arms_factory_factor = 0.25
+                                       production_factory_start_efficiency_factor =  0.15
+                                       production_speed_industrial_complex_factor = 0.25
+                                       consumer_goods_factor =  -0.25
+                                       industrial_capacity_factory = 0.35   
+                                       production_factory_efficiency_gain_factor = 0.25      
+                             } 
+	          }
+                                     SER_Restart_the_Balkan_Wars = {
+		                modifier = {
+                                       justify_war_goal_time = -0.5
+                                       local_resources_factor = 0.4
+                                       global_building_slots_factor =  0.35
+                                       army_infantry_attack_factor = 0.4
+                                       army_infantry_defence_factor = 0.4
+                                       army_attack_factor = 0.6
+                                       army_defence_factor = 0.4
+                                       army_speed_factor = 0.4
+                                       experience_gain_army = 0.25
+                             } 
+	          }
+                                     SER_We_will_not_forget = {
+		                        targeted_modifier = {
+			                    tag = BUL
+			                   attack_bonus_against = 1
+			                  defense_bonus_against = 1
+			                  breakthrough_bonus_against = 1
+                                        } 
+                                          targeted_modifier = {
+                                            tag = DFN
+			                    attack_bonus_against = 1
+			                    defense_bonus_against = 1
+			                    breakthrough_bonus_against = 1
+                                        } 
+                                           targeted_modifier = {
+                                             tag = GER
+			                     attack_bonus_against = 1
+			                     defense_bonus_against = 1
+			                      breakthrough_bonus_against = 1
+                                        } 
+	                 }
+ 
+                                             SER_Our_long_cherished_wish = {
+		                modifier = {
+                                       army_core_attack_factor = 0.4
+		       army_core_defence_factor = 0.4
+                             } 
+	          }
+                                       SER_Three_legged_chair_theory = {
+		                modifier = {
+                                       political_power_gain = +0.35
+                                        stability_weekly = +0.2
+                                        war_support_factor = +0.2
+                             } 
+	          }
+       }
+}

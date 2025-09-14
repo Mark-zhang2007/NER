@@ -1,0 +1,486 @@
+focus_tree = {
+	id = USA_communism
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = USS
+		}
+	}
+	default = no
+	focus = {
+		id = USS_new_party
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 25
+		y = 0
+	}
+	focus = {
+		id = USS_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 6
+		y = 3
+		prerequisite = {
+			focus = USS_develop
+		}
+	}
+	focus = {
+		id = USS_commune
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 15
+		y = 1
+		prerequisite = {
+			focus = USS_new_party
+		}
+	}
+	focus = {
+		id = USS_develop
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = USS_commune
+		}
+	}
+	focus = {
+		id = USS_industry
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 3
+		y = 3
+		prerequisite = {
+			focus = USS_develop
+		}
+	}
+	focus = {
+		id = USS_jijian
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 2
+		y = 4
+		prerequisite = {
+			focus = USS_industry
+		}
+	}
+	focus = {
+		id = USS_railway
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 1
+		y = 5
+		prerequisite = {
+			focus = USS_jijian
+		}
+	}
+	focus = {
+		id = USS_factory2
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 6
+		y = 4
+		prerequisite = {
+			focus = USS_factory
+		}
+	}
+	focus = {
+		id = USS_produce
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 6
+		y = 5
+		prerequisite = {
+			focus = USS_factory2
+		}
+	}
+	focus = {
+		id = USS_workers
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 6
+		y = 6
+		prerequisite = {
+			focus = USS_produce
+		}
+	}
+	focus = {
+		id = USS_economy
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 10
+		y = 3
+		prerequisite = {
+			focus = USS_develop
+		}
+	}
+	focus = {
+		id = USS_economy_danger
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 10
+		y = 4
+		prerequisite = {
+			focus = USS_economy
+		}
+	}
+	focus = {
+		id = USS_re_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 10
+		y = 5
+		prerequisite = {
+			focus = USS_economy_danger
+		}
+	}
+	focus = {
+		id = USS_declare_safe
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 10
+		y = 6
+		prerequisite = {
+			focus = USS_re_economy
+		}
+	}
+	focus = {
+		id = USS_base
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 21
+		y = 2
+		prerequisite = {
+			focus = USS_commune
+		}
+	}
+	focus = {
+		id = USS_military
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 18
+		y = 3
+		prerequisite = {
+			focus = USS_base
+		}
+	}
+	focus = {
+		id = USS_navy
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 14
+		y = 4
+		prerequisite = {
+			focus = USS_military
+		}
+	}
+	focus = {
+		id = USS_army
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 18
+		y = 4
+		prerequisite = {
+			focus = USS_military
+		}
+	}
+	focus = {
+		id = USS_marines
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 16
+		y = 5
+		prerequisite = {
+			focus = USS_army
+		}
+		prerequisite = {
+			focus = USS_navy
+		}
+	}
+	focus = {
+		id = USS_tanks
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 18
+		y = 6
+		prerequisite = {
+			focus = USS_army
+		}
+	}
+	focus = {
+		id = USS_ships
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 14
+		y = 6
+		prerequisite = {
+			focus = USS_navy
+		}
+	}
+	focus = {
+		id = USS_airforce
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 22
+		y = 4
+		prerequisite = {
+			focus = USS_military
+		}
+	}
+	focus = {
+		id = USS_sanbing
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 20
+		y = 5
+		prerequisite = {
+			focus = USS_army
+		}
+		prerequisite = {
+			focus = USS_airforce
+		}
+	}
+	focus = {
+		id = USS_planes
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 22
+		y = 6
+		prerequisite = {
+			focus = USS_airforce
+		}
+	}
+	focus = {
+		id = USS_integration
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 18
+		y = 7
+		prerequisite = {
+			focus = USS_tanks
+		}
+		prerequisite = {
+			focus = USS_planes
+		}
+		prerequisite = {
+			focus = USS_ships
+		}
+	}
+	focus = {
+		id = USS_war
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 25
+		y = 3
+		prerequisite = {
+			focus = USS_base
+		}
+	}
+	focus = {
+		id = USS_conformity
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 25
+		y = 4
+		prerequisite = {
+			focus = USS_war
+		}
+	}
+	focus = {
+		id = USS_loyalty
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 25
+		y = 5
+		prerequisite = {
+			focus = USS_conformity
+		}
+	}
+	focus = {
+		id = USS_prepare
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 25
+		y = 6
+		prerequisite = {
+			focus = USS_loyalty
+		}
+	}
+	focus = {
+		id = USS_center
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 25
+		y = 7
+		prerequisite = {
+			focus = USS_prepare
+		}
+	}
+	focus = {
+		id = USS_people
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 30
+		y = 1
+		prerequisite = {
+			focus = USS_new_party
+		}
+	}
+	focus = {
+		id = USS_support
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 30
+		y = 2
+		prerequisite = {
+			focus = USS_people
+		}
+	}
+	focus = {
+		id = USS_country
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 34
+		y = 1
+		prerequisite = {
+			focus = USS_new_party
+		}
+	}
+	focus = {
+		id = USS_our_dream
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 34
+		y = 2
+		prerequisite = {
+			focus = USS_country
+		}
+	}
+	focus = {
+		id = USS_fra
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 8
+		prerequisite = {
+			focus = USS_center
+		}
+	}
+	focus = {
+		id = USS_withprc
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 27
+		y = 8
+		prerequisite = {
+			focus = USS_center
+		}
+		mutually_exclusive = {
+			focus = USS_liberate
+		}
+	}
+	focus = {
+		id = USS_liberate
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 30
+		y = 8
+		prerequisite = {
+			focus = USS_center
+		}
+		mutually_exclusive = {
+			focus = USS_withprc
+		}
+	}
+	focus = {
+		id = USS_america
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 3
+		prerequisite = {
+			focus = USS_our_dream
+		}
+		prerequisite = {
+			focus = USS_support
+		}
+	}
+	focus = {
+		id = USS_invite_canada
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 30
+		y = 4
+		prerequisite = {
+			focus = USS_america
+		}
+	}
+	focus = {
+		id = USS_invite_mexico
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 34
+		y = 4
+		prerequisite = {
+			focus = USS_america
+		}
+	}
+	focus = {
+		id = USS_liberate_sa
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 5
+		prerequisite = {
+			focus = USS_america
+		}
+	}
+	focus = {
+		id = USS_communism_world
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 6
+		prerequisite = {
+			focus = USS_liberate_sa
+		}
+	}
+	focus = {
+		id = USS_highway
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 3
+		y = 5
+		prerequisite = {
+			focus = USS_jijian
+		}
+	}
+	focus = {
+		id = USS_miracle
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 10
+		y = 7
+		prerequisite = {
+			focus = USS_workers
+		}
+		prerequisite = {
+			focus = USS_home
+		}
+		prerequisite = {
+			focus = USS_declare_safe
+		}
+	}
+	focus = {
+		id = USS_home
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 2
+		y = 6
+		prerequisite = {
+			focus = USS_highway
+			focus = USS_railway
+		}
+	}
+}

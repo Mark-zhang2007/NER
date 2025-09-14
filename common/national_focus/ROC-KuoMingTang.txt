@@ -1,0 +1,332 @@
+#!gfx:interface\NER_goals.gfx
+focus_tree = {
+	id = KMT_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ROC
+		}
+	}
+	continuous_focus_position = {
+		x = 0
+		y = 1500
+	}
+	focus = {
+		id = ROC_focus_white_sun_rise_agian #青天白日再升起
+		icon = GFX_goal_unknown
+		cost = 0
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_2st_KMTdahui #第二次全国代表大会
+		icon = GFX_goal_unknown
+		cost = 5
+		relative_position_id = ROC_focus_white_sun_rise_agian
+		prerequisite = {
+			focus = ROC_focus_white_sun_rise_agian
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			set_cosmetic_tag = ROC_CANTON_GOV
+		}
+	}
+
+	focus = {
+		id = ROC_focus_xunzheng #颁布训政约法
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_2st_KMTdahui
+		prerequisite = {
+			focus = ROC_focus_2st_KMTdahui
+		}
+		cost = 3
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_Overthrow_imperialist_warlords #打倒列强，除军阀！
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_xunzheng
+		prerequisite = {
+			focus = ROC_focus_xunzheng
+		}
+		cost = 2
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+
+	focus = {
+		id = ROC_focus_set_dip #设立外交部
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_Overthrow_imperialist_warlords
+		prerequisite = {
+			focus = ROC_focus_Overthrow_imperialist_warlords
+		}
+		cost = 3
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_contact_huaqiao #联络海外华侨
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_set_dip
+		prerequisite = {
+			focus = ROC_focus_set_dip
+		}
+		cost = 4
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_build_administrative_agency #建立地方行政机构
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_Overthrow_imperialist_warlords
+		prerequisite = {
+			focus = ROC_focus_Overthrow_imperialist_warlords
+		}
+		cost = 5
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_curbing_local_factions #遏制地方实力派
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_build_administrative_agency
+		prerequisite = {
+			focus = ROC_focus_build_administrative_agency
+		}
+		cost = 3
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_second_national_revolution #第二次国民革命
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_xunzheng
+		prerequisite = {
+			focus = ROC_focus_contact_huaqiao
+		}
+		prerequisite = {
+			focus = ROC_focus_curbing_local_factions
+		}
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = ROC_focus_national_army_not_KMTs
+					}
+				}
+				has_completed_focus = ROC_focus_make_huangpu_great_again
+			}
+			else = {
+				has_completed_focus = ROC_focus_national_army_not_KMTs
+			}
+		}
+		cost = 5
+		x = 0
+		y = 4
+		completion_reward = { }
+	}
+######### 军事线 ##########
+ #无论走哪个分支，都解锁一个向华侨寻求走私武器的决议
+	focus = {
+		id = ROC_focus_make_huangpu_great_again #重开黄埔军校
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_xunzheng
+		prerequisite = {
+			focus = ROC_focus_xunzheng
+		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = ROC_build_national_army_flag
+			}
+		}
+		cost = 4
+		x = 4
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_set_political_department #设立政治部
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_make_huangpu_great_again
+		prerequisite = {
+			focus = ROC_focus_make_huangpu_great_again
+		}
+		cost = 3
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_qinaijingcheng #亲爱精诚
+		icon = GFX_goal_unknown
+		cost = 3
+		relative_position_id = ROC_focus_set_political_department
+		prerequisite = {
+			focus = ROC_focus_set_political_department
+		}
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_pioneer_of_National_revorution #国民革命之先锋
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_qinaijingcheng
+		prerequisite = {
+			focus = ROC_focus_qinaijingcheng
+		}
+		cost =3
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_queli_zongcan #建立总参谋部
+		icon = GFX_goal_unknown
+		cost = 3
+		relative_position_id = ROC_focus_national_army_not_KMTs
+		prerequisite = {
+			focus = ROC_focus_national_army_not_KMTs
+		}
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_set_junqu #设立军区
+		icon = GFX_goal_unknown
+		cost = 3
+		relative_position_id = ROC_focus_queli_zongcan
+		prerequisite = {
+			focus = ROC_focus_queli_zongcan
+		}
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_New_army_designation #军队新番号
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_set_junqu
+		prerequisite = {
+			focus = ROC_focus_set_junqu
+		}
+		cost = 3
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_national_army_not_KMTs #国军而非党军 #不对这好像已经违反训政约法了来着
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = ROC_focus_xunzheng
+		prerequisite = {
+			focus = ROC_focus_xunzheng
+		}
+		allow_branch = {
+			has_country_flag = ROC_build_national_army_flag #我们选择了建立国家军队
+		}
+		x = 4
+		y = 1
+		completion_reward = { }
+	}
+
+####### 第一阶段工业线 ###########
+	focus = {
+		id = ROC_focus_liangguang_build #两广省建
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_xunzheng
+		prerequisite = {
+			focus = ROC_focus_xunzheng
+		}
+		cost = 3
+		x = -6
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_expand_guangdong_armsfactory #扩建广东兵工厂
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_liangguang_build
+		prerequisite = {
+			focus = ROC_focus_liangguang_build
+		}
+		cost = 4
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_expand_ic #扩展织造厂
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_liangguang_build
+		prerequisite = {
+			focus = ROC_focus_liangguang_build
+		}
+		cost = 4
+		x = -2
+		y = 1
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ROC_focus_radio_build #设立全国广播电台
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_liangguang_build
+		prerequisite = {
+			focus = ROC_focus_liangguang_build
+		}
+		cost = 3
+		x = 2
+		y = 1
+		completion_reward = { }
+	}
+
+
+	focus = {
+		id = ROC_focus_beifa_dabenying #北伐大本营
+		icon = GFX_goal_unknown
+		relative_position_id = ROC_focus_liangguang_build
+		prerequisite = {
+			focus = ROC_focus_expand_ic
+		}
+		prerequisite = {
+			focus = ROC_focus_expand_guangdong_armsfactory
+		}
+		prerequisite = {
+			focus = ROC_focus_radio_build
+		}
+		cost = 5
+		x = 0
+		y = 2
+		completion_reward = { }
+	}
+}

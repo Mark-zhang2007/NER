@@ -1,0 +1,18 @@
+PRC_publicity = {
+	visible_when_empty = yes
+	icon = SOV_propaganda
+
+	scripted_gui = sov_propaganda_campaigns_ui
+	#icon = 
+	#picture = 
+	allowed = {
+		tag = PRC
+	}
+
+	visible = {
+		has_completed_focus = PRC_focus_on_politics
+		
+	}
+	priority = 11
+}
+

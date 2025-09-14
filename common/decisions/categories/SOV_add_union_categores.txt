@@ -1,0 +1,16 @@
+SOV_add_union_categores = {
+	#icon = 
+	#picture = 
+	allowed = {
+		tag = SOV
+	}
+
+	visible = {
+		OR ={
+		has_completed_focus = SOV_EE_union
+		has_completed_focus = SOV_MA_union
+		}
+	}
+	priority = 10
+}
+

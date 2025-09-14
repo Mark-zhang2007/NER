@@ -1,0 +1,11 @@
+technologies = {
+	irregular_infantry_unlock = {#解锁非正规步兵
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			irregular_infantry
+		}
+	}
+}

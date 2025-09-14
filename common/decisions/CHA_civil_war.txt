@@ -1,0 +1,187 @@
+#决议分类txt文件位置common/decisions/categories/xxx_decision_category.txt
+CHA_civil_war  = {
+
+
+	CHA_civil_war_1 = {#裂开倒计时     
+		days_mission_timeout = 60
+
+		allowed = {
+			tag =CHA
+		}
+
+		available = {     
+			always = no
+		}
+		activation = {                
+			has_idea = CHA_GER_Berlin_eco_boom
+			PRC={exists=no}
+		}
+		fire_only_once = yes
+		
+		selectable_mission = no
+		# 如果设置，会将任务转换为玩家必须选择按钮的任务。
+
+		is_good = no                        
+	
+		
+
+		timeout_effect = {                      
+			country_event  = {   id = CHA.2 }
+      
+			
+		}       
+
+}
+CHA_civil_war_2 = {#裂开后的倒计时     
+		days_mission_timeout = 100
+		fire_only_once = yes
+		allowed = {
+			OR={tag =CHA
+		tag = PRC 
+		tag = ROC
+		tag = GXC
+		tag = SIK
+		tag = XSM
+		tag = SHX
+		tag = MON
+		tag = YUN}
+			
+		}
+
+		available = {     
+					always = no
+		}
+		activation = {                
+			has_idea = CHA_prepare_civil_war
+		}    
+		
+		selectable_mission = no
+		# 如果设置，会将任务转换为玩家必须选择按钮的任务。
+
+		is_good = no                        
+	
+		
+
+		timeout_effect = {                      
+			if = {
+				limit = {
+					tag = PRC
+				}
+				declare_war_on = { target = ROC type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+				declare_war_on = { target = GXC type = annex_everything }
+				declare_war_on = { target = SIK type = annex_everything }
+				declare_war_on = { target = XSM type = annex_everything }
+				declare_war_on = { target = SHX type = annex_everything }
+				declare_war_on = { target = MON type = annex_everything }
+				declare_war_on = { target = YUN type = annex_everything }
+			}
+			if = {
+				limit = {
+					tag = ROC
+				}
+				declare_war_on = { target = PRC type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+				declare_war_on = { target = GXC type = annex_everything }
+				declare_war_on = { target = SIK type = annex_everything }
+				declare_war_on = { target = XSM type = annex_everything }
+				declare_war_on = { target = SHX type = annex_everything }
+				declare_war_on = { target = MON type = annex_everything }
+				declare_war_on = { target = YUN type = annex_everything }
+			}
+			if = {
+				limit = {
+					tag = CHA
+				}
+				declare_war_on = { target = ROC type = annex_everything }
+				declare_war_on = { target = PRC type = annex_everything }
+				declare_war_on = { target = GXC type = annex_everything }
+				declare_war_on = { target = SIK type = annex_everything }
+				declare_war_on = { target = XSM type = annex_everything }
+				declare_war_on = { target = SHX type = annex_everything }
+				declare_war_on = { target = MON type = annex_everything }
+				declare_war_on = { target = YUN type = annex_everything }
+			}
+			if = {
+				limit = {
+					tag = GXC
+				}
+				declare_war_on = { target = ROC type = annex_everything }
+				declare_war_on = { target = PRC type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+				declare_war_on = { target = SIK type = annex_everything }
+				declare_war_on = { target = XSM type = annex_everything }
+				declare_war_on = { target = SHX type = annex_everything }
+				declare_war_on = { target = MON type = annex_everything }
+			}
+			if = {
+				limit = {
+					tag = SIK
+				}
+				declare_war_on = { target = ROC type = annex_everything }
+				declare_war_on = { target = PRC type = annex_everything }
+				declare_war_on = { target = GXC type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+				declare_war_on = { target = XSM type = annex_everything }
+				declare_war_on = { target = SHX type = annex_everything }
+				declare_war_on = { target = MON type = annex_everything }
+			}
+			if = {
+				limit = {
+					tag = XSM
+				}
+				declare_war_on = { target = ROC type = annex_everything }
+				declare_war_on = { target = PRC type = annex_everything }
+				declare_war_on = { target = GXC type = annex_everything }
+				declare_war_on = { target = SIK type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+				declare_war_on = { target = SHX type = annex_everything }
+				declare_war_on = { target = MON type = annex_everything }
+			}
+			if = {
+				limit = {
+					tag = SHX
+				}
+				declare_war_on = { target = ROC type = annex_everything }
+				declare_war_on = { target = PRC type = annex_everything }
+				declare_war_on = { target = GXC type = annex_everything }
+				declare_war_on = { target = SIK type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+				declare_war_on = { target = MON type = annex_everything }
+				declare_war_on = { target = XSM type = annex_everything }
+			}
+			if = {
+				limit = {
+					tag = MON
+				}
+				declare_war_on = { target = ROC type = annex_everything }
+				declare_war_on = { target = PRC type = annex_everything }
+				declare_war_on = { target = GXC type = annex_everything }
+				declare_war_on = { target = SIK type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+				declare_war_on = { target = SHX type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+			}
+			if = {
+				limit = {
+					tag = YUN
+				}
+				declare_war_on = { target = ROC type = annex_everything }
+				declare_war_on = { target = PRC type = annex_everything }
+				declare_war_on = { target = GXC type = annex_everything }
+				declare_war_on = { target = SIK type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+				declare_war_on = { target = SHX type = annex_everything }
+				declare_war_on = { target = CHA type = annex_everything }
+			}
+			country_event = { days = 60
+			 id = CHA.3 }
+
+      
+			
+		}       
+
+}
+
+
+}

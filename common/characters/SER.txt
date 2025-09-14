@@ -1,0 +1,18 @@
+characters={
+	SER_Milan_Stojadinovic = {
+		name = SER_Milan_Stojadinovic
+		portraits={
+			
+			civilian = {    
+				large="gfx/leaders/SER/SER_Milan_Stojadinovic.PNG"
+				
+			}
+		}
+		
+		country_leader={   
+			ideology= nazism
+			
+			
+		}
+
+		

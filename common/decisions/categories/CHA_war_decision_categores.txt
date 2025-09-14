@@ -1,0 +1,23 @@
+CHA_war = {
+	#icon = 
+	#picture = 
+	allowed = {
+		always = yes
+	}
+	available = {
+		tag =CHA
+	}
+	visible = {
+		has_war_with = ETH
+	}
+	priority = 10
+}
+CHA_debug={
+	allowed = {
+		tag = CHA
+	}
+	visible = {
+		is_debug = yes
+	}
+}
+

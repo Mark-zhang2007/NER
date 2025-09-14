@@ -1,0 +1,273 @@
+focus_tree = {
+	id = OTO
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = OTO
+		}
+	}
+	default = no
+	focus = {
+		id = OTO_underdog
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = OTO_insurrection
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = OTO_underdog
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = OTO_govern
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = OTO_underdog
+		}
+		x = 18
+		y = 1
+
+	}
+	focus = {
+		id = OTO_Deadlocked_parliament
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_insurrection
+		}
+		prerequisite = {
+			focus = OTO_govern
+		}
+		x = 17
+		y = 2
+
+	}
+	focus = {
+		id = OTO_Great_Vicker
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = OTO_Deadlocked_parliament
+		}
+		x = 17
+		y = 3
+
+	}
+	focus = {
+		id = OTO_Reassure_people
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = OTO_Great_Vicker
+		}
+		x = 14
+		y = 5
+
+	}
+	focus = {
+		id = OTO_Religious_issues
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = OTO_Great_Vicker
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = OTO_Appease_Christians
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Religious_issues
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = OTO_Religious_inclusion
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Appease_Christians
+		}
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = OTO_Give_autonomy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Reassure_people
+		}
+		x = 14
+		y = 6
+
+	}
+	focus = {
+		id = OTO_wish-1
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Give_autonomy
+		}
+		x = 14
+		y = 7
+
+	}
+	focus = {
+		id = OTO_Facing_crisis
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = OTO_Great_Vicker
+		}
+		x = 20
+		y = 5
+
+	}
+	focus = {
+		id = OTO_Reform_Ottomans
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Facing_crisis
+		}
+		x = 20
+		y = 6
+
+	}
+	focus = {
+		id = OTO_Grassroots_bills
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Reform_Ottomans
+		}
+		x = 20
+		y = 7
+
+	}
+	focus = {
+		id = OTO_Great_Ottomans
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_wish-1
+		}
+		prerequisite = {
+			focus = OTO_Religious_inclusion
+		}
+		prerequisite = {
+			focus = OTO_Grassroots_bills
+		}
+		x = 17
+		y = 9
+
+	}
+	focus = {
+		id = OTO_Aegean_Agreement
+		icon = GFX_goal_unknown
+		cost = 14.00
+		prerequisite = {
+			focus = OTO_Great_Ottomans
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = OTO_Vienna_again
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Aegean_Agreement
+		}
+		x = 14
+		y = 11
+
+	}
+	focus = {
+		id = OTO_Enter_Berlin
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Vienna_again
+		}
+		x = 14
+		y = 12
+
+	}
+	focus = {
+		id = OTO_Extermination_resistance
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Aegean_Agreement
+		}
+		x = 20
+		y = 11
+
+	}
+	focus = {
+		id = OTO_Reconstructing_Egypt
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Extermination_resistance
+		}
+		x = 20
+		y = 12
+
+	}
+	focus = {
+		id = OTO_friendship_xp
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_Enter_Berlin
+		}
+		prerequisite = {
+			focus = OTO_Reconstructing_Egypt
+		}
+		x = 17
+		y = 13
+
+	}
+	focus = {
+		id = OTO_glory_xp
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_friendship_xp
+		}
+		x = 17
+		y = 14
+
+	}
+	focus = {
+		id = OTO_Forever_Ottomans
+		icon = GFX_goal_unknown
+		cost = 12.00
+		prerequisite = {
+			focus = OTO_glory_xp
+		}
+		x = 17
+		y = 15
+
+	}
+}

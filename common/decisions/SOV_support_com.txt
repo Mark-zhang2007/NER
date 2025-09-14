@@ -1,0 +1,187 @@
+#决议分类txt文件位置common/decisions/categories/xxx_decision_category.txt
+SOV_support_com_categores = {
+	SOV_support_CAN_com= {
+		visible = {
+			has_completed_focus = SOV_north_america
+			CAN ={
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		cost = 50
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {  
+			CAN ={
+				add_timed_idea = {
+					idea = SOV_support_com
+					days = 100
+				}
+			}
+		}
+		remove_effect = {
+			add_political_power = 50
+		}
+	}
+	SOV_support_MEX_com= {
+		visible = {
+			has_completed_focus = SOV_north_america
+			MEX ={
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		cost = 50
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {  
+			MEX ={
+				add_timed_idea = {
+					idea = SOV_support_com
+					days = 100
+				}
+			}
+		}
+		remove_effect = {
+			add_political_power = 50
+		}
+	}
+	SOV_support_ARG_com= {
+		visible = {
+			has_completed_focus = SOV_south_america
+			ARG ={
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		cost = 50
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {  
+			ARG ={
+				add_timed_idea = {
+					idea = SOV_support_com
+					days = 100
+				}
+			}
+		}
+		remove_effect = {
+			add_political_power = 50
+		}
+	}
+	SOV_support_SWE_com= {
+		visible = {
+			has_completed_focus = SOV_north_eu
+			SWE ={
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		cost = 50
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {  
+			SWE ={
+				add_timed_idea = {
+					idea = SOV_support_com
+					days = 100
+				}
+			}
+		}
+		remove_effect = {
+			add_political_power = 50
+		}
+	}
+	SOV_support_NOR_com= {
+		visible = {
+			has_completed_focus = SOV_north_eu
+			NOR ={
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		cost = 50
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {  
+			NOR ={
+				add_timed_idea = {
+					idea = SOV_support_com
+					days = 100
+				}
+			}
+		}
+		remove_effect = {
+			add_political_power = 50
+		}
+	}
+	SOV_support_FIN_com= {
+		visible = {
+			has_completed_focus = SOV_north_eu
+			FIN ={
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		cost = 50
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {  
+			FIN ={
+				country_event = SOV.6
+			}
+
+		}
+		remove_effect = {
+			add_political_power = 50
+		}
+	}
+	SOV_support_USS_com= {
+		visible = {
+			has_completed_focus = SOV_help_uss
+			
+		}
+		cost = 50
+		days_remove = 150
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			USS ={#美国工团
+				add_equipment_to_stockpile = {
+					type = infantry_equipment 
+					amount = 1500
+					producer = SOV
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment 
+					amount = 1000
+					producer = SOV
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_artillery_chassis 
+					amount = 150
+					producer = SOV
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,600 @@
+﻿GXC_INF_01 = {
+  name = "步兵部队"  # Infantry Unit
+  for_countries = {
+    GXC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "infantry"
+  }
+  fallback_name = "第%d广西军团"  # %d Guangxi Juntuán
+  ordered = {
+    62 = {
+      "第%d军"  # %d Juntuán
+    }
+    63 = {
+      "第%d军"  # %d Juntuán
+    }
+    64 = {
+      "第%d军"  # %d Juntuán
+    }
+    65 = {
+      "第%d军"  # %d Juntuán
+    }
+    66 = {
+      "第%d军"  # %d Juntuán
+    }
+    67 = {
+      "第%d军"  # %d Juntuán
+    }
+    68 = {
+      "第%d军"  # %d Juntuán
+    }
+    69 = {
+      "第%d军"  # %d Juntuán
+    }
+    60 = {
+      "第%d军"  # %d Juntuán
+    }
+    61 = {
+      "第%d军"  # %d Juntuán
+    }
+    1 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    2 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    3 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    4 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    5 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    6 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    7 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    8 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    9 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    10 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    11 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    12 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    13 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    14 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    15 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    16 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    17 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    18 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    19 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    20 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+  }
+}
+GXC_CAV_01 = {
+  name = "骑兵部队"  # Cavalry Unit
+  for_countries = {
+    GXC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "cavalry"
+  }
+  fallback_name = "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+  ordered = {
+    1 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    2 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    3 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    4 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    6 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    5 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    7 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    8 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    9 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    10 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    11 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    12 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    13 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    14 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+    15 = {
+      "第%d广西骑兵师"  # %d Guangxi Qibing Jun
+    }
+  }
+}
+GXC_MOT_01 = {
+  name = "摩托化部队"  # Motorized Unit
+  for_countries = {
+    GXC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "motorized"
+  }
+  link_numbering_with = {
+    GXC_INF_01
+  }
+  fallback_name = "第%d广西军团"  # %d Guangxi Juntuán
+  ordered = {
+    62 = {
+      "第%d军"  # %d Juntuán
+    }
+    63 = {
+      "第%d军"  # %d Juntuán
+    }
+    64 = {
+      "第%d军"  # %d Juntuán
+    }
+    65 = {
+      "第%d军"  # %d Juntuán
+    }
+    66 = {
+      "第%d军"  # %d Juntuán
+    }
+    67 = {
+      "第%d军"  # %d Juntuán
+    }
+    68 = {
+      "第%d军"  # %d Juntuán
+    }
+    69 = {
+      "第%d军"  # %d Juntuán
+    }
+    60 = {
+      "第%d军"  # %d Juntuán
+    }
+    61 = {
+      "第%d军"  # %d Juntuán
+    }
+    1 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    2 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    3 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    4 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    5 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    6 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    7 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    8 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    9 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    10 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    11 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    12 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    13 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    14 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    15 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    16 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    17 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    18 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    19 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    20 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+  }
+}
+GXC_MEC_01 = {
+  name = "机械化部队"  # Mechanized Unit
+  for_countries = {
+    GXC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "mechanized"
+  }
+  link_numbering_with = {
+    GXC_INF_01
+  }
+  fallback_name = "第%d广西军团"  # %d Guangxi Juntuán
+  ordered = {
+    62 = {
+      "第%d军"  # %d Juntuán
+    }
+    63 = {
+      "第%d军"  # %d Juntuán
+    }
+    64 = {
+      "第%d军"  # %d Juntuán
+    }
+    65 = {
+      "第%d军"  # %d Juntuán
+    }
+    66 = {
+      "第%d军"  # %d Juntuán
+    }
+    67 = {
+      "第%d军"  # %d Juntuán
+    }
+    68 = {
+      "第%d军"  # %d Juntuán
+    }
+    69 = {
+      "第%d军"  # %d Juntuán
+    }
+    60 = {
+      "第%d军"  # %d Juntuán
+    }
+    61 = {
+      "第%d军"  # %d Juntuán
+    }
+    1 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    2 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    3 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    4 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    5 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    6 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    7 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    8 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    9 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    10 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    11 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    12 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    13 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    14 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    15 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    16 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    17 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    18 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    19 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    20 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+  }
+}
+GXC_MNT_01 = {
+  name = "山地部队"  # Mountain Unit
+  for_countries = {
+    GXC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "mountaineers"
+  }
+  link_numbering_with = {
+    GXC_INF_01
+  }
+  fallback_name = "第%d广西军团"  # %d Guangxi Juntuán
+  ordered = {
+    62 = {
+      "第%d军"  # %d Juntuán
+    }
+    63 = {
+      "第%d军"  # %d Juntuán
+    }
+    64 = {
+      "第%d军"  # %d Juntuán
+    }
+    65 = {
+      "第%d军"  # %d Juntuán
+    }
+    66 = {
+      "第%d军"  # %d Juntuán
+    }
+    67 = {
+      "第%d军"  # %d Juntuán
+    }
+    68 = {
+      "第%d军"  # %d Juntuán
+    }
+    69 = {
+      "第%d军"  # %d Juntuán
+    }
+    60 = {
+      "第%d军"  # %d Juntuán
+    }
+    61 = {
+      "第%d军"  # %d Juntuán
+    }
+    1 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    2 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    3 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    4 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    5 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    6 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    7 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    8 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    9 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    10 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    11 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    12 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    13 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    14 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    15 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    16 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    17 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    18 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    19 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+    20 = {
+      "第%d广西军团"  # %d Guangxi Juntuán
+    }
+  }
+}
+GXC_GAR_01 = {
+  name = "守备部队"  # Garrison Unit
+  for_countries = {
+    GXC
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "infantry"
+  }
+  fallback_name = "第%d广西守备师"  # %d Guangxi Jingbei
+  ordered = {
+    101 = {
+      "第1广州守备师"  # 1 Guangzhou Jingbei
+    }
+    111 = {
+      "第1海南守备师"  # 1 Hainan Jingbei
+    }
+    121 = {
+      "第1桂林守备师"  # 1 Guilin Jingbei
+    }
+    102 = {
+      "第2广州守备师"  # 2 Guangzhou Jingbei
+    }
+    103 = {
+      "第3广州守备师"  # 3 Guangzhou Jingbei
+    }
+    112 = {
+      "第2海南守备师"  # 2 Hainan Jingbei
+    }
+    113 = {
+      "第3海南守备师"  # 3 Hainan Jingbei
+    }
+    122 = {
+      "第2桂林守备师"  # 2 Guilin Jingbei
+    }
+    104 = {
+      "第4广州守备师"  # 4 Guangzhou Jingbei
+    }
+    105 = {
+      "第5广州守备师"  # 5 Guangzhou Jingbei
+    }
+    123 = {
+      "第3桂林守备师"  # 3 Guilin Jingbei
+    }
+    124 = {
+      "第4桂林守备师"  # 4 Guilin Jingbei
+    }
+    114 = {
+      "第4海南守备师"  # 4 Hainan Jingbei
+    }
+    115 = {
+      "第5海南守备师"  # 5 Hainan Jingbei
+    }
+    125 = {
+      "第5桂林守备师"  # 5 Guilin Jingbei
+    }
+    131 = {
+      "广东保安队"  # Guangzhou Baoan Ke
+    }
+    132 = {
+      "第1南宁保安队"  # 1 Nanning Baoan Ke
+    }
+    133 = {
+      "第1广东保安队"  # 1 Guangdong Baoan Ke
+    }
+    134 = {
+      "第2广东保安队"  # 2 Guangdong Baoan Ke
+    }
+    135 = {
+      "第3广东保安队"  # 3 Guangdong Baoan Ke
+    }
+    136 = {
+      "第2南宁保安队"  # 2 Nanning Baoan Ke
+    }
+    137 = {
+      "第3南宁保安队"  # 3 Nanning Baoan Ke
+    }
+    1 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    2 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    3 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    4 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    5 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    6 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    7 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    8 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    9 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+    10 = {
+      "第%d广西守备师"  # %d Guangxi Jingbei
+    }
+  }
+}

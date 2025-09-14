@@ -1,0 +1,31 @@
+add_namespace = BUL
+country_event = {
+    id = BUL.900
+    title = BUL.900.t
+    desc = BUL.900.d
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {                        
+        name = BUL.900.a
+        ai_chance = {
+            base = 40
+        }
+        SER = {
+            transfer_state = 106
+            transfer_state = 803       
+        }
+    }
+
+    option = {                        
+        name = BUL.900.b
+        ai_chance = {
+            base = 60
+        }
+        SER = {
+            create_wargoal = {
+                type = annex_everything
+                target = BUL
+            }
+        }
+    }
+}

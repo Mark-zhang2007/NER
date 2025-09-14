@@ -1,0 +1,784 @@
+focus_tree = {
+	id = PRC_1
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRC
+		}
+	}
+	default = no
+	focus = {
+		id = PRC_lightup
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 3
+		x = 12
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = PRC_focus_on_politics
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 1
+		prerequisite = {
+			focus = PRC_lightup
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			add_political_power = 10
+			add_ideas = PRC_focus_on_politics
+		}
+
+	}
+	focus = {
+		id = PRC_workes_and_farmers
+		icon = GFX_goal_rhineland
+		cost = 3
+		prerequisite = {
+			focus = PRC_focus_on_politics
+		}
+		x = 2
+		y = 2
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.05
+			add_ideas = PRC_workes_and_farmers
+		}
+
+	}
+	focus = {
+		id = PRC_unified_thought
+		icon = GFX_goal_generic_national_unity
+		cost = 4
+		prerequisite = {
+			focus = PRC_workes_and_farmers
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			army_experience = 100
+			add_command_power = 50
+		}
+
+	}
+	focus = {
+		id = PRC_divide_politics
+		icon = GFX_goal_generic_small_arms
+		cost = 3
+		prerequisite = {
+			focus = PRC_unified_thought
+		}
+		mutually_exclusive = {
+			focus = PRC_party_command_gun
+		}
+		x = 1
+		y = 4
+		completion_reward = {
+			add_ideas = PRC_divide_politics
+		}
+
+	}
+	focus = {
+		id = PRC_party_command_gun
+		icon = GFX_goal_support_communism
+		cost = 3
+		prerequisite = {
+			focus = PRC_unified_thought
+		}
+		mutually_exclusive = {
+			focus = PRC_divide_politics
+		}
+		x = 3
+		y = 4
+		completion_reward = {
+			add_ideas = PRC_party_command_gun
+		}
+
+	}
+	focus = {
+		id = PRC_build_up_PLA
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5
+		prerequisite = {
+			focus = PRC_divide_politics
+			focus = PRC_party_command_gun
+		}
+		x = 2
+		y = 5
+		completion_reward = {
+			army_experience = 100
+			add_ideas = PRC_build_up_PLA
+		}
+
+	}
+	focus = {
+		id = PRC_establish_central
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 4
+		prerequisite = {
+			focus = PRC_focus_on_politics
+		}
+		x = 6
+		y = 2
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = PRC_focus_on_city
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 3
+		prerequisite = {
+			focus = PRC_establish_central
+		}
+		x = 5
+		y = 3
+		completion_reward = {
+			604 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			622 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			325 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			617 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+
+		}
+
+	}
+	focus = {
+		id = PRC_call_up_worker
+		icon = GFX_goal_generic_propaganda
+		cost = 4
+		prerequisite = {
+			focus = PRC_focus_on_city
+		}
+		x = 5
+		y = 4
+		completion_reward = {
+			add_ideas = PRC_call_up_worker
+			add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = PRC_combine_farmer_and_worker
+		icon = GFX_goal_generic_construct_civilian
+		cost = 3
+		prerequisite = {
+			focus = PRC_establish_central
+		}
+		x = 7
+		y = 3
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 30
+		}
+
+	}
+	focus = {
+		id = PRC_reform_land
+		icon = GFX_goal_generic_construction2
+		cost = 4
+		prerequisite = {
+			focus = PRC_combine_farmer_and_worker
+		}
+		x = 7
+		y = 4
+		completion_reward = {
+			add_ideas = PRC_reform_land
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2	
+				}
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2	
+				}
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2	
+				}
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2	
+				}
+
+		}
+
+	}
+	focus = {
+		id = PRC_unite_as_one
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = {
+			focus = PRC_call_up_worker
+		}
+		prerequisite = {
+			focus = PRC_reform_land
+		}
+		x = 6
+		y = 5
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+
+	}
+	focus = {
+		id = PRC_Build_base_area
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 3
+		prerequisite = {
+			focus = PRC_lightup
+		}
+		x = 11
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	focus = {
+		id = PRC_develop_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 4
+		prerequisite = {
+			focus = PRC_Build_base_area
+		}
+		x = 10
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	focus = {
+		id = PRC_basic_building
+		icon = GFX_goal_generic_construction2
+		cost = 4
+		prerequisite = {
+			focus = PRC_develop_industry
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	focus = {
+		id = PRC_though_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 4
+		prerequisite = {
+			focus = PRC_basic_building
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			build_railway = {
+			path={8049 12156 1976 10257 4295 7256 12767 1367 4925 1395 12819 2067 7294 1319}
+			
+		}
+		build_railway = {
+			path={8049 5007 7301 7406 7418}
+		}
+		build_railway = {
+			path={8049 4167 2091 7256 531 5193 4403 10787 10817 1882 8018 7940}
+		}
+		}
+		
+	}
+
+	
+	focus = {
+		id = PRC_clean_MA
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5
+		prerequisite = {
+			focus = PRC_Build_base_area
+		}
+		x = 12
+		y = 2
+		completion_reward={
+			remove_ideas = PRC_MA_trouble
+		}
+
+	}
+	focus = {
+		id = PRC_suppress_bandits
+		icon = GFX_goal_generic_major_war
+		cost = 4
+		prerequisite = {
+			focus = PRC_clean_MA
+		}
+		x = 12
+		y = 3
+		completion_reward={
+			add_stability = 0.05
+			army_experience = 50
+			add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 50000
+							producer = PRC
+						}
+			add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 5000
+							producer = PRC
+						}
+
+		}
+
+	}
+	focus = {
+		id = PRC_clean_illiterate
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 4
+		prerequisite = {
+			focus = PRC_suppress_bandits
+		}
+		x = 12
+		y = 4
+		completion_reward={
+			add_research_slot = 1
+			add_offsite_building = { type = industrial_complex
+			 level = 3 }
+
+		}
+
+	}
+	focus = {
+		id = PRC_work_by_self
+		icon = GFX_goal_generic_consumer_goods
+		cost = 3
+		prerequisite = {
+			focus = PRC_though_railway
+		}
+		prerequisite = {
+			focus = PRC_clean_illiterate
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+			add_ideas = PRC_work_by_self
+		}
+
+	}
+	focus = {
+		id = PRC_counterattack
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5
+		prerequisite = {
+			focus = PRC_lightup
+		}
+		available = {
+		
+		has_completed_focus = PRC_build_up_PLA
+	}
+
+
+		x = 16
+		y = 1
+		available = {
+			OR={		
+				has_war_with = ROC
+				has_war_with = CHA}
+
+	}
+	completion_reward = {
+		add_timed_idea = {
+			idea = PRC_counterattack
+			  days = 300
+		}
+	}
+}
+
+
+	
+	focus = {
+		id = PRC_pinjing_war
+		icon = GFX_goal_generic_position_armies
+		cost =3
+		prerequisite = {
+			focus = PRC_counterattack
+		}
+		x = 15
+		y = 2
+			bypass = {
+			CHA={
+				exists = no
+			}
+		
+	}	
+		completion_reward = {
+			add_timed_idea = {
+				idea = PRC_pinjing_war 
+				days = 100
+			}
+			add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 5000
+							producer = PRC
+						}
+			add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 500
+							producer = PRC
+						}
+
+	}
+}
+	focus = {
+		id = PRC_liaoshen_war
+		icon = GFX_goal_generic_position_armies
+		cost = 3
+		prerequisite = {
+			focus = PRC_pinjing_war
+		}
+		x = 15
+		y = 3
+					bypass = {
+			CHA={
+				exists = no
+			}
+		
+	}	
+		completion_reward = {
+			add_timed_idea = {
+				idea = PRC_liaoshen_war
+				days = 100
+			}
+			unlock_decision_tooltip = PRC_get_navy 
+			add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 10000
+							producer = PRC
+						}
+			add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 5000
+							producer = PRC
+						}
+
+	}
+
+	}
+	focus = {
+		id = PRC_cross_huangriver
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 3
+		prerequisite = {
+			focus = PRC_counterattack
+		}
+		x = 17
+		y = 2
+					bypass = {
+			CHI={
+				exists = no
+			}
+		
+	}	
+		completion_reward = {
+			add_timed_idea = {
+				days = 60
+				idea = PRC_cross_huangriver
+			}
+		}
+
+	}
+	focus = {
+		id = PRC_huaihai_war
+		icon = GFX_goal_generic_position_armies
+		cost =3
+		prerequisite = {
+			focus = PRC_cross_huangriver
+		}
+		x = 17
+		y = 3
+					bypass = {
+			CHI={
+				exists = no
+			}
+		
+	}	
+		completion_reward = {
+			add_ideas = PRC_huaihai_war
+		}
+
+	}
+	focus = {
+		id = PRC_liberate_korea
+		icon = GFX_goal_support_communism
+		cost = 5
+		prerequisite = {
+			focus = PRC_liaoshen_war
+		}
+		prerequisite = {
+			focus = PRC_huaihai_war
+		}
+		x = 16
+		y = 4
+		completion_reward = {
+			declare_war_on = {
+				target = KOR
+			}
+			add_timed_idea = {
+				days = 30 
+				idea = PRC_liberate_korea
+			}
+		}
+
+	}
+	focus = {
+		id = PRC_cross_to_jap
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 5
+		prerequisite = {
+			focus = PRC_liberate_korea
+		}
+		available = {
+			has_war_with = JAP
+		}
+		x = 16
+		y = 5
+		completion_reward = {
+			add_ideas = PRC_cross_to_jap
+		}
+
+	}
+	focus = {
+		id = PRC_set_up_new_CHINA
+		icon = GFX_goal_support_communism
+		cost = 3
+		prerequisite = {
+			focus = PRC_work_by_self
+		}
+		prerequisite = {
+			focus = PRC_unite_as_one
+		}
+		prerequisite = {
+			focus = PRC_cross_to_jap
+		}
+		prerequisite = {
+			focus = PRC_build_up_PLA
+		}
+		x = 11
+		y = 7
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			set_cosmetic_tag =PRC_a
+			load_focus_tree = china_communist_focus
+		}
+
+	}
+}
+

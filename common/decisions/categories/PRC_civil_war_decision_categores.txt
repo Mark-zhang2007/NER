@@ -1,0 +1,22 @@
+PRC_civil_war = {
+	#icon = 
+	#picture = 
+	allowed = {
+		tag = PRC
+	}
+
+	visible = {
+		OR={has_war_with = ROC
+			has_war_with = CHA
+			has_war_with = JAP
+			has_war_with = KOR
+			TIB={
+				exists = yes
+			}
+			
+		}
+		
+	}
+	priority = 10
+}
+

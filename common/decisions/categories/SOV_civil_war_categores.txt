@@ -1,0 +1,19 @@
+SOV_civil_war_categores = {
+	#icon = 
+	#picture = 
+	allowed = {
+		tag = SOV
+	}
+
+	visible = {
+		AND = {
+			date > 1936.11.6
+			RUS ={
+			exists = yes
+			}
+		}
+		
+	}
+	priority = 10
+}
+

@@ -1,0 +1,190 @@
+add_namespace = USA_event
+
+country_event = { # 胡佛拒绝《全国工业复兴法案》修正案
+    id = USA_event.1
+    immediate = { log = "[GetDateText]: [Root.GetName]: event USA_event.1" }
+    title = USA_event.1.t
+    desc = USA_event.1.desc
+    picture = USA_event_1
+    is_triggered_only = yes
+    hidden = no
+    timeout_days = 14
+    option = { # 让资本家们自己解决吧
+        name = USA_event.1.a
+        ai_chance = { factor = 1 }
+    }
+    option = { # 派国民警卫队护运物资
+        name = USA_event.1.b
+        ai_chance = { factor = 1 }
+    }
+    option = { # 逮捕工会领袖以儆效尤
+        name = USA_event.1.c
+        ai_chance = { factor = 1 }
+    }
+}
+
+country_event = { # USA_event.2
+    id = USA_event.2
+    immediate = { log = "[GetDateText]: [Root.GetName]: event USA_event.2" }
+    title = USA_event.2.t
+    desc = USA_event.2.desc
+    picture = USA_event_2
+    is_triggered_only = yes
+    hidden = no
+    timeout_days = 14
+    option = { # 联邦必须维护法律尊严！
+        name = USA_event.2.a
+        ai_chance = { factor = 1 }
+    }
+    option = { # 也许他们能带来新秩序...
+        name = USA_event.2.b
+        ai_chance = { factor = 1 }
+    }
+}
+
+news_event = { # 美利坚铁路大罢工
+    id = USA_event.3
+    immediate = { log = "[GetDateText]: [Root.GetName]: event USA_event.3" }
+    title = USA_event.3.t
+    desc = USA_event.3.desc
+    picture = USA_event_3
+    is_triggered_only = yes
+    hidden = no
+    timeout_days = 14
+    option = { # 一场灾难
+        name = USA_event.3.a
+        ai_chance = { factor = 1 }
+    }
+}
+
+country_event = { # USA_event.4
+    id = USA_event.4
+    immediate = { log = "[GetDateText]: [Root.GetName]: event USA_event.4" }
+    title = USA_event.4.t
+    desc = USA_event.4.desc
+    picture = USA_event_4
+    is_triggered_only = yes
+    hidden = no
+    timeout_days = 14
+    option = { # 逮捕这些宗教疯子
+        name = USA_event.4.a
+        ai_chance = { factor = 1 }
+    }
+    option = { # 机器说不定真的是万恶之源。。。
+        name = USA_event.4.b
+        ai_chance = { factor = 1 }
+    }
+}
+
+country_event = { # USA_event.5
+    id = USA_event.5
+    immediate = { log = "[GetDateText]: [Root.GetName]: event USA_event.5" }
+    title = USA_event.5.t
+    desc = USA_event.5.desc
+    picture = GFX_USA_event_5
+    is_triggered_only = yes
+    timeout_days = 14
+    immediate = { 
+		hidden_effect = {
+			USA = {
+                set_capital = {
+                    state = 386
+                }
+                # add_timed_idea = { idea = USA_civilwar_ideas days = 70 }
+            }
+            USS = { #com
+                transfer_state = 391
+                transfer_state = 392
+                transfer_state = 394
+                transfer_state = 393
+                transfer_state = 395
+                transfer_state = 396
+                transfer_state = 390
+                transfer_state = 261
+                transfer_state = 360
+                # add_timed_idea = { idea = USA_civilwar_ideas days = 70 }
+                ### setowner uss
+            }
+            ASA = { #fxs
+                transfer_state = 368
+                transfer_state = 372
+                transfer_state = 374
+                transfer_state = 367
+                transfer_state = 365
+                transfer_state = 366
+                transfer_state = 370
+                transfer_state = 371
+                transfer_state = 375
+                transfer_state = 376
+                transfer_state = 382
+                transfer_state = 377
+                transfer_state = 380
+                # add_timed_idea = { idea = USA_civilwar_ideas days = 70 }
+                ### setowner asa
+            }
+            RMC = { #white
+                transfer_state = 361
+                transfer_state = 816
+                transfer_state = 362
+                transfer_state = 363
+                transfer_state = 364
+                transfer_state = 373
+                transfer_state = 369
+                transfer_state = 383
+                transfer_state = 384
+                # add_timed_idea = { idea = USA_civilwar_ideas days = 70 }
+                ### setowner rmc
+            }
+            NEE = { #white
+                transfer_state = 358
+                transfer_state = 357
+                transfer_state = 359
+                # add_timed_idea = { idea = USA_civilwar_ideas days = 70 }
+                ### setowner nee
+            }
+            FCC = { #blue 宪政
+                transfer_state = 378
+                transfer_state = 379
+                transfer_state = 385
+                transfer_state = 386
+                transfer_state = 387
+                transfer_state = 388
+                transfer_state = 381
+                transfer_state = 390
+                transfer_state = 389
+                # add_timed_idea = { idea = USA_civilwar_ideas days = 70 }
+                ### setowner fcc
+            }
+		}
+	}
+    option = { # 无产阶级终会战胜一切
+        name = USA_event.5.a
+        ai_chance = { factor = 0 }
+        USS = { change_tag_from = ROOT }
+    }
+    option = { # 我们紧随墨索里尼的步伐
+        name = USA_event.5.b
+        ai_chance = { factor = 0 }
+        ASA = { change_tag_from = ROOT }
+    }
+    option = { # 只有麦克阿瑟将军能带领我们走向胜利
+        name = USA_event.5.c
+        ai_chance = { factor = 0 }
+        RMC = { change_tag_from = ROOT }
+    }
+    option = { # 为了上帝与祖国
+        name = USA_event.5.d
+        ai_chance = { factor = 0 }
+        NEE = { change_tag_from = ROOT }
+    }
+    option = { # 我们忠于合众政府
+        name = USA_event.5.e
+        ai_chance = { factor = 100 }
+    }
+    option = { # 宪政万岁
+        name = USA_event.5.f
+        ai_chance = { factor = 0 }
+        FCC = { change_tag_from = ROOT }
+    }
+}
+

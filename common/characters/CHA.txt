@@ -1,0 +1,23 @@
+characters = {
+	CHA_Duan_Qirui = {
+		name = CHA_Duan_Qirui
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHA/CHA_Duan_Qirui.png"
+			}
+			army = {
+				large = "gfx/leaders/CHA/CHA_Duan_Qirui_army.png"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 2
+		}
+	}
+}

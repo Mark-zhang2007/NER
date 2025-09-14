@@ -1,0 +1,465 @@
+﻿SHX_INF_01 = {
+  name = "步兵部队"  # Infantry Unit
+  for_countries = {
+    SHX
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "infantry"
+  }
+  fallback_name = "第%d山西军团"  # %d Shanxi Juntuán
+  ordered = {
+    1 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    2 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    3 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    4 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    5 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    6 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    7 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    8 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    9 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    10 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    11 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    12 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    13 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    14 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    15 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    16 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    17 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    18 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    19 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    20 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+  }
+}
+SHX_CAV_01 = {
+  name = "骑兵部队"  # Cavalry Unit
+  for_countries = {
+    SHX
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "cavalry"
+  }
+  fallback_name = "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+  ordered = {
+    1 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    2 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    3 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    4 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    6 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    5 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    7 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    8 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    9 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    10 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    11 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    12 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    13 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    14 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+    15 = {
+      "第%d山西骑兵师"  # %d Shanxi Qibing Jun
+    }
+  }
+}
+SHX_MOT_01 = {
+  name = "摩托化部队"  # Motorized Unit
+  for_countries = {
+    SHX
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "motorized"
+  }
+  link_numbering_with = {
+    SHX_INF_01
+  }
+  fallback_name = "第%d山西军团"  # %d Shanxi Juntuán
+  ordered = {
+    1 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    2 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    3 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    4 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    5 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    6 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    7 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    8 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    9 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    10 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    11 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    12 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    13 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    14 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    15 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    16 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    17 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    18 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    19 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    20 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+  }
+}
+SHX_MEC_01 = {
+  name = "机械化部队"  # Mechanized Unit
+  for_countries = {
+    SHX
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "mechanized"
+  }
+  link_numbering_with = {
+    SHX_INF_01
+  }
+  fallback_name = "第%d山西军团"  # %d Shanxi Juntuán
+  ordered = {
+    1 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    2 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    3 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    4 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    5 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    6 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    7 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    8 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    9 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    10 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    11 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    12 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    13 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    14 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    15 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    16 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    17 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    18 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    19 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    20 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+  }
+}
+SHX_MNT_01 = {
+  name = "山地部队"  # Mountain Unit
+  for_countries = {
+    SHX
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "mountaineers"
+  }
+  link_numbering_with = {
+    SHX_INF_01
+  }
+  fallback_name = "第%d山西军团"  # %d Shanxi Juntuán
+  ordered = {
+    1 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    2 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    3 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    4 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    5 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    6 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    7 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    8 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    9 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    10 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    11 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    12 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    13 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    14 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    15 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    16 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    17 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    18 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    19 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+    20 = {
+      "第%d山西军团"  # %d Shanxi Juntuán
+    }
+  }
+}
+SHX_GAR_01 = {
+  name = "守备部队"  # Garrison Unit
+  for_countries = {
+    SHX
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "infantry"
+  }
+  fallback_name = "第%d山西守备师"  # %d Shanxi Jingbei
+  ordered = {
+    101 = {
+      "第1绥远守备师"  # 1 Suiyuan Jingbei
+    }
+    111 = {
+      "第1察哈尔守备师"  # 1 Chahar Jingbei
+    }
+    102 = {
+      "第2绥远守备师"  # 2 Suiyuan Jingbei
+    }
+    103 = {
+      "第3绥远守备师"  # 3 Suiyuan Jingbei
+    }
+    112 = {
+      "第2察哈尔守备师"  # 2 Chahar Jingbei
+    }
+    113 = {
+      "第3察哈尔守备师"  # 3 Chahar Jingbei
+    }
+    104 = {
+      "第4绥远守备师"  # 4 Suiyuan Jingbei
+    }
+    105 = {
+      "第5绥远守备师"  # 5 Suiyuan Jingbei
+    }
+    114 = {
+      "第4察哈尔守备师"  # 4 Chahar Jingbei
+    }
+    115 = {
+      "第5察哈尔守备师"  # 5 Chahar Jingbei
+    }
+    131 = {
+      "山西保安队"  # Shanxi Baoan Ke
+    }
+    132 = {
+      "第1绥远保安队"  # 1 Suiyuan Baoan Ke
+    }
+    133 = {
+      "第1太原保安队"  # 1 Taiyuan Baoan Ke
+    }
+    134 = {
+      "第2太原保安队"  # 2 Taiyuan Baoan Ke
+    }
+    135 = {
+      "第3太原保安队"  # 3 Taiyuan Baoan Ke
+    }
+    136 = {
+      "第2绥远保安队"  # 2 Suiyuan Baoan Ke
+    }
+    137 = {
+      "第3绥远保安队"  # 3 Suiyuan Baoan Ke
+    }
+    1 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    2 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    3 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    4 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    5 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    6 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    7 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    8 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    9 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+    10 = {
+      "第%d山西守备师"  # %d Shanxi Jingbei
+    }
+  }
+}

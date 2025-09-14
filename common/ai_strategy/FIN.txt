@@ -1,0 +1,14 @@
+FIN_dont_join_allies_please = {
+	enable = {
+		tag = FIN
+		is_historical_focus_on = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = ENG
+		value = -1000
+	}
+}

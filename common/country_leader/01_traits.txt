@@ -1,0 +1,73 @@
+
+leader_traits = {
+	GER_Kurt_von_Schleicher_conctroler = {
+		stability_factor = 0.05
+		political_advisor_cost_factor = -0.2
+		theorist_cost_factor = -0.2
+		army_chief_cost_factor = -0.2
+		navy_chief_cost_factor = -0.2
+		air_chief_cost_factor =-0.2
+		high_command_cost_factor = -0.2
+	}
+	GER_Kurt_von_Schleicher_breaker = {
+		democratic_drift = 0.5
+		drift_defence_factor = 0.2
+	}
+	ITA_Hold_the_bundle={
+		fascism_drift  = 0.05
+		stability_factor = 0.05
+		war_support_factor = 0.05
+	}
+	SOV_Lev_trotsky_leader ={
+		command_power_gain = 0.5
+		mobilization_speed = 0.1
+		drift_defence_factor = 0.2
+		justify_war_goal_time = -0.5
+		send_volunteers_tension = -0.5
+		send_volunteer_size = 6
+	}
+	SOV_father = {
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
+		land_reinforce_rate = 0.1
+		initiative_factor =0.1
+	}
+	RMC_Douglas_MacArthur_traits = {
+		army_attack_factor = 0.1
+		breakthrough_factor = 0.1
+		army_defence_factor = 0.1
+		army_speed_factor = 0.1
+	}
+### SWI特质开始 ###
+	SWI_anime_god = {
+		supply_node_range = 99
+		no_supply_grace = 480
+	}
+	SWI_traits_world = {
+		army_attack_factor = 0.15
+		army_defence_factor = 0.15
+		breakthrough_factor = 0.15
+		army_speed_factor = 0.15
+	}
+	SWI_traits_army = {
+		army_attack_factor = 0.10
+		army_defence_factor = 0.10
+		breakthrough_factor = 0.10
+		army_speed_factor = 0.10
+	}
+	SWI_traits_navy = {
+		navy_attack_factor = 0.10
+		navy_defence_factor = 0.10
+		navy_speed_factor = 0.10
+	}
+	SWI_traits_air_force = {
+		air_attack_factor = 0.10
+		air_defence_factor = 0.10
+		air_speed_factor = 0.10
+	}
+	SWI_traits_anarchy = {
+		political_power_factor = -0.10
+		stability_factor = -0.10
+	}
+### SWI特质结束 ###
+}

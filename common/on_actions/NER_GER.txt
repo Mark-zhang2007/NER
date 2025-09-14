@@ -1,0 +1,13 @@
+on_actions = {
+	on_new_term_election = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					has_completed_focus = GER_focus_berlin_economic_crisis
+				}
+				country_event = { id = NER_GER.2 }
+			}
+		}
+	}
+}

@@ -1,0 +1,1121 @@
+﻿division_template = {
+	name = "重型步兵部队"					# Represents: German-trained divisions (better equipment than rest),
+	division_names_group = ROC_INF_01
+									# 	as well as two-division infantry corps (generally poorly-equipped militias),
+	regiments ={
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+
+	priority = 0 # garrison
+}
+division_template = {
+	name = "轻型步兵部队"			# Represents three-division infantry corps (generally poorly-equipped militias)
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        anti_tank = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2}
+	}
+}
+division_template = {
+	name ="骑兵部队"			# Represents two-division cavalry corps (generally poorly-equipped)
+	division_names_group = ROC_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 3 y = 0 }
+		cavalry = { x = 3 y = 1 }
+	}
+}
+
+### OOB ###
+units = {
+	###### Kuomintang Army (CO: Chang Kai-shek) ######
+	##### Beiping-Tianjin Area (CO: ) #####
+	### 29 Juntuan (highly-reinforced corps) ###
+	division = {
+		# "37 Bubing Shi"
+		location = 9843
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		# "38 Bubing Shi"
+		location = 10068
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		# "132 Bubing Shi"
+		location = 11761
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		# "143 Bubing Shi"
+		location = 4140
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2
+	}
+
+	##### First War Area (CO: Cheng Qian) #####
+	division = { # "4 八旗军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 4925
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	### 2nd Army Group (CO: Liu Shi) ###
+	division = { # "3 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 12408
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "2 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 402
+		}
+		location = 7256
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "25 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 425
+		}
+		location = 7256
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	## 1st Army ##
+	division = { # "27 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 427
+		}
+		location = 2091
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		# "1 Lujun Shi"
+		location = 8072
+		division_template = "重型步兵部队"	
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+	## 14th Army ##
+	division = {
+		# "14 Lujun Shi"
+		location = 10144
+		division_template = "轻型步兵部队"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+
+	##### Second War Area (CO: Yan Xishan) #####
+	division = { # "9 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 1069
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = { # "1 八旗军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1069
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = { # "2 八旗军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1069
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	### 7th Army Group (CO: Fu Zuoyi) ###
+	division = { # "4 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 404
+		}
+		location = 9958
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "89 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 489
+		}
+		location = 9958
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "17 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 4114
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "6 八旗军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 4114
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	### 14th Army Group (CO: Wei Lihuang) ###
+	division = { # "10 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 410
+		}
+		location = 10043
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "83 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 483
+		}
+		location = 10043
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+
+	##### Third War Area (CO: Gu Zhutong) #####
+	division = { # "1 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7027
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		# "1 Fujian Jingbei"
+		location = 9974
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.1
+	}
+	division = {
+		# "2 Fujian Jingbei"
+		location = 4169
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.1
+	}
+	division = {
+		# "3 Fujian Jingbei"
+		location = 4196
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	## Shanghai Defense Force ##
+	division = {
+		# "Shanghai Jingbei"
+		location = 7014
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.1
+	}
+	division = {
+		# "Lu zhan Shi"
+		location = 7014
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	## 8th Army (CO: Zhang Fakui) ##
+	division = { # "3 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 403
+		}
+		location = 10076
+		division_template = "轻型步兵部队"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "Shui Jing Tuan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 499
+		}
+		location = 10076
+		division_template = "轻型步兵部队"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		# "8 Lujun Shi"
+		location = 4925
+		division_template = "重型步兵部队"	
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	## 9th Army (CO: Zhang Zhizhong) ##
+	division = { # "36 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 436
+		}
+		location = 7191
+		division_template = "轻型步兵部队"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "87 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 487
+		}
+		location = 7191
+		division_template = "轻型步兵部队"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "88 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 488
+		}
+		location = 7191
+		division_template = "轻型步兵部队"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	## 10th Army (CO: Liu Jiangxu) ##
+	division = {
+		# "10 Lujun Shi"
+		location = 10076
+		division_template = "重型步兵部队"	
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+	### 15th Army Group (CO: Chen Cheng) ###
+	division = { # "11 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 411
+		}
+		location = 12076
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "14 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 414
+		}
+		location = 12076
+		division_template = "轻型步兵部队"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "4 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 12076
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "18 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 12076
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "39 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 39
+		}
+		location = 4042
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "54 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 54
+		}
+		location = 4042
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = { # "74 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 74
+		}
+		location = 4042
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	### 19th Army Group (CO: Xu Yue) ###
+	division = { # "6 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 406
+		}
+		location = 7058
+		division_template = "轻型步兵部队"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "9 Bubing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 409
+		}
+		location = 7058
+		division_template = "轻型步兵部队"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "25 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 1096
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+
+	##### Yangtze War Area (CO: ) #####
+	division = {
+		# "Wuhan Jingbei"
+		location = 4619
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	### River Defense Force (CO: ) ###
+	division = {
+		# "11 Lujun Shi"
+		location = 1036
+		division_template = "重型步兵部队"	
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	division = {
+		# "12 Lujun Shi"
+		location = 7637
+		division_template = "重型步兵部队"	
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+	division = { # "43 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 43
+		}
+		location = 9959
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	### Capital Garrison Force (CO: ) ###
+	division = {
+		# "2 Lujun Shi"
+		location = 11913
+		division_template = "重型步兵部队"	
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	division = { # "Peixun Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 498
+		}
+		location = 11913
+		division_template = "轻型步兵部队"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		# "1 Nanking Jingbei"
+		location = 11913
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+	division = {
+		# "2 Nanking Jingbei"
+		location = 11913
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+	division = {
+		# "3 Nanking Jingbei"
+		location = 11913
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+	division = {
+		# "4 Nanking Jingbei"
+		location = 11913
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+
+	##### Fifth War Area (CO: Li Zongren) #####
+	division = { # "3 八旗军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 10000
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		# "Qingdao Jingbei"
+		location = 10000
+		division_template = "重型步兵部队"			# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.1
+	}
+	## 3rd Army (CO: Han Fuqu) ##
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 4205
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 4205
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 4189
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 10062
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 11963
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 994
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 7650
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 12789
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 2098
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 10802
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 12754
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 4828
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 2015
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 12524
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 7804
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 10597
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 12605
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 12533
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 10541
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 10675
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 1693
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 10521
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 12500
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 3815
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 3944
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { # "40 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 10433
+		division_template ="骑兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+		division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 10068
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+
+	}
+			division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 9843
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+
+	}
+			division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 4190
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+
+	}
+			division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 1069
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+
+	}
+			division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 11752
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 9978
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 9970
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 4196
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 12141
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 7199
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 7418
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+
+
+
+		
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 8124
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+
+	}
+	division = { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 13240
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 10777
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 5068
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 10833
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 12941
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 8164
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "12 定武军"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 10928
+		division_template = "重型步兵部队"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+
+
+
+
+
+}
+
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = CHA
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+		
+	}	
+}

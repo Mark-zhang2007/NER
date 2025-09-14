@@ -1,0 +1,14 @@
+SOV_support_com_categores = {
+	#icon = 
+	#picture = 
+	allowed = {
+		tag = SOV
+	}
+
+	visible = {
+		has_completed_focus = SOV_third_nation
+		
+	}
+	priority = 10
+}
+

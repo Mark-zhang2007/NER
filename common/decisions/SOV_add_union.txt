@@ -1,0 +1,46 @@
+#决议分类txt文件位置common/decisions/categories/xxx_decision_category.txt
+SOV_add_union_categores = {
+	SOV_add_union={
+		available = {
+			OR ={
+				has_completed_focus = SOV_EE_union
+				has_completed_focus = SOV_MA_union
+			}
+			
+		}
+		visible = {
+			FROM={
+				NOT = {
+					is_subject = yes
+				}
+			}
+		}
+		cost = 100
+		targets = {
+			POL
+			WHR
+			UKR
+			LIT
+			VBH
+			MOL
+			KAZ
+			KYR
+			TAJ
+			TMS
+		}
+		target_trigger = {
+			is_subject = no
+			exists = yes
+			has_war = no
+		}
+		
+		remove_effect = {
+			FROM= {
+				country_event = SOV.6
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

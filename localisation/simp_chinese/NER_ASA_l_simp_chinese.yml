@@ -1,0 +1,51 @@
+﻿l_simp_chinese:
+######顺序为 ###
+##### 国名 ###
+ Pro_Slavery_Bloc: "国际蓄奴联盟"
+
+#### 党派名 ###
+ ASA_communism_party: "美国共产党"
+ ASA_communism_party_long: "美国共产党"
+ ASA_democratic_party: "临时联盟"
+ ASA_democratic_party_long: "共和党-民主党选举联盟"
+ ASA_fascism_party: "军政府"
+ ASA_fascism_party_long: "军政府"
+ ASA_neutrality_party: "美利坚登基党"
+ ASA_neutrality_party_long: "美利坚登基党"
+# tooltip
+# 决议events
+### focus
+ # ===== 核心分支 =====
+ ASA_Establish_Confederacy: "建立联盟国"
+ ASA_Plantation_Economy_Act: "种植园经济法案"
+ ASA_States_Rights_Doctrine: "州权至上原则"
+ ASA_Fugitive_Slave_Act: "逃奴追缉法案"
+ 
+ # ===== 军事强化 =====
+ ASA_Cotton_Army: "棉花军团"
+ ASA_Fortify_Mason_Dixon: "加固工业基地"
+ ASA_Cavalry_Tradition: "骑兵传统复兴"
+ ASA_Riverine_Defense: "河防舰队"
+ 
+ # ===== 奴隶制度 =====
+ ASA_Code_Noir: "黑人法典"
+ ASA_Slave_Patrols: "奴隶巡逻队"
+ ASA_Cotton_Kingdom: "棉花王国"
+ ASA_Peculiar_Institution: "特殊制度"
+ 
+ # ===== 外交政策 =====
+ ASA_Cotton_Diplomacy: "棉花外交"
+ ASA_Seek_British_Recognition: "寻求英国承认"
+ ASA_French_Alliance: "旧友反仇"
+ ASA_Pro_Slavery_International: "国际蓄奴联盟"
+ 
+ # ===== 社会控制 =====
+ ASA_White_Supremacy_Act: "白人至上法案"
+ ASA_Anti_Abolitionist_Crackdown: "镇压废奴主义"
+ ASA_Racial_Purity_Laws: "种族纯洁法案"
+ ASA_Confederate_Identity: "联盟国认同"
+ 
+## character
+ ASA_Grand_Imperial_Council: "大奴隶主议会"
+## ideas
+ ASA_Eternal_Subjugation: "永久奴役宣言"

@@ -1,0 +1,239 @@
+ideas = {
+
+	country = {
+	#不要动	
+
+		ITA_National_Development_Council1 ={
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+				consumer_goods_factor = -0.1
+			}
+		}
+		FRA_economic_crisis_half ={
+			modifier = {
+				consumer_goods_expected_value = 0.125
+				stability_factor = -0.15
+				war_stability_factor = -0.2
+				war_support_factor = -0.125
+				industrial_capacity_factory = -0.2
+				political_power_factor = -0.15
+			}
+		}
+		ITA_National_Development_Council2 ={
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+				consumer_goods_factor = -0.2
+			}
+		}
+		ITA_National_Development_Council3 ={
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+				consumer_goods_factor = -0.2
+				production_speed_arms_factory_factor = 0.3
+				global_building_slots_factor = 0.1
+			}
+		}
+		ITA_National_Development_Council4 ={
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+				consumer_goods_factor = -0.2
+				production_speed_arms_factory_factor = 0.3
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+			}
+		}
+		ITA_National_Development_Council4 ={
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+				consumer_goods_factor = -0.2
+				production_speed_arms_factory_factor = 0.3
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				supply_consumption_factor = -0.2
+			}
+		
+		}
+		ITA_National_Development_Council5 ={
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+				consumer_goods_factor = -0.3
+				production_speed_arms_factory_factor = 0.3
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				supply_consumption_factor = -0.2
+			}
+		
+		}
+		ITA_National_Development_Council6={
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+				consumer_goods_factor = -0.3
+				production_speed_arms_factory_factor = 0.3
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.3
+				industrial_capacity_dockyard = 0.2
+				supply_consumption_factor = -0.2
+				production_factory_max_efficiency_factor = 0.1
+			}
+		
+		}
+		ITA_startplace ={
+			modifier = {
+				drift_defence_factor =0.1
+			}
+		}
+		 ITA_the_disgrace_of_a_defeated_country ={
+			modifier = {
+				experience_gain_army_factor = -0.2
+				experience_gain_navy_factor = -0.2
+				experience_gain_air_factor = -0.2
+				army_attack_factor = -0.1
+				stability_factor = -0.05
+			}
+		 }
+		 ITA_Italian_Army ={
+			modifier ={
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+	
+			}
+		}
+		ITA_Royal_Italian_Navy1 ={
+			modifier = {
+				experience_gain_navy =0.05
+				navy_org_factor = 0.1
+				navy_weather_penalty = -0.1
+			}
+		}
+		ITA_Royal_Italian_Navy2 ={
+			modifier = {
+				experience_gain_navy =0.05
+				navy_org_factor = 0.1
+				navy_weather_penalty = -0.1
+				positioning = 0.2
+				naval_critical_score_chance_factor =0.1
+				naval_defense_factor = 0.1
+				naval_damage_factor =0.1
+			}
+		}
+		ITA_Royal_Italian_Navy3 ={
+			modifier = {
+				experience_gain_navy =0.05
+				navy_org_factor = 0.1
+				navy_weather_penalty = -0.1
+				positioning = 0.2
+				naval_critical_score_chance_factor =0.1
+				naval_defense_factor = 0.1
+				naval_damage_factor =0.1
+				industrial_capacity_dockyard = 0.2
+			}
+		}
+		ITA_Royal_Italian_Navy3 ={
+			modifier = {
+				experience_gain_navy =0.05
+				navy_org_factor = 0.1
+				navy_weather_penalty = -0.1
+				positioning = 0.2
+				naval_critical_score_chance_factor =0.1
+				naval_defense_factor = 0.2
+				naval_damage_factor =0.2
+				industrial_capacity_dockyard = 0.2
+			}
+		}
+		ITA_attack_eng ={
+			available = {
+				has_war_with = ENG
+			}
+			modifier = {
+				invasion_preparation = -0.2
+				naval_invasion_penalty = -0.2
+				naval_invasion_capacity =20
+			}
+		}
+		ITA_our_sea1={
+			modifier = {
+				stability_factor =0.1
+				war_support_factor = 0.1
+			}
+		}
+		ITA_our_sea2={
+			modifier = {
+				stability_factor =0.1
+				war_support_factor = 0.1
+				naval_damage_factor = 0.1
+				naval_defense_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		ITA_kill_ger ={
+			available = {
+				has_war_with = GER
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.2
+			}
+		}
+		 ITA_Italian_Army2 ={
+			modifier ={
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		 ITA_Italian_Army3 ={
+			modifier ={
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		ITA_light_tanks ={
+			equipment_bonus = {
+			light_tank_chassis = {
+				build_cost_ic = -0.25
+				instant = yes
+			}
+		}
+
+		}
+		ITA_air_force1 ={
+			modifier = {
+				air_attack_factor = 0.1
+				air_defence_factor = 0.1
+				air_agility_factor =0.1
+				air_range_factor = 0.1
+				air_maximum_speed_factor = 0.1
+
+			}
+		}
+		ITA_air_force2 ={
+			modifier = {
+				air_attack_factor = 0.2
+				air_defence_factor = 0.2
+				air_agility_factor =0.2
+				air_range_factor = 0.2
+				air_maximum_speed_factor = 0.2
+				air_weather_penalty = -0.1
+				air_night_penalty = -0.1
+			}
+		}
+		ITA_air_force3 ={
+			modifier = {
+				air_attack_factor = 0.3
+				air_defence_factor = 0.3
+				air_agility_factor =0.2
+				air_range_factor = 0.2
+				air_maximum_speed_factor = 0.2
+				air_weather_penalty = -0.1
+				air_night_penalty = -0.1
+			}
+		}
+	}
+}

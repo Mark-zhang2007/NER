@@ -1,0 +1,32 @@
+state={
+	id=753
+	name="STATE_753"
+	provinces={
+		1257 2045 4375 4403 5193 9966 10787 10903 
+	}
+	manpower=3000000
+	buildings_max_level_factor=1.000
+	state_category = rural
+	history={
+		owner = CHA
+		add_core_of = CHA
+		add_core_of = PRC
+		add_core_of = ROC
+		add_core_of = GXC
+		add_core_of = SIK
+		add_core_of = XSM
+		add_core_of = SHX
+		add_core_of = YUN
+
+		victory_points = {
+			2045 1 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		
+	}
+
+	local_supplies=1.0 
+}

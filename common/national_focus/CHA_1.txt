@@ -1,0 +1,202 @@
+focus_tree = {
+	id = CHA_1
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHA
+		}
+	}
+	default = no
+	focus = {
+		id = CHA_ready_for_war
+		icon = GFX_goal_generic_army_doctrines
+		cost = 2
+		x = 3
+		y = 2
+		completion_reward = {
+			add_stability = -0.3
+			add_political_power = 100
+			hidden_effect ={
+			add_ai_strategy = {
+			type = prepare_for_war
+			id = "ETH"
+			value = 100
+		}}
+			
+
+		}
+
+
+	}
+	focus = {
+		id = CHA_protest
+		icon = GFX_goal_generic_demand_territory
+		cost = 1
+		x = 8
+		y = 2
+		allow_branch= {
+			if = {
+				limit = {has_war_with = ETH }
+			} 
+	}
+
+		completion_reward = {
+			add_stability = -0.7
+		}
+
+	}
+	focus = {
+		id = CHA_Stabilize_army
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 3
+		prerequisite = {
+			focus = CHA_ready_for_war
+		}
+		x = 3
+		y = 3
+		completion_reward = {
+			add_war_support =0.1
+			army_experience = 50
+		}
+
+	}
+	focus = {
+		id = CHA_Expedition_East_Africa
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 3
+		prerequisite = {
+			focus = CHA_Stabilize_army
+		}
+		x = 3
+		y = 4
+		completion_reward = {
+			declare_war_on = { target = ETH 
+								type = annex_everything } 
+			
+				country_event = {	id = CHA.1 }
+
+			
+		}
+
+	}
+	focus = {
+		id = CHA_roughhouse
+		icon = GFX_goal_generic_major_war
+		cost = 2
+		prerequisite = {
+			focus = CHA_protest
+		}
+		mutually_exclusive = {
+			focus = CHA_Reasonable_control
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.3
+			add_war_support = -0.4
+		}
+
+	}
+	focus = {
+		id = CHA_Blockade_message
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 2
+		prerequisite = {
+			focus = CHA_roughhouse
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+			add_political_power = -200
+			add_stability = 0.1
+		}
+
+	}
+	focus = {
+		id = CHA_Steady_advance
+		icon = GFX_goal_generic_small_arms
+		cost = 2
+		prerequisite = {
+			focus = CHA_Expedition_East_Africa
+		}
+		mutually_exclusive = {
+			focus = CHA_fast
+		}
+		x = 4
+		y = 5
+		completion_reward = {
+			add_timed_idea = { idea = CHA_Steady_advance
+			 days = 300 } 
+		}
+
+	}
+	focus = {
+		id = CHA_fast
+		icon = GFX_goal_generic_attack_allies
+		cost = 2
+		prerequisite = {
+			focus = CHA_Expedition_East_Africa
+		}
+		mutually_exclusive = {
+			focus = CHA_Steady_advance
+		}
+		x = 2
+		y = 5
+		completion_reward = {
+			add_timed_idea = { idea = CHA_fast days = 100 } 
+		}
+
+	}
+	focus = {
+		id = CHA_Reasonable_control
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 2
+		prerequisite = {
+			focus = CHA_protest
+		}
+		mutually_exclusive = {
+			focus = CHA_roughhouse
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			add_political_power = 10
+			add_stability = -0.4
+		}
+
+	}
+	focus = {
+		id = CHA_accept
+		icon = GFX_goal_generic_alliance
+		cost = 2
+		prerequisite = {
+			focus = CHA_Reasonable_control
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			add_political_power = 10
+			add_timed_idea = { idea = CHA_accept
+			 days = 300 }
+		}
+
+	}
+	focus = {
+		id = CHA_back_to_routine
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 3
+		prerequisite = {
+			focus = CHA_Blockade_message
+			focus = CHA_accept
+		}
+		x = 8
+		y = 5
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.5
+		}
+
+	}
+}

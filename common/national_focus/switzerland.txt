@@ -1,0 +1,561 @@
+focus_tree = {
+	id = switzerland
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SWI
+		}
+	}
+	default = no
+	focus = {
+		id = SWI_start
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 28
+		y = 0
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = SWI_commune_military
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 43
+		y = 0
+		completion_reward = {
+			add_war_support = 0.2
+			army_experience = 20
+			navy_experience = 20
+			air_experience = 20
+		}
+	}
+	focus = {
+		id = SWI_36
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 28
+		y = 1
+		prerequisite = {
+			focus = SWI_start
+		}
+		completion_reward = {
+			add_stability = 0.3
+		}
+	}
+	focus = {
+		id = SWI_wwi
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 28
+		y = 2
+		prerequisite = {
+			focus = SWI_36
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 150
+			army_experience = 20
+			navy_experience = 20
+			air_experience = 20
+		}
+	}
+	focus = {
+		id = SWI_treaties
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 28
+		y = 3
+		prerequisite = {
+			focus = SWI_wwi
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = SWI_aerbeisi
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 25
+		y = 4
+		prerequisite = {
+			focus = SWI_treaties
+		}
+		completion_reward = {
+			remove_ideas = SWI_aebs
+		}
+	}
+	focus = {
+		id = SWI_paris_treaty
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 4
+		prerequisite = {
+			focus = SWI_treaties
+		}
+		completion_reward = {
+			remove_ideas = SWI_pt
+		}
+	}
+	focus = {
+		id = SWI_bulietani
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 31
+		y = 4
+		prerequisite = {
+			focus = SWI_treaties
+		}
+		completion_reward = {
+			remove_ideas = SWI_bltn
+		}
+	}
+	focus = {
+		id = SWI_anarchy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 5
+		prerequisite = {
+			focus = SWI_paris_treaty
+		}
+		prerequisite = {
+			focus = SWI_bulietani
+		}
+		prerequisite = {
+			focus = SWI_aerbeisi
+		}
+		completion_reward = {
+			remove_ideas = SWI_disorderly_commune
+			set_politics = {  
+			ruling_party = neutrality  
+			elections_allowed = no
+			}
+		}
+	}
+	focus = {
+		id = SWI_ia
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 6
+		prerequisite = {
+			focus = SWI_anarchy
+		}
+		completion_reward = {		
+			# every_state = { add_core_of } = SWI
+			add_research_slot = 2
+		}
+	}
+	
+	focus = {
+		id = SWI_ff
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 17
+		y = 7
+		prerequisite = {
+			focus = SWI_ia
+		}
+		completion_reward = {
+			add_ideas = SWI_forevers1
+		}
+	}
+	focus = {
+		id = SWI_miracle
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 28
+		y = 7
+		prerequisite = {
+			focus = SWI_ia
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SWI_anarchy_anime
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 28
+		y = 8
+		prerequisite = {
+			focus = SWI_miracle
+		}
+		completion_reward = {
+			add_ideas = SWI_anime
+		}
+	}
+	focus = {
+		id = SWI_zaphkiel
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 9
+		prerequisite = {
+			focus = SWI_anarchy_anime
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SWI_bangdream
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 21
+		y = 10
+		prerequisite = {
+			focus = SWI_zaphkiel
+		}
+		completion_reward = {
+			add_ideas = SWI_bgd_ideas1
+		}
+	}
+	focus = {
+		id = SWI_fate
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 24
+		y = 10
+		prerequisite = {
+			focus = SWI_zaphkiel
+		}
+		completion_reward = {
+			add_ideas = SWI_fate_ideas1
+		}
+	}
+	focus = {
+		id = SWI_datealive
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 10
+		prerequisite = {
+			focus = SWI_zaphkiel
+		}
+		completion_reward = {
+			add_ideas = SWI_dal_ideas1
+		}
+	}
+	focus = {
+		id = SWI_white
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 11
+		prerequisite = {
+			focus = SWI_datealive
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_dal_ideas1
+				add_idea = SWI_dal_ideas2
+			}
+		}
+	}
+	focus = {
+		id = SWI_red
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 12
+		prerequisite = {
+			focus = SWI_white
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_dal_ideas2
+				add_idea = SWI_dal_ideas3
+			}
+		}
+	}
+	focus = {
+		id = SWI_re0
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 10
+		prerequisite = {
+			focus = SWI_zaphkiel
+		}
+		completion_reward = {
+			add_ideas = SWI_re0_ideas1
+		}
+	}
+	focus = {
+		id = SWI_blue
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 11
+		prerequisite = {
+			focus = SWI_re0
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_re0_ideas1
+				add_idea = SWI_re0_ideas2
+			}
+		}
+	}
+	focus = {
+		id = SWI_pretty_derby
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 35
+		y = 10
+		prerequisite = {
+			focus = SWI_zaphkiel
+		}
+		completion_reward = {
+			add_ideas = SWI_cy_ideas1
+		}
+	}
+	focus = {
+		id = SWI_economy1
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 39
+		y = 7
+		prerequisite = {
+			focus = SWI_ia
+		}
+		completion_reward = {
+			add_ideas = SWI_commune_economy1
+		}
+	}
+	focus = {
+		id = SWI_economy2
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 39
+		y = 8
+		prerequisite = {
+			focus = SWI_economy1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_commune_economy1
+				add_idea = SWI_commune_economy2
+			}
+		}
+	}
+	focus = {
+		id = SWI_economy3
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 39
+		y = 9
+		prerequisite = {
+			focus = SWI_economy2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_commune_economy2
+				add_idea = SWI_commune_economy3
+			}
+		}
+	}
+	focus = {
+		id = SWI_army1
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 40
+		y = 1
+		prerequisite = {
+			focus = SWI_commune_military
+		}
+		completion_reward = {
+			add_ideas = SWI_army_ideas1
+		}
+	}
+	focus = {
+		id = SWI_army2
+		icon = GFX_goal_unknown
+		cost = 6
+		x = 40
+		y = 2
+		prerequisite = {
+			focus = SWI_army1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_army_ideas1
+				add_idea = SWI_army_ideas2
+			}
+		}
+	}
+	focus = {
+		id = SWI_navy1
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 43
+		y = 1
+		prerequisite = {
+			focus = SWI_commune_military
+		}
+		completion_reward = {
+			add_ideas = SWI_navy_ideas1
+		}
+	}
+	focus = {
+		id = SWI_navy2
+		icon = GFX_goal_unknown
+		cost = 6
+		x = 43
+		y = 2
+		prerequisite = {
+			focus = SWI_navy1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_navy_ideas1
+				add_idea = SWI_navy_ideas2
+			}
+		}
+	}
+	focus = {
+		id = SWI_forever_war
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 17
+		y = 8
+		prerequisite = {
+			focus = SWI_ff
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_forevers1
+				add_idea = SWI_forevers2
+			}
+		}
+	}
+	focus = {
+		id = SWI_forever_commune
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 17
+		y = 9
+		prerequisite = {
+			focus = SWI_forever_war
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_forevers2
+				add_idea = SWI_forevers3
+			}
+		}
+	}
+	focus = {
+		id = SWI_forever_mama
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 17
+		y = 10
+		prerequisite = {
+			focus = SWI_forever_commune
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_forevers3
+				add_idea = SWI_forevers4
+			}
+		}
+	}
+	focus = {
+		id = SWI_forever_people
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 17
+		y = 11
+		prerequisite = {
+			focus = SWI_forever_mama
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_forevers4
+				add_idea = SWI_forevers5
+			}
+		}
+	}
+	focus = {
+		id = SWI_air_force1
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 46
+		y = 1
+		prerequisite = {
+			focus = SWI_commune_military
+		}
+		completion_reward = {
+				add_ideas = SWI_air_force_ideas1
+		}
+	}
+	focus = {
+		id = SWI_air_force2
+		icon = GFX_goal_unknown
+		cost = 6
+		x = 46
+		y = 2
+		prerequisite = {
+			focus = SWI_air_force1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_air_force_ideas1
+				add_idea = SWI_air_force_ideas2
+			}
+		}
+	}
+	focus = {
+		id = SWI_commune_fate
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 24
+		y = 11
+		prerequisite = {
+			focus = SWI_fate
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_fate_ideas1
+				add_idea = SWI_fate_ideas2
+			}
+		}
+	}
+	focus = {
+		id = SWI_commune_band
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 21
+		y = 11
+		prerequisite = {
+			focus = SWI_bangdream
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWI_bgd_ideas1
+				add_idea = SWI_bgd_ideas2
+			}
+		}
+	}
+	focus = {
+		id = SWI_final
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 13
+		prerequisite = {
+			focus = SWI_red
+		}
+		completion_reward = {
+			add_ideas = SWI_final_idea
+		}
+	}
+}

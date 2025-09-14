@@ -1,0 +1,20 @@
+CHA_civil_war = {
+	#icon = 
+	#picture = 
+	allowed = {
+		OR={tag =CHA
+		tag = PRC
+		tag = ROC}
+	}
+
+	visible = {
+		OR={tag =CHA
+		tag = PRC
+		tag = ROC}
+		CHA={
+		has_idea = CHA_GER_Berlin_eco_boom
+	}
+	}
+	priority = 10
+}
+

@@ -1,0 +1,171 @@
+SOV_alliance_PRC = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		has_government = communism
+	}
+	ai_strategy = {
+		type = befriend
+		id = PRC
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = PRC
+		value = 200
+	}
+
+}
+SOV_buildings={
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		always = yes
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+	
+		value = 2
+	}
+	abort = {
+		always = no
+	}
+}
+SOV_antagonize_GER = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		has_government = communism
+		GER ={
+			has_government = neutrality
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = GER
+		value = 200000
+	}
+}
+SOV_antagonize_ITA = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		has_government = communism
+		ITA ={
+			has_government = fascism
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = ITA
+		value = 200000
+	}
+
+}
+SOV_35_army_factory = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		AND = {
+			has_government = communism
+			has_country_flag = start_five_years_plan
+			has_completed_focus = SOV_start_35
+			NOT = {
+				has_completed_focus = SOV_start_45
+			}
+			industrial_complex > 40
+		}
+		
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory 
+		value = 1000000
+	}
+	
+	abort = {
+		arms_factory > 80
+	}
+
+}
+SOV_35_civil_factory = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		AND = {
+			has_government = communism
+			has_country_flag = start_five_years_plan
+			has_completed_focus = SOV_start_35
+			NOT = {
+				has_completed_focus = SOV_start_45
+			}
+			arms_factory > 80
+		}
+		
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 40
+	}
+	abort = {
+		industrial_complex > 40
+	}
+
+}
+SOV_45_army_factory = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		AND = {
+			has_government = communism
+			has_country_flag = start_five_years_plan
+			has_completed_focus = SOV_start_35
+			NOT = {
+				has_completed_focus = SOV_start_45
+			}
+			industrial_complex > 100
+		}
+		
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory 
+		value = 10000
+	}
+	abort = {
+		arms_factory > 150
+	}
+}
+SOV_45_civil_factory = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		AND = {
+			has_government = communism
+			has_country_flag = start_five_years_plan
+			has_completed_focus = SOV_start_35
+			NOT = {
+				has_completed_focus = SOV_start_45
+			}
+			arms_factory > 150
+		}
+		
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+	abort = {
+		industrial_complex > 100
+	}
+}

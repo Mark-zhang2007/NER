@@ -1,0 +1,186 @@
+capital = 64
+#首都地块states(带#的均为注释，无效果，若想要效果，就删除#)
+
+
+set_oob = "GER_1936_nsb"
+
+
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 1.0
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.8
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.3
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "GER_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			iw_large_airframe = 1
+			air_torpedoe_1 = 1
+			photo_reconnaisance = 1
+			bba_early_transport_plane = 1
+		}
+	else = {
+		set_air_oob = "GER_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+			early_transport_plane = 1
+		}
+	}
+}
+
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+
+# starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+
+set_technology = {
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	basic_heavy_tank_chassis = 1
+	engine_tech_1 = 1
+}
+
+
+
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	panzerschiffe = 1
+	pre_dreadnoughts = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	mtg_transport = 1
+	basic_torpedo = 1
+	improved_ship_torpedo_launcher = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_medium_battery = 1
+	basic_heavy_battery = 1
+	basic_depth_charges = 1
+	sonar = 1
+	basic_cruiser_armor_scheme = 1
+}
+set_naval_oob = "GER_1936_naval_mtg"
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+#军队数据，若暂时没有，可以在oob前面加上#注释掉 
+
+#开始时的科技
+set_stability = 0.7
+#设置稳定度，例如70%稳定度，则填入0.7
+set_war_support = 0.7
+#设置战争支持度
+recruit_character = GER_Kurt_von_Schleicher
+recruit_character = GER_Wilhelm_II
+#recruit_character = 
+#获取领导人，将领（在common\characters\你的国家tag）
+
+set_politics = {
+	ruling_party = neutrality
+	#领导该国家的派系，共产：communism，法西斯：fascism，民主：democratic，中立：neutrality
+	last_election = "1936.1.1"
+	#最后一次选举（"年.月.日" （p社sb代码，无法早于该日期））
+	election_frequency = 9
+	#选举间隔（48为默认）
+	elections_allowed = yes
+	#是否允许公众选举（no或者yes）
+}
+set_popularities = {
+	communism = 5
+	fascism = 5
+	democratic = 20
+	neutrality = 70
+	#设置意识形态支持度，总数不超过100，共产：communism，法西斯：fascism，民主：democratic，中立：neutrality
+}
+create_faction = GER_allies_faction
+
+add_ideas = {
+	GER_idea_kaisers_volition
+	GER_idea_capitalist_unrest
+	export_focus
+	limited_conscription
+}
+#添加民族精神（在common\ideas\你的国家tag_country.txt）
+set_autonomy = {
+		target = MTA
+		autonomy_state = autonomy_puppet} 
+set_autonomy = {
+		target = VBH
+		autonomy_state = autonomy_puppet} 
+set_autonomy = {
+		target = LIT
+		autonomy_state = autonomy_puppet} 
+set_autonomy = {
+		target = WHR
+		autonomy_state = autonomy_puppet} 
+set_autonomy = {
+		target = UKR
+		autonomy_state = autonomy_puppet} 
+set_autonomy = {
+		target = POL
+		autonomy_state = autonomy_puppet}
+set_autonomy = {
+		target = BEL
+		autonomy_state = autonomy_puppet}

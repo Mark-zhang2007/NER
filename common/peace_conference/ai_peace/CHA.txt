@@ -1,0 +1,74 @@
+peace_ai_desires = {
+	CHA_annex_ETH_faoctor = {
+		peace_action_type = { take_states }
+		enable = {
+			ROOT = {
+				tag = CHA
+			}
+			FROM.FROM.FROM = {
+				is_core_of = ETH
+			}
+		}
+		ai_desire = 1000
+	}
+	CHA_civil_faoctor = {
+		peace_action_type = { take_states }
+		enable = {
+			ROOT = {
+				tag = CHA
+			}
+			FROM.FROM.FROM = {
+				is_core_of =CHA
+			}
+		}
+		ai_desire = 1000
+	}
+	ROC_civil_faoctor = {
+		peace_action_type = { take_states }
+		enable = {
+			ROOT = {
+				tag = ROC
+			}
+			FROM.FROM.FROM = {
+				is_core_of = CHA
+			}
+		}
+		ai_desire = 1000
+	}
+	PRC_civil_faoctor = {
+		peace_action_type = { take_states }
+		enable = {
+			ROOT = {
+				tag = PRC
+			}
+			FROM.FROM.FROM = {
+				is_core_of = CHA
+			}
+		}
+		ai_desire = 1000
+	}
+	JAP_civil_faoctor = {
+		peace_action_type = { take_states }
+		enable = {
+			ROOT = {
+				tag = JAP
+			}
+			FROM.FROM.FROM = {
+				is_core_of = CHA
+			}
+		}
+		ai_desire = 1000
+	}
+	SOV_civil_faoctor = {
+		peace_action_type = { take_states }
+		enable = {
+			ROOT = {
+				tag = SOV
+			}
+			FROM.FROM.FROM = {
+				is_core_of = RUS
+			}
+		}
+		ai_desire = 1000
+	}
+}

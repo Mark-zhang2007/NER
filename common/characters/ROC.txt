@@ -1,0 +1,43 @@
+characters = {
+	ROC_Xu_Chongzhi = {#许崇智
+		name = ROC_Xu_Chongzhi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ROC/ROC_Xu_Chongzhi.png"
+			}
+			army = {
+				large = "gfx/leaders/ROC/ROC_Xu_Chongzhi_army.png"
+			}
+		}
+		country_leader = {
+			ideology = sanmin_dem
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+			traits = {
+				politically_connected
+				skilled_staffer
+				irregulars_officer
+				career_officer
+			}
+		}
+	}
+
+	ROC_Deng_Yanda = {#邓演达
+		name = ROC_Deng_Yanda
+		country_leader = {
+			ideology = sanmin_soc
+		}
+	}
+
+	ROC_Dai_Jitao = {#戴季陶
+		name = ROC_Dai_Jitao
+		country_leader = {
+			ideology = sanmin_fatuan
+		}
+	}
+}

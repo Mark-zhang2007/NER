@@ -1,0 +1,48 @@
+﻿l_simp_chinese:
+## 国策栏目
+ # ===== 核心分支 =====
+ FCC_Restore_Constitution: "恢复宪政"
+ FCC_Reopen_Congress: "重开国会"
+ FCC_Judicial_Reform: "司法改革"
+ FCC_Civil_Liberties_Act: "公民自由法案"
+ 
+ # ===== 经济重建 =====
+ FCC_Economic_Recovery_Plan: "经济复苏计划"
+ FCC_New_Deal_2: "新新政"
+ FCC_Infrastructure_Renewal: "基础设施重建"
+ FCC_Tax_Reform: "税收改革"
+ 
+ # ===== 军事改革 =====
+ FCC_Purge_Loyalists: "清除效忠派"
+ FCC_Constitutional_Guard: "宪政卫队"
+ FCC_Modernize_Military: "军事现代化"
+ FCC_Volunteer_Corps: "志愿军团"
+ 
+ # ===== 外交政策 =====
+ FCC_Seek_International_Recognition: "寻求国际承认"
+ FCC_Join_Democratic_Alliance: "加入民主联盟"
+ FCC_Isolate_Extremists: "孤立极端势力"
+ FCC_Promote_Democracy_Abroad: "海外推广民主"
+ 
+ # ===== 社会和解 =====
+ FCC_Reconciliation_Commission: "和解委员会"
+ FCC_Civil_Rights_Act: "民权法案"
+ FCC_Educational_Reform: "教育改革"
+ FCC_Healthcare_Reform: "医疗改革"
+
+## characters
+FCC_Leader: "自由新宪修订会"
+Democratic_League: "自由阵线"
+## ideas
+FCC_Constitutional_Restoration: "宪政恢复"
+FCC_Constitutional_Restoration_desc: "自1932年以来，我们国家一直处于政治动荡之中。各派系之间的冲突使国家陷入了内战，经济也遭受了严重打击。现在是时候恢复宪政，重建我们的民主制度了。"
+FCC_Independent_Judiciary: "独立的司法系统"
+FCC_Independent_Judiciary_desc: "一个独立的司法系统是民主社会的基石。我们将确保法院系统不受政治干预，保障公民的基本权利和自由。"
+FCC_Economic_Stimulus: "经济刺激"
+FCC_Economic_Stimulus_desc: "我们的经济正处于萧条之中，失业率高企，工业产出低迷。为了振兴经济，我们需要采取积极的财政政策，增加政府支出，刺激需求，促进就业。"
+FCC_Join_Democratic_Alliance: "加入民主联盟"
+FCC_Join_Democratic_Alliance_desc: "在当前的国际形势下，孤立主义已经不再适用。我们需要与其他民主国家建立更紧密的联系，共同应对极权主义的威胁。加入自由阵线将有助于提升我们的国际地位，增强国家安全。
+FCC_Loyal_Defenders: "忠诚卫士"
+FCC_Loyal_Defenders_desc: "宪政卫队是我们国家的中坚力量，他们忠诚于宪法和民主制度。通过加强他们的训练和装备，我们可以确保国家的安全，防止任何形式的内乱和外来威胁。"
+FCC_Alliance_Member: "联盟成员"
+FCC_Alliance_Member_desc: "作为自由阵线的一员，我们将享有更多的国际支持和合作机会。这不仅有助于提升我们的军事能力，还能促进经济发展和技术进步。"

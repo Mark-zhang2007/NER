@@ -1,0 +1,383 @@
+ideas = {
+#不要动
+
+	country = {
+	#不要动	
+
+		#{country_tag}_test = {
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			#name = {country_tag}_test 
+			#国家tag_精神名字，如USA_123
+
+			#picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			#allowed = { always = yes }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			#removal_cost = -1
+			#移除花费（一般不动这个）
+
+			#modifier = {
+			#}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		#}
+		GER_constitutional_monarchy = {
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
+			}
+		}
+
+		GER_idea_kaisers_volition = {#德皇意志
+			allowed = {
+				tag = GER
+			}
+			picture = GER_kaiser
+			modifier = {
+				stability_factor = 0.2
+			}
+		}
+
+		GER_idea_capitalist_unrest = {#资本动乱 哎我操资本怎么这么坏啊.jpg
+			allowed = {
+				tag = GER
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = -0.1
+				stability_factor = -0.15
+				war_support_factor = -0.1
+
+			}
+		}
+
+		GER_idea_economic_crisis = {#八·三柏林经济危机
+			allowed = {
+				tag = GER
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.35
+				stability_factor = -0.3
+				war_stability_factor = -0.4
+				war_support_factor = -0.25
+				industrial_capacity_factory = -0.4
+				political_power_factor = -0.3
+			}
+		}
+		GER_focus_Stimulate_the_economy ={
+			modifier = {
+				civilian_factory_use = 1
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = 0.4
+				production_speed_industrial_complex_factor = 0.3
+			}
+		}
+		GER_focus_quantitative_easing ={
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				stability_weekly = 0.05
+				production_factory_efficiency_gain_factor =0.2
+				trade_opinion_factor = 0.5
+				production_speed_buildings_factor = 0.5
+				production_speed_industrial_complex_factor = 0.5
+
+			}
+		}
+		GER_focus_overissued_government_bonds ={
+			modifier = {
+				min_export = -0.3
+				consumer_goods_factor = 0.2
+				political_power_cost = 0.2
+				production_speed_buildings_factor = 0.3
+				production_speed_arms_factory_factor = 0.4
+				production_speed_industrial_complex_factor = 0.4
+				industrial_capacity_factory = 0.3
+				political_advisor_cost_factor = -0.3
+				trade_laws_cost_factor  = -0.3
+			}
+		}
+		GER_focus_MGAG ={
+			modifier = {
+				industrial_concern_cost_factor = -0.2
+				line_change_production_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.3
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_start_efficiency_factor = 0.3
+			}
+		}
+		GER_focus_prussia_artillery ={
+			equipment_bonus = {
+		artillery_equipment = {
+			build_cost_ic = -0.2
+			soft_attack = 0.1
+			instant = yes
+		}
+	}
+
+		}
+		GER_focus_creeping_barrage={
+			modifier = {
+				army_artillery_attack_factor = 0.3
+				army_artillery_defence_factor = 0.2
+			}
+			equipment_bonus = {
+		artillery_equipment = {
+			soft_attack = 0.1
+			instant = yes
+		}
+	}
+
+
+		}
+		GER_focus_improve_Trench_Warfare ={
+				modifier = {
+					max_dig_in = 10
+					max_dig_in_factor = 0.4
+					production_speed_bunker_factor = 0.4
+					dig_in_speed_factor = 0.3
+				}
+			}
+		GER_focus_king_of_war={
+				modifier = {
+					army_infantry_attack_factor = 0.1
+					army_infantry_defence_factor = 0.1
+					army_artillery_attack_factor = 0.3
+					land_night_attack = 0.3
+
+				}
+			}
+		GER_focus_thunder_war={
+				modifier = {
+					army_armor_attack_factor = 0.2
+					army_armor_defence_factor = 0.3
+					army_armor_speed_factor = 0.1
+				}
+			}
+		 GER_focus_tank_research={
+				modifier = {
+					army_armor_attack_factor = 0.1
+					army_armor_defence_factor = 0.2
+					army_armor_speed_factor = 0.2
+				}
+				equipment_bonus = {
+			armor  = {
+				build_cost_ic = -0.1
+				reliability = 0.1
+				maximum_speed = 0.2
+				armor_value = 0.1
+				instant = yes
+			}
+		}
+
+			}
+		GER_focus_Infantry_tank_coordination={
+				modifier = {
+					army_armor_attack_factor = 0.1
+					army_armor_defence_factor = 0.2
+					supply_consumption_factor = -0.1
+					org_loss_when_moving = -0.1
+					army_infantry_attack_factor = 0.1
+					army_infantry_defence_factor =  0.1
+					motorized_attack_factor =  0.1
+					motorized_defence_factor = 0.1
+					mechanized_attack_factor =  0.1
+					mechanized_defence_factor =  0.1
+					breakthrough_factor = 0.2
+				}
+			}
+		GER_focus_Glory_of_prussia_1={
+				modifier = {
+					conscription_factor = 0.3
+					mobilization_speed =0.2
+				}
+			}
+		GER_focus_Glory_of_prussia_2={
+				modifier = {
+					conscription_factor = 0.4
+					mobilization_speed =0.4
+					non_core_manpower =0.2
+					training_time_army_factor=-0.1
+					army_org_factor =0.2
+				}
+			}
+		GER_industrial_1={
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_factory_efficiency_gain_factor =0.2
+				production_speed_industrial_complex_factor =0.2
+
+			}
+		}
+		GER_industrial_2={
+			modifier = {
+				industrial_capacity_factory = 0.4
+				production_factory_efficiency_gain_factor =0.4
+				production_speed_industrial_complex_factor =0.4
+				production_factory_max_efficiency_factor = 0.3
+				production_factory_start_efficiency_factor = 0.2
+				production_lack_of_resource_penalty_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
+				production_speed_bunker_factor= 0.2
+				production_speed_infrastructure_factor = 0.4
+			}
+		}
+		GER_control={
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.6
+			}
+
+		}
+		GER_duchy_by_gun={
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.3
+				mic_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.3
+			}
+		}
+		GER_duchy_by_eco={
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.2
+				mic_to_target_factor = 0.2
+				trade_cost_for_target_factor = -0.4
+			}
+		}
+		GER_focus_kaiser_prestige={
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				stability_weekly = 0.01
+				political_power_gain = 0.05
+			}
+		}
+		GER_focus_call_noblemen={
+			modifier = {
+				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.1
+				stability_weekly = 0.02
+				political_power_gain = 0.05
+				mobilization_speed = 0.1
+				industrial_capacity_factory = 0.2
+			}
+		}
+		GER_focus_three_for_heil={
+			modifier = {
+				defensive_war_stability_factor = 0.1
+				offensive_war_stability_factor = 0.1
+				war_support_weekly =  0.01
+				conscription_factor = 0.05
+				mobilization_speed = 0.05
+				stability_weekly = 0.05
+				political_power_gain = 0.5
+			}
+		}
+		GER_idea_economic_crisis_lighten = {#八·三柏林经济危机(勉强减轻
+			allowed = {
+				tag = GER
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				stability_factor = -0.1
+				war_stability_factor = -0.1
+				war_support_factor = -0.1
+				industrial_capacity_factory = -0.2
+				political_power_factor = -0.1
+			}
+		}
+		GER_focus_second_term_of_office ={
+			modifier = {
+				stability_weekly = 0.01
+				political_power_gain =0.05
+				political_advisor_cost_factor = -0.2
+				theorist_cost_factor = -0.2
+			}
+		}
+		GER_focus_careful_left_and_right = {
+			modifier = {
+				communism_drift = -0.5
+				fascism_drift = -0.5
+				drift_defence_factor = 0.3
+			}
+		}
+		GER_focus_Reorganise_GSH = {
+			modifier = {
+				own_operative_capture_chance_factor = -0.2
+				mobilization_laws_cost_factor = -0.2
+				theorist_cost_factor = -0.2
+				consumer_goods_factor = -0.1
+				command_power_gain = 0.5
+				max_planning_factor = 1
+				planning_speed = 0.3
+			}
+		}
+		GER_focus_cash_relinquish_money_power = {
+			modifier = {
+				local_resources_factor = 0.3
+				global_building_slots_factor = 0.5
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		GER_focus_revisit_Prussian_spirit = {
+			modifier = {
+				conscription_factor = 0.1
+				mobilization_speed = 0.3
+				initiative_factor = 0.2
+				army_core_defence_factor = 0.3
+			}
+
+		}
+		GER_focus_remove_mad_dog = {
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+		}
+		GER_focus_break_dream_of_east_roma = {
+			targeted_modifier = {
+				tag = OTO
+				attack_bonus_against = 0.3
+				defense_bonus_against = 0.3
+				breakthrough_bonus_against = 0.3
+			}
+		}
+		GER_focus_german_need_Mr_D ={
+			modifier = {
+				democratic_drift = 0.1
+				drift_defence_factor = 0.3
+				stability_weekly = 0.05
+				political_power_gain = 0.5
+				compliance_starting_value = 0.5
+				resistance_decay = 0.5
+			}
+		}
+		GER_focus_Legacy_of_Holstein_War ={
+			targeted_modifier = {
+				tag = DEN
+				attack_bonus_against = 0.3
+				breakthrough_bonus_against = 0.3
+			}
+		}
+		GER_focus_leading_eagle_of_democratic_world = {
+			modifier = {
+				democratic_drift = 0.1
+				drift_defence_factor = 0.3
+				stability_weekly = 0.05
+				political_power_gain = 0.5
+				compliance_starting_value = 0.5
+				resistance_decay = 0.5
+				production_factory_efficiency_gain_factor = 0.2
+				send_volunteer_size = 24
+				send_volunteers_tension = -0.8
+				research_speed_factor = 0.1
+			}
+			
+		}
+	}
+}

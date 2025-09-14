@@ -1,0 +1,1135 @@
+focus_tree = {
+	id = italy
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+	default = no
+	focus = {
+		id = ITA_fuxing
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 23
+		y = 0
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+			# +150pp，+5稳定
+		}
+	}
+
+	focus = {
+		id = ITA_dream
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 2
+		prerequisite = {
+			focus = ITA_fuxing
+		}
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.1 } 
+			# 法西斯主义支持率变化：+10.00%
+		}
+	}
+
+	focus = {
+		id = ITA_industry
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 9
+		y = 3
+		prerequisite = {
+			focus = ITA_dream
+		}
+		completion_reward = {
+			add_tech_bonus = {
+		name = ITA_industry
+		bonus = 2
+		uses = 2
+		category = industry 
+	}
+
+			# 两张200%工业卡
+		}
+	}
+
+	focus = {
+		id = ITA_develop
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 9
+		y = 4
+		prerequisite = {
+			focus = ITA_industry
+		}
+		completion_reward = {
+			add_ideas = ITA_National_Development_Council1
+			# 增加一个民族精神“国家发展委员会” +20%民工速度 -10消费品系数
+		}
+	}
+	focus = {
+		id = ITA_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 5
+		y = 5
+		prerequisite = {
+			focus = ITA_develop
+		}
+		available = {
+			has_idea = GER_idea_economic_crisis
+		}
+		completion_reward = {
+			# 消除经济危机的一半debuff（剩下一半在后面 177行）
+			#前提条件：有经济危机的debuff
+			swap_ideas = {
+				remove_idea = GER_idea_economic_crisis
+				add_idea = FRA_economic_crisis_half
+			}
+		}
+	}
+	focus = {
+		id = ITA_4years_plan
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 5
+		y = 6
+		prerequisite = {
+			focus = ITA_economy
+		}
+		completion_reward = {
+			# “国家发展委员会”追加效果 +10%民工速度、-10%消费品系数
+			swap_ideas = {
+				remove_idea =  ITA_National_Development_Council1
+				add_idea = ITA_National_Development_Council2
+			}
+		}
+	}
+	focus = {
+		id = ITA_rebuild_rome
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 9
+		y = 7
+		prerequisite = {
+			focus = ITA_4years_plan
+		}
+		completion_reward = {
+			2 ={
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+			}
+			# 罗马地块+4建筑位+2民+2军
+		}
+	}
+	focus = {
+		id = ITA_rebuild_milan
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 9
+		y = 8
+		prerequisite = {
+			focus = ITA_rebuild_rome
+		}
+		available = {
+			controls_state = 159
+		}
+		completion_reward = {
+			159 ={
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+			}
+			# 米兰地块+4建筑位+2民+2军
+		}
+	}
+	focus = {
+		id = ITA_prepare
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 13
+		y = 5
+		prerequisite = {
+			focus = ITA_develop
+		}
+		available = {
+			has_idea = ITA_National_Development_Council2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea =  ITA_National_Development_Council2
+				add_idea = ITA_National_Development_Council3
+			}
+			# “国家发展委员会”追加效果 +30%军工速度 +10%地块格子上限
+		}
+	}
+	focus = {
+		id = ITA_fxsindustry
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 13
+		y = 6
+		prerequisite = {
+			focus = ITA_prepare
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea =  ITA_National_Development_Council3
+				add_idea = ITA_National_Development_Council4
+			}
+			# “国家发展委员会”追加效果 +20%工厂产出 +20%海军产出
+		}
+	}
+	focus = {
+		id = ITA_highway
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 13
+		y = 7
+		prerequisite = {
+			focus = ITA_fxsindustry
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			# 任意四个地块+1层基建
+		}
+	}
+	focus = {
+		id = ITA_wuliu
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 13
+		y = 8
+		prerequisite = {
+			focus = ITA_highway
+		}
+		completion_reward = {
+			# “国家发展委员会”追加效果 补给消耗-20%
+			swap_ideas = {
+				remove_idea =  ITA_National_Development_Council4
+				add_idea = ITA_National_Development_Council5
+			}
+		}
+	}
+	focus = {
+		id = ITA_better_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 13
+		y = 9
+		prerequisite = {
+			focus = ITA_wuliu
+		}
+		completion_reward = {
+			remove_ideas = FRA_economic_crisis_half
+			# 全部消除经济危机的debuff
+		}
+	}
+	focus = {
+		id = ITA_kuozhangplan
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 23
+		y = 3
+		prerequisite = {
+			focus = ITA_dream
+		}
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			army_experience = 30
+			# +10黑线支持率 +30陆军经验
+		}
+	}
+	focus = {
+		id = ITA_lost_place
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 19
+		y = 4
+		prerequisite = {
+			focus = ITA_kuozhangplan
+		}
+		completion_reward = {
+			159={
+				add_core_of = ITA
+			}
+			850={
+				add_core_of = ITA
+			}
+			160={
+				add_core_of = ITA
+			}
+			# 获得159、850、160的核心
+		}
+	}
+	focus = {
+		id = ITA_attack_swi
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 6
+		prerequisite = {
+			focus = ITA_lost_place
+		}
+		bypass = {
+			SWI={
+				exists = no
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+		completion_reward = {
+			create_wargoal = { target = SWI type = puppet_wargoal_focus }
+			# 获得对SWI的战争目标。若SWI不存在或者是自己傀儡则跳过
+		}
+	}
+	focus = {
+		id = ITA_north_back
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 19
+		y = 6
+		prerequisite = {
+			focus = ITA_lost_place
+		}
+		completion_reward = {
+			DFN = {
+				country_event = DFN.007
+			}
+			# 索取159、850、160、736、852，目标dfn多瑙联邦，在索取后获得这五个地块的控制权+736/852的宣称
+		}
+	}
+	focus = {
+		id = ITA_fxs
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 20
+		y = 1
+		prerequisite = {
+			focus = ITA_fuxing
+		}
+		completion_reward = {
+			# 墨索里尼（领导人）获得特质“紧握束棒” 每日+0.05fxs主义支持率、5稳定、5战支
+			add_country_leader_trait =ITA_Hold_the_bundle
+		}
+	}
+	focus = {
+		id = ITA_north_africa
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 21
+		y = 6
+		prerequisite = {
+			focus = ITA_lost_place
+		}
+		mutually_exclusive = {
+			focus = ITA_with_oto
+		}
+		available = {
+			NOT ={has_war_with = OTO}
+			
+		}
+		completion_reward = {
+			#前提条件与奥斯曼不在战争状态，北非不在自己控制下
+			# 索取661/448/662/449/450/451/663/273
+			OTO ={
+				country_event = OTO.1
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_east_africa
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 21
+		y = 7
+		prerequisite = {
+			focus = ITA_north_africa
+		}
+		completion_reward = {
+			CHA = {
+				country_event = CHA.9
+			}
+			# 索取550/269/559/844（只有这四块，还有两块不归意大利）
+		}
+	}
+	focus = {
+		id = ITA_onebeg
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 21
+		y = 8
+		prerequisite = {
+			focus = ITA_east_africa
+		}
+		bypass = {
+			has_war_with = DFN
+		}
+		completion_reward = {
+			# 索取109/104/103/853/804/105/45 
+		}
+	}
+	focus = {
+		id = ITA_with_dfn
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 19
+		y = 9
+		prerequisite = {
+			focus = ITA_north_back
+		}
+		prerequisite = {
+			focus = ITA_onebeg
+		}
+		mutually_exclusive = {
+			focus = ITA_attack_dfn
+		}
+		available = {
+			DFN = {
+				NOT = {
+					is_in_faction = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+		completion_reward = {
+			# 和多瑙建立阵营。前提多瑙不在阵营中。
+			create_faction = ITA_DFN
+			
+			add_to_faction = DFN
+		
+		}
+	}
+	focus = {
+		id = ITA_attack_ger
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 17
+		y = 10
+		prerequisite = {
+			focus = ITA_with_dfn
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = GER
+				type = puppet_wargoal_focus
+			}
+			# GER战争目标
+		}
+	}
+	focus = {
+		id = ITA_ambition
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 27
+		y = 4
+		prerequisite = {
+			focus = ITA_kuozhangplan
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			# +10%战争支持度
+		}
+	}
+	focus = {
+		id = ITA_africa
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 25
+		y = 5
+		prerequisite = {
+			focus = ITA_ambition
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_tech_bonus = {
+				name = ITA_industry
+				bonus = 0.5
+				uses = 1
+				category = industry 
+	}
+			# +150pp、一张工业+50%科技卡
+		}
+	}
+	focus = {
+		id = ITA_with_oto
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 25
+		y = 6
+		prerequisite = {
+			focus = ITA_africa
+		}
+		mutually_exclusive = {
+			focus = ITA_north_africa
+		}
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OTO ={
+						is_in_faction = yes
+					}
+				}
+				OTO = {
+					add_to_faction = ITA
+				}
+			}
+			if = {
+				limit = {
+					OTO ={
+						is_in_faction = no
+					}
+				}
+				create_faction = Eastern_Roman_Empire
+				add_to_faction = OTO
+			}
+			# 加入东罗协定/创建东罗协定
+		}
+	}
+	focus = {
+		id = ITA_startplace
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 26
+		y = 1
+		prerequisite = {
+			focus = ITA_fuxing
+		}
+		completion_reward = {
+			add_ideas = ITA_startplace
+			# 意识形态变化抵制力度 +10.00%
+		}
+	}
+	focus = {
+		id = ITA_baergan
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 27
+		y = 5
+		prerequisite = {
+			focus = ITA_ambition
+		}
+		completion_reward = {
+			add_state_claim =102		
+			add_state_claim =109		
+			add_state_claim =104		
+			add_state_claim =103		
+			add_state_claim =853		
+			add_state_claim =804		
+			add_state_claim =105
+			add_state_claim =45		
+			# 102/109/104/103/853/804/105/45 宣称
+		}
+	}
+	focus = {
+		id = ITA_suogu
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 27
+		y = 6
+		prerequisite = {
+			focus = ITA_baergan
+		}
+		completion_reward = {
+			ALB={
+				country_event = ALB.1
+			}
+			# 事件，阿尔巴尼亚傀儡
+		}
+	}
+	focus = {
+		id = ITA_vienna
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 25
+		y = 7
+		prerequisite = {
+			focus = ITA_with_oto
+		}
+		prerequisite = {
+			focus = ITA_suogu
+		}
+		bypass = {
+			has_war_with = DFN
+		}
+		completion_reward = {
+			DFN = {
+				country_event = DFN.009
+			}
+			# 同意后获得 764/82/109/104/103/853/804/105/45/84/76/80/89/91 的控制权
+		}
+	}
+	focus = {
+		id = ITA_military
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 36
+		y = 3
+		prerequisite = {
+			focus = ITA_dream
+		}
+		completion_reward = {
+			army_experience = 50
+			navy_experience = 50
+			air_experience = 50
+			# +50三军经验
+		}
+	}
+	focus = {
+		id = ITA_royal
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 36
+		y = 4
+		prerequisite = {
+			focus = ITA_military
+		}
+		completion_reward = {
+			remove_ideas = ITA_the_disgrace_of_a_defeated_country
+			# 移除民族精神“战败国的耻辱”（-20%三军经验获取，陆军师进攻-10%，稳定度-5%）
+		}
+	}
+	focus = {
+		id = ITA_army
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 31
+		y = 5
+		prerequisite = {
+			focus = ITA_royal
+		}
+		completion_reward = {
+			add_ideas =  ITA_Italian_Army
+			# 获得意大利皇家陆军：+15%进攻+15%防御
+		}
+	}
+	focus = {
+		id = ITA_navy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 36
+		y = 5
+		prerequisite = {
+			focus = ITA_royal
+		}
+		completion_reward = {
+			add_ideas = ITA_Royal_Italian_Navy1
+			# 意大利皇家海军（开局随便给几个debuff，这个把debuff消除并给予每日0.05海军经验）
+		}
+	}
+	focus = {
+		id = ITA_whale
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 36
+		y = 6
+		prerequisite = {
+			focus = ITA_navy
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_Royal_Italian_Navy1
+				add_idea = ITA_Royal_Italian_Navy2
+			}
+		}
+		# 意大利皇家海军追加效果（随便找几个海军buff给就行）
+	}
+	focus = {
+		id = ITA_ships
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 36
+		y = 7
+		prerequisite = {
+			focus = ITA_whale
+		}
+		completion_reward = {
+			# 意大利皇家海军追加效果：+20%海军产出
+			swap_ideas = {
+				remove_idea = ITA_Royal_Italian_Navy2
+				add_idea = ITA_Royal_Italian_Navy3
+			}
+		}
+	}
+	focus = {
+		id = ITA_better_life
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 9
+		y = 9
+		prerequisite = {
+			focus = ITA_wuliu
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_National_Development_Council4
+				add_idea = ITA_National_Development_Council5
+			}
+			# “国家发展委员会”追加效果 -10生活消费品系数
+		}
+	}
+	focus = {
+		id = ITA_miracle
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 9
+		y = 10
+		prerequisite = {
+			focus = ITA_better_life
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_National_Development_Council5
+				add_idea = ITA_National_Development_Council6
+			}
+			add_ideas = ITA_National_Development_Council6
+			# “国家发展委员会”追加效果 +10工厂产出 +10生产效率上限
+		}
+	}
+	focus = {
+		id = ITA_twobeg
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 25
+		y = 8
+		prerequisite = {
+			focus = ITA_vienna
+		}
+		completion_reward = {
+			SER ={
+				transfer_state = 764
+				transfer_state = 82
+			}
+			ROM ={
+				transfer_state = 84
+				transfer_state = 76
+				transfer_state = 80
+				add_state_claim = 89
+				add_state_claim = 91
+			}
+			set_autonomy = {
+				target = SER
+				autonomy_state = autonomy_puppet
+			}
+			set_autonomy = {
+				target = ROM
+				autonomy_state = autonomy_puppet
+			}
+			# 将地块进行移交并傀儡SER和ROM
+			# SER 764/82 宣称
+			# ROM 84/76/80核心 89/91宣称
+		}
+	}
+	focus = {
+		id = ITA_attack_dfn
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 23
+		y = 9
+		prerequisite = {
+			focus = ITA_onebeg
+			focus = ITA_twobeg
+		}
+		mutually_exclusive = {
+			focus = ITA_with_dfn
+		}
+		completion_reward = {
+			create_wargoal = { target = DFN type = puppet_wargoal_focus}
+			#DFN战争目标
+		}
+	}
+	focus = {
+		id = ITA_eng_africa
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 21
+		y = 10
+		prerequisite = {
+			focus = ITA_attack_dfn
+			focus = ITA_with_dfn
+		}
+		completion_reward = {
+			ENG ={
+				country_event = ENG.1
+			}
+			# 找英国要英属非洲，同意效果吃下BAF，不同意效果拿目标
+		}
+	}
+	focus = {
+		id = ITA_attack_oto
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 24
+		y = 12
+		prerequisite = {
+			focus = ITA_our_sea
+		}
+		completion_reward = {
+			create_wargoal = { target = OTO type = puppet_wargoal_focus}
+			# OTO战争目标
+		}
+	}
+	focus = {
+		id = ITA_attack_fra
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 18
+		y = 12
+		prerequisite = {
+			focus = ITA_our_sea
+		}
+		completion_reward = {
+			create_wargoal = { target =FRA type = puppet_wargoal_focus}
+			# FRA战争目标
+		}
+	}
+	focus = {
+		id = ITA_attack_spr
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 21
+		y = 13
+		prerequisite = {
+			focus = ITA_attack_fra
+		}
+		completion_reward = {
+			create_wargoal = { target = SPA type = puppet_wargoal_focus}
+			# 西班牙战争目标
+		}
+	}
+	focus = {
+		id = ITA_attack_eng
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 18
+		y = 13
+		prerequisite = {
+			focus = ITA_attack_fra
+		}
+		completion_reward = {
+			create_wargoal = { target = ENG type = puppet_wargoal_focus}
+			add_ideas = ITA_attack_eng
+			# 英国战争目标 +20%登录上限
+		}
+	}
+	focus = {
+		id = ITA_dream_of_rome
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 24
+		y = 13
+		prerequisite = {
+			focus = ITA_attack_oto
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_our_sea1
+				add_idea = ITA_our_sea2
+			}
+			
+			# “我们的海”追加效果（后面有这个精神，国策排序有问题，无需在意）：+10%攻防
+		}
+	}
+	focus = {
+		id = ITA_kill_ger
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 25
+		y = 10
+		prerequisite = {
+			focus = ITA_attack_dfn
+		}
+		completion_reward = {
+			create_wargoal = { target = GER type = puppet_wargoal_focus}
+			add_ideas = ITA_kill_ger
+			# GER战争目标，+20%对德攻防
+		}
+	}
+	focus = {
+		id = ITA_our_sea
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 21
+		y = 11
+		prerequisite = {
+			focus = ITA_kill_ger
+			focus = ITA_eng_africa
+			focus = ITA_attack_ger
+		}
+		completion_reward = {
+			add_ideas = ITA_our_sea1
+			# 获得民族精神“我们的海”（稳定度+10% 战争支持度+10%）
+		}
+	}
+	focus = {
+		id = ITA_Rome_Kingdom
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 21
+		y = 14
+		prerequisite = {
+			focus = ITA_attack_eng
+		}
+		prerequisite = {
+			focus = ITA_attack_spr
+		}
+		prerequisite = {
+			focus = ITA_dream_of_rome
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR={
+						is_core_of =POR
+						is_core_of =SPR
+						is_core_of =FRA
+						is_core_of =BEL
+						is_core_of =HOL
+						is_core_of =SWI
+						is_core_of =SER
+						is_core_of =ALB
+						is_core_of =GRE
+					}
+				}
+				add_core_of = ITA
+				
+			}
+			add_state_core = 152
+			add_state_core = 976
+			add_state_core = 102
+			add_state_core = 853
+			add_state_core = 109
+			add_state_core = 104
+			add_state_core = 103
+			add_state_core = 163
+			add_state_core = 804
+			add_state_core = 105
+			add_state_core = 341
+			add_state_core = 797
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 345
+			add_state_core = 346
+			add_state_core = 49
+			add_state_core = 347
+			add_state_core = 356
+			add_state_core = 798
+			add_state_core = 348
+			add_state_core = 344
+			add_state_core = 355
+			add_state_core = 349
+			add_state_core = 353
+			add_state_core = 354
+			add_state_core = 350
+			add_state_core = 680
+			add_state_core = 554
+			add_state_core = 799
+			add_state_core = 553
+			add_state_core = 454
+			add_state_core = 453
+			add_state_core = 446
+			add_state_core = 907
+			add_state_core = 447
+			add_state_core = 452
+			add_state_core = 663
+			add_state_core = 451
+			add_state_core = 450
+			add_state_core = 449
+			add_state_core = 662
+			add_state_core = 661
+			add_state_core = 448
+			add_state_core = 665
+			add_state_core = 458
+			add_state_core = 460
+			add_state_core = 513
+			add_state_core = 459
+			add_state_core = 462
+			add_state_core = 461
+
+			#获得核心，核心可以参照意大利成立罗马帝国的原版决议
+		}
+	}
+	focus = {
+		id = ITA_wolf
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 31
+		y = 6
+		prerequisite = {
+			focus = ITA_army
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_Italian_Army
+				add_idea = ITA_Italian_Army2
+			}
+			# 意大利皇家陆军追加效果：+10%攻防
+		}
+	}
+	focus = {
+		id = ITA_light_tanks
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 31
+		y = 7
+		prerequisite = {
+			focus = ITA_wolf
+		}
+		completion_reward = {
+			# -25%轻坦造价
+			add_ideas = ITA_light_tanks
+		}
+	}
+	focus = {
+		id = ITA_air_force
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 41
+		y = 5
+		prerequisite = {
+			focus = ITA_royal
+		}
+		completion_reward = {
+			add_ideas = ITA_air_force1
+			# 获得民族精神“意大利皇家空军”（随便给点东西）
+		}
+	}
+	focus = {
+		id = ITA_eagle
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 41
+		y = 6
+		prerequisite = {
+			focus = ITA_air_force
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_air_force1
+				add_idea = ITA_air_force2
+			}
+			# “意大利皇家空军”（再随便给一点）
+		}
+	}
+	focus = {
+		id = ITA_our_air
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 41
+		y = 7
+		prerequisite = {
+			focus = ITA_eagle
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_our_air
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				name = ITA_our_air
+				bonus = 1
+				uses = 1
+				category = medium_air
+			}
+			add_tech_bonus = {
+				name = ITA_our_air
+				bonus = 1
+				uses = 1
+				category = heavy_air
+			}
+			add_tech_bonus = {
+				name = ITA_our_air
+				bonus = 1
+				uses = 1
+				category = air_equipment 
+			}
+
+			# +四张空军100%卡
+		}
+	}
+	focus = {
+		id = ITA_honor
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 36
+		y = 8
+		prerequisite = {
+			focus = ITA_ships
+			focus = ITA_our_air
+			focus = ITA_light_tanks
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_Italian_Army2
+				add_idea = ITA_Italian_Army3
+			}
+			swap_ideas = {
+				remove_idea = ITA_air_force2
+				add_idea = ITA_air_force3
+			}
+			swap_ideas = {
+				remove_idea = ITA_Royal_Italian_Navy3
+				add_idea = ITA_Royal_Italian_Navy4
+			}
+			# 给陆军民族精神+10%攻防、海空同上。
+		}
+	}
+}

@@ -1,0 +1,37 @@
+
+state={
+	id=985
+	name="STATE_985" #
+	manpower = 109808 
+	
+	state_category = rural
+	
+
+
+	history={
+		owner = CHA
+		add_core_of = CHA
+		add_core_of = PRC
+		add_core_of = ROC
+		add_core_of = GXC
+		add_core_of = SIK
+		add_core_of = XSM
+		add_core_of = SHX
+		add_core_of = YUN
+
+		buildings = {
+			infrastructure = 1
+		}
+
+		victory_points = {
+			4435 1 # Gangtok
+		}
+
+	}
+
+	provinces={
+		4435
+	}
+
+	local_supplies=0.0 
+}

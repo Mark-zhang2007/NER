@@ -1,0 +1,58 @@
+FCC_ideas = {
+	country = {
+    # ===== 宪政恢复 =====
+    FCC_Constitutional_Restoration = {
+        modifier = {
+            political_power_factor = 0.20                  # 政治点数获取 +20%
+            stability_factor = 0.15                       # 稳定度 +15%
+            democratic_drift = 0.05                       # 民主思潮传播 +5%
+        }
+    }
+    
+    # ===== 司法独立 =====
+    FCC_Independent_Judiciary = {
+        modifier = {
+            political_power_factor = 0.10                   # 政治点数消耗 -10%
+            ideology_drift_defence_factor = 0.25           # 意识形态抵制 +25%
+        }
+    }
+    
+    # ===== 经济刺激 =====
+    FCC_Economic_Stimulus = {
+        modifier = {
+            production_speed_buildings_factor = 0.25       # 建筑建造速度 +25%
+            consumer_goods_factor = -0.10                  # 消费品需求 -10%
+            production_factory_efficiency_gain_factor = 0.20 # 生产效率增长 +20%
+            local_resources_factor = 0.15                     # 资源开采率 +15%
+        }
+
+    }
+    
+    # ===== 基础设施繁荣 =====
+    FCC_Infrastructure_Boom = {
+        modifier = {
+            infrastructure_construction_speed = 0.40       # 基础设施建造速度 +40%
+            production_speed_industrial_complex_factor = 0.30 # 工厂建造速度 +30%
+        }
+    }
+    
+    # ===== 忠诚卫士 =====
+    FCC_Loyal_Defenders = {
+        modifier = {
+            army_morale_factor = 0.15                     # 组织度恢复 +15%
+            experience_gain_army_factor = 0.20            # 陆军经验获取 +20%
+            surrender_limit = 0.10                         # 投降界限 +10%
+            special_forces_cap = 0.25                      # 特种部队上限 +25%
+        }
+    }
+    
+    # ===== 联盟成员 =====
+    FCC_Alliance_Member = {
+        modifier = {
+            trade_opinion_factor = 0.50                   # 贸易关系加成 +50%
+            send_volunteers_tension = -0.30              # 派遣志愿军紧张度要求 -30%
+            join_faction_tension = -0.20                 # 加入阵营紧张度要求 -20%
+        }
+    }
+	}
+}

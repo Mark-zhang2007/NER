@@ -1,0 +1,109 @@
+ideas = {
+	country = {
+    # ===== 国家基础 =====
+    ASA_Confederate_Nation = { ###
+        modifier = {
+            stability_factor = -0.10
+            war_support_factor = 0.20
+            non_core_manpower = 0.30 # 奴役非核心人口
+        }
+    } #
+    
+    # ===== 经济体系 =====  
+    ASA_King_Cotton = { ####
+        modifier = {
+            min_export = -0.25
+            consumer_goods_factor = 0.10
+        }
+    }
+	ASA_Fugitive_Slave_Act = {  ####
+		modifier = {
+			political_power_factor = 0.15
+			stability_factor = -0.05
+			war_support_factor = 0.10
+		}
+	}
+    
+    # ===== 军事力量 =====
+    ASA_States_Autonomy = {  ####
+        modifier = {
+            training_time_army_factor = -0.30
+            experience_gain_army_factor = 0.15
+            army_morale_factor = 0.10
+        }
+    }
+    
+    ASA_Mounted_Rifles = {  ####
+        modifier = {
+            cavalry_attack_factor = 0.25
+            cavalry_defence_factor = 0.15
+            army_speed_factor = 0.10
+        }
+    }
+    
+    ASA_Slave_Catchers = {
+        modifier = {
+            naval_speed_factor = -0.10 # 内河舰队
+            naval_defense_factor = 0.20
+            river_crossing_factor = -0.50
+        }
+    }
+    
+    # ===== 奴隶制度 =====
+    ASA_Racial_Hierarchy = {
+        modifier = {
+			stability_factor = -0.05
+			war_support_factor = 0.10
+        }
+    }
+    
+    ASA_Eternal_Servitude = {  ####
+        modifier = {
+            non_core_manpower = 0.40
+            research_speed_factor = -0.15
+        }
+    }
+    
+    # ===== 外交联盟 =====
+    ASA_Racial_Codes = {
+        modifier = {
+            faction_tech_share_bonus = 0.10
+            send_volunteer_size = 2
+            justify_war_goal_time = -0.30
+        }
+    }
+    
+    # ===== 种族主义 =====   
+    ASA_One_Drop_Rule = {
+        modifier = {
+            political_power_factor = 0.20
+            stability_factor = 0.10
+            war_support_factor = 0.15
+        }
+    }
+    
+    ASA_Lost_Cause = {
+        modifier = {
+            war_support_factor = 0.25
+            surrender_limit = 0.15
+			political_power_factor = 0.20
+
+        }
+    }
+    
+    # ===== 奴隶主统治 =====
+    ASA_Plantocracy = {
+        modifier = {
+            industrial_capacity_factory = 0.15
+        }
+    }
+    
+    ASA_Perpetual_Bondage = {
+        modifier = {
+            non_core_manpower = 0.60
+            resistance_growth = -0.10
+			industrial_capacity_factory = 0.10
+        }
+    }
+}
+}

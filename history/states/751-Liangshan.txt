@@ -1,0 +1,43 @@
+state={
+	id=751
+	name="STATE_751"
+	provinces={
+		1999 2067 7294 10726 10841 12141 12819 
+	}
+	manpower=300000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	history={
+		owner = CHA
+		add_core_of = CHA
+		add_core_of = PRC
+		add_core_of = ROC
+		add_core_of = GXC
+		add_core_of = SIK
+		add_core_of = XSM
+		add_core_of = SHX
+		add_core_of = YUN
+
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			12141 3
+		}
+		victory_points = {
+			7294 1
+		}
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+				infrastructure = 1
+
+			}
+
+		}
+
+	}
+
+	local_supplies=1.0 
+}

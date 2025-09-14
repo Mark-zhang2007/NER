@@ -1,0 +1,14 @@
+SOV_five_years_mission_categores = {
+	#icon = 
+	#picture = 
+	allowed = {
+		tag = SOV
+	}
+
+	visible = {
+		has_completed_focus = SOV_start_35
+		
+	}
+	priority = 10
+}
+

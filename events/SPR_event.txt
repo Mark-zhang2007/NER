@@ -1,0 +1,37 @@
+﻿add_namespace = SPR
+
+country_event = {
+  id = SPR.1
+  title = SPR.1.t
+  desc = SPR.1.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  option = {
+    name = SPR.1.a
+    SPR = {
+      remove_ideas = SPR_Parliamentary_Deadlock
+	    remove_ideas = SPR_Regional_Separatism
+	    remove_ideas = SPR_Military_Disunity
+	    remove_ideas = SPR_Religious_Divide
+      hidden_effect = {
+        set_global_flag = SPR_in_civil_war
+        set_country_flag = SPR_government_is_left
+      }
+    }
+  }
+  option = {
+    name = SPR.1.b
+    SPR = {
+      remove_ideas = SPR_Parliamentary_Deadlock
+	    remove_ideas = SPR_Regional_Separatism
+	    remove_ideas = SPR_Military_Disunity
+	    remove_ideas = SPR_Religious_Divide
+      hidden_effect = {
+        set_global_flag = SPR_in_civil_war
+        set_country_flag = SPR_government_is_right
+      }  
+    }
+       
+  }
+}
+

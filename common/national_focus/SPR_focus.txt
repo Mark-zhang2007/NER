@@ -1,0 +1,857 @@
+focus_tree = {
+	id = SPR_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SPR
+		}
+	}
+	default = no
+	
+	# ===== 起始国策 =====
+	focus = {
+		id = SPR_looking_back
+		icon = GFX_goal_unknown
+		cost = 2
+		x = 23
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	# ===== 卡洛斯派分支 =====
+	focus = {
+		id = SPR_For_God_and_Tradition
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 9
+		prerequisite = { focus = SPR_Inevitable_Conflict }
+		mutually_exclusive = { focus = SPR_Defend_Madrid }
+		mutually_exclusive = { focus = SPR_National_Movement }
+		mutually_exclusive = { focus = SPR_Revolutionary_Defense_Councils }
+		completion_reward = {
+			add_ideas = SPR_Traditionalist_Zeal
+		}
+		available = {
+			original_tag = SPR
+			has_global_flag = SPR_in_civil_war
+			has_country_flag = SPR_government_is_right
+		}
+	}
+	
+	focus = {
+		id = SPR_Raising_the_Requetes
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 10
+		prerequisite = { focus = SPR_For_God_and_Tradition }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_The_Traditional_Kingdom
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 11
+		prerequisite = { focus = SPR_Raising_the_Requetes }
+		completion_reward = {
+			add_ideas = SPR_Carlist_Monarchy
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {
+		id = SPR_Against_All_Enemies
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 12
+		prerequisite = { focus = SPR_The_Traditional_Kingdom }
+		completion_reward = {
+			add_war_support = 0.15
+			army_experience = 50
+		}
+	}
+	
+	focus = {
+		id = SPR_Seek_International_Recognition
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 13
+		prerequisite = { focus = SPR_Against_All_Enemies }
+		completion_reward = {
+			add_war_support = -0.10
+			add_stability = 0.30
+		}
+	}
+	
+	focus = {
+		id = SPR_Triumph_of_Catholicism
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 14
+		prerequisite = { focus = SPR_Seek_International_Recognition }
+		completion_reward = {
+			add_ideas = SPR_Catholic_State
+			add_stability = 0.15
+		}
+	}
+	
+	focus = {
+		id = SPR_Restoring_the_Throne
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 15
+		prerequisite = { focus = SPR_Triumph_of_Catholicism }
+		completion_reward = {
+			add_ideas = SPR_Legitimate_Monarchy
+			add_war_support = 0.10
+		}
+	}
+	
+	focus = {
+		id = SPR_The_Traditionalist_State
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 16
+		prerequisite = { focus = SPR_Restoring_the_Throne }
+		completion_reward = {
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = arms_factory
+				level = 3
+				}
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = arms_factory
+				level = 3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_Tradition_in_the_Modern_World
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 17
+		prerequisite = { focus = SPR_The_Traditionalist_State }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = SPR_Carlist_Diplomacy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 18
+		prerequisite = { focus = SPR_Tradition_in_the_Modern_World }
+		available = {
+			original_tag = SPR
+			NOT = { has_war = yes }
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = POR
+				type = annex_everything
+			}
+		}
+	}
+	
+	# ===== 中间派分支 =====
+	focus = {
+		id = SPR_The_Fragile_United_Front
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 1
+		prerequisite = { focus = SPR_looking_back }
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = SPR_Carlist_Compromise
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 2
+		prerequisite = { focus = SPR_The_Fragile_United_Front }
+		completion_reward = {
+			add_ideas = SPR_Provisional_Unity
+		}
+	}
+	
+	focus = {
+		id = SPR_Falangist_Menace
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 3
+		prerequisite = { focus = SPR_Carlist_Compromise }
+		completion_reward = {
+			add_war_support = 0.10
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = SPR_Attempted_Military_Reforms
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 4
+		prerequisite = { focus = SPR_Falangist_Menace }
+		completion_reward = {
+			army_experience = 75
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_Whispers_of_Anarchy
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 5
+		prerequisite = { focus = SPR_Attempted_Military_Reforms }
+		completion_reward = {
+			add_stability = -0.10
+			remove_ideas = SPR_Social_Unrest
+		}
+	}
+	
+	focus = {
+		id = SPR_Comintern_Connections
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 6
+		prerequisite = { focus = SPR_Whispers_of_Anarchy }
+		completion_reward = {
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {	
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_Parliamentary_Dilemma
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 7
+		prerequisite = { focus = SPR_Comintern_Connections }
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = SPR_Inevitable_Conflict
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 23
+		y = 8
+		prerequisite = { focus = SPR_Parliamentary_Dilemma }
+		completion_reward = {
+			country_event = {
+				id = SPR.1 days = 1
+			}
+			news_event = {
+				id = world_NEWS.4 
+				days = 1
+			}
+		}
+	}
+	
+	# ===== 共和派分支 =====
+	focus = {
+		id = SPR_Defend_Madrid
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 9
+		prerequisite = { focus = SPR_Inevitable_Conflict }
+		mutually_exclusive = { focus = SPR_For_God_and_Tradition }
+		mutually_exclusive = { focus = SPR_National_Movement }
+		mutually_exclusive = { focus = SPR_Revolutionary_Defense_Councils }
+		available = {
+			original_tag = SPR
+			has_global_flag = SPR_in_civil_war
+			has_country_flag = SPR_government_is_left
+		}
+		completion_reward = {
+			add_ideas = SPR_Republican_Defense
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {	
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_The_People's_Army
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 10
+		prerequisite = { focus = SPR_Defend_Madrid }
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+	
+	focus = {
+		id = SPR_Quell_the_Anarchists
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 11
+		prerequisite = { focus = SPR_The_People's_Army }
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = SPR_Against_the_Carlists
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 12
+		prerequisite = { focus = SPR_Quell_the_Anarchists }
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+	
+	focus = {
+		id = SPR_Crush_the_Falange
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 13
+		prerequisite = { focus = SPR_Against_the_Carlists }
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+	
+	focus = {
+		id = SPR_Unified_Command
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 14
+		prerequisite = { focus = SPR_Crush_the_Falange }
+		completion_reward = {
+			add_ideas = SPR_Republican_Unity
+		}
+	}
+	
+	focus = {
+		id = SPR_Seek_International_Aid
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 15
+		prerequisite = { focus = SPR_Unified_Command }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = SPR_Price_of_Victory
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 16
+		prerequisite = { focus = SPR_Seek_International_Aid }
+		completion_reward = {
+			add_stability = -0.15
+			add_war_support = -0.10
+		}
+	}
+	
+	focus = {
+		id = SPR_Rebuilding_the_Nation
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 17
+		prerequisite = { focus = SPR_Price_of_Victory }
+		completion_reward = {
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_Path_to_Reconciliation
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 18
+		prerequisite = { focus = SPR_Rebuilding_the_Nation }
+		completion_reward = {
+			add_stability = 0.20
+		}
+	}
+	
+	focus = {
+		id = SPR_A_New_Constitution
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 19
+		prerequisite = { focus = SPR_Path_to_Reconciliation }
+		completion_reward = {
+			add_ideas = SPR_Republican_Constitution
+		}
+	}
+	
+	focus = {
+		id = SPR_Future_of_the_Popular_Front
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 20
+		prerequisite = { focus = SPR_A_New_Constitution }
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
+	}
+	
+	focus = {
+		id = SPR_Socialist_Republic
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 12
+		y = 21
+		prerequisite = { focus = SPR_Future_of_the_Popular_Front }
+		mutually_exclusive = { focus = SPR_Bastion_of_Democracy }
+		completion_reward = {
+			add_ideas = SPR_Socialist_State
+		}
+	}
+	
+	focus = {
+		id = SPR_Bastion_of_Democracy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 21
+		prerequisite = { focus = SPR_Future_of_the_Popular_Front }
+		mutually_exclusive = { focus = SPR_Socialist_Republic }
+		completion_reward = {
+			add_ideas = SPR_Democratic_Bastion
+		}
+	}
+	
+	focus = {
+		id = SPR_Spain's_Standing_in_the_World
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 14
+		y = 22
+		prerequisite = { focus = SPR_Bastion_of_Democracy }
+		prerequisite = { focus = SPR_Socialist_Republic }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = POR
+			}
+			add_war_support = 0.15
+		}
+	}
+	
+	# ===== 长枪党分支 =====
+	focus = {
+		id = SPR_National_Movement
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 9
+		prerequisite = { focus = SPR_Inevitable_Conflict }
+		mutually_exclusive = { focus = SPR_For_God_and_Tradition }
+		mutually_exclusive = { focus = SPR_Defend_Madrid }
+		mutually_exclusive = { focus = SPR_Revolutionary_Defense_Councils }
+		available = {
+			original_tag = SPR
+			has_global_flag = SPR_in_civil_war
+			has_country_flag = SPR_government_is_right
+		}
+		completion_reward = {
+			add_ideas = SPR_Falangist_Ideology
+		}
+	}
+	
+	focus = {
+		id = SPR_Hail_Rome_and_Paris
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 10
+		prerequisite = { focus = SPR_National_Movement }
+		available = {
+			original_tag = SPR
+			NOT = { has_war = yes }
+			or = {
+				FRA ={
+					is_faction_leader = yes
+				} 
+				ITA ={
+					is_faction_leader = yes
+				}
+				OTO ={
+					is_faction_leader = yes
+				} 
+			}	
+		}
+		bypass = {
+			is_in_faction_with = FRA
+		}
+		completion_reward = {
+			FRA = {
+				add_to_faction = SPR
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_The_Falange_Marches
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 11
+		prerequisite = { focus = SPR_Hail_Rome_and_Paris }
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+	
+	focus = {
+		id = SPR_Purge_the_Reds
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 12
+		prerequisite = { focus = SPR_The_Falange_Marches }
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 200
+		}
+	}
+	
+	focus = {
+		id = SPR_The_National_Syndicalist_State
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 13
+		prerequisite = { focus = SPR_Purge_the_Reds }
+		completion_reward = {
+			add_ideas = SPR_Syndicalist_State
+		}
+	}
+	
+	focus = {
+		id = SPR_Arriba_El_Movimiento_Nacional
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 14
+		prerequisite = { focus = SPR_The_National_Syndicalist_State }
+		completion_reward = {
+			add_war_support = 0.20
+		}
+	}
+	
+	focus = {
+		id = SPR_El_Caudillo
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 15
+		prerequisite = { focus = SPR_Arriba_El_Movimiento_Nacional }
+		completion_reward = {
+			add_ideas = SPR_Caudillo_Leadership
+		}
+	}
+	
+	focus = {
+		id = SPR_Forging_La_Nueva_Espana
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 16
+		prerequisite = { focus = SPR_El_Caudillo }
+		completion_reward = {
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					
+					type = arms_factory
+					level = 2
+				}
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_Alignment_with_the_ER
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 17
+		prerequisite = { focus = SPR_Forging_La_Nueva_Espana }
+		completion_reward = {
+			create_faction = Fascist_International
+			add_ideas = SPR_Axis_Alignment
+		}
+	}
+	
+	focus = {
+		id = SPR_Dreams_of_Empire
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 18
+		prerequisite = { focus = SPR_Alignment_with_the_ER }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = POR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MOR
+			}
+		}
+	}
+	
+	# ===== 无政府主义分支 =====
+	focus = {
+		id = SPR_Revolutionary_Defense_Councils
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 9
+		prerequisite = { focus = SPR_Inevitable_Conflict }
+		mutually_exclusive = { focus = SPR_National_Movement }
+		mutually_exclusive = { focus = SPR_For_God_and_Tradition }
+		mutually_exclusive = { focus = SPR_Defend_Madrid }
+		available = {
+			original_tag = SPR
+			has_global_flag = SPR_in_civil_war
+			has_country_flag = SPR_government_is_left
+		}
+		completion_reward = {
+			add_ideas = SPR_Anarchist_Revolution
+		}
+	}
+	
+	focus = {
+		id = SPR_Collectivize_Land_And_Factories
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 10
+		prerequisite = { focus = SPR_Revolutionary_Defense_Councils }
+		completion_reward = {
+			add_stability = -0.10
+		}
+	}
+	
+	focus = {
+		id = SPR_Libertarian_Communism
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 11
+		prerequisite = { focus = SPR_Collectivize_Land_And_Factories }
+		completion_reward = {
+			add_ideas = SPR_Anarcho_Communism
+		}
+	}
+	
+	focus = {
+		id = SPR_No_Gods_No_Masters
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 12
+		prerequisite = { focus = SPR_Libertarian_Communism }
+		completion_reward = {
+			add_war_support = 0.20
+		}
+	}
+	
+	focus = {
+		id = SPR_Alliance_with_CNT-FAI
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 13
+		prerequisite = { focus = SPR_No_Gods_No_Masters }
+		completion_reward = {
+			add_ideas = SPR_Anarchist_Solidarity
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {
+		id = SPR_The_Dream_Realized
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 14
+		prerequisite = { focus = SPR_Alliance_with_CNT-FAI }
+		completion_reward = {
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					
+					type = arms_factory
+					level = 4
+				}
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					
+					type = arms_factory
+					level = 4
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_The_Free_Territory
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 15
+		prerequisite = { focus = SPR_The_Dream_Realized }
+		completion_reward = {
+			add_ideas = SPR_Anarchist_Utopia
+		}
+	}
+	
+	focus = {
+		id = SPR_Direct_Action_Diplomacy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 16
+		prerequisite = { focus = SPR_The_Free_Territory }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = POR
+		}
+	}
+	}
+	
+	focus = {
+		id = SPR_Defending_the_Revolution
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 17
+		prerequisite = { focus = SPR_Direct_Action_Diplomacy }
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	
+	focus = {
+		id = SPR_Ideals_vs_Survival
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 18
+		prerequisite = { focus = SPR_Defending_the_Revolution }
+		completion_reward = {
+			add_stability = -0.10
+			add_ideas = SPR_Revolutionary_Dilemma
+		}
+	}
+}

@@ -1,0 +1,52 @@
+characters = {
+	
+	SWI_Istuka_kotori={
+		name = SWI_Istuka_kotori
+
+		#担任党派领导人时的数据
+		country_leader = {
+			#意识形态
+			ideology = anarchism
+			#特质
+			traits = { SWI_anime_god }
+			#不可用日期（死亡日期）
+			expire = "1965.1.1.1"
+			#我也不知道这个是什么，但最好不要碰这个
+			id=-1
+		}
+		#担任陆军将军时的数据
+		field_marshal={
+			#特质（如堑壕大师）
+			traits={ }
+			#等级
+			skill=1
+			#攻击等级
+			attack_skill=10
+			#防御等级
+			defense_skill=10
+			#计划等级
+			planning_skill=10
+			#后勤等级
+			logistics_skill=10
+			#作者也不知道这个有什么用，不过能运行就不要碰
+			legacy_id=-1
+		}
+	}
+
+
+	SWI_more_anarchy={
+		name = SWI_more_anarchy
+
+		#担任党派领导人时的数据
+		country_leader = {
+			#意识形态
+			ideology = stalinism
+			#特质
+			traits = { }
+			#不可用日期（死亡日期）
+			expire = "1965.1.1.1"
+			#我也不知道这个是什么，但最好不要碰这个
+			id=-1
+		}
+	}
+}

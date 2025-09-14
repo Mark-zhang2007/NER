@@ -1,0 +1,675 @@
+focus_tree = {
+	id = japan
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	default = no
+	focus = {
+		id = JAP_welcome
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 20
+		y = 0
+		mutually_exclusive = {
+			focus = JAP_chosen
+		}
+	}
+	focus = {
+		id = JAP_chosen
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 0
+		mutually_exclusive = {
+			focus = JAP_welcome
+		}
+	}
+	focus = {
+		id = JAP_recover_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 48
+		y = 0
+	}
+	focus = {
+		id = JAP_army
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 59
+		y = 1
+	}
+	focus = {
+		id = JAP_reduce_push
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 59
+		y = 2
+		prerequisite = {
+			focus = JAP_army
+		}
+	}
+	focus = {
+		id = JAP_navy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 42
+		y = 5
+	}
+	focus = {
+		id = JAP_air_force
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 51
+		y = 5
+	}
+	focus = {
+		id = JAP_junguo
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 1
+		prerequisite = {
+			focus = JAP_welcome
+		}
+		mutually_exclusive = {
+			focus = JAP_lixian
+		}
+	}
+	focus = {
+		id = JAP_king_glory
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 13
+		y = 2
+		prerequisite = {
+			focus = JAP_junguo
+		}
+	}
+	focus = {
+		id = JAP_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 13
+		y = 3
+		prerequisite = {
+			focus = JAP_king_glory
+		}
+	}
+	focus = {
+		id = JAP_all_war
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 13
+		y = 4
+		prerequisite = {
+			focus = JAP_economy
+		}
+	}
+	focus = {
+		id = JAP_independent
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 2
+		prerequisite = {
+			focus = JAP_junguo
+		}
+	}
+	focus = {
+		id = JAP_old_state
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 3
+		prerequisite = {
+			focus = JAP_independent
+		}
+	}
+	focus = {
+		id = JAP_attack_kor
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 4
+		prerequisite = {
+			focus = JAP_old_state
+		}
+	}
+	focus = {
+		id = JAP_man_or_war
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 5
+		prerequisite = {
+			focus = JAP_attack_kor
+		}
+	}
+	focus = {
+		id = JAP_kill_the_dragon
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 6
+		prerequisite = {
+			focus = JAP_man_or_war
+		}
+	}
+	focus = {
+		id = JAP_back_home
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 16
+		y = 7
+		prerequisite = {
+			focus = JAP_kill_the_dragon
+		}
+	}
+	focus = {
+		id = JAP_thinking_of_king
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 19
+		y = 2
+		prerequisite = {
+			focus = JAP_junguo
+		}
+	}
+	focus = {
+		id = JAP_ban_demo
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 19
+		y = 3
+		prerequisite = {
+			focus = JAP_thinking_of_king
+		}
+	}
+	focus = {
+		id = JAP_ban_new_thinking
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 19
+		y = 4
+		prerequisite = {
+			focus = JAP_ban_demo
+		}
+	}
+	focus = {
+		id = JAP_lixian
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 24
+		y = 1
+		prerequisite = {
+			focus = JAP_welcome
+		}
+		mutually_exclusive = {
+			focus = JAP_junguo
+		}
+	}
+	focus = {
+		id = JAP_attack_communism
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 22
+		y = 2
+		prerequisite = {
+			focus = JAP_lixian
+		}
+	}
+	focus = {
+		id = JAP_minzhu
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 28
+		y = 1
+		prerequisite = {
+			focus = JAP_chosen
+		}
+		mutually_exclusive = {
+			focus = JAP_communism
+		}
+	}
+	focus = {
+		id = JAP_end_back
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 2
+		prerequisite = {
+			focus = JAP_minzhu
+			focus = JAP_lixian
+		}
+	}
+	focus = {
+		id = JAP_rechosen
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 3
+		prerequisite = {
+			focus = JAP_end_back
+		}
+	}
+	focus = {
+		id = JAP_use_economy_crisis
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 4
+		prerequisite = {
+			focus = JAP_rechosen
+		}
+	}
+	focus = {
+		id = JAP_economy_war
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 5
+		prerequisite = {
+			focus = JAP_use_economy_crisis
+		}
+	}
+	focus = {
+		id = JAP_1940chosen
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 26
+		y = 6
+		prerequisite = {
+			focus = JAP_economy_war
+		}
+	}
+	focus = {
+		id = JAP_jiuzhou
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 30
+		y = 2
+		prerequisite = {
+			focus = JAP_minzhu
+		}
+	}
+	focus = {
+		id = JAP_east_asia
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 30
+		y = 3
+		prerequisite = {
+			focus = JAP_jiuzhou
+		}
+	}
+	focus = {
+		id = JAP_communism
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 36
+		y = 1
+		prerequisite = {
+			focus = JAP_chosen
+		}
+		mutually_exclusive = {
+			focus = JAP_minzhu
+		}
+	}
+	focus = {
+		id = JAP_with_prc
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 33
+		y = 2
+		prerequisite = {
+			focus = JAP_communism
+		}
+	}
+	focus = {
+		id = JAP_attack_rus
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 33
+		y = 3
+		prerequisite = {
+			focus = JAP_with_prc
+		}
+	}
+	focus = {
+		id = JAP_international
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 33
+		y = 4
+		prerequisite = {
+			focus = JAP_attack_rus
+		}
+	}
+	focus = {
+		id = JAP_nation_control
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 36
+		y = 2
+		prerequisite = {
+			focus = JAP_communism
+		}
+	}
+	focus = {
+		id = JAP_national_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 36
+		y = 3
+		prerequisite = {
+			focus = JAP_nation_control
+		}
+	}
+	focus = {
+		id = JAP_15
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 36
+		y = 4
+		prerequisite = {
+			focus = JAP_national_economy
+		}
+	}
+	focus = {
+		id = JAP_25
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 36
+		y = 5
+		prerequisite = {
+			focus = JAP_15
+		}
+	}
+	focus = {
+		id = JAP_liberate_people
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 39
+		y = 2
+		prerequisite = {
+			focus = JAP_communism
+		}
+	}
+	focus = {
+		id = JAP_liberate_thinking
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 39
+		y = 3
+		prerequisite = {
+			focus = JAP_liberate_people
+		}
+	}
+	focus = {
+		id = JAP_jiawu
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 42
+		y = 6
+		prerequisite = {
+			focus = JAP_navy
+		}
+	}
+	focus = {
+		id = JAP_navy_honest
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 39
+		y = 7
+		prerequisite = {
+			focus = JAP_jiawu
+		}
+	}
+	focus = {
+		id = JAP_navy_science
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 42
+		y = 7
+		prerequisite = {
+			focus = JAP_jiawu
+		}
+	}
+	focus = {
+		id = JAP_for_jap
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 48
+		y = 1
+		prerequisite = {
+			focus = JAP_recover_economy
+		}
+	}
+	focus = {
+		id = JAP_national_industry
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 44
+		y = 2
+		prerequisite = {
+			focus = JAP_for_jap
+		}
+	}
+	focus = {
+		id = JAP_war_supports
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 44
+		y = 3
+		prerequisite = {
+			focus = JAP_national_industry
+		}
+	}
+	focus = {
+		id = JAP_navy_produce
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 45
+		y = 7
+		prerequisite = {
+			focus = JAP_jiawu
+		}
+	}
+	focus = {
+		id = JAP_tokyo
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 48
+		y = 2
+		prerequisite = {
+			focus = JAP_for_jap
+		}
+	}
+	focus = {
+		id = JAP_all_industry
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 48
+		y = 3
+		prerequisite = {
+			focus = JAP_tokyo
+		}
+	}
+	focus = {
+		id = JAP_air_industry
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 50
+		y = 6
+		prerequisite = {
+			focus = JAP_air_force
+		}
+	}
+	focus = {
+		id = JAP_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 52
+		y = 2
+		prerequisite = {
+			focus = JAP_for_jap
+		}
+	}
+	focus = {
+		id = JAP_workers
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 52
+		y = 3
+		prerequisite = {
+			focus = JAP_factory
+		}
+	}
+	focus = {
+		id = JAP_air_science
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 53
+		y = 6
+		prerequisite = {
+			focus = JAP_air_force
+		}
+	}
+	focus = {
+		id = JAP_zero_type
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 52
+		y = 7
+		prerequisite = {
+			focus = JAP_air_science
+		}
+	}
+	focus = {
+		id = JAP_eagles
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 55
+		y = 7
+		prerequisite = {
+			focus = JAP_air_science
+		}
+	}
+	focus = {
+		id = JAP_jap_army
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 57
+		y = 3
+		prerequisite = {
+			focus = JAP_reduce_push
+		}
+		mutually_exclusive = {
+			focus = JAP_for_army
+		}
+	}
+	focus = {
+		id = JAP_for_army
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 61
+		y = 3
+		prerequisite = {
+			focus = JAP_reduce_push
+		}
+		mutually_exclusive = {
+			focus = JAP_jap_army
+		}
+	}
+	focus = {
+		id = JAP_army_honest
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 59
+		y = 4
+		prerequisite = {
+			focus = JAP_for_army
+			focus = JAP_jap_army
+		}
+	}
+	focus = {
+		id = JAP_army_science1
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 59
+		y = 5
+		prerequisite = {
+			focus = JAP_army_honest
+		}
+	}
+	focus = {
+		id = JAP_army_science2
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 59
+		y = 6
+		prerequisite = {
+			focus = JAP_army_science1
+		}
+	}
+	focus = {
+		id = JAP_army_science3
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 59
+		y = 7
+		prerequisite = {
+			focus = JAP_army_science2
+		}
+	}
+	focus = {
+		id = JAP_navy_suppress
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 39
+		y = 8
+		prerequisite = {
+			focus = JAP_navy_honest
+		}
+	}
+	focus = {
+		id = JAP_sea_up
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 41
+		y = 8
+		prerequisite = {
+			focus = JAP_navy_science
+		}
+		mutually_exclusive = {
+			focus = JAP_sea_down
+		}
+	}
+	focus = {
+		id = JAP_sea_down
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 43
+		y = 8
+		prerequisite = {
+			focus = JAP_navy_science
+		}
+		mutually_exclusive = {
+			focus = JAP_sea_up
+		}
+	}
+	focus = {
+		id = JAP_no_death
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 52
+		y = 8
+		prerequisite = {
+			focus = JAP_zero_type
+		}
+	}
+}

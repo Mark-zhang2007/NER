@@ -1,0 +1,864 @@
+focus_tree = {
+	id = ENG_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	default = no
+focus = {
+	id = ENG_danger
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 22
+	y = 0
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加战争支持度并添加限时国家标记
+		add_war_support = 0.05
+		set_country_flag = { flag = ENG_danger }
+	}
+}
+
+focus = {
+	id = ENG_Imperial_Preference_Elegy
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 22
+	y = 1
+	prerequisite = {
+		focus = ENG_danger
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加政治点数并添加贸易政策相关效果
+		add_political_power = 150
+		add_ideas = ENG_imperial_preference_system
+	}
+}
+
+focus = {
+	id = ENG_Suppress_Colonial_Unrest
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 22
+	y = 2
+	prerequisite = {
+		focus = ENG_Imperial_Preference_Elegy
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 在所有殖民地省份添加驻军并增加稳定度
+		every_owned_state = {
+			limit = { is_core_of = ENG }
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_stability = 0.10
+	}
+}
+
+focus = {
+	id = ENG_Gold_Standard_Last_Stand
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 22
+	y = 3
+	prerequisite = {
+		focus = ENG_Suppress_Colonial_Unrest
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加工业产能但减少消费品工厂
+		add_offsite_building = { type = industrial_complex level = 2 }
+		add_offsite_building = { type = arms_factory level = 1 }
+	}
+}
+
+focus = {
+	id = ENG_Vigilant_Observer
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 22
+	y = 4
+	prerequisite = {
+		focus = ENG_Gold_Standard_Last_Stand
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 解锁情报决议并增加情报能力
+		unlock_decision_category_tooltip = intelligence_agency_decisions
+		add_command_power = 100
+	}
+}
+
+focus = {
+	id = ENG_Crossroads_Choice
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 22
+	y = 5
+	prerequisite = {
+		focus = ENG_Vigilant_Observer
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 解锁后续三条分支路线
+		country_event = {
+			id = ENG_event.1 days = 15 
+		}
+	}
+}
+
+focus = {
+	id = ENG_Labour_Revolution
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 13
+	y = 6
+	prerequisite = {
+		focus = ENG_Crossroads_Choice
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加共产主义支持率并添加相关民族精神
+		add_popularity = { ideology = communism popularity = 0.15 }
+		add_ideas = ENG_labour_movement
+	}
+}
+
+focus = {
+	id = ENG_Fascist_Crown
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 19
+	y = 6
+	prerequisite = {
+		focus = ENG_Crossroads_Choice
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加法西斯支持率并修改政党名称
+		add_popularity = { ideology = fascism popularity = 0.15 }
+		set_party_name = { ideology = fascism long_name = "BRITISH_UNION" name = "BUF" }
+	}
+}
+
+focus = {
+	id = ENG_Eastern_Rome_Temptation
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 17
+	y = 7
+	prerequisite = {
+		focus = ENG_Fascist_Crown
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		add_state_claim = 135  
+		add_state_claim = 134  
+		add_state_claim = 113  
+		add_state_claim = 119  
+	}
+}
+
+focus = {
+	id = ENG_Imperial_Counterstrike
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 25
+	y = 6
+	prerequisite = {
+		focus = ENG_Crossroads_Choice
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加战争支持度和陆军经验
+		add_war_support = 0.10
+		army_experience = 50
+	}
+}
+
+focus = {
+	id = ENG_Far_East_Legacy
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 22
+	y = 7
+	prerequisite = {
+		focus = ENG_Imperial_Counterstrike
+		focus = ENG_Fascist_Crown
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 在远东地区获得核心并增加资源
+		add_core_of = MAL
+		add_core_of = SIA
+		add_resource = { type = rubber amount = 50 }
+	}
+}
+
+focus = {
+	id = ENG_Rebuild_Royal_Navy
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 25
+	y = 7
+	prerequisite = {
+		focus = ENG_Imperial_Counterstrike
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加海军船坞和海军经验
+		navy_experience = 100
+		add_offsite_building = { type = dockyard level = 3 }
+	}
+}
+
+focus = {
+	id = ENG_Far_East_Rebalance
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 25
+	y = 8
+	prerequisite = {
+		focus = ENG_Rebuild_Royal_Navy
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 添加海军科技加速卡
+		add_tech_bonus = {
+			name = naval_rearmament
+			bonus = 0.5
+			uses = 2
+			ahead_reduction = 1
+			category = naval_equipment
+		}
+	}
+}
+
+focus = {
+	id = ENG_Far_East_OptionA
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 24
+	y = 9
+	prerequisite = {
+		focus = ENG_Far_East_Rebalance
+	}
+	mutually_exclusive = {
+		focus = ENG_Far_East_OptionB
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 与日本建立贸易关系
+		set_global_flag = eng_japan_trade_deal
+		add_resource = { type = tungsten amount = 30 }
+	}
+}
+
+focus = {
+	id = ENG_Far_East_OptionB
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 26
+	y = 9
+	prerequisite = {
+		focus = ENG_Far_East_Rebalance
+	}
+	mutually_exclusive = {
+		focus = ENG_Far_East_OptionA
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 对中国提供军事援助
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 10000
+			producer = ENG
+		}
+	}
+}
+
+focus = {
+	id = ENG_European_Offshore_Balance
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 25
+	y = 10
+	prerequisite = {
+		focus = ENG_Far_East_OptionB
+		focus = ENG_Far_East_OptionA
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加外交影响力和政治点数
+		add_political_power = 200
+		set_global_flag = european_balance_power
+	}
+}
+
+focus = {
+	id = ENG_Europe_OptionA
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 25
+	y = 11
+	prerequisite = {
+		focus = ENG_European_Offshore_Balance
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 与法国建立防御同盟
+		FRA = { 
+			add_opinion_modifier = { target = ENG modifier = defensive_pact }
+		}
+	}
+}
+
+focus = {
+	id = ENG_Europe_OptionB
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 25
+	y = 12
+	prerequisite = {
+		focus = ENG_Europe_OptionA
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 增加工业产能和基础设施
+		add_offsite_building = { type = industrial_complex level = 3 }
+		add_offsite_building = { type = infrastructure level = 2 }
+	}
+}
+
+focus = {
+	id = ENG_Imperial_Total_Mobilization
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 25
+	y = 13
+	prerequisite = {
+		focus = ENG_Europe_OptionB
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 全面动员：增加战争支持度和稳定度
+		add_war_support = 0.15
+		add_stability = 0.15
+		add_timed_idea = { idea = total_mobilization days = 365 }
+	}
+}
+
+focus = {
+	id = ENG_Splendid_Isolation_2
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 31
+	y = 6
+	prerequisite = {
+		focus = ENG_Crossroads_Choice
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 孤立主义政策：增加稳定度但减少战争支持度
+		add_stability = 0.10
+		add_war_support = -0.05
+	}
+}
+
+focus = {
+	id = ENG_Kings_Choice
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 28
+	y = 7
+	prerequisite = {
+		focus = ENG_Imperial_Counterstrike
+		focus = ENG_Splendid_Isolation_2
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 王室决策：添加王室相关民族精神
+		add_ideas = ENG_royal_prerogative
+	}
+}
+
+focus = {
+	id = ENG_Abandon_Gold_Standard
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 31
+	y = 7
+	prerequisite = {
+		focus = ENG_Splendid_Isolation_2
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 放弃金本位：增加民用工厂但减少稳定度
+		add_offsite_building = { type = industrial_complex level = 2 }
+		add_stability = -0.05
+	}
+}
+
+focus = {
+	id = ENG_Dominion_Federalization
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 31
+	y = 8
+	prerequisite = {
+		focus = ENG_Abandon_Gold_Standard
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 自治领联邦化：增加自治领关系
+		CAN = { add_opinion_modifier = { target = ENG modifier = imperial_federation } }
+		AUS = { add_opinion_modifier = { target = ENG modifier = imperial_federation } }
+		SAF = { add_opinion_modifier = { target = ENG modifier = imperial_federation } }
+		NZL = { add_opinion_modifier = { target = ENG modifier = imperial_federation } }
+	}
+}
+
+focus = {
+	id = ENG_Continental_Balance_New
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 31
+	y = 9
+	prerequisite = {
+		focus = ENG_Dominion_Federalization
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 新大陆平衡：增加外交选项
+		unlock_decision_category_tooltip = continental_diplomacy
+	}
+}
+
+focus = {
+	id = ENG_Continental_OptionA
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 30
+	y = 10
+	prerequisite = {
+		focus = ENG_Continental_Balance_New
+	}
+	mutually_exclusive = {
+		focus = ENG_Continental_OptionB
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 亲美政策：增加与美国关系
+		USA = { add_opinion_modifier = { target = ENG modifier = special_relationship } }
+	}
+}
+
+focus = {
+	id = ENG_Continental_OptionB
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 32
+	y = 10
+	prerequisite = {
+		focus = ENG_Continental_Balance_New
+	}
+	mutually_exclusive = {
+		focus = ENG_Continental_OptionA
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 欧洲优先：增加与低地国家关系
+		HOL = { add_opinion_modifier = { target = ENG modifier = continental_ally } }
+		BEL = { add_opinion_modifier = { target = ENG modifier = continental_ally } }
+	}
+}
+
+focus = {
+	id = ENG_Homeland_Fortress_Plan
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 31
+	y = 11
+	prerequisite = {
+		focus = ENG_Continental_OptionA
+		focus = ENG_Continental_OptionB
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 本土堡垒计划：在不列颠岛增加防御工事
+		224 = { add_building_construction = { type = bunker level = 2 instant_build = yes } } # 伦敦
+		225 = { add_building_construction = { type = bunker level = 2 instant_build = yes } } # 伯明翰
+	}
+}
+
+focus = {
+	id = ENG_Orderly_Colonial_Retreat
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 31
+	y = 12
+	prerequisite = {
+		focus = ENG_Homeland_Fortress_Plan
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 有序殖民撤退：减少全球紧张度
+		add_named_threat = { threat = -5 name = "殖民撤退" }
+	}
+}
+
+focus = {
+	id = ENG_Crown_Jewel_Operation
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 25
+	y = 14
+	prerequisite = {
+		focus = ENG_Imperial_Total_Mobilization
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 皇冠宝石行动：在印度增加工业
+		678 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } } # 德里
+		679 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } } # 孟买
+	}
+}
+
+focus = {
+	id = ENG_Peoples_Front_Election
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 13
+	y = 7
+	prerequisite = {
+		focus = ENG_Labour_Revolution
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 人民阵线选举：增加共产主义支持率
+		add_popularity = { ideology = communism popularity = 0.20 }
+	}
+}
+
+focus = {
+	id = ENG_Nationalization_Wave
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 13
+	y = 8
+	prerequisite = {
+		focus = ENG_Peoples_Front_Election
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 国有化浪潮：增加民用工厂
+		add_offsite_building = { type = industrial_complex level = 3 }
+	}
+}
+
+focus = {
+	id = ENG_Dissolve_Colonial_Empire
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 13
+	y = 9
+	prerequisite = {
+		focus = ENG_Nationalization_Wave
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 解散殖民帝国：移除殖民地核心
+		remove_ideas = colonial_administration
+	}
+}
+
+focus = {
+	id = ENG_Dissolve_OptionA
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 12
+	y = 10
+	prerequisite = {
+		focus = ENG_Dissolve_Colonial_Empire
+	}
+	mutually_exclusive = {
+		focus = ENG_Dissolve_OptionB
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 和平解散：增加稳定度
+		add_stability = 0.10
+	}
+}
+
+focus = {
+	id = ENG_Dissolve_OptionB
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 14
+	y = 10
+	prerequisite = {
+		focus = ENG_Dissolve_Colonial_Empire
+	}
+	mutually_exclusive = {
+		focus = ENG_Dissolve_OptionA
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 武力镇压：增加陆军经验但减少稳定度
+		army_experience = 75
+		add_stability = -0.05
+	}
+}
+
+focus = {
+	id = ENG_Hand_in_Hand_With_Red_Giant
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 13
+	y = 11
+	prerequisite = {
+		focus = ENG_Dissolve_OptionB
+		focus = ENG_Dissolve_OptionA
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 与红色巨人携手：增加与苏联关系
+		SOV = { add_opinion_modifier = { target = ENG modifier = socialist_alliance } }
+	}
+}
+
+focus = {
+	id = ENG_International_Brigade_Upgrade
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 13
+	y = 12
+	prerequisite = {
+		focus = ENG_Hand_in_Hand_With_Red_Giant
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 国际纵队升级：添加特种部队相关民族精神
+		add_ideas = ENG_international_brigades
+	}
+}
+
+focus = {
+	id = ENG_Blackshirts_March
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 19
+	y = 7
+	prerequisite = {
+		focus = ENG_Fascist_Crown
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 黑衫军游行：增加法西斯支持率
+		add_popularity = { ideology = fascism popularity = 0.20 }
+	}
+}
+
+focus = {
+	id = ENG_Pure_Britannia
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 19
+	y = 8
+	prerequisite = {
+		focus = ENG_Blackshirts_March
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 纯粹不列颠：添加民族主义民族精神
+		add_ideas = ENG_pure_britannia_movement
+	}
+}
+
+focus = {
+	id = ENG_Corporate_State_Economy
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 19
+	y = 9
+	prerequisite = {
+		focus = ENG_Pure_Britannia
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 社团主义国家经济：增加工业产能
+		add_offsite_building = { type = industrial_complex level = 2 }
+		add_offsite_building = { type = arms_factory level = 2 }
+	}
+}
+
+focus = {
+	id = ENG_Steel_Empire_Plan
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 19
+	y = 10
+	prerequisite = {
+		focus = ENG_Corporate_State_Economy
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 钢铁帝国计划：添加工业相关民族精神
+		add_ideas = ENG_steel_empire_industrialization
+	}
+}
+
+focus = {
+	id = ENG_Steel_OptionA
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 18
+	y = 11
+	prerequisite = {
+		focus = ENG_Steel_Empire_Plan
+	}
+	mutually_exclusive = {
+		focus = ENG_Steel_OptionB
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 大陆扩张：对法国和低地国家创建战争借口
+		create_wargoal = { target = FRA type = take_state_focus }
+		create_wargoal = { target = HOL type = take_state_focus }
+	}
+}
+
+focus = {
+	id = ENG_Steel_OptionB
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 20
+	y = 11
+	prerequisite = {
+		focus = ENG_Steel_Empire_Plan
+	}
+	mutually_exclusive = {
+		focus = ENG_Steel_OptionA
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 海外扩张：对意大利和西班牙创建战争借口
+		create_wargoal = { target = ITA type = take_state_focus }
+		create_wargoal = { target = SPR type = take_state_focus }
+	}
+}
+
+focus = {
+	id = ENG_Dance_With_Dark_Tide
+	icon = GFX_goal_unknown
+	cost = 10
+	x = 19
+	y = 12
+	prerequisite = {
+		focus = ENG_Steel_OptionA
+		focus = ENG_Steel_OptionB
+	}
+	available = {
+		tag = ENG
+	}
+	completion_reward = {
+		# 与黑暗浪潮共舞：加入轴心国阵营
+		FRA = { 
+			add_to_faction = ENG
+		}
+	}
+}
+}

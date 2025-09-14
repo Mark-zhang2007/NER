@@ -1,0 +1,75 @@
+﻿add_namespace = FRA
+
+country_event = {#德国拒绝交还
+  id = FRA.1
+  title = FRA.1.t
+  desc = FRA.1.d
+  is_triggered_only = yes
+   
+
+
+  fire_only_once = yes
+  option = {
+    
+    name = FRA.1.a
+    FRA ={
+      add_political_power = -50
+      add_war_support = -0.2
+      add_stability = -0.1
+
+    }
+  }
+  option = {
+    
+    name = FRA.1.b
+    FRA ={
+      declare_war_on = { target = BUD type = annex_everything }
+
+    }
+  }
+
+}
+country_event = {#右转
+  id = FRA.2
+  title = FRA.2.t
+  desc = FRA.2.d
+  is_triggered_only = yes
+   
+
+
+  fire_only_once = yes
+ 
+  option = {
+    
+    name = FRA.2.a
+     set_politics = { 
+			ruling_party = fascism #填母意识形态
+
+			elections_allowed = no
+		}
+  }
+
+
+}
+country_event = {#德国拒绝
+  id = FRA.3
+  title = FRA.3.t
+  desc = FRA.3.d
+  is_triggered_only = yes
+   
+
+
+  fire_only_once = yes
+ 
+  option = {
+    
+    name = FRA.3.a
+    declare_war_on = {
+      target = GER
+      type = puppet_wargoal_focus 
+     }
+  }
+
+
+}
+

@@ -1,0 +1,67 @@
+#决议分类txt文件位置common/decisions/categories/xxx_decision_category.txt
+SOV_civil_war_categores = {
+	SOV_civli_war_coming= {
+		fire_only_once = yes
+		days_mission_timeout = 365
+		allowed = {
+			tag = SOV
+		}
+		activation = {                
+			date > 1936.11.6
+		}    
+		available = {                           
+			always = no
+		}
+
+		is_good = no
+		war_with_on_timeout = RUS
+		timeout_effect = {                      
+			declare_war_on = {
+				target = RUS
+				type = annex_everything
+			}  
+			add_ideas = SOV_civil_war        
+		}       
+
+	}
+	SOV_more_guns ={
+		days_remove = 30
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			RUS ={
+				exists = yes
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = SOV
+			}
+		}
+		days_re_enable = 50
+	}
+	SOV_attact_fast ={
+		days_remove = 30
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			RUS ={
+				exists = yes
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+			no_supply_grace = 12
+			breakthrough_factor = 0.5
+			army_speed_factor = 0.2
+		}
+		days_re_enable = 50
+	}
+}

@@ -1,0 +1,1569 @@
+﻿CHI_INF_01 = {
+  name = "步兵部队"  # Infantry Unit
+  for_countries = {
+    CHI
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "infantry"
+  }
+  fallback_name = "国民革命军第%d军"  # %d Juntuán
+  ordered = {
+    1 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    2 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    3 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    4 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    9 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    12 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    13 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    14 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    17 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    18 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    25 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    39 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    40 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    43 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    52 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    54 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    73 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    74 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    403 = {
+      "第3步兵师"  # 3 Bubing Shi
+    }
+    406 = {
+      "第6步兵师"  # 6 Bubing Shi
+    }
+    409 = {
+      "第9步兵师"  # 9 Bubing Shi
+    }
+    414 = {
+      "第14步兵师"  # 14 Bubing Shi
+    }
+    436 = {
+      "第36步兵师"  # 36 Bubing Shi
+    }
+    487 = {
+      "第87步兵师"  # 87 Bubing Shi
+    }
+    488 = {
+      "第88步兵师"  # 88 Bubing Shi
+    }
+    498 = {
+      "预备师"  # Peixun Shi
+    }
+    402 = {
+      "第2步兵师"  # 2 Bubing Shi
+    }
+    404 = {
+      "第4步兵师"  # 4 Bubing Shi
+    }
+    410 = {
+      "第10步兵师"  # 10 Bubing Shi
+    }
+    411 = {
+      "第11步兵师"  # 11 Bubing Shi
+    }
+    425 = {
+      "第25步兵师"  # 25 Bubing Shi
+    }
+    427 = {
+      "第27步兵师"  # 27 Bubing Shi
+    }
+    457 = {
+      "第57步兵师"  # 57 Bubing Shi
+    }
+    467 = {
+      "第67步兵师"  # 67 Bubing Shi
+    }
+    480 = {
+      "第80步兵师"  # 80 Bubing Shi
+    }
+    483 = {
+      "第83步兵师"  # 83 Bubing Shi
+    }
+    489 = {
+      "第89步兵师"  # 89 Bubing Shi
+    }
+    499 = {
+      "精锐团"  # Shui Jing Tuan
+    }
+    6 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    7 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    8 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    10 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    15 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    16 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    19 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    20 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    21 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    22 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    23 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    26 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    28 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    29 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    30 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    31 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    32 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    33 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    34 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    35 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    37 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    38 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    41 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    42 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    44 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    45 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    46 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    47 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    48 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    49 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    51 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    53 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    55 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    56 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    57 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    59 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    60 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    61 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    62 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    63 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    64 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    65 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    66 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    67 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    68 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    70 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    71 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    72 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    75 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    76 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    77 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    78 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    79 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    80 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    81 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    82 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    83 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    84 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    85 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    86 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    87 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    89 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    92 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    93 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    94 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    98 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    201 = {
+      "新编第1军"  # Xin 1 Juntuán
+    }
+    5 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    27 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    50 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    58 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    69 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    90 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    91 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    96 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    99 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    100 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    202 = {
+      "新编第2军"  # Xin 2 Juntuán
+    }
+    203 = {
+      "新编第3军"  # Xin 3 Juntuán
+    }
+    205 = {
+      "新编第5军"  # Xin 5 Juntuán
+    }
+    206 = {
+      "新编第6军"  # Xin 6 Juntuán
+    }
+    36 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    301 = {
+      "暂编第1军"  # 1 Juntuán Linshi
+    }
+    302 = {
+      "暂编第2军"  # 2 Juntuán Linshi
+    }
+    430 = {
+      "新编第30步兵师"  # Xin 30 Bubing Shi
+    }
+    438 = {
+      "新编第38步兵师"  # Xin 38 Bubing Shi
+    }
+    422 = {
+      "新编第22步兵师"  # Xin 22 Bubing Shi
+    }
+    450 = {
+      "第50步兵师"  # 50 Bubing Shi
+    }
+    88 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    207 = {
+      "新编第7军"  # Xin 7 Juntuán
+    }
+    304 = {
+      "暂编第4军"  # 4 Juntuán Linshi
+    }
+    305 = {
+      "暂编第5军"  # 5 Juntuán Linshi
+    }
+    309 = {
+      "暂编第9军"  # 9 Juntuán Linshi
+    }
+    11 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    95 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    208 = {
+      "新编第8军"  # Xin 8 Juntuán
+    }
+    303 = {
+      "暂编第3军"  # 3 Juntuán Linshi
+    }
+    315 = {
+      "暂编第15军"  # 15 Juntuán Linshi
+    }
+    209 = {
+      "新编第9军"  # Xin 9 Juntuán
+    }
+    210 = {
+      "新编第10军"  # Xin 10 Juntuán
+    }
+    211 = {
+      "新编第11军"  # Xin 11 Juntuán
+    }
+    212 = {
+      "新编第12军"  # Xin 12 Juntuán
+    }
+    213 = {
+      "新编第13军"  # Xin 13 Juntuán
+    }
+    214 = {
+      "新编第14军"  # Xin 14 Juntuán
+    }
+    215 = {
+      "新编第15军"  # Xin 15 Juntuán
+    }
+    306 = {
+      "暂编第6军"  # 6 Juntuán Linshi
+    }
+    307 = {
+      "暂编第7军"  # 7 Juntuán Linshi
+    }
+    308 = {
+      "暂编第8军"  # 8 Juntuán Linshi
+    }
+    310 = {
+      "暂编第9军"  # 9 Juntuán Linshi
+    }
+    311 = {
+      "暂编第10军"  # 10 Juntuán Linshi
+    }
+    312 = {
+      "暂编第11军"  # 11 Juntuán Linshi
+    }
+    313 = {
+      "暂编第12军"  # 12 Juntuán Linshi
+    }
+    314 = {
+      "暂编第13军"  # 13 Juntuán Linshi
+    }
+  }
+}
+CHI_CAV_01 = {
+  name = "骑兵部队"  # Cavalry Unit
+  for_countries = {
+    CHI
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "cavalry"
+  }
+  fallback_name = "国民革命军第%d骑兵师"  # %d Qibing Jun
+  ordered = {
+    1 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    2 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    3 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    4 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    6 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    5 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    101 = {
+      "新编第1骑兵师"  # Xin 1 Qibing Jun
+    }
+    102 = {
+      "新编第2骑兵师"  # Xin 2 Qibing Jun
+    }
+    103 = {
+      "新编第3骑兵师"  # Xin 3 Qibing Jun
+    }
+    104 = {
+      "新编第4骑兵师"  # Xin 4 Qibing Jun
+    }
+    7 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    8 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    9 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+    10 = {
+      "国民革命军第%d骑兵师"  # %d Qibing Jun
+    }
+  }
+}
+CHI_MOT_01 = {
+  name = "摩托化部队"  # Motorized Unit
+  for_countries = {
+    CHI
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "motorized"
+  }
+  link_numbering_with = {
+    CHI_INF_01
+  }
+  fallback_name = "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+  ordered = {
+    500 = {
+      "200 机动化步兵师"  # 200 Jidonghua Bubing Shi
+    }
+    430 = {
+      "新编第30机动化步兵师"  # Xin 30 Jidonghua Bubing Shi
+    }
+    438 = {
+      "新编第38机动化步兵师"  # Xin 38 Jidonghua Bubing Shi
+    }
+    422 = {
+      "新编第22机动化步兵师"  # Xin 22 Jidonghua Bubing Shi
+    }
+    414 = {
+      "第14机动化步兵师"  # 14 Jidonghua Bubing Shi
+    }
+    450 = {
+      "第50机动化步兵师"  # 50 Jidonghua Bubing Shi
+    }
+    403 = {
+      "第3机动化步兵师"  # 3 Jidonghua Bubing Shi
+    }
+    406 = {
+      "第6机动化步兵师"  # 6 Jidonghua Bubing Shi
+    }
+    409 = {
+      "第9机动化步兵师"  # 9 Jidonghua Bubing Shi
+    }
+    436 = {
+      "第36机动化步兵师"  # 36 Jidonghua Bubing Shi
+    }
+    487 = {
+      "第87机动化步兵师"  # 87 Jidonghua Bubing Shi
+    }
+    488 = {
+      "第88机动化步兵师"  # 88 Jidonghua Bubing Shi
+    }
+    402 = {
+      "第2机动化步兵师"  # 2 Jidonghua Bubing Shi
+    }
+    404 = {
+      "第4机动化步兵师"  # 4 Jidonghua Bubing Shi
+    }
+    410 = {
+      "第10机动化步兵师"  # 10 Jidonghua Bubing Shi
+    }
+    411 = {
+      "第11机动化步兵师"  # 11 Jidonghua Bubing Shi
+    }
+    425 = {
+      "第25机动化步兵师"  # 25 Jidonghua Bubing Shi
+    }
+    427 = {
+      "第27机动化步兵师"  # 27 Jidonghua Bubing Shi
+    }
+    457 = {
+      "第57机动化步兵师"  # 57 Jidonghua Bubing Shi
+    }
+    467 = {
+      "第67机动化步兵师"  # 67 Jidonghua Bubing Shi
+    }
+    480 = {
+      "第80机动化步兵师"  # 80 Jidonghua Bubing Shi
+    }
+    483 = {
+      "第83机动化步兵师"  # 83 Jidonghua Bubing Shi
+    }
+    489 = {
+      "第89机动化步兵师"  # 89 Jidonghua Bubing Shi
+    }
+    5 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    1 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    2 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    3 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    4 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    9 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    12 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    13 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    14 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    17 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    18 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    6 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    7 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    8 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    10 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    15 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    16 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    19 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    20 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+    11 = {
+      "国民革命军第%d机动化军"  # %d Jidonghua Juntuán
+    }
+  }
+}
+CHI_MEC_01 = {
+  name = "机械化部队"  # Mechanized Unit
+  for_countries = {
+    CHI
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "mechanized"
+  }
+  link_numbering_with = {
+    CHI_INF_01
+  }
+  fallback_name = "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+  ordered = {
+    500 = {
+      "第200机动化步兵师"  # 200 Jixiehua Bubing Shi
+    }
+    430 = {
+      "新编第30机动化步兵师"  # Xin 30 Jixiehua Bubing Shi
+    }
+    438 = {
+      "新编第38机动化步兵师"  # Xin 38 Jixiehua Bubing Shi
+    }
+    422 = {
+      "新编第22机动化步兵师"  # Xin 22 Jixiehua Bubing Shi
+    }
+    414 = {
+      "第14机械化步兵师"  # 14 Jixiehua Bubing Shi
+    }
+    450 = {
+      "第50机械化步兵师"  # 50 Jixiehua Bubing Shi
+    }
+    403 = {
+      "第3机械化步兵师"  # 3 Jixiehua Bubing Shi
+    }
+    406 = {
+      "第6机械化步兵师"  # 6 Jixiehua Bubing Shi
+    }
+    409 = {
+      "第9机械化步兵师"  # 9 Jixiehua Bubing Shi
+    }
+    436 = {
+      "第36机械化步兵师"  # 36 Jixiehua Bubing Shi
+    }
+    487 = {
+      "第87机械化步兵师"  # 87 Jixiehua Bubing Shi
+    }
+    488 = {
+      "第88机械化步兵师"  # 88 Jixiehua Bubing Shi
+    }
+    402 = {
+      "第2机械化步兵师"  # 2 Jixiehua Bubing Shi
+    }
+    404 = {
+      "第4机械化步兵师"  # 4 Jixiehua Bubing Shi
+    }
+    410 = {
+      "第10机械化步兵师"  # 10 Jixiehua Bubing Shi
+    }
+    411 = {
+      "第11机械化步兵师"  # 11 Jixiehua Bubing Shi
+    }
+    425 = {
+      "第25机械化步兵师"  # 25 Jixiehua Bubing Shi
+    }
+    427 = {
+      "第27机械化步兵师"  # 27 Jixiehua Bubing Shi
+    }
+    457 = {
+      "第57机械化步兵师"  # 57 Jixiehua Bubing Shi
+    }
+    467 = {
+      "第67机械化步兵师"  # 67 Jixiehua Bubing Shi
+    }
+    480 = {
+      "第80机械化步兵师"  # 80 Jixiehua Bubing Shi
+    }
+    483 = {
+      "第83机械化步兵师"  # 83 Jixiehua Bubing Shi
+    }
+    489 = {
+      "第89机械化步兵师"  # 89 Jixiehua Bubing Shi
+    }
+    5 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    1 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    2 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    3 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    4 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    9 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    12 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    13 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    14 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    17 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    18 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    6 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    7 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    8 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    10 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    15 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    16 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    19 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    20 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+    11 = {
+      "国民革命军第%d机械化步兵军团"  # %d Jixiehua Juntuán
+    }
+  }
+}
+CHI_ARM_01 = {
+  name = "装甲部队"  # Armored Unit
+  for_countries = {
+    CHI
+    SHX
+    GXC
+    YUN
+    XSM
+    SIK
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "light_armor"
+    "medium_armor"
+    "heavy_armor"
+    "modern_armor"
+  }
+  fallback_name = "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+  ordered = {
+    1 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    2 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    3 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    4 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    5 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    6 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    7 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    8 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    9 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    10 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    11 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    12 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    13 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    14 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+    15 = {
+      "国民革命军第%d装甲师"  # %d Zhuangjia Shi
+    }
+  }
+}
+CHI_PAR_01 = {
+  name = "伞兵部队"  # Paratrooper Unit
+  for_countries = {
+    CHI
+    SHX
+    GXC
+    YUN
+    XSM
+    SIK
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "paratrooper"
+  }
+  fallback_name = "国民革命军第%d伞兵师"  # %d Sanbing Shi
+  ordered = {
+    1 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    2 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    3 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    4 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    5 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    6 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    7 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    8 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    9 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+    10 = {
+      "国民革命军第%d伞兵师"  # %d Sanbing Shi
+    }
+  }
+}
+CHI_MAR_01 = {
+  name = "陆战师"  # Marine Unit
+  for_countries = {
+    CHI
+    SHX
+    GXC
+    YUN
+    XSM
+    SIK
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "marine"
+  }
+  fallback_name = "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+  ordered = {
+    1 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    2 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    3 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    4 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    5 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    6 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    7 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    8 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    9 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+    10 = {
+      "国民革命军第%d陆战师"  # %d Luzhan Dui Shi
+    }
+  }
+}
+CHI_MNT_01 = {
+  name = "山地师"  # Mountain Unit
+  for_countries = {
+    CHI
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "mountaineers"
+  }
+  link_numbering_with = {
+    CHI_INF_01
+  }
+  fallback_name = "国民革命军第%d军"  # %d Juntuán
+  ordered = {
+    430 = {
+      "新编第30步兵师"  # Xin 30 Bubing Shi
+    }
+    438 = {
+      "新编第38步兵师"  # Xin 38 Bubing Shi
+    }
+    422 = {
+      "新编第22步兵师"  # Xin 22 Bubing Shi
+    }
+    414 = {
+      "第14步兵师"  # 14 Bubing Shi
+    }
+    450 = {
+      "第50步兵师"  # 50 Bubing Shi
+    }
+    403 = {
+      "第3步兵师"  # 3 Bubing Shi
+    }
+    406 = {
+      "第6步兵师"  # 6 Bubing Shi
+    }
+    409 = {
+      "第9步兵师"  # 9 Bubing Shi
+    }
+    436 = {
+      "第36步兵师"  # 36 Bubing Shi
+    }
+    487 = {
+      "第87步兵师"  # 87 Bubing Shi
+    }
+    488 = {
+      "第88步兵师"  # 88 Bubing Shi
+    }
+    498 = {
+      "预备军"  # Peixun Shi
+    }
+    402 = {
+      "第2步兵师"  # 2 Bubing Shi
+    }
+    404 = {
+      "第4步兵师"  # 4 Bubing Shi
+    }
+    410 = {
+      "第10步兵师"  # 10 Bubing Shi
+    }
+    411 = {
+      "第11步兵师"  # 11 Bubing Shi
+    }
+    425 = {
+      "第25步兵师"  # 25 Bubing Shi
+    }
+    427 = {
+      "第27步兵师"  # 27 Bubing Shi
+    }
+    457 = {
+      "第57步兵师"  # 57 Bubing Shi
+    }
+    467 = {
+      "第67步兵师"  # 67 Bubing Shi
+    }
+    480 = {
+      "第80步兵师"  # 80 Bubing Shi
+    }
+    483 = {
+      "第83步兵师"  # 83 Bubing Shi
+    }
+    489 = {
+      "第89步兵师"  # 89 Bubing Shi
+    }
+    499 = {
+      "精锐团"  # Shui Jing Tuan
+    }
+    1 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    2 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    3 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    4 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    9 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    12 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    13 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    14 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    17 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    18 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    25 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    39 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    40 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    43 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    52 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    54 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    73 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    74 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    6 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    7 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    8 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    10 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    15 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    16 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    19 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    20 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    21 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    22 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    23 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    26 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    28 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    29 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    30 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    31 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    32 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    33 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    34 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    35 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    37 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    38 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    41 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    42 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    44 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    45 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    46 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    47 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    48 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    49 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    51 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    53 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    55 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    56 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    57 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    59 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    60 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    61 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    62 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    63 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    64 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    65 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    66 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    67 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    68 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    70 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    71 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    72 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    75 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    76 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    77 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    78 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    79 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    80 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    81 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    82 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    83 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    84 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    85 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    86 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    87 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    89 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    92 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    93 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    94 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    98 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    201 = {
+      "新编第1军"  # Xin 1 Juntuán
+    }
+    5 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    27 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    50 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    58 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    69 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    90 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    91 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    96 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    99 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    100 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    202 = {
+      "新编第2军"  # Xin 2 Juntuán
+    }
+    203 = {
+      "新编第3军"  # Xin 3 Juntuán
+    }
+    205 = {
+      "新编第5军"  # Xin 5 Juntuán
+    }
+    206 = {
+      "新编第6军"  # Xin 6 Juntuán
+    }
+    36 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    88 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    207 = {
+      "新编第7军"  # Xin 7 Juntuán
+    }
+    11 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    95 = {
+      "国民革命军第%d军"  # %d Juntuán
+    }
+    208 = {
+      "新编第8军"  # Xin 8 Juntuán
+    }
+    209 = {
+      "新编第9军"  # Xin 9 Juntuán
+    }
+    210 = {
+      "新编第10军"  # Xin 10 Juntuán
+    }
+    211 = {
+      "新编第11军"  # Xin 11 Juntuán
+    }
+    212 = {
+      "新编第12军"  # Xin 12 Juntuán
+    }
+    213 = {
+      "新编第13军"  # Xin 13 Juntuán
+    }
+    214 = {
+      "新编第14军"  # Xin 14 Juntuán
+    }
+    215 = {
+      "新编第15军"  # Xin 15 Juntuán
+    }
+  }
+}
+CHI_GAR_01 = {
+  name = "守备部队"  # Garrison Unit
+  for_countries = {
+    CHI
+  }
+  can_use = {
+    always = yes
+  }
+  division_types = {
+    "infantry"
+  }
+  fallback_name = "国民革命军第%d保安总队"  # %d Baoan Zongdui
+  ordered = {
+    101 = {
+      "上海守备师"  # Shanghai Jingbei
+    }
+    102 = {
+      "第1福建守备师"  # 1 Fujian Jingbei
+    }
+    103 = {
+      "第1南京守备师"  # 1 Nanking Jingbei
+    }
+    104 = {
+      "武汉守备师"  # Wuhan Jingbei
+    }
+    105 = {
+      "青岛守备师"  # Qingdao Jingbei
+    }
+    106 = {
+      "河南省卫戍军"  # Henan Sheng Jun
+    }
+    107 = {
+      "安徽省卫戍军"  # Anhui Sheng Jun
+    }
+    108 = {
+      "甘肃省卫戍军"  # Gansu Sheng Jun
+    }
+    109 = {
+      "山东省卫戍军"  # Shandong Sheng Jun
+    }
+    110 = {
+      "江苏省卫戍军"  # Jiangsu Sheng Jun
+    }
+    111 = {
+      "湖北省卫戍军"  # Hubei Sheng Jun
+    }
+    112 = {
+      "第2南京守备师"  # 2 Nanking Jingbei
+    }
+    113 = {
+      "第2福建守备师"  # 2 Fujian Jingbei
+    }
+    114 = {
+      "第3福建守备师"  # 3 Fujian Jingbei
+    }
+    115 = {
+      "江西省卫戍军"  # Jiangxi Sheng Jun
+    }
+    116 = {
+      "浙江省卫戍军"  # Zhejiang Sheng Jun
+    }
+    117 = {
+      "湖南省卫戍军"  # Hunan Sheng Jun
+    }
+    118 = {
+      "福建省卫戍军"  # Fujian Sheng Jun
+    }
+    119 = {
+      "第2南京守备师"  # 2 Nanking Jingbei
+    }
+    126 = {
+      "第3南京守备师"  # 3 Nanking Jingbei
+    }
+    127 = {
+      "第4南京守备师"  # 4 Nanking Jingbei
+    }
+    120 = {
+      "滇南守备师"  # Tiennan Jingbei
+    }
+    121 = {
+      "合肥守备师"  # Hophei Jingbei
+    }
+    122 = {
+      "察哈尔守备师"  # Chahar Jingbei
+    }
+    123 = {
+      "青海守备师"  # Chun-ai Jingbei
+    }
+    124 = {
+      "湖南守备师"  # Hunan Jingbei
+    }
+    125 = {
+      "河北守备师"  # Hubei Jingbei
+    }
+    1 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    2 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    3 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    4 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    5 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    6 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    7 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    8 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    9 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    10 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    11 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    12 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    13 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    14 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    15 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    16 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    17 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    18 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    19 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+    20 = {
+      "国民革命军第%d保安总队"  # %d Baoan Zongdui
+    }
+  }
+}

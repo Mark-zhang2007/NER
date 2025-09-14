@@ -1,0 +1,53 @@
+focus_tree = {
+	id = usa
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = USA
+		}
+	}
+	default = no
+	focus = {
+		id = USA_start
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 17
+		y = 0
+	}
+	focus = {
+		id = USA_danger
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 17
+		y = 1
+		prerequisite = {
+			focus = USA_start
+		}
+	}
+	focus = {
+		id = USA_conference
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 17
+		y = 2
+		prerequisite = {
+			focus = USA_danger
+		}
+	}
+	focus = {
+		id = USA_help
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 17
+		y = 3
+		prerequisite = {
+			focus = USA_conference
+		}
+		completion_reward = {		
+			country_event = {	id = USA_event.5	}
+			set_global_flag = USA_civil_war_happened
+		}
+		
+	}
+}

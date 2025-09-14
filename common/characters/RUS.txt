@@ -1,0 +1,27 @@
+characters = {
+	RUS_Aleksandr_Kolchak = {#亚历山大·高尔察克
+		name = RUS_Aleksandr_Kolchak
+		portraits = {
+			army = {
+				large = "gfx/leaders/RUS/RUS_Aleksandr_Kolchak.png"
+			}
+			civilian = {
+				large = "gfx/leaders/RUS/RUS_Aleksandr_Kolchak.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
+			traits = {
+				war_hero
+				gentlemanly
+			}
+		}
+	}
+}

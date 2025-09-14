@@ -1,0 +1,196 @@
+﻿division_template = {
+	name = "兵役军团"			# Represents three-division infantry corps (generally poorly-equipped militias)
+
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+
+division_template = {
+	name = "轻型步兵部队"			# Represents three-division infantry corps (generally poorly-equipped militias)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        anti_tank = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2}
+	}
+}
+
+### OOB ###
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 1591
+		division_template = "兵役军团"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 1591
+		division_template = "兵役军团"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 1591
+		division_template = "兵役军团"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 1591
+		division_template = "兵役军团"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 1591
+		division_template = "兵役军团"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 1591
+		division_template = "兵役军团"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 7341
+		division_template = "兵役军团"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 7597
+		division_template = "兵役军团"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 1591
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 1591
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 7341
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 7341
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+units = {
+	division = {
+		# "143 Bubing Shi"
+		location = 7597
+		division_template = "轻型步兵部队"
+		start_experience_factor = 0.2 #初始训练等级，经验等级设置在 0 到 1 的范围内。
+        #如果未设置，则默认为 0。游戏中的经验等级边界是{ 0.1, 0.3, 0.75, 0.9 }
+        start_equipment_factor = 1 #初始装备水平，不决定人力。如果未设置，则默认为 1。
+        start_manpower_factor = 1
+	}	
+}
+
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = KAZ
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+		
+	}	
+}

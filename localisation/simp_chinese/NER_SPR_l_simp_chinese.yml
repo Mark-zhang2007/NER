@@ -1,0 +1,131 @@
+﻿l_simp_chinese:
+#### 国策栏目
+# 内战前 (Pre-Civil War) - 基础与分歧​
+# This branch focuses on the fragile political situation and the buildup to conflict.
+SPR_looking_back: "回望往昔"
+SPR_The_Fragile_United_Front: "人民阵线的脆弱团结"
+SPR_Carlist_Compromise: "卡洛斯派的妥协"
+SPR_Falangist_Menace: "长枪党的威胁"
+SPR_Attempted_Military_Reforms: "​军事改革尝试"
+SPR_Whispers_of_Anarchy: "​无政府主义的低语"
+SPR_Comintern_Connections: "​共产国际的联系"
+SPR_Parliamentary_Dilemma: "​议会民主的困境"
+SPR_Inevitable_Conflict: "​不可避免的冲突？"
+# ​内战中国策树 (During Civil War)​​
+# Once the civil war triggers, the focus tree splits into multiple branches representing the different factions. The player can only choose one path.
+SPR_Defend_Madrid: "​捍卫马德里"
+SPR_The_People's_Army: "​人民军"
+SPR_Quell_the_Anarchists: "​压制无政府主义者叛乱"
+SPR_Against_the_Carlists: "对抗卡洛斯派危机"
+SPR_Crush_the_Falange: "​粉碎长枪党"
+SPR_Unified_Command: "​统一战线"
+SPR_Seek_International_Aid: "​寻求国际援助"  ## 胜利
+SPR_Price_of_Victory: "​胜利的代价"
+SPR_Rebuilding_the_Nation: "​重建国家"
+SPR_Path_to_Reconciliation: "​和解之路？"
+SPR_A_New_Constitution: "​新宪法"
+SPR_Future_of_the_Popular_Front: "​人民阵线的未来"
+SPR_Socialist_Republic: "​社会主义共和国"
+SPR_Bastion_of_Democracy: "​民主的堡垒"
+SPR_Spain's_Standing_in_the_World: "​西班牙的地位"
+SPR_For_God_and_Tradition: "​为了上帝和传统！"
+SPR_Raising_the_Requetes: "​组建雷奎特斯军团"
+SPR_The_Traditional_Kingdom: "​传统的王国"
+SPR_Against_All_Enemies: "​对抗所有敌人"
+SPR_Seek_International_Recognition: "​寻求国际承认"  ## 胜利
+SPR_Triumph_of_Catholicism: "​天主教的胜利"
+SPR_Restoring_the_Throne: "​恢复王位"
+SPR_The_Traditionalist_State: "​传统主义国家"
+SPR_Tradition_in_the_Modern_World: "​现代世界中的传统"
+SPR_Carlist_Diplomacy: "​卡洛斯派的外交"
+SPR_National_Movement: "​民族运动"  ## 长枪党分支
+SPR_Hail_Rome_and_Paris: "​向罗马和巴黎致敬"
+SPR_The_Falange_Marches: "​长枪党进军"
+SPR_Purge_the_Reds: "​清除左翼分子"
+SPR_The_National_Syndicalist_State: "​民族工团主义国家"  ## 胜利
+SPR_Arriba_El_Movimiento_Nacional: "​民族运动万岁！"
+SPR_El_Caudillo: "​最高统帅考迪罗"
+SPR_Forging_La_Nueva_Espana: "​构建新西班牙"
+SPR_Alignment_with_the_ER: "​加入东罗协定"
+SPR_Dreams_of_Empire: "​帝国梦想"
+SPR_Revolutionary_Defense_Councils: "​革命自卫委员会"   ## Anarchism
+SPR_Collectivize_Land_And_Factories: "​集体化土地与工厂"
+SPR_Libertarian_Communism: "​自由意志主义共产主义"
+SPR_No_Gods_No_Masters: "​没有上帝，没有主人！"
+SPR_Alliance_with_CNT-FAI: "​全国劳工联盟"  ## 胜利
+SPR_The_Dream_Realized: "​梦想成真"
+SPR_The_Free_Territory: "​自由领土"
+SPR_Direct_Action_Diplomacy: "​直接行动外交"
+SPR_Defending_the_Revolution: "​捍卫革命"
+SPR_Ideals_vs_Survival: "​理想与生存"
+# ideas
+SPR_in_civil_war: "西班牙内战开始了"
+SPR_government_is_left: "民主共和——左翼政府"
+SPR_government_is_right: "手握束棒——右翼政府"
+ # ===== 卡洛斯派精神 =====
+ SPR_Traditionalist_Zeal: "传统主义热情"
+ SPR_Carlist_Monarchy: "卡洛斯君主制"
+ SPR_Catholic_State: "天主教国家"
+ SPR_Legitimate_Monarchy: "正统君主制"
+ 
+ # ===== 共和派精神 =====
+ SPR_Republican_Defense: "共和国防卫"
+ SPR_Republican_Unity: "共和统一阵线"
+ SPR_Republican_Constitution: "共和宪法"
+ SPR_Democratic_Bastion: "民主堡垒"
+ 
+ # ===== 长枪党精神 =====
+ SPR_Falangist_Ideology: "长枪党意识形态"
+ SPR_Syndicalist_State: "工团主义国家"
+ SPR_Caudillo_Leadership: "领袖领导力"
+ SPR_Axis_Alignment: "轴心国结盟"
+ 
+ # ===== 无政府主义精神 =====
+ SPR_Anarchist_Revolution: "无政府主义革命"
+ SPR_Anarcho_Communism: "无政府共产主义"
+ SPR_Anarchist_Solidarity: "无政府主义团结"
+ SPR_Anarchist_Utopia: "无政府乌托邦"
+ SPR_Revolutionary_Dilemma: "革命困境"
+ 
+ # ===== 通用精神 =====
+ SPR_Provisional_Unity: "临时团结"
+ SPR_Social_Unrest: "社会动荡"
+ SPR_Socialist_State: "社会主义国家"
+ 
+ # ===== 特殊精神 =====
+ SPR_Popular_Front: "人民阵线"
+ SPR_Civil_War_Exhaustion: "内战耗竭"
+ SPR_International_Brigades: "国际纵队"
+ 
+ # ===== 国策添加的精神 =====
+ SPR_Traditional_Kingdom: "传统王国"
+ SPR_National_Syndicalism: "国家工团主义"
+ SPR_Libertarian_Communism: "自由共产主义"
+ SPR_Republican_Resolve: "共和决心"
+ 
+ # ===== 军事精神 =====
+ SPR_Peoples_Army: "人民军队"
+ SPR_Requetes_Militia: "雷克特民兵"
+ SPR_Falange_Militias: "长枪党民兵"
+ SPR_Anarchist_Militias: "无政府主义民兵"
+ 
+ # ===== 经济精神 =====
+ SPR_Collectivized_Economy: "集体化经济"
+ SPR_National_Syndicalist_Economy: "国家工团主义经济"
+ SPR_Traditionalist_Agrarian: "传统农业经济"
+ SPR_Republican_Industrialization: "共和工业化"
+ 
+ # ===== 危机精神 =====
+ SPR_Parliamentary_Deadlock: "议会僵局"
+ SPR_Religious_Divide: "宗教分裂"
+ SPR_Regional_Separatism: "地区分离主义"
+ SPR_Military_Disunity: "军队分裂"
+
+# events
+ world_NEWS.4.t: "西班牙内战爆发！"
+ world_NEWS.4.d: "西班牙爆发了内战。\n西班牙曾经拥有大路上最强大的海军和最广阔的领土，然而这一切都在过去的四百年中灰飞烟灭。如今的西班牙已经失去美洲殖民地，仅在非洲保留一部分殖民领地。\n今天的西班牙是一个动荡不安的国家，社会矛盾激烈。左翼势力与右翼势力之间的冲突不断升级，最终导致了内战的爆发。\n“我们必须团结一致，捍卫我们的共和国和民主制度。无论是工人、农民，还是知识分子，我们都必须站在一起，抵御法西斯的威胁。”——曼努埃尔·阿萨尼亚，西班牙共和国总统"
+ world_NEWS.4.a: "只有消灭法西斯，才能拯救西班牙！"
+ SPR.1.t: "内战爆发！"
+ SPR.1.d: "就在今天，马德里的共和国议会乱作一团。西班牙内战爆发。由弗朗西斯科·佛朗哥将军领导的军队叛乱迅速席卷全国，试图推翻由人民阵线领导的共和政府。\n“我们必须团结一致，捍卫我们的共和国和民主制度。无论是工人、农民，还是知识分子，我们都必须站在一起，抵御法西斯的威胁。”——曼努埃尔·阿萨尼亚，西班牙共和国总统"
+ SPR.1.a: "只有消灭法西斯，才能拯救西班牙！"
+SPR.1.b: "为了帝国之梦！"

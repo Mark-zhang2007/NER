@@ -1,0 +1,145 @@
+#决议分类txt文件位置common/decisions/categories/xxx_decision_category.txt
+PRC_publicity  = {
+	PRC_self_reliance = {
+		priority = 2
+
+		#icon = eng_propaganda_campaigns
+
+		
+
+		allowed = {
+			original_tag = PRC
+		}
+
+		available = {
+			check_variable = { 
+			var = PRC_poster_slot_num
+			value = 3
+			compare = less_than
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = PRC_work_by_self
+			}
+		}
+
+		days_remove = 60
+
+		days_re_enable = 30
+		cost = 20
+
+		modifier = {
+			consumer_goods_factor = -0.3
+			stability_weekly = 0.05
+			weekly_manpower = 100
+			production_factory_start_efficiency_factor = 0.5
+		}
+
+		complete_effect = {
+			add_to_variable = {PRC_poster_slot_num = 1}
+			
+		}
+
+		remove_effect = {
+			add_to_variable = {PRC_poster_slot_num = -1}
+		}
+	}
+	PRC_people_unite = {
+		priority = 2
+
+		#icon = eng_propaganda_campaigns
+
+		
+
+		allowed = {
+			original_tag = PRC
+		}
+
+		available = {
+			check_variable = { 
+			var = PRC_poster_slot_num
+			value = 3
+			compare = less_than
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = PRC_work_by_self
+			}
+		}
+
+		days_remove = 60
+
+		days_re_enable = 30
+		cost = 20
+
+		modifier = {
+			weekly_manpower = 1000
+			training_time_factor = -0.1
+			minimum_training_level = -0.3
+			mobilization_speed = 0.3
+		}
+
+		complete_effect = {
+			add_to_variable = {PRC_poster_slot_num = 1}
+			
+		}
+
+		remove_effect = {
+			add_to_variable = {PRC_poster_slot_num = -1}
+		}
+	}
+	PRC_Liberate_all_China = {
+		priority = 2
+
+		#icon = eng_propaganda_campaigns
+
+		
+
+		allowed = {
+			original_tag = PRC
+		}
+
+		available = {
+			check_variable = { 
+			var = PRC_poster_slot_num
+			value = 3
+			compare = less_than
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = PRC_counterattack
+			}
+		}
+
+		days_remove = 60
+
+		days_re_enable = 30
+		cost = 20
+
+		modifier = {
+			army_infantry_attack_factor = 0.2
+			army_org_factor = 0.3
+			army_morale_factor = 0.2
+			org_loss_when_moving = -0.1
+			breakthrough_factor = 0.1
+			recon_factor = 0.2
+			land_reinforce_rate = 0.3
+
+		}
+
+		complete_effect = {
+			add_to_variable = {PRC_poster_slot_num = 1}
+			
+		}
+
+		remove_effect = {
+			add_to_variable = {PRC_poster_slot_num = -1}
+		}
+	}
+}

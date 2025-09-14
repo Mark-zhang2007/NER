@@ -1,0 +1,1259 @@
+focus_tree = {
+	id = FRA_FT1
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	default = no
+	focus = {
+		id = FRA_industry
+		icon = GFX_goal_unknown
+		cost = 5.00
+		x = 6
+		y = 0
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	focus = {
+		id = FRA_government
+		icon = GFX_goal_unknown
+		cost = 2.00
+		x = 29
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = FRA_army
+		icon = GFX_goal_unknown
+		cost = 5.00
+		x = 41
+		y = 1
+		completion_reward = {
+			army_experience = 100
+			add_war_support = 0.3
+	add_tech_bonus = {
+		name = ""
+		bonus = 1
+		uses =2
+
+		technology = infantry_weapons 
+		ahead_reduction = 1
+	}
+
+		}
+
+	}
+	focus = {
+		id = FRA_navy
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 52
+		y = 1
+		completion_reward = {
+			navy_experience = 200
+		
+	
+		}
+
+	}
+	focus = {
+		id = FRA_airforce
+		icon = GFX_goal_unknown
+		cost = 3.00
+		x = 61
+		y = 1
+		completion_reward = {
+			air_experience = 200
+		
+		
+		}
+
+	}
+	focus = {
+		id = FRA_workers
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = FRA_industry
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = FRA_workers
+		}
+
+	}
+	focus = {
+		id = FRA_work_right
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = FRA_workers
+		}
+		x = 2
+		y = 2
+		completion_reward = {
+			add_ideas = FRA_work_right
+		}
+
+	}
+
+	focus = {
+		id = FRA_rebuild
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_industry
+		}
+		x = 10
+		y = 1
+		completion_reward = {
+			16 = {
+					add_building_construction = {
+							type = industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	focus = {
+		id = FRA_minyong1
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_rebuild
+		}
+		x = 6
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type =industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+				}
+				add_tech_bonus = {
+					name =  FRA_minyong1
+					bonus = 0.6
+					uses = 1
+					ahead_reduction =1
+					category = cat_production
+				}
+
+		}
+
+	}
+	focus = {
+		id = FRA_minyong2
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_minyong1
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+				}
+			add_tech_bonus = {
+					name =  FRA_minyong1
+					bonus = 0.6
+					uses = 1
+					ahead_reduction =1
+					category = excavation_tech
+				}
+		}
+
+	}
+	focus = {
+		id = FRA_minyong3
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_minyong2
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type =industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+				}
+			add_tech_bonus = {
+					name =  FRA_minyong1
+					bonus = 0.6
+					uses = 1
+					ahead_reduction =1
+					category = construction_tech
+				}
+		}
+
+	}
+	focus = {
+		id = FRA_minyong4
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_minyong3
+		}
+		x = 6
+		y = 5
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+		random_owned_controlled_state = {
+					add_building_construction = {
+							type = infrastructure  
+							level = 2
+							instant_build = yes
+						}
+				}
+			add_tech_bonus = {
+					name =  FRA_minyong1
+					bonus = 0.6
+					uses = 2
+					ahead_reduction =1
+					category = industry
+				}
+		}
+		
+		
+	}
+	focus = {
+		id = FRA_myjianshe
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_minyong4
+		}
+		x = 6
+		y = 6
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_building_construction = {
+							type = industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+				}
+		random_owned_controlled_state = {
+					add_building_construction = {
+							type = industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+				}
+			add_ideas = FRA_myjianshe
+		}
+	}
+	focus = {
+		id = FRA_junyong1
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_rebuild
+		}
+		x = 10
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+			add_ideas = FRA_industry1
+		}
+
+	}
+	focus = {
+		id = FRA_junyong2
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_junyong1
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				swap_ideas = {
+					remove_idea = FRA_industry1
+					add_idea = FRA_industry2
+				}
+		}
+
+	}
+	focus = {
+		id = FRA_junyong3
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_junyong2
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				swap_ideas = {
+					remove_idea = FRA_industry2
+					add_idea =FRA_industry3
+				}
+		}
+	}
+	focus = {
+		id = FRA_junyong4
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_junyong3
+		}
+		x = 10
+		y = 5
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory 
+							level = 2
+							instant_build = yes
+						}
+				}
+				swap_ideas = {
+					remove_idea = FRA_industry3
+					add_idea =FRA_industry4
+				}
+		}
+
+	}
+	focus = {
+		id = FRA_jyjianshe
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_junyong4
+		}
+		x = 10
+		y = 6
+		completion_reward = {
+			add_ideas = FRA_ARMY_industry
+		}
+
+	}
+	focus = {
+		id = FRA_highway
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_rebuild
+		}
+		x = 14
+		y = 2
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = FRA
+				}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = infrastructure 
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	focus = {
+		id = FRA_sci_industry
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_highway
+		}
+		x = 14
+		y = 3
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = FRA_miracle
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_jyjianshe
+		}
+		prerequisite = {
+			focus = FRA_sci_industry
+		}
+		prerequisite = {
+			focus = FRA_myjianshe
+		}
+		x = 10
+		y = 7
+		completion_reward = {
+			remove_ideas = FRA_bad_industry
+		}
+
+	}
+	focus = {
+		id = FRA_turnright
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_government
+		}
+		x = 29
+		y = 1
+		completion_reward = {
+			country_event = FRA.2
+		}
+	}
+	focus = {
+		id = FRA_fxs
+		icon = GFX_goal_unknown
+		cost = 2.00
+		prerequisite = {
+			focus = FRA_turnright
+		}
+		x = 29
+		y = 2
+		completion_reward = {
+			add_ideas = FRA_fxs
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = FRA_nation
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = FRA_fxs
+		}
+		x = 26
+		y = 3
+		completion_reward = {
+			add_ideas = FRA_nation
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = FRA_nationality
+		icon = GFX_goal_unknown
+		cost =3
+		prerequisite = {
+			focus = FRA_fxs
+		}
+		x = 32
+		y = 3
+		completion_reward = {
+			add_ideas = FRA_nationality
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = FRA_for_the_war
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_nationality
+		}
+		x = 32
+		y = 4
+		completion_reward = {
+			add_war_support = 0.3
+			add_political_power = 100
+			add_ai_strategy = {
+			type = prepare_for_war
+			#种类
+			id = GER
+			#根据种类而定(有些可能要打双引号，如:结盟的战略，结盟对象国家代码要打双引号)
+			value = 100
+			#数值
+		}
+
+		}
+
+	}
+	focus = {
+		id = FRA_prepare
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_for_the_war
+		}
+		x = 32
+		y = 5
+		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_prepare
+				days = 100
+			}
+		}
+	}
+	focus = {
+		id = FRA_guns
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_army
+		}
+		mutually_exclusive = {
+			focus = FRA_tanks
+		}
+		x = 38
+		y = 2
+		completion_reward = {
+			add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 1000
+							producer = FRA
+						}
+			add_tech_bonus = {
+				name = ""
+				bonus = 1
+				uses =1
+
+				category  = infantry_weapons
+				ahead_reduction = 1
+			}
+		}
+
+	}
+	focus = {
+		id = FRA_tanks
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_army
+		}
+		mutually_exclusive = {
+			focus = FRA_guns
+		}
+		x = 44
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = ""
+				bonus = 1
+				uses =3
+
+				category  = armor 
+				ahead_reduction = 1
+			}
+		}
+	}
+	focus = {
+		id = FRA_newarmy
+		icon = GFX_goal_unknown
+		cost = 3
+		available = {
+			has_completed_focus = FRA_command
+		}
+		prerequisite = {
+			focus = FRA_tanks
+			focus = FRA_guns
+		}
+		x = 41
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_bad_army
+				add_idea = FRA_revitalizing
+			}
+		}
+
+	}
+	focus = {
+		id = FRA_powerful
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_newarmy
+		}
+		x = 38
+		y = 4
+		completion_reward = {
+			add_ideas = FRA_powerful
+		}
+
+	}
+	focus = {
+		id = FRA_revenge
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_newarmy
+		}
+		x = 41
+		y = 4
+		completion_reward = {
+			add_ideas = FRA_revenge
+			army_experience = 50
+		}
+
+
+	}
+	focus = {
+		id = FRA_revitalize
+		icon = GFX_goal_unknown
+		cost = 5.00
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+		}
+		prerequisite = {
+			focus = FRA_newarmy
+		}
+		x = 44
+		y = 4
+		completion_reward = {
+			remove_ideas = FRA_revitalizing
+		}
+
+	}
+	focus = {
+		id = FRA_victory
+		icon = GFX_goal_unknown
+		cost = 5
+		available = {
+			has_completed_focus = FRA_winner
+		}
+		prerequisite = {
+			focus = FRA_powerful
+		}
+		prerequisite = {
+			focus = FRA_revenge
+		}
+		prerequisite = {
+			focus = FRA_revitalize
+		}
+		x = 41
+		y = 5
+		completion_reward = {
+			add_ideas = FRA_victory
+		}
+	}
+	focus = {
+		id = FRA_up
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = FRA_navy
+		}
+		mutually_exclusive = {
+			focus = FRA_down
+		}
+		x = 49
+		y = 2
+		completion_reward = {
+			add_ideas = FRA_up
+		}
+
+	}
+	focus = {
+		id = FRA_dd
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_up
+		}
+		x = 47
+		y = 3
+		completion_reward = {
+		add_tech_bonus = {
+		name = ""
+		bonus = 1
+		uses =1
+
+		category  = dd_tech 
+		ahead_reduction = 1
+	}
+		}
+	}
+	focus = {
+		id = FRA_ca
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_up
+		}
+		x = 50
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = ""
+				bonus = 1
+				uses =1
+
+				category  = ca_tech 
+				ahead_reduction = 1
+			}
+		}
+	}
+	focus = {
+		id = FRA_down
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = FRA_navy
+		}
+		mutually_exclusive = {
+			focus = FRA_up
+		}
+		x = 55
+		y = 2
+		completion_reward = {
+			add_ideas = FRA_down
+		}
+
+	}
+	focus = {
+		id = FRA_xueshuo
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = FRA_down
+			focus = FRA_up
+		}
+		x = 52
+		y = 3
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = FRA_xueshuo
+				cost_reduction = 0.7
+				uses = 2
+				category = air_doctrine
+			}
+
+		}
+
+	}
+	focus = {
+		id = FRA_ss
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = FRA_down
+		}
+		x = 55
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = ""
+				bonus = 1
+				uses =1
+
+				category  = ss_tech
+				ahead_reduction = 1
+			}
+		}
+
+	}
+	focus = {
+		id = FRA_small
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = FRA_airforce
+		}
+		mutually_exclusive = {
+			focus = FRA_medium
+		}
+		x = 59
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = ""
+				bonus = 1
+				uses =1
+
+				category  = light_fighter
+				ahead_reduction = 1
+			}
+		}
+	}
+	focus = {
+		id = FRA_medium
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = FRA_airforce
+		}
+		mutually_exclusive = {
+			focus = FRA_small
+		}
+		x = 63
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = ""
+				bonus = 1
+				uses =1
+
+				category  = cat_heavy_fighter
+				ahead_reduction = 1
+			}
+				add_tech_bonus = {
+				name = ""
+				bonus = 1
+				uses =1
+
+				category  =cat_strategic_bomber 
+				ahead_reduction = 1
+			}
+		}
+	}
+	focus = {
+		id = FRA_ourair
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_small
+			focus = FRA_medium
+		}
+		x = 59
+		y = 3
+		completion_reward = {
+			add_ideas = FRA_ourair
+			air_experience = 100
+		}
+
+	}
+	focus = {
+		id = FRA_need_BUD
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_need_BRI
+		}
+		x = 26
+		y = 5
+		completion_reward = {
+			GER = {
+				country_event = NER_GER.5
+
+			}
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = FRA_need_BRI
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = FRA_nation
+		}
+		x = 26
+		y = 4
+		completion_reward = {
+			add_war_support = 0.1
+			BRI ={
+				country_event = BRI_back.1
+			}
+		}
+
+	}
+	focus = {
+		id = FRA_war_to_eng
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_command
+		}
+		x = 26
+		y = 7
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 100
+				producer = FRA
+        }
+		add_ai_strategy = {
+			type = prepare_for_war
+			id = ENG
+			value = 1000
+		}
+
+		}
+
+	}
+	focus = {
+		id = FRA_command
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_need_BUD
+		}
+		prerequisite = {
+			focus = FRA_prepare
+		}
+		x = 29
+		y = 6
+		completion_reward = {
+			add_ideas = FRA_command
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = GER
+				value = 100
+			}
+			add_ai_strategy = {
+				type = force_build_armies
+				value = 100
+
+			}
+			
+		}
+
+	}
+	focus = {
+		id = FRA_with_oto
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_command
+		}
+		x = 32
+		y = 7
+		completion_reward = {
+			if = {
+				limit = {
+					OTO = {
+						is_in_faction= yes
+					}
+				}
+				OTO = {
+					add_to_faction = FRA
+
+				}
+			}
+			else = {
+				create_faction = Eastern_Roman_Empire
+				add_to_faction = OTO
+			}
+			
+		}
+	}
+	focus = {
+		id = FRA_engwar
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_war_to_eng
+		}
+		x = 26
+		y = 8
+		ai_will_do = {
+			base = 1
+			modifier = {
+				GER= {
+					exists = yes
+				}
+				factor = 0
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = ENG
+				type = puppet_wargoal_focus 
+			}
+			add_war_support = 0.2
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = FRA_war_to_ger
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_with_oto
+		}
+		x = 32
+		y = 8
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				NOT={
+					has_completed_focus = FRA_revitalize
+					has_completed_focus = FRA_revenge
+					has_completed_focus = FRA_powerful
+				}
+				factor = 0
+			}
+		}
+		completion_reward = {
+			GER = {
+				country_event = NER_GER.6
+			}
+			add_war_support = 0.2
+			add_political_power = 100
+			add_ai_strategy = {
+				type = front_armor_score 
+				id = GER
+				value = 100
+			}
+		}
+
+	}
+	focus = {
+		id = FRA_winner
+		icon = GFX_goal_unknown
+		cost = 5
+		available = {
+			NOT = {
+				has_war_with = GER
+				has_war_with = ENG
+			}
+		}
+		prerequisite = {
+			focus = FRA_war_to_ger
+		}
+		prerequisite = {
+			focus = FRA_engwar
+		}
+		x = 29
+		y = 9
+		completion_reward = {
+			add_ideas = FRA_winner
+		}
+
+	}
+	focus = {
+		id = FRA_war_to_usa
+		icon = GFX_goal_unknown
+		cost = 5
+		available = {
+			has_war = no
+		}
+		prerequisite = {
+			focus = FRA_winner
+		}
+		x = 25
+		y = 10
+		completion_reward = {
+			create_wargoal = { target = USA type = puppet_wargoal_focus  } 
+		}
+
+	}
+	focus = {
+		id = FRA_against_sov
+		icon = GFX_goal_unknown
+		cost = 5
+		available = {
+			has_war = no
+		}
+		prerequisite = {
+			focus = FRA_winner
+		}
+		x = 33
+		y = 10
+		completion_reward = {
+			create_wargoal = { target = SOV type = puppet_wargoal_focus  } 
+		}
+
+	}
+	focus = {
+		id = FRA_newnation
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_winner
+		}
+		x = 29
+		y = 10
+		completion_reward = {
+			add_state_core = 794
+			add_state_core = 165
+			add_state_core = 167
+			add_state_core = 158
+			add_state_core = 28
+			add_state_core = 6
+			add_state_core = 34
+			add_state_core = 980
+			add_state_core = 977
+			add_state_core = 35
+			add_state_core = 56
+			add_state_core = 59
+			add_state_core = 57
+			add_state_core = 51
+			add_state_core = 162
+			add_state_core = 2
+			add_political_power = 100
+			add_stability = 0.2
+		}
+		
+
+	}
+	focus = {
+		id = FRA_against_cha
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_newnation
+		}
+		x = 29
+		y = 11
+		completion_reward = {
+			add_ai_strategy = {
+			type = prepare_for_war
+			id = PRC
+			value = 1000
+		}
+		}
+
+	}
+	focus = {
+		id = FRA_coldwar
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_against_cha
+		}
+		mutually_exclusive = {
+			focus = FRA_war_to_cha
+		}
+		x = 27
+		y = 12
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			
+		}
+
+	}
+	focus = {
+		id = FRA_war_to_cha
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_against_cha
+		}
+		mutually_exclusive = {
+			focus = FRA_coldwar
+		}
+		x = 31
+		y = 12
+		completion_reward = {
+			create_wargoal = { target = PRC type = puppet_wargoal_focus  } 
+		}
+
+	}
+	focus = {
+		id = FRA_produce
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FRA_medium
+			focus = FRA_small
+		}
+		x = 63
+		y = 3
+		completion_reward = {
+			add_ideas = FRA_produce
+		}
+
+	}
+
+}

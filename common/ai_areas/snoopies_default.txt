@@ -1,0 +1,13 @@
+areas = {
+	ddaywall = {
+        strategic_regions = {
+            208 # france
+            20
+            19 # Calais
+			5
+			6
+			275
+        }
+    }
+
+}

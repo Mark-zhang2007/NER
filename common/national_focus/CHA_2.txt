@@ -1,0 +1,295 @@
+focus_tree = {
+	id = CHA_2
+	country = {
+		factor = 0
+		modifier = {
+			add = 9
+			tag = CHA
+		}
+	}
+	default = no
+	focus = {
+		id = CHA_win_1
+		icon = GFX_goal_generic_army_doctrines
+		cost = 0.00
+		x = 4
+		y = 0
+		allow_branch = {
+					OR = {
+		NOT = { country_exists = ETH }
+		ETH={
+			is_subject =  yes
+	}
+}
+		}
+
+	}
+	focus = {
+		id = CHA_loose
+		icon = GFX_goal_generic_attack_allies
+		cost = 0.00
+		x = 13
+		y = 0
+		allow_branch = {
+			country_exists = ETH
+		}
+
+	}
+	focus = {
+		id = CHA_focus_on_domestic
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 3
+		prerequisite = {
+			focus = CHA_win_1
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = CHA_biulding
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 0.00
+		prerequisite = {
+			focus = CHA_focus_on_domestic
+		}
+		x = 2
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+		}
+
+	}
+	focus = {
+		id = CHA_Firm_rule
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 3
+		prerequisite = {
+			focus = CHA_focus_on_domestic
+		}
+		x = 4
+		y = 2
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = CHA_control_vassalstates
+		icon = GFX_goal_generic_position_armies
+		cost = 3
+		prerequisite = {
+			focus = CHA_win_1
+		}
+		x = 7
+		y = 1
+
+	}
+	focus = {
+		id = CHA_tax_chage_rights
+		icon = GFX_goal_generic_major_alliance
+		cost = 0.00
+		prerequisite = {
+			focus = CHA_control_vassalstates
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = CHA_clean_gov
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 0.00
+		prerequisite = {
+			focus = CHA_loose
+		}
+		x = 13
+		y = 1
+		completion_reward = {
+			add_political_power = -30
+			add_stability = -0.1
+			add_timed_idea = {
+				idea = CHA_clean_gov
+				days = 60
+			}
+		}
+
+	}
+	focus = {
+		id = CHA_duaqirui
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.00
+		prerequisite = {
+			focus = CHA_clean_gov
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = CHA_rail_way
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 0.00
+		prerequisite = {
+			focus = CHA_biulding
+		}
+		x = 3
+		y = 3
+		completion_reward = {
+			build_railway = { #铺设铁路
+		path = { 11752 4612 7048 12331 12609 10629 12880 7803 10899 10770 2028 5076 7997 10834 7940 10865 2074 5736 7792 10545 4709 
+	}
+			}
+		}
+
+	}
+	focus = {
+		id = CHA_harbor
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 0.00
+		prerequisite = {
+			focus = CHA_biulding
+		}
+		x = 1
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = dockyard 
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = dockyard 
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = dockyard 
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = naval_base 
+							level = 2
+							instant_build = yes
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes}
+						}
+				}
+			random_owned_controlled_state = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = naval_base 
+							level = 2
+							instant_build = yes
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes}
+						}
+				}
+			random_owned_controlled_state = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = naval_base 
+							level = 2
+							instant_build = yes
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes}
+						}
+				}
+		}
+
+	}
+	focus = {
+		id = CHA_boost_trade
+		icon = GFX_goal_generic_trade
+		cost = 0.00
+		prerequisite = {
+			focus = CHA_tax_chage_rights
+		}
+		x = 7
+		y = 3
+		completion_reward = {
+			add_ideas = CHA_boost_trade
+		}
+
+	}
+	focus = {
+		id = CHA_puyi
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.00
+		prerequisite = {
+			focus = CHA_clean_gov
+		}
+		x = 14
+		y = 2
+
+	}
+}

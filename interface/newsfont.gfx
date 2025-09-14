@@ -1,0 +1,10 @@
+bitmapfonts = {
+
+ 	bitmapfont = {
+		name = "news"   
+		path = "gfx/fonts/news"	
+		color = 0xffffffff
+	}
+
+
+}
